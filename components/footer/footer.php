@@ -60,6 +60,7 @@
                     <li class="footer-link-item"><a href="/pages/services/shipping.html" class="footer-link"><i class="fas fa-chevron-right"></i>Shipping & Fulfillment</a></li>
                     <li class="footer-link-item"><a href="/pages/services/event-managementServices.html" class="footer-link"><i class="fas fa-chevron-right"></i>Event Management</a></li>
                     <li class="footer-link-item"><a href="/pages/services/designAndCreative.html" class="footer-link"><i class="fas fa-chevron-right"></i>Web & App Development</a></li>
+                    <li class="footer-link-item"><a href="./candidate_registration.php" class="footer-link"><i class="fas fa-chevron-right"></i>Candidate Registration</a></li>
                 </ul>
             </div>
 
