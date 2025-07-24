@@ -1,0 +1,303 @@
+{
+  "project_name": "Candidate Registration & Management System",
+  "overview": {
+    "purpose": "QR code accessible form for students/candidates to register with comprehensive admin management dashboard",
+    "theme": "Red and White Bootstrap design matching existing project aesthetic",
+    "target_users": [
+      "Students",
+      "Job Seekers",
+      "Admin Users",
+      "Super Admin Users"
+    ]
+  },
+  "system_architecture": {
+    "frontend": {
+      "framework": "Bootstrap 5",
+      "theme_colors": {
+        "primary": "#d90429",
+        "secondary": "#ef233c",
+        "accent": "#e63946",
+        "white": "#ffffff",
+        "light_gray": "#f8f9fa"
+      },
+      "components": [
+        "Responsive registration form",
+        "Admin dashboard with filters",
+        "Export functionality",
+        "Pagination system"
+      ]
+    },
+    "backend": {
+      "language": "PHP",
+      "database": "MySQL",
+      "authentication": "Session-based with role management",
+      "file_structure": [
+        "candidate_registration.php (root level)",
+        "admin/candidate_dashboard.php",
+        "admin/fetch_candidates.php",
+        "admin/export_candidates.php",
+        "admin/delete_candidate.php",
+        "admin/candidate_details.php"
+      ]
+    }
+  },
+  "database_design": {
+    "table_name": "candidates",
+    "fields": [
+      {
+        "name": "id",
+        "type": "INT AUTO_INCREMENT PRIMARY KEY",
+        "description": "Unique identifier"
+      },
+      {
+        "name": "full_name",
+        "type": "VARCHAR(255) NOT NULL",
+        "description": "Candidate's full name"
+      },
+      {
+        "name": "age",
+        "type": "INT NOT NULL",
+        "description": "Candidate's age"
+      },
+      {
+        "name": "phone_number",
+        "type": "VARCHAR(15) NOT NULL",
+        "description": "Contact phone number"
+      },
+      {
+        "name": "gender",
+        "type": "ENUM('Male', 'Female', 'Other') NOT NULL",
+        "description": "Gender selection"
+      },
+      {
+        "name": "city",
+        "type": "VARCHAR(100) NOT NULL",
+        "description": "Current city"
+      },
+      {
+        "name": "job_category",
+        "type": "VARCHAR(255) NOT NULL",
+        "description": "Job category from JSON"
+      },
+      {
+        "name": "job_role",
+        "type": "VARCHAR(255) NOT NULL",
+        "description": "Specific job role from JSON"
+      },
+      {
+        "name": "years_experience",
+        "type": "DECIMAL(3,1) NOT NULL",
+        "description": "Years of experience (0-50.0)"
+      },
+      {
+        "name": "current_salary",
+        "type": "DECIMAL(10,2)",
+        "description": "Current salary (optional)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP",
+        "description": "Registration timestamp"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP",
+        "description": "Last update timestamp"
+      },
+      {
+        "name": "status",
+        "type": "ENUM('active', 'archived', 'contacted') DEFAULT 'active'",
+        "description": "Candidate status for admin tracking"
+      }
+    ],
+    "indexes": [
+      "INDEX idx_job_category (job_category)",
+      "INDEX idx_city (city)",
+      "INDEX idx_experience (years_experience)",
+      "INDEX idx_created_at (created_at)",
+      "INDEX idx_status (status)"
+    ]
+  },
+  "form_design": {
+    "location": "candidate_registration.php (project root)",
+    "layout": "Single page responsive form",
+    "sections": [
+      {
+        "name": "Header",
+        "components": ["Logo", "Title", "Description"]
+      },
+      {
+        "name": "Personal Information",
+        "fields": ["Full Name", "Age", "Phone Number", "Gender", "City"]
+      },
+      {
+        "name": "Professional Information",
+        "fields": [
+          "Job Category (Dropdown)",
+          "Job Role (Dynamic Dropdown)",
+          "Years of Experience",
+          "Current Salary"
+        ]
+      },
+      {
+        "name": "Submit Section",
+        "components": ["Submit Button", "Success Message"]
+      }
+    ],
+    "validation": {
+      "client_side": "HTML5 + JavaScript validation",
+      "server_side": "PHP validation with sanitization",
+      "required_fields": [
+        "full_name",
+        "age",
+        "phone_number",
+        "gender",
+        "city",
+        "job_category",
+        "job_role",
+        "years_experience"
+      ]
+    },
+    "features": [
+      "Dynamic job role loading based on category",
+      "Mobile-first responsive design",
+      "Form progress indicators",
+      "Success/error messaging",
+      "Data sanitization and validation"
+    ]
+  },
+  "admin_dashboard": {
+    "location": "admin/candidate_dashboard.php",
+    "access_control": "Admin and Super Admin only",
+    "features": {
+      "data_display": {
+        "table_view": "Responsive Bootstrap table",
+        "pagination": "Server-side pagination (20 records per page)",
+        "sorting": "Sortable columns for all major fields"
+      },
+      "filtering_system": {
+        "search": "Global search across name, phone, city",
+        "job_category_filter": "Dropdown filter by job category",
+        "experience_range": "Min/Max years experience filter",
+        "salary_range": "Min/Max salary filter",
+        "city_filter": "Multi-select city filter",
+        "date_range": "Registration date range picker",
+        "status_filter": "Active/Archived/Contacted status filter"
+      },
+      "actions": {
+        "view_details": "Modal popup with full candidate information",
+        "edit_status": "Quick status update (Active/Archived/Contacted)",
+        "delete_record": "Soft delete with confirmation",
+        "bulk_actions": "Select multiple for bulk status updates",
+        "export_data": "Excel/CSV export with current filters applied"
+      },
+      "statistics": {
+        "total_candidates": "Total registrations count",
+        "today_registrations": "Today's new registrations",
+        "category_breakdown": "Chart showing distribution by job category",
+        "experience_distribution": "Chart showing experience levels",
+        "city_wise_data": "Top cities chart"
+      }
+    }
+  },
+  "integration_points": {
+    "main_dashboard": {
+      "file": "admin/main_dashboard.php",
+      "addition": "New card for 'Candidate Management' with icon and description",
+      "placement": "Add as 7th management section card"
+    },
+    "navigation": {
+      "breadcrumbs": "Main Dashboard > Candidate Management",
+      "back_links": "Return to main dashboard option"
+    }
+  },
+  "export_functionality": {
+    "formats": ["Excel (.xlsx)", "CSV (.csv)"],
+    "features": [
+      "Export current filtered data",
+      "Export all data",
+      "Custom date range export",
+      "Include/exclude specific columns",
+      "Formatted headers and data"
+    ],
+    "file_naming": "candidates_export_YYYY-MM-DD_HHMMSS"
+  },
+  "technical_specifications": {
+    "responsive_breakpoints": {
+      "mobile": "< 768px",
+      "tablet": "768px - 1024px",
+      "desktop": "> 1024px"
+    },
+    "performance": {
+      "pagination": "Server-side for large datasets",
+      "caching": "Optional query result caching",
+      "lazy_loading": "For job role dropdowns"
+    },
+    "security": {
+      "input_validation": "Server-side validation for all inputs",
+      "sql_injection": "Prepared statements for all queries",
+      "xss_protection": "HTML encoding for all outputs",
+      "csrf_protection": "Token-based form submission"
+    }
+  },
+  "implementation_phases": {
+    "phase_1": {
+      "name": "Database & Core Form",
+      "tasks": [
+        "Create candidates table",
+        "Build registration form",
+        "Implement form processing",
+        "Add basic validation"
+      ]
+    },
+    "phase_2": {
+      "name": "Admin Dashboard Basic",
+      "tasks": [
+        "Create candidate dashboard",
+        "Implement data display",
+        "Add basic filtering",
+        "Integrate with main dashboard"
+      ]
+    },
+    "phase_3": {
+      "name": "Advanced Features",
+      "tasks": [
+        "Add advanced filters",
+        "Implement export functionality",
+        "Add statistics dashboard",
+        "Implement bulk actions"
+      ]
+    },
+    "phase_4": {
+      "name": "Polish & Optimization",
+      "tasks": [
+        "Mobile optimization",
+        "Performance tuning",
+        "Error handling enhancement",
+        "Documentation"
+      ]
+    }
+  },
+  "testing_checklist": [
+    "Form validation (client & server side)",
+    "Database operations (insert, update, delete)",
+    "Admin dashboard functionality",
+    "Export features",
+    "Mobile responsiveness",
+    "Security testing",
+    "Performance testing"
+  ],
+  "deployment_notes": {
+    "requirements": ["PHP 7.4+", "MySQL 5.7+", "Bootstrap 5", "jQuery 3.6+"],
+    "files_to_create": [
+      "candidate_registration.php",
+      "admin/candidate_dashboard.php",
+      "admin/fetch_candidates.php",
+      "admin/export_candidates.php",
+      "admin/candidate_details.php",
+      "admin/delete_candidate.php",
+      "database/create_candidates_table.sql"
+    ],
+    "files_to_modify": ["admin/main_dashboard.php"]
+  }
+}

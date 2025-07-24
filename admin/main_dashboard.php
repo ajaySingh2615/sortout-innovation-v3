@@ -214,6 +214,38 @@ if ($_SESSION['role'] === 'super_admin') {
                 </div>
             </div>
         </div>
+
+        <!-- Candidate Management Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-success-subtle">
+                            <i class="fas fa-user-graduate text-success"></i>
+                        </div>
+                        <h5 class="card-title ms-3 mb-0">Candidate Management</h5>
+                    </div>
+                    <p class="card-text text-muted">Manage candidate registrations from QR code form submissions.</p>
+                    <a href="candidate_dashboard.php" class="btn btn-outline-success mt-auto">Manage Candidates</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Client Management Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-info-subtle">
+                            <i class="fas fa-handshake text-info"></i>
+                        </div>
+                        <h5 class="card-title ms-3 mb-0">Client Management</h5>
+                    </div>
+                    <p class="card-text text-muted">Manage client relationships and project collaborations.</p>
+                    <a href="add_client.php" class="btn btn-outline-info mt-auto">Manage Clients</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
