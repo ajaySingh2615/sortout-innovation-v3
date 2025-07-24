@@ -1,0 +1,697 @@
+/* ####################################### */
+/* Navigation Links */
+/* Navigation Container */
+.navbar {
+  height: 70px; /* Fixed navbar height */
+  position: sticky;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo img {
+  width: 200px; /* Increase this for bigger logo */
+  height: 80px; /* Maintain aspect ratio */
+  max-height: 50px; /* Restrict navbar height */
+  object-fit: contain; /* Ensures proper scaling */
+}
+
+/* Navbar Links */
+.navbar-links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.job-anchor {
+  text-decoration: none;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+  color: #d10000;
+  transform: scale(1.05);
+}
+
+.navbar-links ul li a.active {
+  color: #d10000;
+  border-bottom: 2px solid #d10000;
+}
+
+/* Call-to-Action (CTA) Button */
+.nav-cta {
+  background: #d10000;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #a00000;
+  transform: translateY(-3px);
+}
+
+/* Mobile Menu Button */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333333;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: #ffffff;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .navbar-links ul li {
+    text-align: left;
+  }
+
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+}
+
+/* Sticky Background on Scroll */
+.navbar.scrolled {
+  background: #f8f9fa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Alignment */
+@media (max-width: 767px) {
+  .navbar .container {
+    padding: 0 15px;
+  }
+
+  .navbar-links ul li a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Career Section */
+.career-section {
+  background: #ffffff;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+/* Heading Styling */
+.career-heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #d10000;
+  margin-bottom: 20px;
+}
+
+/* Description Styling */
+.career-description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button Styling */
+.career-btn .btn-primary {
+  background-color: #d10000;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.career-btn .btn-primary:hover {
+  background-color: #a00000;
+  transform: translateY(-3px);
+}
+
+/* Image Styling */
+.career-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); */
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .career-heading {
+    font-size: 2.4rem;
+  }
+
+  .career-description {
+    font-size: 1.1rem;
+  }
+
+  .career-btn .btn-primary {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .career-section {
+    text-align: center;
+    padding: 60px 15px;
+  }
+
+  .career-heading {
+    font-size: 2rem;
+  }
+
+  .career-description {
+    font-size: 1rem;
+  }
+
+  .career-btn {
+    display: inline-block;
+  }
+
+  .career-image {
+    max-width: 80%;
+    margin-top: 30px;
+  }
+}
+
+/* Core Values Section */
+/* Core Values Section */
+.core-values-section {
+  background-color: #d10000;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* Heading Styling */
+.core-values-heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+}
+
+/* Value Boxes */
+.value-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #d10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* padding-bottom: 20px; */
+}
+
+.value-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .core-values-heading {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .core-values-section {
+    padding: 60px 15px;
+  }
+
+  .core-values-heading {
+    font-size: 2rem;
+  }
+
+  .value-box {
+    font-size: 1rem;
+    padding: 15px;
+    margin-bottom: 20px; /* Adds extra spacing for small screens */
+  }
+}
+
+/* Open Positions Section */
+/* Open Positions Section */
+/* 🌟 Job Listing Section Styles */
+/* 🌟 Job Listing Section */
+/* Job Listing Section */
+.job-listing-section {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: red;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Job Filters */
+.job-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.job-filters input,
+.job-filters select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 220px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.job-filters input:focus,
+.job-filters select:focus {
+  border-color: red;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+.job-filters button {
+  background: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.job-filters button:hover {
+  background: darkred;
+}
+
+/* Job Listings Grid */
+.job-listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Job Card */
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  border-left: 5px solid red;
+}
+
+.job-card:hover {
+  transform: scale(1.02);
+}
+
+.job-card h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.job-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.job-card .apply-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.job-card .apply-btn:hover {
+  background: darkred;
+}
+
+/* Pagination */
+/* Pagination */
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures items stay in one row */
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* Previous & Next Buttons */
+.pagination-container button {
+  background: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination-container button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-container button:hover:not(:disabled) {
+  background: darkred;
+}
+
+/* Page Number Buttons */
+.page-number {
+  background: white;
+  color: red;
+  padding: 8px 15px;
+  border: 2px solid red;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 5px; /* Spacing between numbers */
+}
+
+/* Highlight Active Page */
+.page-number.active {
+  background: red;
+  color: white;
+  border: 2px solid darkred;
+  transform: scale(1.1);
+}
+
+/* Responsive Fix: Ensure Pagination is Always Horizontal */
+@media (max-width: 600px) {
+  .pagination-container {
+    flex-wrap: nowrap; /* Prevents vertical stacking */
+    overflow-x: auto; /* Allows scrolling on very small screens */
+    white-space: nowrap; /* Keeps numbers in one line */
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .page-number {
+    padding: 6px 12px; /* Adjusted size for smaller screens */
+    font-size: 0.9rem;
+    margin: 0 3px;
+  }
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .job-filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .job-filters input,
+  .job-filters select {
+    width: 100%;
+  }
+}
+
+/* 🌟 Job Application Section */
+.job-application-section {
+  background: linear-gradient(135deg, #d10000, #ff4b4b);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+}
+
+.job-application-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(255, 0, 0, 0.4);
+}
+
+/* ✅ Heading */
+.job-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ✅ Description */
+.job-description {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+/* ✅ Submit Button */
+.job-btn {
+  background: white;
+  color: #d10000;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+  outline: none;
+  display: inline-block;
+}
+
+.job-btn:hover {
+  background: #ffffffcc;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Remove Button Focus Outline */
+.job-btn:focus,
+.job-btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 🌟 Responsive Design */
+@media (max-width: 768px) {
+  .job-application-section {
+    padding: 60px 15px;
+  }
+
+  .job-heading {
+    font-size: 2rem;
+  }
+
+  .job-description {
+    font-size: 1rem;
+  }
+
+  .job-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+.footer-section {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section h4 {
+  color: #ff4b4b;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #ff4b4b;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4b4b;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-bottom ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom ul li a:hover {
+  color: #ff4b4b;
+}
+
+.footer-logo img {
+  padding-bottom: 15px;
+  width: 180px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Ensures responsiveness */
+  display: block;
+  margin: 0 auto; /* Centers the logo */
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    width: 140px; /* Smaller size for mobile */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .footer-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

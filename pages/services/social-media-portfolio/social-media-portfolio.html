@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>My Work - Hero Section</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="/pages/services/social-media-portfolio/social-media-portfolio.css"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+        <!-- Bootstrap Navbar with Enhanced Features -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+          <div class="container">
+              <!-- Logo with hover effect -->
+              <a class="navbar-brand position-relative" href="/">
+                  <div class="logo-container">
+                      <img src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" alt="SortOut Innovation" height="45" class="main-logo">
+                      <div class="logo-glow"></div>
+                  </div>
+              </a>
+  
+              <!-- Animated Mobile Toggle Button -->
+              <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="toggle-icon">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+              </button>
+  
+              <!-- Enhanced Navigation Links -->
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav align-items-center">
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/pages/about-page/about.html">About</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Career
+                          </a>
+                          <ul class="dropdown-menu animate slideIn">
+                              <li>
+                                  <a class="dropdown-item" href="/employee-job/index.php">Employee Jobs</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="/admin/artist-v2/public/index.php">Artist Jobs</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/modal_agency.php">Find Talent</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/pages/our-services-page/service.html">Services</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/pages/contact-page/contact-page.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/blog/index.php">Blog</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  
+      <!-- Spacer for fixed navbar -->
+      <!-- <div style="height: 76px;"></div> -->
+  
+      <style>
+      /* Modern Navbar Styles with Enhanced Features */
+      .navbar {
+          padding: 0.8rem 0;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          background: rgba(255, 255, 255, 0.98) !important;
+          backdrop-filter: blur(10px);
+      }
+  
+      /* Logo Container with Glow Effect */
+      .logo-container {
+          position: relative;
+          display: inline-block;
+      }
+  
+      .logo-glow {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle, rgba(209, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+      }
+  
+      .navbar-brand:hover .logo-glow {
+          opacity: 1;
+      }
+  
+      /* Navigation Links */
+      .nav-link {
+          font-weight: 400;
+          color: #2c3e50 !important;
+          position: relative;
+          transition: all 0.3s ease;
+          font-size: 15px !important;
+          letter-spacing: 1px;
+      }
+  
+      .nav-link::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 50%;
+          background: linear-gradient(90deg, #d10000, #ff4b4b);
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+          border-radius: 2px;
+      }
+  
+      .nav-link:hover::after {
+          width: calc(100% - 1.5rem);
+      }
+  
+      .nav-link:hover {
+          color: #d10000 !important;
+      }
+  
+      /* Enhanced Dropdown Styles */
+      .dropdown-menu {
+          border: none;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          border-radius: 12px;
+          padding: 0.8rem 0.5rem;
+          margin-top: 0.5rem;
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(10px);
+      }
+  
+      .dropdown-item {
+          padding: 0.8rem 1.2rem;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          color: #2c3e50;
+          font-size: 14px;
+      }
+  
+      .dropdown-item:hover {
+          background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+          color: #d10000;
+          transform: translateX(5px);
+      }
+  
+      /* Animated Mobile Toggle Button */
+      .toggle-icon {
+          width: 24px;
+          height: 20px;
+          position: relative;
+          cursor: pointer;
+      }
+  
+      .toggle-icon span {
+          display: block;
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background: #2c3e50;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+      }
+  
+      .toggle-icon span:first-child {
+          top: 0;
+      }
+  
+      .toggle-icon span:nth-child(2) {
+          top: 9px;
+      }
+  
+      .toggle-icon span:last-child {
+          top: 18px;
+      }
+  
+      .navbar-toggler[aria-expanded="true"] .toggle-icon span:first-child {
+          transform: rotate(45deg);
+          top: 9px;
+      }
+  
+      .navbar-toggler[aria-expanded="true"] .toggle-icon span:nth-child(2) {
+          opacity: 0;
+      }
+  
+      .navbar-toggler[aria-expanded="true"] .toggle-icon span:last-child {
+          transform: rotate(-45deg);
+          top: 9px;
+      }
+  
+      /* Mobile Styles */
+      @media (max-width: 991px) {
+          .navbar-collapse {
+              background: rgba(255, 255, 255, 0.98);
+              backdrop-filter: blur(10px);
+              padding: 1rem;
+              border-radius: 16px;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+              margin-top: 1rem;
+          }
+  
+          .nav-link {
+              padding: 0.8rem 1.2rem !important;
+              border-radius: 8px;
+          }
+  
+          .nav-link:hover {
+              background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+          }
+  
+          .nav-link::after {
+              display: none;
+          }
+  
+          .dropdown-menu {
+              box-shadow: none;
+              padding-left: 1rem;
+              background: transparent;
+          }
+  
+          .dropdown-item:hover {
+              transform: none;
+          }
+      }
+      </style>
+  
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbar = document.querySelector('.navbar');
+          let lastScroll = 0;
+  
+          // Enhanced scroll behavior
+          window.addEventListener('scroll', () => {
+              const currentScroll = window.pageYOffset;
+              
+              if (currentScroll > 50) {
+                  navbar.style.padding = "0.6rem 0";
+                  navbar.style.boxShadow = "0 5px 30px rgba(0,0,0,0.08)";
+              } else {
+                  navbar.style.padding = "0.8rem 0";
+                  navbar.style.boxShadow = "none";
+              }
+  
+              // Smooth hide/show on scroll
+              if (currentScroll > lastScroll && currentScroll > 100) {
+                  navbar.style.transform = 'translateY(-100%)';
+              } else {
+                  navbar.style.transform = 'translateY(0)';
+              }
+  
+              lastScroll = currentScroll;
+          });
+  
+          // Handle mobile menu toggle animation
+          const navbarToggler = document.querySelector('.navbar-toggler');
+          navbarToggler.addEventListener('click', function() {
+              const isExpanded = this.getAttribute('aria-expanded') === 'true';
+              this.setAttribute('aria-expanded', !isExpanded);
+          });
+      });
+      </script>
+
+    <!-- Hero Section -->
+    <div class="container hero-section">
+      <div class="row align-items-center">
+        <!-- Left Content -->
+        <div class="col-md-6">
+          <div class="hero-content">
+            <h1 class="hero-title">Your Social Media Solution 🚀</h1>
+            <p class="hero-subtitle">
+              We are ready to plan, execute, and track social media marketing
+              campaigns. Customize and craft your content from multiple sources.
+            </p>
+
+            <div class="mt-4">
+              <a href="#work"
+                ><button class="btn btn-danger">Get Started</button></a
+              >
+
+              <!-- <button class="btn btn-outline">🎬 Watch Video</button> -->
+            </div>
+
+            <!-- Brand Logos -->
+            <div class="brand-logos mt-4">
+              <a class="brand-logos-a" href="https://sortoutinnovation.com/">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                  alt="Google"
+                />
+              </a>
+              <a
+                class="brand-logos-a"
+                href="https://www.facebook.com/Sortout.Innovation/"
+                ><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png"
+                  alt="Meta"
+              /></a>
+
+              <a
+                class="brand-logos-a"
+                href="https://www.instagram.com/sortout_innovation/"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png?20200512141346"
+                  alt="Adobe"
+                />
+              </a>
+
+              <a
+                class="brand-logos-a"
+                href="https://www.youtube.com/watch?v=tw-xk-Pb-zA"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/YouTube_full-color_icon_%282024%29.svg/640px-YouTube_full-color_icon_%282024%29.svg.png"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="col-md-6 text-center">
+          <div class="position-relative">
+            <img
+              src="/images/portfolio/socail-media-img/hero-img.png"
+              alt="Social Media Expert"
+              class="hero-image"
+            />
+
+            <!-- Floating Elements -->
+            <div class="floating-badge badge-top-left">Best Agency</div>
+            <div class="floating-badge badge-bottom-right">24/7 Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side - Image/Logo -->
+          <div class="col-md-5 text-center">
+            <img
+              src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+              alt="Sortout Innovation"
+              class="about-image"
+            />
+          </div>
+
+          <!-- Right Side - Company Info -->
+          <div class="col-md-7">
+            <h2 class="about-title">About Sortout Innovation</h2>
+            <p class="about-subtitle">
+              We are a results-driven social media marketing agency, helping
+              brands create, engage, and grow through innovative digital
+              strategies.
+            </p>
+
+            <!-- Company Services -->
+            <ul class="about-services">
+              <li>Social Media Strategy</li>
+              <li>Content Creation & Branding</li>
+              <li>Paid Advertising & Campaigns</li>
+              <li>Analytics & Performance Tracking</li>
+            </ul>
+
+            <!-- Social Media Links -->
+            <div class="social-icons">
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+
+            <!-- CTA Button -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="work">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="portfolio-title">OUR WORK</h2>
+          <p class="portfolio-subtitle">
+            See how we’ve helped brands grow with creative social media
+            campaigns.
+          </p>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="portfolio-item">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-logo.jpg"
+                alt="Project 1"
+              />
+              <div class="portfolio-overlay">
+                <h4>Universal Health Care Center</h4>
+                <p>
+                  Trusted provider of high-quality supplement products and
+                  sports apparel.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="portfolio-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueAssetsLogo.jpg"
+                alt="Project 3"
+              />
+              <div class="portfolio-overlay">
+                <h4>TrueAsset Consultancy</h4>
+                <p>
+                  Leading real estate firm specializing in commercial,
+                  residential, and office spaces.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="portfolio-item">
+              <img
+                src="/images/portfolio/socail-media-img/ed-logo.png"
+                alt="Project 2"
+              />
+              <div class="portfolio-overlay">
+                <h4>Earndigitally</h4>
+                <p>
+                  Content creation and digital marketing agency specializing in
+                  delivering strategic marketing solutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <!-- <div class="text-center mt-4">
+          <button class="btn btn-primary">View Full Portfolio</button>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="uhcc-case-study">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side: Case Study Details -->
+          <div class="col-md-6 case-study-content">
+            <h2 class="case-study-title uhcc-color">
+              Universal Health Care Center
+            </h2>
+            <p class="case-study-industry">
+              Industry: Healthcare & Active Wear
+            </p>
+            <p class="case-study-description">
+              We helped UHCC enhance their online presence, increase engagement,
+              and drive patient interactions through strategic social media
+              marketing.
+            </p>
+
+            <ul class="case-study-strategy">
+              <li>
+                <strong>Audience Target:</strong> Optimized content for the
+                right patient demographics.
+              </li>
+              <li>
+                <strong>Content Strategy:</strong> Created engaging healthcare
+                posts to build trust.
+              </li>
+              <li>
+                <strong>Paid Ads:</strong> Facebook & Instagram ads increased
+                patient inquiries.
+              </li>
+              <li>
+                <strong>Community Engagement:</strong> Actively managed comments
+                & messages.
+              </li>
+              <li>
+                <strong>Performance Analytics:</strong> Optimized content & ad
+                performance.
+              </li>
+            </ul>
+
+            <h4 class="case-study-achievements">Key Achievements:</h4>
+            <ul class="achievements-list">
+              <li>
+                ✔
+                <span class="achievements-list-color-black"
+                  >200% growth in social media followers.</span
+                >
+              </li>
+              <li>
+                ✔
+                <span class="achievements-list-color-black"
+                  >Doubled engagement, boosting patient inquiries.</span
+                >
+              </li>
+              <li>
+                ✔
+                <span class="achievements-list-color-black"
+                  >80% increase in lead conversion.</span
+                >
+              </li>
+              <li>
+                ✔
+                <span class="achievements-list-color-black"
+                  >150% more Facebook & Instagram reach.</span
+                >
+              </li>
+              <li>
+                ✔
+                <span class="achievements-list-color-black"
+                  >Strong brand credibility in healthcare.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Side: Social Media Preview -->
+          <div class="col-md-6">
+            <div
+              id="socialMediaCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="/images/portfolio/socail-media-img/ugcc-img-1.webp"
+                    class="d-block w-100"
+                    alt="Facebook Page"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="/images/portfolio/socail-media-img/ugcc-img-2.webp"
+                    class="d-block w-100"
+                    alt="Instagram Page"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UHCC Section -->
+    <section class="live-streaming-container background-uhcc">
+      <div class="live-streaming-content">
+        <h2 class="live-streaming-title">
+          <span class="highlight-text red-earn">UHCC </span> Campaign Highlights
+          <br />
+        </h2>
+
+        <!-- Image Slider (Before & After) -->
+        <div class="case-study-slider">
+          <div class="slider">
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-1.webp"
+                alt="Campaign 1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-2.webp"
+                alt="Campaign 2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-3.webp"
+                alt="Campaign 3"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-4.webp"
+                alt="Campaign 4"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-5.webp"
+                alt="Campaign 4"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-6.webp"
+                alt="Campaign 4"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-1.webp"
+                alt="Campaign 4"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-2.webp"
+                alt="Campaign 4"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="/images/portfolio/socail-media-img/ucc-img/uhcc-icons-image-3.webp"
+                alt="Campaign 4"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox Popup -->
+        <div id="lightbox" class="lightbox">
+          <span class="close-btn" onclick="closeLightbox()">&times;</span>
+          <img id="lightbox-img" src="" alt="Expanded Image" />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Auto-scroll the image slider
+        let slider = document.querySelector(".slider");
+        let scrollAmount = 0;
+        let scrollStep = 250; // Image width
+
+        function autoScrollSlider() {
+          if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+            scrollAmount = 0;
+          } else {
+            scrollAmount += scrollStep;
+          }
+          slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
+        }
+
+        let sliderInterval = setInterval(autoScrollSlider, 2000);
+
+        // Pause scrolling when hovering over images
+        document.querySelectorAll(".slide").forEach((slide) => {
+          slide.addEventListener("mouseenter", () =>
+            clearInterval(sliderInterval)
+          );
+          slide.addEventListener("mouseleave", () => {
+            sliderInterval = setInterval(autoScrollSlider, 2000);
+          });
+        });
+      });
+    </script>
+
+    <section class="earndigitally-case-study">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Side: Before & After Instagram Profile -->
+          <!-- Left Side: Before & After Instagram Profile -->
+          <div class="col-md-6">
+            <div
+              class="flip-container"
+              onmouseover="hoverEffect(true)"
+              onmouseout="hoverEffect(false)"
+              onclick="flipCard()"
+            >
+              <div class="flipper">
+                <!-- Front (Before Image) -->
+                <div class="front">
+                  <img
+                    src="/images/portfolio/socail-media-img/earnDigital/earnDigital-img-1.webp"
+                    alt="Before Instagram Profile"
+                  />
+                  <div class="flip-text">Click to Flip</div>
+                </div>
+                <!-- Back (After Image) -->
+                <div class="back">
+                  <img
+                    src="/images/portfolio/socail-media-img/earnDigital/earnDigital-img-2.webp"
+                    alt="After Instagram Profile"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Company Info & Description -->
+          <div class="col-md-6 case-study-content">
+            <h2 class="case-study-title-earn">Earndigitally</h2>
+            <p class="case-study-industry">
+              Industry: Digital Marketing & Content Creation
+            </p>
+            <p class="case-study-description">
+              We helped Earndigitally improve their online branding, engagement,
+              and content strategy. Our goal was to enhance their social media
+              presence through creative content and targeted strategies.
+            </p>
+
+            <ul class="case-study-strategy">
+              <li>
+                ✅ <strong>Profile Enhancement:</strong> Optimized Instagram
+                profile layout & aesthetics.
+              </li>
+              <li>
+                ✅ <strong>Content Strategy:</strong> Created engaging posts &
+                reels.
+              </li>
+              <li>
+                ✅ <strong>Ad Campaigns:</strong> Managed Facebook & Instagram
+                ads.
+              </li>
+              <li>
+                ✅ <strong>Audience Growth:</strong> Increased followers &
+                engagement.
+              </li>
+              <li>
+                ✅ <strong>Performance Analytics:</strong> Regular insights &
+                strategy adjustments.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- earndigitally Section -->
+    <section class="live-streaming-container background-earndigitally">
+      <div class="live-streaming-content">
+        <h2 class="live-streaming-title">
+          <span class="highlight-text red-earn">Earndigitally</span> Work
+          Portfolio.
+          <br />
+        </h2>
+
+        <!-- Image Album Section -->
+        <div class="image-album">
+          <div class="album-grid">
+            <div
+              class="album-item"
+              onclick="openLightbox('/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-1.webp')"
+            >
+              <img
+                src="/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-1.webp"
+                alt="Work 1"
+              />
+              <div class="overlay"><span>Social Media Campaign</span></div>
+            </div>
+            <div
+              class="album-item"
+              onclick="openLightbox('/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-2.webp')"
+            >
+              <img
+                src="/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-2.webp"
+                alt="Work 2"
+              />
+              <div class="overlay"><span>Brand Awareness</span></div>
+            </div>
+            <div
+              class="album-item"
+              onclick="openLightbox('/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-3.webp')"
+            >
+              <img
+                src="/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-3.webp"
+                alt="Work 3"
+              />
+              <div class="overlay"><span>Marketing Strategy</span></div>
+            </div>
+            <div
+              class="album-item"
+              onclick="openLightbox('/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-4.webp')"
+            >
+              <img
+                src="/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-4.webp"
+                alt="Work 4"
+              />
+              <div class="overlay"><span>Website Development</span></div>
+            </div>
+            <div
+              class="album-item"
+              onclick="openLightbox('/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-5.webp')"
+            >
+              <img
+                src="/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-5.webp"
+                alt="Work 5"
+              />
+              <div class="overlay"><span>SEO Optimization</span></div>
+            </div>
+            <div
+              class="album-item"
+              onclick="openLightbox('/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-6.webp')"
+            >
+              <img
+                src="/images/portfolio/socail-media-img/earnDigital/album/Earndigitally-image-album-6.webp"
+                alt="Work 6"
+              />
+              <div class="overlay"><span>Content Marketing</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox Popup -->
+        <div id="lightbox" class="lightbox">
+          <span class="close-btn" onclick="closeLightbox()">&times;</span>
+          <img id="lightbox-img" src="" alt="Expanded Image" />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Flip Effect on Click
+      function flipCard() {
+        document.querySelector(".flipper").classList.toggle("flipped");
+      }
+
+      // Hover Effect to Pop Out the Image
+      function hoverEffect(isHover) {
+        const container = document.querySelector(".flip-container");
+        if (isHover) {
+          container.classList.add("hovered");
+        } else {
+          container.classList.remove("hovered");
+        }
+      }
+
+      // Ensure Lightbox is Hidden on Page Load
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("lightbox").style.display = "none";
+      });
+
+      // Function to open lightbox and display clicked image
+      function openLightbox(imageSrc) {
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+
+        lightboxImg.src = imageSrc;
+        lightbox.style.display = "flex"; // Show the lightbox
+      }
+
+      // Function to close lightbox when clicked outside or on close button
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    </script>
+
+    <!-- TrueAsset Consultancy Section -->
+    <section class="trueasset-case-study">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="case-study-title">TrueAsset Consultancy</h2>
+          <p class="case-study-industry">
+            Industry: Real Estate & Digital Growth
+          </p>
+          <p class="case-study-description">
+            Our expert strategies helped TrueAsset Consultancy achieve
+            outstanding online growth within just 3 months. From increasing
+            followers and engagement to building a credible online presence, we
+            delivered measurable success.
+          </p>
+        </div>
+
+        <!-- Before & After Growth Section -->
+        <div class="growth-section">
+          <!-- Left Side: Before Instagram Growth -->
+          <div class="growth-box">
+            <h3>BEFORE</h3>
+            <img
+              src="/images/portfolio/socail-media-img/trueasset/before-after/before.webp"
+              alt="Before Growth"
+              class="lightbox-trigger"
+              data-image="/images/portfolio/socail-media-img/trueasset/before-after/before.webp"
+            />
+          </div>
+
+          <!-- Animated Arrow -->
+          <div class="growth-arrow">
+            <span class="growth-arrow-icon"
+              ><span class="three-grow">3</span> <br />
+              MONTHS GROWTH</span
+            >
+          </div>
+
+          <!-- Right Side: After Instagram Growth -->
+          <div class="growth-box">
+            <h3>AFTER</h3>
+            <img
+              src="/images/portfolio/socail-media-img/trueasset/before-after/after.webp"
+              alt="After Growth"
+              class="lightbox-trigger"
+              data-image="/images/portfolio/socail-media-img/trueasset/before-after/after.webp"
+            />
+          </div>
+        </div>
+
+        <!-- Performance Growth (Analytics Section) -->
+        <div class="performance-section">
+          <h3 class="performance-title">PERFORMANCE GROWTH</h3>
+          <p><img src="" alt="" /></p>
+
+          <!-- First Row (3 Insights with Arrows) -->
+          <div class="performance-grid">
+            <div class="performance-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/true/1aa.webp"
+                alt="Performance Data 1"
+              />
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <div class="performance-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/true/1b.webp"
+                alt="Performance Data 2"
+              />
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <div class="performance-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/true/1c.webp"
+                alt="Performance Data 3"
+              />
+            </div>
+          </div>
+
+          <!-- Downward Arrow -->
+          <i class="fa-solid fa-arrow-down-long arrow-down"></i>
+
+          <!-- Second Row (2 Insights with Arrows) -->
+          <div class="performance-grid">
+            <div class="performance-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/true/1d.webp"
+                alt="Performance Data 4"
+              />
+            </div>
+            <i class="fa-solid fa-arrow-right arrow-icon"></i>
+            <div class="performance-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/true/1e.webp"
+                alt="Performance Data 5"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Instagram Story Album (Full Width, Responsive) -->
+        <div class="instagram-album">
+          <h3 class="album-title">Instagram Stories Showcase 📸</h3>
+          <div class="story-container">
+            <div class="story-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-story/trueassetimg-1.webp"
+                alt="Story 1"
+                class="lightbox-trigger"
+              />
+            </div>
+            <div class="story-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-story/trueassetimg-2.webp"
+                alt="Story 2"
+                class="lightbox-trigger"
+              />
+            </div>
+            <div class="story-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-story/trueassetimg-3.webp"
+                alt="Story 3"
+                class="lightbox-trigger"
+              />
+            </div>
+            <div class="story-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-story/trueassetimg-4.webp"
+                alt="Story 4"
+                class="lightbox-trigger"
+              />
+            </div>
+            <div class="story-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-story/trueassetimg-5.webp"
+                alt="Story 5"
+                class="lightbox-trigger"
+              />
+            </div>
+            <div class="story-item">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-story/trueassetimg-6.webp"
+                alt="Story 6"
+                class="lightbox-trigger"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Streaming Portfolio Section -->
+    <section class="live-streaming-container">
+      <div class="live-streaming-content">
+        <h2 class="live-streaming-title">
+          We deliver the best
+          <span class="highlight-text">Social Media Posts</span> content.
+          <br />
+          And we will do the same for you.
+        </h2>
+
+        <!-- Swiper Slider -->
+        <div class="swiper liveSwiper">
+          <div class="swiper-wrapper">
+            <!-- Image Slides -->
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-1.webp"
+                alt="Post 1"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-2.webp"
+                alt="Post 2"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-3.webp"
+                alt="Post 3"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-4.webp"
+                alt="Post 4"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-5.webp"
+                alt="Post 5"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-6.webp"
+                alt="Post 6"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-7.webp"
+                alt="Post 7"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-8.webp"
+                alt="Post 8"
+              />
+            </div>
+            <div class="swiper-slide ls-slide">
+              <img
+                src="/images/portfolio/socail-media-img/trueasset/instagram-post/instagram-post-9.webp"
+                alt="Post 9"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Initialize Swiper
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".liveSwiper", {
+          slidesPerView: 4, // Show 4 images at a time
+          spaceBetween: 15, // Spacing between images
+          loop: true, // Infinite loop
+          autoplay: {
+            delay: 1000, // Auto-scroll every 2 seconds
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+
+          // Responsive Breakpoints
+          breakpoints: {
+            1200: { slidesPerView: 4 }, // Large screens
+            992: { slidesPerView: 3 }, // Tablets
+            768: { slidesPerView: 2 }, // Small tablets
+            480: { slidesPerView: 1 }, // Mobile
+          },
+        });
+      });
+    </script>
+
+    <!-- CTA (Call-To-Action) Section -->
+    <section class="cta-section">
+      <h2 class="cta-title">Get in Touch with Us 📞</h2>
+      <div class="cta-container">
+        <!-- Phone Contact -->
+        <div class="cta-box">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Call Us</h3>
+          <p><a href="tel:+919818559036">+91 9818559036</a></p>
+        </div>
+
+        <!-- Email Contact -->
+        <div class="cta-box">
+          <i class="fas fa-envelope"></i>
+          <h3>Email Us</h3>
+          <p>
+            <a href="mailto:info@sortoutinnovation.com"
+              >info@sortoutinnovation.com</a
+            >
+          </p>
+        </div>
+
+        <!-- Address Contact -->
+        <div class="cta-box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Visit Us</h3>
+          <p>Spaze i-Tech Park, Gurugram, India</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+

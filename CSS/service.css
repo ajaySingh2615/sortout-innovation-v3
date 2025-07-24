@@ -1,0 +1,961 @@
+/* Root Variables for Styling */
+:root {
+  --primary-color: #c90001; /* Red for accents */
+  --secondary-color: #ffffff; /* White for contrast */
+  --dark-color: #1c1c1c; /* Deep black for text */
+  --text-color: #000000; /* Standard black */
+  --font-family-main: "Roboto", sans-serif; /* Main font */
+  --border-radius: 12px; /* Rounded corners */
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* General Reset */
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Section Background */
+.bg_smm {
+  background-color: #f1f1f1; /* Light gray background */
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* Container with responsive widths */
+.container {
+  padding: 50px 0px;
+}
+
+.col-md-12 {
+  padding: 0px;
+}
+
+/* Row Layout */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Marquee Text */
+/* Modern Marquee Text Styling */
+
+a {
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #970001; /* Slightly darker red */
+  transform: scale(1.05);
+}
+
+/* ####################################### */
+/* Navigation Links */
+/* Navigation Container */
+.navbar {
+  position: fixed; /* Keeps navbar at the top during scroll */
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Universal Container Settings */
+.container {
+  max-width: 1200px; /* Restricts container width for consistent layout */
+  margin: 0 auto; /* Centers content */
+  padding: 0 15px; /* Adds spacing to prevent edge overflow */
+}
+
+.navbar .container {
+  max-width: 1200px; /* Same width as hero and about sections */
+  padding: 0 15px; /* Prevents overflow */
+  margin: 0 auto; /* Centers the content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Navbar Links */
+.navbar-links ul {
+  display: flex;
+  gap: 20px; /* Reduced gap to prevent stretching */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+  color: #d10000;
+  transform: scale(1.05);
+}
+
+.navbar-links ul li a.active {
+  color: #d10000;
+  border-bottom: 2px solid #d10000;
+}
+
+/* Mobile Hamburger Menu */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333333;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 15px; /* Consistent padding on medium devices */
+  }
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 60px; /* Just below the navbar */
+    right: 0;
+    background: #ffffff;
+    width: 100%;
+    max-width: 300px; /* Dropdown width for mobile */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .navbar-links ul li {
+    text-align: left;
+  }
+
+  .navbar-links.active {
+    transform: translateX(0); /* Dropdown becomes visible */
+  }
+}
+
+/* Sticky Background on Scroll */
+.navbar.scrolled {
+  background: #f8f9fa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Alignment */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px; /* Consistent padding on medium devices */
+  }
+
+  .navbar .container {
+    padding: 0 15px;
+  }
+
+  .navbar-links ul li a {
+    font-size: 0.9rem; /* Smaller font size for compact view */
+    padding: 8px 10px;
+  }
+}
+
+/* FOOTER */
+/* ################################################# */
+/* footer styles */
+.container-fluid.background {
+  background-color: #1a1a1a; /* Dark theme background */
+  color: white; /* White text for contrast */
+  padding: 20px 0;
+}
+
+.footer_p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.para_footer {
+  margin: 5px 0;
+}
+
+.footerlinks {
+  font-size: 14px;
+  margin: 0;
+  text-decoration: none;
+}
+
+a.white {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a.white:hover {
+  color: #ff4d4d; /* Highlight color on hover */
+}
+
+.pd-10 {
+  padding: 10px;
+}
+
+.center-mb {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer_img {
+  width: 20px;
+  margin-top: 5px;
+}
+
+.col-md-2,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-8 {
+  margin-bottom: 15px; /* Add space between columns on smaller screens */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .col-md-2,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Down Triangle */
+/* Floating Social Media Background */
+/* Floating Social Media Background */
+/* Floating Social Media Bar */
+/* Floating Social Media Bar */
+.container-fluid.fsbg {
+  background: #c90001; /* Solid red background */
+  padding: 10px 20px; /* Slight padding for minimal space */
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Center the content */
+  align-items: center;
+  border-radius: 30px 30px 0 0; /* Rounded top corners */
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+}
+
+/* Social Media Icon */
+.wp-idget {
+  margin: 0 12px; /* Space between icons */
+  width: 40px; /* Consistent size */
+  height: 40px; /* Consistent size */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.wp-idget:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Footer Strip Text */
+.footer-strip {
+  margin-top: 10px; /* Space between the icons and text */
+  font-size: 1rem; /* Compact font size */
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+
+/* Footer Heading Link */
+.footer-strip-heading a {
+  color: #ffd0d0; /* Light red for the link */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-strip-heading a:hover {
+  color: white; /* White text on hover */
+  text-decoration: underline;
+}
+
+/* career */
+/*  */
+/*  */
+/*  */
+
+/* Open Positions */
+/* Icon style */
+.fas.fa-long-arrow-alt-right {
+  font-size: 30px; /* Adjust icon size */
+  color: black; /* Black color for the icon */
+  background-color: #fff; /* Dark background for the icon */
+  padding: 10px; /* Padding around the icon */
+  border-radius: 50%; /* Circular background */
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.fas.fa-long-arrow-alt-right:hover {
+  transform: translateX(5px); /* Move the icon to the right on hover */
+  color: #fff; /* Change icon color to white on hover */
+  background-color: #fb0000; /* Change background to red on hover */
+}
+
+.positon-anchor {
+  text-decoration: none;
+}
+
+.position-box-red {
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-color: #fb0000;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin: 0px 10px 0px 10px;
+  padding: 5px 40px 15px 40px;
+  border-radius: 11px 11px 11px 11px;
+}
+
+.position-box {
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-color: #252525;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  margin: 0px 10px 0px 10px;
+  padding: 5px 40px 15px 40px;
+  border-radius: 11px 11px 11px 11px;
+}
+
+.divider-sec {
+  padding: 22px 0px;
+  border-bottom: 3px solid;
+  color: black;
+}
+
+i.fas.fa-location-arrow {
+  margin-right: 5px;
+}
+i.fas.fa-long-arrow-alt-right {
+  font-size: 26px;
+  margin-top: 30px;
+}
+.red {
+  color: #fb0000 !important;
+}
+.red-background {
+  background-color: red;
+}
+
+.heading-title-position-white {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.red-title {
+  color: #fb0000 !important;
+}
+
+.black-title {
+  color: #000;
+}
+
+/* Looking for a change section */
+
+/* HERO SECTION STYLE */
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #f9f9f9 0%, #f8f8f8 100%);
+
+  color: #000;
+  padding: 20px 20px;
+  position: relative;
+}
+
+.hero-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Left Column (Image) */
+.hero-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero-image img {
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); */
+}
+
+/* Right Column (Text Content) */
+.hero-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.hero-header .hero-icon {
+  width: 22px;
+  height: auto;
+}
+
+.hero-title-heading {
+  color: #c90001;
+  font-family: "Poppins", Sans-serif;
+  font-size: 110px;
+  font-weight: 800;
+  line-height: 1em;
+  letter-spacing: 0px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+
+  .hero-title-heading {
+    font-size: 80px; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 100vh;
+  }
+  .hero-title-heading {
+    font-size: 50px; /* Even smaller font size for mobile devices */
+  }
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-primary {
+  background-color: #c90001; /* Red background */
+  color: white;
+  border: none;
+  padding: 18px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+  background: #ff4a39;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image,
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-button {
+    font-size: 16px;
+  }
+}
+
+.hire-us {
+  color: #3540e8;
+  font-family: "Inter", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  letter-spacing: 1px;
+}
+
+.hero-description-heading {
+  color: #6b6e71;
+  font-family: "Inter", Sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8em;
+}
+
+.hero-description-heading {
+  padding-top: 30px;
+}
+
+.hero-description-heading {
+  padding-bottom: 30px;
+}
+
+/* who we are section */
+
+/* About Us Section */
+.about-us {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.about-us h2 {
+  /* Secondary Heading: Who We Are */
+  font-size: 3.8rem; /* Larger font for prominence */
+  color: #000; /* Black color */
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.about-us h3 {
+  /* Third Heading: We are the best business consulting agency */
+  font-size: 1.8rem; /* Adjusted for hierarchy */
+  color: #800000; /* Darker red for contrast */
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.about-us p {
+  /* Paragraph: Description text */
+  font-size: 1.1rem; /* Slightly larger for readability */
+  color: #666;
+  line-height: 1.8; /* Improved line spacing */
+  margin-bottom: 30px;
+}
+
+/* Services Section */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 2px solid #b30000; /* Red border */
+  border-radius: 8px;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.3)) sepia(1) saturate(2)
+    hue-rotate(-40deg);
+}
+
+.service-card h3 {
+  /* Card Heading */
+  font-size: 1.5rem; /* Adjusted font size */
+  color: #b30000; /* Red color */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.service-card p {
+  /* Card Paragraph */
+  font-size: 1rem; /* Larger for better readability */
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+  /* About Us Section */
+  .about-us h2 {
+    font-size: 2.8rem; /* Smaller font for headings */
+  }
+
+  .about-us h3 {
+    font-size: 1.5rem; /* Adjusted for smaller screens */
+  }
+
+  .about-us p {
+    font-size: 1rem; /* Adjusted for better readability on small screens */
+  }
+
+  /* Services Section */
+  .services-container {
+    justify-content: center; /* Center cards on smaller devices */
+    padding: 20px 10px;
+  }
+
+  .service-card {
+    max-width: 90%; /* Increase card width on smaller screens */
+    margin-bottom: 20px; /* Add spacing between cards */
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem; /* Adjusted heading size for better readability */
+  }
+
+  .service-card p {
+    font-size: 0.95rem; /* Slightly smaller paragraph text */
+  }
+}
+
+/* Responsive Design for Very Small Devices (e.g., mobile phones) */
+@media (max-width: 480px) {
+  /* About Us Section */
+  .about-us h2 {
+    font-size: 2.2rem; /* Smaller font for mobile screens */
+  }
+
+  .about-us h3 {
+    font-size: 1.3rem; /* Further reduced heading size */
+  }
+
+  .about-us p {
+    font-size: 0.95rem; /* Smaller text for mobile screens */
+  }
+
+  /* Services Section */
+  .service-card {
+    max-width: 100%; /* Full width for mobile screens */
+  }
+
+  .service-card img {
+    width: 60px; /* Smaller icon for mobile screens */
+    height: 60px;
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem; /* Smaller card headings */
+  }
+
+  .service-card p {
+    font-size: 0.9rem; /* Smaller paragraph text for mobile */
+  }
+}
+
+/* SERVICES IMGS SECTION */
+/* ####################### */
+/* ####################### */
+/* Portfolio Section */
+/* Section Style */
+/* Section Style */
+/* Section Style */
+/* General Styling for Services Section */
+.services {
+  background-color: #fb0000;
+}
+
+.sec-para,
+.sec-heading {
+  color: #fff !important;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+  gap: 30px; /* Spacing between the items */
+}
+
+.service-item {
+  background-color: #fff; /* Light background for each service item */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.service-item:hover {
+  transform: translateY(-10px); /* Hover effect for slight lifting */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  color: #b33000;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.view-more {
+  color: #000; /* Blue color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold text */
+  padding: 5px 10px; /* Add padding for spacing */
+  border: 2px solid #b30000; /* Blue border */
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.view-more:hover {
+  background-color: #b30000; /* Change background color on hover */
+  color: #fff; /* Change text color to white */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Optional: Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Stacks the items vertically on smaller screens */
+  }
+}
+
+/* ########################## */
+/* Why Choose us */
+/* ######################## */
+/* General styling for the columns */
+/* General Styling for the Section */
+/* General Styling for the Section */
+/* General Styling for the Section */
+/* General Styling for the Section */
+.content-section {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Text and Image Column */
+.text-image-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.text-column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-heading {
+  font-size: 3.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-subheading {
+  font-size: 1.8rem;
+  color: #800000;
+  margin-bottom: 15px;
+}
+
+.section-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+}
+
+.image-column {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-column img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* Carousel Section with Cards */
+.carousel-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-widget {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.carousel-card {
+  flex: 1 1 22%;
+  max-width: 22%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.carousel-card:hover {
+  transform: translateY(-10px);
+}
+
+.carousel-icon {
+  font-size: 3rem;
+  color: #c90001;
+  margin-bottom: 20px;
+}
+
+.carousel-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.carousel-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content-section {
+    padding: 50px 15px;
+  }
+
+  .text-image-column {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-column,
+  .image-column {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .carousel-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .carousel-container {
+    gap: 20px;
+  }
+}

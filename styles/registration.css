@@ -1,0 +1,1075 @@
+/* ===============================================
+   REGISTRATION PAGE STYLES
+   =============================================== */
+
+/* Bootstrap-Tailwind Compatibility Fixes */
+.navbar * {
+    box-sizing: border-box;
+}
+
+/* Ensure body doesn't have conflicting padding */
+body.bg-gray-100 {
+    padding-top: 75px !important;
+}
+
+/* Fix potential Bootstrap-Tailwind conflicts */
+.container-fluid {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* CRITICAL: Force navbar elements to display - Tailwind reset override */
+.navbar .navbar-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.navbar .nav-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.navbar .nav-link {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #333 !important;
+}
+
+.navbar .navbar-collapse {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    flex-basis: auto !important;
+    flex-grow: 1 !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+}
+
+.navbar .navbar-collapse.show {
+    display: flex !important;
+}
+
+/* Fix navbar layout and alignment */
+.navbar .navbar-nav.ms-auto {
+    margin-left: auto !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+/* Ensure navbar brand is visible */
+.navbar .navbar-brand {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Force dropdown to work */
+.navbar .dropdown-menu {
+    display: block !important;
+    position: absolute !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown.show .dropdown-menu {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Bootstrap responsive classes override */
+@media (min-width: 992px) {
+    .navbar .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto !important;
+    }
+    
+    .navbar .navbar-nav {
+        flex-direction: row !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar .navbar-collapse {
+        display: none !important;
+    }
+    
+    .navbar .navbar-collapse.show {
+        display: block !important;
+        justify-content: flex-start !important;
+    }
+    
+    .navbar .navbar-nav.ms-auto {
+        margin-left: 0 !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+}
+
+/* Additional Tailwind reset overrides */
+.navbar button {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.navbar .btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+}
+
+/* Ensure all navbar text is visible */
+.navbar * {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Clean Bootstrap responsive classes handling (exclude Create Profile buttons) */
+.navbar .d-none:not(li):not([id*="createProfile"]) {
+    display: none !important;
+}
+
+/* Ensure proper spacing */
+.navbar .me-1,
+.navbar .me-2,
+.navbar .ms-2,
+.navbar .ms-auto {
+    margin: 0.25rem !important;
+}
+
+/* Create Profile Button Responsive Fix - TARGET SPECIFIC BUTTONS */
+/* Default: Hide mobile button, show desktop button */
+.navbar li.nav-item.d-lg-none {
+    display: none !important;
+}
+
+.navbar li.nav-item.d-none.d-lg-block {
+    display: block !important;
+}
+
+/* Mobile screens: Hide desktop button, show mobile button */
+@media (max-width: 991.98px) {
+    .navbar li.nav-item.d-none.d-lg-block {
+        display: none !important;
+    }
+    
+    .navbar li.nav-item.d-lg-none {
+        display: block !important;
+    }
+}
+
+/* Desktop screens: Show desktop button, hide mobile button */
+@media (min-width: 992px) {
+    .navbar li.nav-item.d-none.d-lg-block {
+        display: block !important;
+    }
+    
+    .navbar li.nav-item.d-lg-none {
+        display: none !important;
+    }
+}
+
+/* ULTRA SPECIFIC: Target buttons by ID */
+#createProfileBtn {
+    display: inline-block !important;
+    visibility: visible !important;
+}
+
+#createProfileBtnMobile {
+    display: none !important;
+}
+
+@media (max-width: 991.98px) {
+    #createProfileBtn {
+        display: none !important;
+    }
+    
+    #createProfileBtnMobile {
+        display: inline-block !important;
+        visibility: visible !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #createProfileBtn {
+        display: inline-block !important;
+        visibility: visible !important;
+    }
+    
+    #createProfileBtnMobile {
+        display: none !important;
+    }
+}
+
+/* ✅ Ensure modals are hidden on page load */
+#profileSelectionModal,
+#addClientModal {
+    display: none; /* Hide initially */
+}
+
+/* ✅ Fix modal positioning and ensure it's above all content */
+#profileSelectionModal,
+#addClientModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999; /* Keep modal always on top */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: none; /* Hide until triggered */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* ✅ Show modal when it's active */
+#profileSelectionModal.flex,
+#addClientModal.flex {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ✅ Ensure modal content is centered */
+#profileSelectionModal > div,
+#addClientModal > div {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ Ensure smooth scale-in effect */
+#profileSelectionModal.flex > div,
+#addClientModal.flex > div {
+    transform: scale(1);
+}
+
+/* ✅ Button Styling */
+.modal-button {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* ✅ Hover Effects */
+.modal-button:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Close Button */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e63946;
+    cursor: pointer;
+}
+
+/* ✅ Prevent background scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    #profileSelectionModal > div,
+    #addClientModal > div {
+        max-width: 90%;
+    }
+    
+    /* ✅ Mobile-specific file input styles */
+    #addClientModal input[type="file"] {
+        padding: 16px;
+        font-size: 16px; /* Prevent zoom on iOS */
+        border-radius: 12px;
+    }
+    
+    /* ✅ Enhance camera/gallery selection on mobile */
+    #artistImage, #employeeImage {
+        padding: 20px !important;
+        min-height: 60px;
+        text-align: center;
+    }
+    
+    /* ✅ Better touch targets for mobile */
+    #addClientModal .form-group label {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+/* ✅ Additional mobile styles for smaller devices */
+@media (max-width: 480px) {
+    #addClientModal > div {
+        max-width: 95%;
+        padding: 20px;
+    }
+    
+    #addClientModal input[type="file"] {
+        padding: 18px;
+        font-size: 14px;
+    }
+    
+    /* ✅ Adjust file input button styling for mobile */
+    #artistImage::-webkit-file-upload-button,
+    #employeeImage::-webkit-file-upload-button {
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        margin-right: 12px;
+    }
+}
+
+/* ✅ Center Modal & Enhance Appearance */
+#addClientModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* ✅ Show Modal */
+#addClientModal.flex {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ✅ Stylish Form Container */
+#addClientModal > div {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 450px;
+    text-align: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ Animate Modal Appearance */
+#addClientModal.flex > div {
+    transform: scale(1);
+}
+
+/* ✅ Enhanced Input & Select Fields */
+#addClientModal input,
+#addClientModal select {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    font-size: 14px;
+}
+
+/* ✅ Enhanced Focus Effect on Inputs */
+#addClientModal input:focus,
+#addClientModal select:focus {
+    border: 2px solid #ef4444;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+    transform: translateY(-1px);
+}
+
+/* ✅ File Input Styling */
+#addClientModal input[type="file"] {
+    border: 2px dashed #d1d5db;
+    background-color: #f9fafb;
+    padding: 20px;
+}
+
+#addClientModal input[type="file"]:focus {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+/* ✅ Multi-select Styling */
+#addClientModal select[multiple] {
+    min-height: 120px;
+    padding: 12px;
+}
+
+/* ✅ Section Headers */
+.form-section-header {
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    border-left: 4px solid #ef4444;
+}
+
+/* ✅ Enhanced Labels */
+#addClientModal label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* ✅ Info Text Styling */
+#addClientModal .text-gray-500 {
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* ✅ Submit Button Styling */
+#addClientModal button[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+#addClientModal button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    #addClientModal > div {
+        max-width: 90%;
+    }
+}
+
+/* Font families */
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+
+/* Client section styling */
+.clients-section {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+}
+
+.clients-section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.clients-section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Client card enhancements */
+.client-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client-name {
+    font-family: 'Playfair Display', serif;
+}
+
+.client-category {
+    font-family: 'Inter', sans-serif;
+}
+
+.client-badge {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Filter styling */
+.filter-label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #555;
+}
+
+.filter-select {
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.filter-select:focus {
+    border-color: #ff4757;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.2);
+}
+
+/* Toggle button styling */
+.toggle-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.toggle-button.active {
+    background-color: #ff4757;
+    color: white;
+}
+
+.toggle-button:not(.active) {
+    background-color: #f1f1f1;
+    color: #666;
+}
+
+/* Category section styles */
+.categories-section {
+    position: relative;
+    padding: 6rem 0;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.categories-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/background-image-2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.2);
+    z-index: 0;
+}
+
+.categories-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.categories-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #ff4757, #ff6b81);
+}
+
+.categories-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--category-color-from), var(--category-color-to));
+    opacity: 0.9;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+.category-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1);
+}
+
+.category-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: white;
+    margin: 0;
+}
+
+.category-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0.5rem;
+}
+
+/* Trusted clients section styles */
+.trusted-clients-section {
+    background: linear-gradient(to right, #f8f9fa, #ffffff, #f8f9fa);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.trusted-clients-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.trusted-clients-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #ff4757, #ff6b81);
+}
+
+.trusted-clients-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.client-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 120px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-logo-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo {
+    max-width: 80%;
+    max-height: 60px;
+    object-fit: contain;
+    filter: grayscale(0%);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.client-logo-container:hover .client-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Update the logo scroll container and animation styles */
+.logo-scroll-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo-scroll {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.logo-scroll-reverse {
+    display: flex;
+    animation: scroll-reverse 30s linear infinite;
+    width: max-content;
+}
+
+.logo-scroll-item {
+    flex: 0 0 auto;
+    margin: 0 1.5rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(calc(-250px * 5));
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.logo-scroll-container::before,
+.logo-scroll-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-scroll-container::before {
+    left: 0;
+    background: linear-gradient(to right, #f8f9fa, transparent);
+}
+
+.logo-scroll-container::after {
+    right: 0;
+    background: linear-gradient(to left, #f8f9fa, transparent);
+}
+
+/* Add custom positioning for banner images */
+.banner-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+/* Mobile-specific styling to show the center-left part of the image */
+@media (max-width: 768px) {
+    .banner-image {
+        object-position: 25% center; /* This positions the image 25% from the left */
+    }
+}
+
+/* Extra-small devices */
+@media (max-width: 480px) {
+    .banner-image {
+        object-position: 30% center; /* This positions the image 30% from the left */
+    }
+}
+
+/* Banner container with correct aspect ratio */
+.banner-container {
+    position: relative;
+    width: 100%;
+    /* Maintain the exact 3750:1250 aspect ratio */
+    padding-top: 33.33%; /* (1250/3750 * 100%) */
+    height: 0;
+    overflow: hidden;
+}
+
+/* Banner images */
+.banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adjust banner position on smaller screens */
+@media (max-width: 768px) {
+    .banner-image {
+        object-position: 25% center;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-image {
+        object-position: 30% center;
+    }
+}
+
+/* Additional mobile fixes */
+@media (max-width: 480px) {
+    /* Improve tap targets for navigation arrows */
+    .banner-container button {
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        touch-action: manipulation;
+    }
+    
+    /* Ensure arrows are above content and have adequate tap area */
+    #prevBtn, #nextBtn {
+        z-index: 30;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    /* Fix indicators size and appearance */
+    .banner-container .indicator,
+    button.indicator,
+    .indicator {
+        width: 6px !important;
+        height: 6px !important;
+        min-width: 6px !important;
+        min-height: 6px !important;
+        max-width: 6px !important;
+        max-height: 6px !important;
+        border-radius: 50% !important;
+        display: block !important;
+        padding: 0 !important;
+        margin: 0 4px !important;
+    }
+    
+    .banner-container .indicator.active,
+    button.indicator.active,
+    .indicator.active {
+        transform: scale(1.1) !important;
+        background-color: white !important;
+        width: 6px !important;
+        height: 6px !important;
+    }
+}
+
+/* Additional arrow fixes for mobile */
+.nav-arrow {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 480px) {
+    .nav-arrow {
+        background-color: rgba(0,0,0,0.7) !important;
+        width: 36px !important;
+        height: 36px !important;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+}
+
+/* Add dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px;
+    z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background: #f5f5f5;
+    color: #d10000;
+}
+
+/* Mobile Dropdown */
+@media (max-width: 991px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        width: 100%;
+        display: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-item {
+        padding: 10px 20px;
+        text-align: center;
+        background: #f5f5f5;
+    }
+}
+
+/* ✅ Notification styles */
+.notification {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* City dropdown styles */
+.city-option.active {
+    background-color: #f3f4f6 !important;
+}
+
+.city-option:hover {
+    background-color: #f9fafb;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .trusted-clients-section {
+        padding: 3rem 0;
+    }
+    
+    .client-logo-container {
+        height: 100px;
+        padding: 1rem;
+    }
+    
+    .client-logo {
+        max-height: 50px;
+    }
+    
+    .client-card {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .toggle-button {
+        padding: 12px 16px;
+        min-height: 48px;
+    }
+    
+    .filter-group {
+        margin-bottom: 16px;
+    }
+    
+    select, input, button {
+        min-height: 48px;
+        font-size: 16px;
+    }
+    
+    .fixed-bottom {
+        position: sticky;
+        bottom: 0;
+        z-index: 10;
+    }
+    
+    .client-overlay {
+        padding: 16px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .client-card {
+        margin-bottom: 16px;
+    }
+    
+    .client-badge {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    
+    .client-name {
+        font-size: 18px;
+    }
+    
+    .pull-refresh-hint {
+        text-align: center;
+        color: #888;
+        padding: 12px;
+        font-size: 14px;
+        display: none;
+    }
+    
+    .pull-refresh-hint {
+        display: block;
+    }
+} 

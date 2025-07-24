@@ -1,0 +1,1583 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #e63946, #ff6b6b);
+  color: #333;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.brand-logos-a {
+  text-decoration: none;
+}
+
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Hero Content */
+.hero-content {
+  background: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Responsive Text Scaling */
+.hero-title {
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 42px); /* Responsive font size */
+  color: #222;
+}
+
+.hero-subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Button Responsiveness */
+.btn-primary,
+.btn-outline {
+  padding: 10px 15px;
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+/* Hero Image */
+.hero-image {
+  position: relative;
+  max-width: 100%;
+  width: clamp(200px, 50vw, 400px);
+  border-radius: 50%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Floating Elements */
+.floating-badge {
+  position: absolute;
+  background: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: clamp(12px, 1.5vw, 14px);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: floatAnimation 3s infinite ease-in-out;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Floating Badge Fix for Cut-Off */
+.floating-badge::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+/* Floating Badge Icons */
+.floating-badge img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Floating Animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive Badge Positions */
+.badge-top-left {
+  top: 10%;
+  left: 5%;
+}
+
+.badge-bottom-right {
+  bottom: 10%;
+  right: 5%;
+}
+
+/* Hover Effects */
+.floating-badge:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Brand Logos */
+.brand-logos img {
+  height: clamp(20px, 5vw, 40px);
+  margin: 0 5px;
+  opacity: 1;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .hero-content {
+    padding: 30px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .badge-top-left,
+  .badge-bottom-right {
+    position: static;
+    margin: 10px auto;
+    display: inline-block;
+    animation: none;
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .hero-image {
+    width: 90%;
+  }
+
+  .brand-logos img {
+    height: 25px;
+    margin: 10px;
+  }
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 0;
+  background: #000;
+  text-align: left;
+}
+
+/* About Title */
+.about-title {
+  font-size: clamp(26px, 5vw, 36px);
+  font-weight: 700;
+  color: #fff;
+}
+
+/* About Subtitle */
+.about-subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Company Image / Logo */
+.about-image {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+/* Services List */
+.about-services {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.about-services li {
+  font-size: 16px;
+  color: #fff;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.about-services li::before {
+  content: "\2714";
+  color: #e63946;
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: Arial, sans-serif; /* Change font */
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-link {
+  font-size: 22px;
+  margin-right: 15px;
+  color: #fff;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+  color: #c32f39;
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    text-align: center;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  .about-services {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  padding: 80px 0;
+  background: #fff;
+  text-align: center;
+}
+
+/* Section Title */
+.portfolio-title {
+  font-size: clamp(26px, 5vw, 36px);
+  font-weight: 700;
+  color: #222;
+}
+
+/* Section Subtitle */
+.portfolio-subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Portfolio Grid */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+/* CTA Button */
+.btn-primary {
+  background: #e63946;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 600;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #c32f39;
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-item {
+    margin-bottom: 20px;
+  }
+}
+
+/* ==============================
+   Universal Health Care Case Study Section
+   ============================== */
+.uhcc-case-study {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.background-uhcc {
+  background: linear-gradient(to right, #e63946, #ff6b6b) !important;
+}
+
+.uhcc-color {
+  color: #e63946 !important;
+}
+
+/* Left Side: Case Study Content */
+.uhcc-case-study .case-study-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 90%;
+  padding-right: 20px;
+}
+
+.case-study-title {
+  font-size: 45px !important;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.case-study-industry {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.case-study-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* List Styling */
+.case-study-strategy,
+.achievements-list {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ✅ Fix List Item Alignment */
+.case-study-strategy li,
+.achievements-list li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  gap: 8px; /* Space between icon and text */
+}
+
+.case-study-strategy li strong {
+  color: #222;
+}
+
+/* Ensure the '✅' stays aligned */
+.case-study-strategy li::before {
+  /* content: "✅"; */
+  color: #28a745;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.achievements-list li {
+  content: "\2714";
+  color: #e63946;
+  font-weight: bold;
+  margin-right: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* Key Achievements Section */
+.case-study-achievements {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e63946;
+  margin-top: 20px;
+}
+
+.achievements-list-color-black {
+  color: #000;
+}
+
+/* ==============================
+     Right Side: Social Media Preview
+     ============================== */
+.uhcc-case-study .social-media-preview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+/* Carousel: Full Width & Height */
+.uhcc-case-study #socialMediaCarousel {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure images fill the carousel */
+.uhcc-case-study #socialMediaCarousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.uhcc-case-study #socialMediaCarousel .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.uhcc-case-study #socialMediaCarousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ==============================
+     Image Slider
+     ============================== */
+.case-study-slider {
+  margin-top: 50px;
+  background: linear-gradient(to right, #e63946, #ff6b6b);
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.image-slider-font-white {
+  color: #fff;
+  font-weight: 600;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 20px;
+  white-space: nowrap;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide:hover {
+  transform: scale(1.1);
+}
+
+/* ==============================
+     RESPONSIVE DESIGN
+     ============================== */
+
+/* ✅ Tablets (Medium Screens) */
+@media (max-width: 992px) {
+  .uhcc-case-study .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .uhcc-case-study .case-study-content {
+    max-width: 100%;
+    text-align: center;
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+
+  .uhcc-case-study .social-media-preview {
+    height: 400px;
+  }
+
+  .uhcc-case-study #socialMediaCarousel {
+    height: 100%;
+  }
+}
+
+/* ✅ Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .uhcc-case-study {
+    padding: 50px 0;
+  }
+
+  .uhcc-case-study .case-study-content {
+    padding: 0 10px;
+  }
+
+  .case-study-title {
+    font-size: 28px;
+  }
+
+  .case-study-description {
+    font-size: 14px;
+  }
+
+  .case-study-strategy li,
+  .achievements-list li {
+    font-size: 14px;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .uhcc-case-study .social-media-preview {
+    height: 350px;
+  }
+
+  .uhcc-case-study #socialMediaCarousel {
+    height: 100%;
+  }
+}
+
+/* ✅ Mobile Phones (Portrait) */
+@media (max-width: 576px) {
+  .uhcc-case-study {
+    padding: 40px 0;
+  }
+
+  .case-study-title {
+    font-size: 24px;
+  }
+
+  .case-study-industry {
+    font-size: 16px;
+  }
+
+  .case-study-description {
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  .case-study-strategy,
+  .achievements-list {
+    gap: 5px;
+  }
+
+  .case-study-strategy li,
+  .achievements-list li {
+    font-size: 12px;
+    justify-content: left;
+    text-align: left;
+  }
+
+  .uhcc-case-study .social-media-preview {
+    height: 300px;
+  }
+
+  .uhcc-case-study #socialMediaCarousel {
+    height: 100%;
+  }
+}
+
+/* ✅ Small Mobile Screens (320px - 480px) */
+@media (max-width: 480px) {
+  .uhcc-case-study .social-media-preview {
+    height: 280px;
+  }
+
+  .uhcc-case-study #socialMediaCarousel {
+    height: 100%;
+  }
+
+  .case-study-title {
+    font-size: 22px;
+  }
+
+  .case-study-description {
+    font-size: 12px;
+  }
+
+  .case-study-strategy li,
+  .achievements-list li {
+    font-size: 11px;
+    text-align: left;
+  }
+}
+
+/* ==============================
+   Earndigitally Case Study Section
+   ============================== */
+.earndigitally-case-study {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.background-earndigitally {
+  background: #008000 !important;
+}
+
+.red-earn {
+  color: #000 !important;
+}
+
+/* ==============================
+     Left Side: Flip Image Effect (Before & After)
+     ============================== */
+/* Flip Image Container */
+.flip-container {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  transition: transform 0.3s ease-in-out; /* Hover Zoom Effect */
+}
+
+/* Flipper (Rotates on Click) */
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+/* Front & Back Faces */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 10px;
+}
+
+/* Ensure images are fully visible */
+.front img,
+.back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* No cropping, full visibility */
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth Pop-Out Effect */
+}
+
+/* Pop-Out Effect on Hover */
+.flip-container.hovered {
+  transform: scale(1.5);
+}
+
+/* Flip Effect */
+.back {
+  transform: rotateY(180deg);
+}
+
+/* Flip Text */
+.flip-text {
+  position: absolute;
+  bottom: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Flipped State */
+.flipped {
+  transform: rotateY(180deg);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .flip-container {
+    max-width: 300px;
+  }
+
+  .flipper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .flipper {
+    height: 280px;
+  }
+}
+
+/* ==============================
+     Right Side: Case Study Content
+     ============================== */
+.earndigitally-case-study .case-study-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  max-width: 90%;
+  padding-left: 30px;
+}
+
+.case-study-title-earn {
+  font-size: 45px;
+  font-weight: bold;
+  color: #008000;
+}
+
+.case-study-industry {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.case-study-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Case Study List */
+.case-study-strategy {
+  padding-left: 0;
+  list-style: none;
+}
+
+.case-study-strategy li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+  gap: 8px;
+}
+
+/* ==============================
+   Image Album Section - 3 Column Grid
+   ============================== */
+.image-album {
+  margin-top: 50px;
+  text-align: center;
+  background-color: #008000;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.image-album h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* 3 Columns Grid Layout */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px;
+  gap: 15px;
+  padding: 0 20px;
+  justify-content: center;
+}
+
+/* Album Item */
+.album-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer; /* Make images clickable */
+}
+
+/* Ensure All Images Fit Properly */
+.album-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect - Interactive Overlay */
+.album-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.album-item:hover img {
+  transform: scale(1.05);
+}
+
+.album-item:hover .overlay {
+  opacity: 1;
+}
+
+/* ==============================
+     Lightbox (Popup Image on Click)
+     ============================== */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ==============================
+     Responsive Fixes (Tablet & Mobile)
+     ============================== */
+
+/* ✅ Tablets (Medium Screens) */
+@media (max-width: 992px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+}
+
+/* ✅ Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 180px;
+  }
+}
+
+/* ✅ Mobile Phones */
+@media (max-width: 576px) {
+  .album-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 160px;
+  }
+}
+
+/* ==============================
+     RESPONSIVE DESIGN (FIXES FOR MOBILE & TABLET)
+     ============================== */
+
+/* ✅ Tablets (Medium Screens) */
+@media (max-width: 992px) {
+  .earndigitally-case-study .row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .earndigitally-case-study .case-study-content {
+    max-width: 100%;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+/* ✅ Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .flip-container {
+    max-width: 300px;
+  }
+
+  .flipper {
+    height: 350px;
+  }
+
+  .case-study-title {
+    font-size: 28px;
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* ✅ Mobile Phones (Portrait) */
+@media (max-width: 576px) {
+  .flipper {
+    height: 280px;
+  }
+
+  .case-study-title {
+    font-size: 24px;
+  }
+
+  .album-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+}
+
+/* ==============================
+   TrueAsset Consultancy Section
+   ============================== */
+.trueasset-case-study {
+  padding: 80px 0;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 40px;
+}
+
+.case-study-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #00004c;
+}
+
+.case-study-industry {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.case-study-description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 15px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ==============================
+   Growth Section (Before & After)
+   ============================== */
+.growth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Growth Boxes */
+.growth-box {
+  text-align: center;
+  width: 40%;
+  cursor: pointer; /* Make it clickable */
+}
+
+.growth-box h3 {
+  font-size: 20px;
+  color: #00004c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Image Hover Effect */
+.growth-box img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: fill;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* On Hover: Slightly Zoom In */
+.growth-box img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.growth-arrow-icon {
+  font-size: 20px;
+  color: #00004c;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.three-grow {
+  font-size: 110px;
+}
+
+/* ==============================
+   Lightbox (Properly Shows on Click)
+   ============================== */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Lightbox Image */
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 10px 25px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Close Button Hover */
+.close-lightbox:hover {
+  color: #e63946;
+}
+
+/* Ensure Lightbox is Responsive */
+@media (max-width: 576px) {
+  .lightbox img {
+    max-width: 95%;
+  }
+
+  .close-lightbox {
+    font-size: 30px;
+  }
+}
+
+/* ==============================
+   Performance Growth Section
+   ============================== */
+.performance-section {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.performance-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00004c;
+  margin-bottom: 20px;
+}
+
+/* Performance Grid */
+.performance-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+/* Performance Images */
+.performance-item img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.performance-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ==============================
+     Font Awesome Arrows
+     ============================== */
+
+/* Right Arrows (Between Images) */
+.arrow-icon {
+  font-size: 36px;
+  color: #00004c;
+}
+
+/* Downward Arrow */
+.arrow-down {
+  font-size: 50px;
+  color: #00004c;
+  margin: 20px 0;
+}
+
+/* ==============================
+     Responsive Fixes
+     ============================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .performance-grid {
+    flex-direction: column;
+  }
+
+  .arrow-icon {
+    display: none; /* Hide right arrows on smaller screens */
+  }
+
+  .arrow-down {
+    font-size: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .performance-item img {
+    width: 180px;
+  }
+
+  .arrow-down {
+    font-size: 30px;
+  }
+}
+
+/* CTA (Call-to-Action) */
+.cta-box {
+  margin-top: 50px;
+  text-align: center;
+  background: #e63946;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-box h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background: white;
+  color: #e63946;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #fff3f3;
+}
+
+/* ==============================
+     Responsive Fixes
+     ============================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .growth-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .growth-box {
+    width: 90%;
+  }
+
+  .performance-box img {
+    max-width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .case-study-title {
+    font-size: 28px;
+  }
+
+  .case-study-description {
+    font-size: 14px;
+  }
+
+  .growth-arrow {
+    font-size: 14px;
+  }
+
+  .performance-title {
+    font-size: 20px;
+  }
+
+  .cta-box {
+    padding: 20px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* ==============================
+   Instagram Story Album (Fully Responsive)
+   ============================== */
+.instagram-album {
+  margin-top: 150px;
+  text-align: center;
+  width: 100%;
+}
+
+.album-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00004c;
+  margin-bottom: 20px;
+}
+
+/* Story Container - Full Width */
+.story-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0 20px;
+}
+
+/* Individual Story Items with Mobile Aspect Ratio (9:16) */
+.story-item {
+  width: calc(100% / 6 - 10px); /* Ensures 6 Stories in One Row */
+  max-width: 180px;
+  height: calc(180px * 1.77); /* Maintain 9:16 Aspect Ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Ensure Story Images Fit Properly */
+.story-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.story-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ==============================
+       Responsive Fixes (Tablet & Mobile)
+       ============================== */
+
+/* Tablets (Show 3 Stories Per Row) */
+@media (max-width: 992px) {
+  .story-item {
+    width: calc(100% / 3 - 10px); /* Three Stories Per Row */
+    max-width: 200px;
+    height: calc(200px * 1.77);
+  }
+}
+
+/* Mobile (Show 2 Stories Per Row) */
+@media (max-width: 576px) {
+  .story-item {
+    width: calc(100% / 2 - 10px); /* Two Stories Per Row */
+    max-width: 180px;
+    height: calc(180px * 1.77);
+  }
+}
+
+/* ==============================
+   Live Streaming Portfolio (Multiple Images)
+   ============================== */
+.live-streaming-container {
+  width: 100%;
+  padding: 60px 0;
+  background: #00004c;
+  text-align: center;
+}
+
+.live-streaming-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.highlight-text {
+  color: #e63946;
+}
+
+/* Swiper Container */
+.liveSwiper {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Swiper Slide */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ls-slide img {
+  width: 100%;
+  max-width: 250px; /* Ensures multiple images are visible */
+  height: auto;
+  border-radius: 15px;
+  border: 3px solid orange;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.ls-slide img:hover {
+  transform: scale(1.05);
+}
+
+/* Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #e63946; /* Red arrows */
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+  bottom: 10px;
+}
+
+/* ==============================
+     Responsive Design (Ensure Proper Layout)
+     ============================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .liveSwiper {
+    width: 95%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .live-streaming-title {
+    font-size: 22px;
+  }
+
+  .liveSwiper {
+    width: 100%;
+  }
+
+  .ls-slide img {
+    max-width: 180px;
+  }
+}
+
+/* ==============================
+   CTA (Call-To-Action) Section
+   ============================== */
+.cta-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00004c;
+  margin-bottom: 30px;
+}
+
+/* CTA Container */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Individual CTA Box */
+.cta-box {
+  width: 300px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-box i {
+  font-size: 30px;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.cta-box h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cta-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+.cta-box a {
+  text-decoration: none;
+  color: #e63946;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.cta-box a:hover {
+  color: #00004c;
+}
+
+/* Hover Effect */
+.cta-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+     Responsive Fixes (Tablet & Mobile)
+     ============================== */
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-box {
+    width: 90%;
+  }
+}
+

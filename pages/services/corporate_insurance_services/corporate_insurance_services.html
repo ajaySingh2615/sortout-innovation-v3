@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Corporate Insurance Services</title>
+
+    <link
+      rel="stylesheet"
+      href="/pages/services/corporate_insurance_services/corporate_insurance_services.css"
+    />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+        <!-- Bootstrap Navbar with Enhanced Features -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+          <div class="container">
+              <!-- Logo with hover effect -->
+              <a class="navbar-brand position-relative" href="/">
+                  <div class="logo-container">
+                      <img src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" alt="SortOut Innovation" height="45" class="main-logo">
+                      <div class="logo-glow"></div>
+                  </div>
+              </a>
+  
+              <!-- Animated Mobile Toggle Button -->
+              <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <div class="toggle-icon">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                  </div>
+              </button>
+  
+              <!-- Enhanced Navigation Links -->
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav align-items-center">
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/pages/about-page/about.html">About</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Career
+                          </a>
+                          <ul class="dropdown-menu animate slideIn">
+                              <li>
+                                  <a class="dropdown-item" href="/employee-job/index.php">Employee Jobs</a>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="/admin/artist-v2/public/index.php">Artist Jobs</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/modal_agency.php">Find Talent</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/pages/our-services-page/service.html">Services</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/pages/contact-page/contact-page.html">Contact</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link px-3" href="/blog/index.php">Blog</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  
+      <!-- Spacer for fixed navbar -->
+      <!-- <div style="height: 76px;"></div> -->
+  
+      <style>
+      /* Modern Navbar Styles with Enhanced Features */
+      .navbar {
+          padding: 0.8rem 0;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          background: rgba(255, 255, 255, 0.98) !important;
+          backdrop-filter: blur(10px);
+      }
+  
+      /* Logo Container with Glow Effect */
+      .logo-container {
+          position: relative;
+          display: inline-block;
+      }
+  
+      .logo-glow {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          background: radial-gradient(circle, rgba(209, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+      }
+  
+      .navbar-brand:hover .logo-glow {
+          opacity: 1;
+      }
+  
+      /* Navigation Links */
+      .nav-link {
+          font-weight: 400;
+          color: #2c3e50 !important;
+          position: relative;
+          transition: all 0.3s ease;
+          font-size: 15px !important;
+          letter-spacing: 1px;
+      }
+  
+      .nav-link::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 50%;
+          background: linear-gradient(90deg, #d10000, #ff4b4b);
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+          border-radius: 2px;
+      }
+  
+      .nav-link:hover::after {
+          width: calc(100% - 1.5rem);
+      }
+  
+      .nav-link:hover {
+          color: #d10000 !important;
+      }
+  
+      /* Enhanced Dropdown Styles */
+      .dropdown-menu {
+          border: none;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          border-radius: 12px;
+          padding: 0.8rem 0.5rem;
+          margin-top: 0.5rem;
+          background: rgba(255, 255, 255, 0.98);
+          backdrop-filter: blur(10px);
+      }
+  
+      .dropdown-item {
+          padding: 0.8rem 1.2rem;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          color: #2c3e50;
+          font-size: 14px;
+      }
+  
+      .dropdown-item:hover {
+          background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+          color: #d10000;
+          transform: translateX(5px);
+      }
+  
+      /* Animated Mobile Toggle Button */
+      .toggle-icon {
+          width: 24px;
+          height: 20px;
+          position: relative;
+          cursor: pointer;
+      }
+  
+      .toggle-icon span {
+          display: block;
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background: #2c3e50;
+          border-radius: 2px;
+          transition: all 0.3s ease;
+      }
+  
+      .toggle-icon span:first-child {
+          top: 0;
+      }
+  
+      .toggle-icon span:nth-child(2) {
+          top: 9px;
+      }
+  
+      .toggle-icon span:last-child {
+          top: 18px;
+      }
+  
+      .navbar-toggler[aria-expanded="true"] .toggle-icon span:first-child {
+          transform: rotate(45deg);
+          top: 9px;
+      }
+  
+      .navbar-toggler[aria-expanded="true"] .toggle-icon span:nth-child(2) {
+          opacity: 0;
+      }
+  
+      .navbar-toggler[aria-expanded="true"] .toggle-icon span:last-child {
+          transform: rotate(-45deg);
+          top: 9px;
+      }
+  
+      /* Mobile Styles */
+      @media (max-width: 991px) {
+          .navbar-collapse {
+              background: rgba(255, 255, 255, 0.98);
+              backdrop-filter: blur(10px);
+              padding: 1rem;
+              border-radius: 16px;
+              box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+              margin-top: 1rem;
+          }
+  
+          .nav-link {
+              padding: 0.8rem 1.2rem !important;
+              border-radius: 8px;
+          }
+  
+          .nav-link:hover {
+              background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+          }
+  
+          .nav-link::after {
+              display: none;
+          }
+  
+          .dropdown-menu {
+              box-shadow: none;
+              padding-left: 1rem;
+              background: transparent;
+          }
+  
+          .dropdown-item:hover {
+              transform: none;
+          }
+      }
+      </style>
+  
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbar = document.querySelector('.navbar');
+          let lastScroll = 0;
+  
+          // Enhanced scroll behavior
+          window.addEventListener('scroll', () => {
+              const currentScroll = window.pageYOffset;
+              
+              if (currentScroll > 50) {
+                  navbar.style.padding = "0.6rem 0";
+                  navbar.style.boxShadow = "0 5px 30px rgba(0,0,0,0.08)";
+              } else {
+                  navbar.style.padding = "0.8rem 0";
+                  navbar.style.boxShadow = "none";
+              }
+  
+              // Smooth hide/show on scroll
+              if (currentScroll > lastScroll && currentScroll > 100) {
+                  navbar.style.transform = 'translateY(-100%)';
+              } else {
+                  navbar.style.transform = 'translateY(0)';
+              }
+  
+              lastScroll = currentScroll;
+          });
+  
+          // Handle mobile menu toggle animation
+          const navbarToggler = document.querySelector('.navbar-toggler');
+          navbarToggler.addEventListener('click', function() {
+              const isExpanded = this.getAttribute('aria-expanded') === 'true';
+              this.setAttribute('aria-expanded', !isExpanded);
+          });
+      });
+      </script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <!-- Semi-transparent overlay -->
+      <div class="hero-content">
+        <h1>
+          Protect Your Business with
+          <span class="highlight">Comprehensive Corporate Insurance</span>
+        </h1>
+        <p>
+          Customized insurance solutions to secure your business, employees, and
+          assets.
+        </p>
+        <a
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+          >Get a Free Consultation</a
+        >
+      </div>
+    </section>
+
+    <!-- About Our Insurance Services Section -->
+    <section class="about-insurance-section">
+      <div class="container">
+        <div class="about-insurance-content">
+          <!-- Left Side - Image -->
+          <div class="about-image">
+            <img
+              src="/images/services-imgs/corporate-insurance/about-image.webp"
+              alt="Corporate Insurance"
+            />
+            <p class="image-caption">
+              Tailored corporate insurance solutions for secure business growth.
+            </p>
+          </div>
+
+          <!-- Right Side - Text & Highlights -->
+          <div class="about-info">
+            <h2>About Our <span class="highlight">Insurance Services</span></h2>
+            <p>
+              We provide customized corporate insurance solutions that protect
+              businesses from financial risks, employee liabilities, and
+              operational disruptions.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-building"></i>
+                <p><strong>100+ Corporate Clients Served</strong></p>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-file-contract"></i>
+                <p><strong>Industry-Specific Insurance Plans</strong></p>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-bolt"></i>
+                <p><strong>Quick & Hassle-Free Claims Process</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Function to make highlight items appear on scroll
+      document.addEventListener("DOMContentLoaded", function () {
+        const highlightItems = document.querySelectorAll(".highlight-item");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        highlightItems.forEach((item) => observer.observe(item));
+      });
+    </script>
+
+    <!-- Our Corporate Insurance Plans Section -->
+    <section class="insurance-plans">
+      <div class="insurance-container">
+        <h2 class="insurance-title">
+          Our <span class="insurance-highlight">Corporate Insurance Plans</span>
+        </h2>
+        <p class="insurance-subtext">
+          Comprehensive coverage to safeguard your business, employees, and
+          assets.
+        </p>
+
+        <div class="insurance-grid">
+          <div class="insurance-item">
+            <i class="fas fa-building"></i>
+            <h3>Business Property Insurance</h3>
+            <p>Protects your offices, buildings, and valuable assets.</p>
+          </div>
+          <div class="insurance-item">
+            <i class="fas fa-user-md"></i>
+            <h3>Corporate Health Insurance</h3>
+            <p>Group mediclaim and wellness plans for employees.</p>
+          </div>
+          <div class="insurance-item">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Liability Insurance</h3>
+            <p>Guards against legal claims and third-party liabilities.</p>
+          </div>
+          <div class="insurance-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Cybersecurity Insurance</h3>
+            <p>Protects your business from cyber threats and data breaches.</p>
+          </div>
+          <div class="insurance-item">
+            <i class="fas fa-car"></i>
+            <h3>Commercial Vehicle Insurance</h3>
+            <p>Covers company-owned fleets and business transport.</p>
+          </div>
+          <div class="insurance-item">
+            <i class="fas fa-briefcase"></i>
+            <h3>Business Protection Insurance</h3>
+            <p>Comprehensive risk coverage for businesses of all sizes.</p>
+          </div>
+          <div class="insurance-item">
+            <i class="fas fa-user-shield"></i>
+            <h3>Employee Life & Term Insurance</h3>
+            <p>Ensures financial security for employees and dependents.</p>
+          </div>
+          <div class="insurance-item">
+            <i class="fas fa-users-cog"></i>
+            <h3>Group Term Insurance</h3>
+            <p>Specialized life insurance for corporate teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="process-section">
+      <div class="process-container">
+        <h2 class="process-title">
+          How It <span class="process-highlight">Works</span>
+        </h2>
+        <p class="process-subtext">
+          A simple 4-step process to get the best corporate insurance.
+        </p>
+
+        <div class="process-steps">
+          <div class="process-step">
+            <i class="fas fa-comments"></i>
+            <h3>Consultation</h3>
+            <p>Discuss your business risks with our experts.</p>
+          </div>
+          <div class="process-step">
+            <i class="fas fa-cogs"></i>
+            <h3>Policy Customization</h3>
+            <p>Get tailored coverage plans for your business needs.</p>
+          </div>
+          <div class="process-step">
+            <i class="fas fa-file-signature"></i>
+            <h3>Sign & Activate</h3>
+            <p>Easy and quick policy setup without complications.</p>
+          </div>
+          <div class="process-step">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Support & Claims</h3>
+            <p>Fast and hassle-free claim assistance anytime.</p>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="https://wa.me/919818559036" class="process-cta"
+          >Schedule a Free Consultation</a
+        >
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="trust-section">
+      <div class="trust-shape"></div>
+      <!-- Decorative Shape -->
+      <div class="trust-container">
+        <h2 class="trust-title">
+          Why Businesses <span class="trust-highlight">Trust Us</span> for Their
+          Insurance Needs
+        </h2>
+
+        <div class="trust-grid">
+          <div class="trust-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Custom Insurance Plans</h3>
+            <p>Coverage tailored to your business needs.</p>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-bolt"></i>
+            <h3>Fast Claims Processing</h3>
+            <p>Quick and hassle-free claim approvals.</p>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-user-tie"></i>
+            <h3>Expert Advisory Team</h3>
+            <p>Dedicated experts to guide your policy selection.</p>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-star"></i>
+            <h3>Rated 5 Stars</h3>
+            <p>Trusted by top enterprises across industries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Success Stories Section -->
+    <section class="testimonials-section">
+      <div class="testimonials-container">
+        <h2 class="testimonials-title">
+          What Our <span class="testimonials-highlight">Clients Say</span>
+        </h2>
+        <p class="testimonials-subtext">
+          Trusted by businesses worldwide for reliable corporate insurance
+          solutions.
+        </p>
+
+        <!-- Testimonials Slider -->
+        <div class="testimonials-slider">
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "This insurance saved our company thousands during a crisis!"
+            </p>
+            <h4 class="testimonial-name">- Ankit Prasad, CEO, Josh Corp</h4>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "Outstanding support and hassle-free claims process. Highly
+              recommend!"
+            </p>
+            <h4 class="testimonial-name">
+              - Pallavi Singh, Founder, Tech Solutions
+            </h4>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial-text">
+              "Our employees feel more secure with the comprehensive coverage. A
+              game changer!"
+            </p>
+            <h4 class="testimonial-name">
+              - Swati Nathani, HR Director, ABC Ltd.
+            </h4>
+          </div>
+        </div>
+
+        <!-- Client Logos -->
+        <h3 class="clients-title">Trusted by Industry Leaders</h3>
+        <div class="clients-logos">
+          <img
+            src="/images/company-images/improved-logos/chingari1.jpeg"
+            alt="Client Logo"
+          />
+          <img
+            src="/images/company-images/improved-logos/disco2.jpeg"
+            alt="Client Logo"
+          />
+          <img
+            src="/images/company-images/improved-logos/imo3.png"
+            alt="Client Logo"
+          />
+          <img
+            src="/images/company-images/improved-logos/me4.jpeg"
+            alt="Client Logo"
+          />
+          <img
+            src="/images/company-images/improved-logos/meesho14.png"
+            alt="Client Logo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs-section">
+      <div class="faqs-container">
+        <h2 class="faqs-title">
+          Frequently Asked <span class="faqs-highlight">Questions</span>
+        </h2>
+        <p class="faqs-subtext">
+          Find answers to common queries about our corporate insurance services.
+        </p>
+
+        <div class="faqs">
+          <div class="faq-item">
+            <button class="faq-question">
+              What’s the best insurance for my business?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                It depends on your business type and risks. We offer tailored
+                plans for various industries.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How does the claims process work?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Our claims process is quick and hassle-free. Just submit your
+                claim online, and our team will assist you promptly.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Do you offer discounts for bulk policies?
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! We provide discounts for businesses purchasing multiple
+                policies. Contact us for custom pricing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // 🎯 FAQ Toggle Functionality
+      document.querySelectorAll(".faq-question").forEach((button) => {
+        button.addEventListener("click", () => {
+          const faqItem = button.parentNode;
+
+          // Close any other open FAQ before opening new one
+          document.querySelectorAll(".faq-item").forEach((item) => {
+            if (item !== faqItem) {
+              item.classList.remove("active");
+            }
+          });
+
+          // Toggle active class to open/close the FAQ
+          faqItem.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!-- Contact & Get a Quote Section -->
+    <section class="contact-section">
+      <div class="contact-container">
+        <h2 class="contact-title">
+          Get in <span class="contact-highlight">Touch</span>
+        </h2>
+        <p class="contact-subtext">
+          Secure your business today with the right insurance plan!
+        </p>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>
+              Email:
+              <a
+                href="mailto:info@sortoutinnovation.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >info@sortoutinnovation.com</a
+              >
+            </p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <p>Phone: <a href="https://wa.me/919818559036">9818559036</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Location: Spaze i-Tech Park, Gurugram, India</p>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <a
+          href="tel:+919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-cta"
+          >Request a Quote</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>HR Services</title>
+
+    <link rel="stylesheet" href="/CSS/services/hrService.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="SortOut Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li><a href="/pages/about-page/about.html" class="nav-link">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Career <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="/employee-job/index.php" class="dropdown-item">Employee Jobs</a>
+                <a href="/admin/artist-v2/public/index.php" class="dropdown-item">Artist Jobs</a>
+              </div>
+            </li>
+            <li><a href="/modal_agency.php" class="nav-link">Find Talent</a></li>
+            <li><a href="/pages/our-services-page/service.html" class="nav-link">Service</a></li>
+            <li><a href="/pages/contact-page/contact-page.html" class="nav-link">Contact</a></li>
+            <li><a href="/blog/index.php" class="nav-link">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbarToggle = document.querySelector(".navbar-toggle");
+          const navbarLinks = document.querySelector(".navbar-links");
+          const dropdowns = document.querySelectorAll(".dropdown");
+
+          // Toggle mobile menu
+          navbarToggle.addEventListener("click", () => {
+              navbarLinks.classList.toggle("active");
+          });
+
+          // Handle dropdowns on mobile
+          dropdowns.forEach(dropdown => {
+              const link = dropdown.querySelector("a");
+              link.addEventListener("click", (e) => {
+                  if (window.innerWidth <= 991) {
+                      e.preventDefault();
+                      dropdown.classList.toggle("active");
+                  }
+              });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", (e) => {
+              if (!navbarLinks.contains(e.target) && !navbarToggle.contains(e.target)) {
+                  navbarLinks.classList.remove("active");
+                  dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+              }
+          });
+
+          // Sticky Navbar on Scroll
+          window.addEventListener("scroll", () => {
+              const navbar = document.querySelector(".navbar");
+              if (window.scrollY > 50) {
+                  navbar.classList.add("scrolled");
+              } else {
+                  navbar.classList.remove("scrolled");
+              }
+          });
+      });
+    </script>
+
+    <section class="hero-section" id="hero">
+      <div class="hero-bg"></div>
+      <div class="container">
+        <marquee class="smm-marq" behavior="alternate">
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+          <span class="pdr-60">HR Services</span>
+        </marquee>
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 text-content">
+            <h1 class="hero-title">
+              Empower Your Business with <span>HR Expertise</span>
+            </h1>
+            <p class="hero-subtitle">
+              We deliver tailored HR solutions to streamline your processes and
+              help your people thrive.
+            </p>
+            <div class="hero-buttons">
+              <a href="#services" class="btn btn-primary">Get Started</a>
+              <a
+                href="https://wa.me/919818559036"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline-secondary"
+                >Book Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 image-content">
+            <div class="image-wrapper">
+              <img
+                src="/images/services-imgs/hero-section/hr-hero-logo.png"
+                alt="HR Solutions"
+                class="hero-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 about-content">
+            <h2 class="about-heading">About <span>Our HR Services</span></h2>
+            <p class="about-description">
+              We specialize in delivering
+              <strong>tailored HR solutions</strong> that align with your
+              business goals. From <strong>employee management</strong> to
+              <strong>compliance</strong>, we ensure your HR processes run
+              smoothly and efficiently. Our experienced team helps you focus on
+              building a thriving workplace culture while we handle the
+              administrative complexities.
+            </p>
+            <div class="about-points">
+              <div class="point">
+                <i class="fas fa-user-tie point-icon"></i>
+                <p><strong>10+ Years of Experience</strong> in HR Management</p>
+              </div>
+              <div class="point">
+                <i class="fas fa-briefcase point-icon"></i>
+                <p>Serving <strong>Businesses of All Sizes</strong></p>
+              </div>
+              <div class="point">
+                <i class="fas fa-hands-helping point-icon"></i>
+                <p>
+                  Dedicated to <strong>Excellence in Employee Relations</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 about-image-container">
+            <div class="image-wrapper">
+              <img
+                src="/images/services-imgs/hr/round_hr_services.jpg"
+                alt="HR Services"
+                class="about-image"
+              />
+              <div class="circle-decor"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="simple-services-section" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="section-title">Our HR Services</h2>
+            <p class="section-description">
+              Discover how our tailored HR solutions can elevate your business
+              and empower your workforce.
+            </p>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="row">
+          <!-- Service 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="simple-service-box">
+              <i class="fas fa-user-tie service-icon"></i>
+              <h3 class="service-title">Recruitment Acquisition</h3>
+              <p class="service-description">
+                Attract and hire top talent with our structured and efficient
+                recruitment processes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="simple-service-box">
+              <i class="fas fa-money-check-alt service-icon"></i>
+              <h3 class="service-title">Payroll Management</h3>
+              <p class="service-description">
+                Ensure accurate and timely payroll processing with our advanced
+                solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="simple-service-box">
+              <i class="fas fa-handshake service-icon"></i>
+              <h3 class="service-title">Employee Onboarding</h3>
+              <p class="service-description">
+                Streamline onboarding to help new employees feel welcome and
+                productive from day one.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="simple-service-box">
+              <i class="fas fa-gavel service-icon"></i>
+              <h3 class="service-title">Compliance & Regulations</h3>
+              <p class="service-description">
+                Stay compliant with labor laws and regulations, reducing risks
+                for your business.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="simple-service-box">
+              <i class="fas fa-chart-line service-icon"></i>
+              <h3 class="service-title">Performance Management</h3>
+              <p class="service-description">
+                Boost productivity with performance tracking and tailored
+                improvement plans.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="simple-service-box">
+              <i class="fas fa-chalkboard-teacher service-icon"></i>
+              <h3 class="service-title">Training & Development</h3>
+              <p class="service-description">
+                Upskill your workforce with customized training programs
+                designed for growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-unique-section" id="why-choose-unique">
+      <!-- Animated Background -->
+      <div class="animated-bg"></div>
+
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="unique-title">Why Choose Our HR Solutions?</h2>
+            <p class="unique-subtitle">
+              Partner with us for seamless HR management.
+            </p>
+            <p class="unique-description">
+              Managing people is at the heart of every successful business.
+              Here's why clients trust us with their HR needs:
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Features Grid -->
+        <div class="row g-4">
+          <!-- Feature 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="unique-card">
+              <div class="icon-container">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3 class="card-title">Customized HR Strategies</h3>
+              <p class="card-description">
+                Tailored solutions designed to meet the unique needs of your
+                business.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="unique-card">
+              <div class="icon-container">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3 class="card-title">Advanced Technology Integration</h3>
+              <p class="card-description">
+                Leverage the latest HR tech for efficient processes and better
+                outcomes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="unique-card">
+              <div class="icon-container">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+              <h3 class="card-title">Transparent & Scalable Solutions</h3>
+              <p class="card-description">
+                Scalable HR systems with complete transparency at every stage.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="col-md-6 col-lg-6 mx-auto">
+            <div class="unique-card featured-card">
+              <div class="icon-container">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3 class="card-title">24/7 HR Support & Assistance</h3>
+              <p class="card-description">
+                Dedicated support to assist you anytime, anywhere.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="enhanced-testimonials-section" id="testimonials">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="testimonials-title">What Our Clients Say</h2>
+            <p class="testimonials-subtitle">
+              Hear from businesses that have transformed with our HR solutions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="row g-5">
+          <!-- Testimonial 1 -->
+          <div class="col-md-6">
+            <div class="testimonial-card enhanced-card">
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  "Sortout Innovation transformed how we manage our workforce.
+                  Their payroll solutions are seamless and efficient!"
+                </p>
+                <div class="testimonial-author">
+                  <h5 class="author-name">Rohan Sharma</h5>
+                  <p class="author-role">CEO of Josh</p>
+                </div>
+              </div>
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-6">
+            <div class="testimonial-card enhanced-card">
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  "Their compliance support saved us from hefty fines. Highly
+                  recommended for small businesses."
+                </p>
+                <div class="testimonial-author">
+                  <h5 class="author-name">Priya Mehta</h5>
+                  <p class="author-role">HR Manager</p>
+                </div>
+              </div>
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-6 mx-auto">
+            <div class="testimonial-card enhanced-card">
+              <div class="testimonial-content">
+                <p class="testimonial-text">
+                  "Our recruitment process has never been this smooth. They
+                  helped us find the perfect team members quickly!"
+                </p>
+                <div class="testimonial-author">
+                  <h5 class="author-name">Amit Verma</h5>
+                  <p class="author-role">Operations Head</p>
+                </div>
+              </div>
+              <div class="testimonial-icon">
+                <i class="fas fa-quote-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-modern-section" id="faq">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="faq-title">Frequently Asked Questions</h2>
+            <p class="faq-subtitle">
+              Find answers to the most common questions about our HR services.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Grid -->
+        <div class="row g-4">
+          <!-- FAQ Item 1 -->
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  What industries do you provide HR services for?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                We provide HR solutions across various industries, including IT,
+                manufacturing, retail, and more.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  Do you handle compliance for small businesses?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                Yes, we specialize in compliance management for businesses of
+                all sizes.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  Can you help us with remote employee management?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                Absolutely! We offer tools and strategies to manage remote teams
+                effectively.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  What’s the onboarding process like for your services?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                We start with a thorough consultation to understand your needs
+                and tailor our solutions accordingly.
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional FAQ Items -->
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">How do you ensure data security?</h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                We use advanced encryption and secure protocols to protect
+                sensitive information.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  Can you help with employee performance reviews?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                Yes, we provide tools and strategies to facilitate effective
+                performance reviews.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  Do you offer training for HR tools?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                We provide comprehensive training for all HR tools to ensure
+                smooth adoption.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  What is the cost of your HR services?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                Our pricing depends on the scope of services. Contact us for a
+                custom quote.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  Can you customize solutions for our needs?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                Yes, we specialize in creating tailored HR solutions for
+                businesses of all sizes.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="faq-card">
+              <div class="faq-header" onclick="toggleFAQ(this)">
+                <h3 class="faq-question">
+                  How quickly can we start using your services?
+                </h3>
+                <i class="fas fa-plus toggle-icon"></i>
+              </div>
+              <div class="faq-body">
+                Once the consultation is complete, we can start implementing
+                solutions within a week.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="cta">
+      <div class="container text-center">
+        <!-- CTA Heading -->
+        <h2 class="cta-heading">Let’s Build a Better Workplace Together</h2>
+        <p class="cta-content">
+          Transform your HR processes today with our expert solutions. Reach out
+          to us for a consultation and take the first step toward hassle-free HR
+          management.
+        </p>
+        <!-- CTA Button -->
+        <div class="cta-buttons">
+          <a href="#services" class="cta-button primary-button"
+            >Explore Services</a
+          >
+          <a
+            href="tel:+919818559036"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-button secondary-button"
+            >Book Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      function toggleFAQ(element) {
+        const card = element.parentElement;
+        const allCards = document.querySelectorAll(".faq-card");
+
+        // Collapse all other FAQ cards
+        allCards.forEach((otherCard) => {
+          if (otherCard !== card) {
+            otherCard.classList.remove("active");
+          }
+        });
+
+        // Toggle current card
+        card.classList.toggle("active");
+      }
+    </script>
+
+    <!-- Font Awesome for Social Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Accordion Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome Script -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

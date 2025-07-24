@@ -1,0 +1,1259 @@
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  height: 85vh;
+  background: url("/images/services-imgs/corporate-insurance/hero-image.webp")
+    center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Dark Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.15);
+  animation: bgPulse 6s infinite alternate ease-in-out;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Hero Title (Smooth Wave Animation) */
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  display: inline-block;
+  animation: textWave 4s infinite ease-in-out;
+}
+
+/* Highlighted Text */
+.highlight {
+  color: #ffcc00;
+}
+
+/* Hero Paragraph (Soft Side-to-Side Movement) */
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  animation: textSlide 5s infinite ease-in-out;
+}
+
+/* Call-to-Action Button (Soft Breathing Effect) */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: #c20000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  animation: pulseGlow 3s infinite ease-in-out;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn-primary:hover {
+  background: #c20000;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.6);
+}
+
+/* 🔹 Continuous Animation Keyframes 🔹 */
+
+/* Background Soft Pulse Effect */
+@keyframes bgPulse {
+  0% {
+    background: rgba(255, 0, 0, 0.75);
+  }
+  100% {
+    background: rgba(255, 0, 0, 0.85);
+  }
+}
+
+/* Text Wave Effect */
+@keyframes textWave {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 70vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* 🏢 About Insurance Services Section */
+.about-insurance-section {
+  background: linear-gradient(to right, #fff, #f8f8f8);
+  padding: 80px 20px;
+  overflow: hidden; /* Prevent unwanted scrolling */
+}
+
+/* 📌 Container */
+.about-insurance-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+/* 🎯 Left Side - Image */
+.about-image {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* 🖱️ Hover Effect on Image */
+.about-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 📝 Caption Below the Image */
+.image-caption {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 10px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+/* 🖱️ Hover Effect - Increase Size */
+.about-image:hover .image-caption {
+  transform: scale(1.1);
+  color: #c20000;
+}
+
+/* 📌 Right Side - Text & Highlights */
+.about-info {
+  flex: 1;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* 🏆 Title */
+.about-info h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 15px;
+}
+
+/* 📝 Paragraph */
+.about-info p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* 📌 Key Highlights */
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 🌟 Highlight Items */
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #fff;
+  border: 2px solid #c20000;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.1);
+  min-height: 60px;
+}
+
+/* 🖱️ Hover Effect on Highlights */
+.highlight-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0px 8px 20px rgba(255, 0, 0, 0.2);
+}
+
+/* 🏆 Icons */
+.highlight-item i {
+  font-size: 1.8rem;
+  color: #c20000;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* 📜 Text */
+.highlight-item p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .about-insurance-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  .about-image img {
+    max-width: 380px;
+  }
+
+  .about-info {
+    text-align: center;
+  }
+
+  .highlight-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-insurance-section {
+    padding: 60px 15px;
+  }
+
+  .about-info h2 {
+    font-size: 2rem;
+  }
+
+  .about-info p {
+    font-size: 1rem;
+  }
+
+  .about-image img {
+    max-width: 320px;
+  }
+
+  .highlight-item {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .highlight-item i {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+  }
+
+  .highlight-item p {
+    font-size: 0.95rem;
+  }
+}
+
+/* 🔹 Why Choose Us Section */
+.trust-section {
+  position: relative;
+  background: #f8f8f8;
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 🔴 Background Shape - Moving Effect */
+.trust-shape {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 0, 0, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+  animation: moveShape 10s infinite alternate ease-in-out;
+}
+
+/* 🌟 Section Title - Gentle Pulsing Effect */
+.trust-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  animation: pulseText 4s infinite ease-in-out;
+}
+
+/* 🔴 Highlighted Text */
+.trust-highlight {
+  color: #ffcc00;
+}
+
+/* 🟦 Benefits Grid */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* 🎯 Individual Benefit Item */
+.trust-item {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Adding Decorative Lines in Benefit Item */
+.trust-item::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🖱️ Hover Effect */
+.trust-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.2);
+}
+
+.trust-item:hover::before {
+  transform: scale(1.5);
+}
+
+/* 🌍 Floating Icons */
+.trust-item i {
+  font-size: 3rem;
+  color: #c20000;
+  margin-bottom: 15px;
+  display: inline-block;
+  animation: floatIcons 6s infinite ease-in-out;
+}
+
+/* 🔹 Benefit Title */
+.trust-item h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 📜 Benefit Description */
+.trust-item p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 🎥 🔹 Keyframe Animations 🔹 */
+
+/* 🔴 Moving Background Shape */
+@keyframes moveShape {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(15px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* 🌍 Floating Icons Animation */
+@keyframes floatIcons {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-shape {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* 🎯 Corporate Insurance Plans Section */
+.insurance-plans {
+  position: relative;
+  background: linear-gradient(to right, #fff, #f8f8f8);
+  padding: 100px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 🔷 Background Decorative Shapes */
+.insurance-plans::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+  animation: floatingShape 12s infinite alternate ease-in-out;
+}
+
+.insurance-plans::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 69, 0, 0.15);
+  border-radius: 50%;
+  z-index: 0;
+  animation: floatingShape 15s infinite alternate ease-in-out;
+}
+
+/* 🏆 Section Title */
+.insurance-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 🔥 Highlighted Text */
+.insurance-highlight {
+  color: #ffcc00;
+}
+
+/* Subtitle */
+.insurance-subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 📌 Grid Layout */
+.insurance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* 🔥 Individual Insurance Card */
+.insurance-item {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+/* 🖱️ Hover Effect */
+.insurance-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.2);
+  border-color: rgba(255, 0, 0, 0.3);
+}
+
+/* 🔥 Animated Icon Glow */
+.insurance-item i {
+  font-size: 3rem;
+  color: #c20000;
+  margin-bottom: 15px;
+  display: inline-block;
+  animation: iconGlow 4s infinite alternate ease-in-out;
+}
+
+/* 🏆 Insurance Title */
+.insurance-item h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 📝 Description */
+.insurance-item p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 🔄 Alternating Card Sizes */
+.insurance-item:nth-child(odd) {
+  padding: 35px;
+}
+
+/* 🎥 🔹 Keyframe Animations 🔹 */
+
+/* 🔷 Floating Background Shapes */
+@keyframes floatingShape {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
+}
+
+/* 🔥 Icon Glow Animation */
+@keyframes iconGlow {
+  0% {
+    text-shadow: 0px 0px 5px rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    text-shadow: 0px 0px 15px rgba(255, 0, 0, 0.5);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .insurance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .insurance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 🎯 How It Works Section */
+.process-section {
+  background: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* 🏆 Section Title */
+.process-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 15px;
+}
+
+/* 🔥 Highlighted Text */
+.process-highlight {
+  color: #ffcc00;
+}
+
+/* 📝 Subtitle */
+.process-subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* 📌 Steps Layout */
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* 🎯 Individual Step */
+.process-step {
+  flex: 1;
+  max-width: 250px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🔥 Step Icons */
+.process-step i {
+  font-size: 3rem;
+  color: #c20000;
+  margin-bottom: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 🖱️ Hover Effect */
+.process-step:hover {
+  transform: scale(1.05);
+}
+
+.process-step:hover i {
+  transform: scale(1.1);
+}
+
+/* 🏆 Step Title */
+.process-step h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 📝 Step Description */
+.process-step p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 🔴 CTA Button */
+.process-cta {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 12px 30px;
+  background: #c20000;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* 🖱️ Hover Effect on CTA */
+.process-cta:hover {
+  background: #ff4500;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .process-steps {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .process-step {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-section {
+    padding: 80px 15px;
+  }
+
+  .process-title {
+    font-size: 2rem;
+  }
+
+  .process-subtext {
+    font-size: 1rem;
+  }
+
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .process-step {
+    max-width: 100%;
+  }
+
+  .process-cta {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* 🎯 Client Testimonials Section */
+.testimonials-section {
+  background: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* 🏆 Section Title */
+.testimonials-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 15px;
+}
+
+/* 🔥 Highlighted Text */
+.testimonials-highlight {
+  color: #ffcc00;
+}
+
+/* 📝 Subtitle */
+.testimonials-subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* 📌 Testimonials Container */
+.testimonials-container {
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 📌 Testimonials Slider */
+.testimonials-slider {
+  display: flex;
+  width: 300%;
+  transition: transform 1s ease-in-out;
+  animation: slideTestimonials 20s infinite linear;
+}
+
+/* 🎯 Individual Testimonial */
+.testimonial {
+  margin: 5px;
+  width: 33.33%;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* 📝 Testimonial Text */
+.testimonial-text {
+  font-size: 1.3rem;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* 🏆 Client Name */
+.testimonial-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #c20000;
+}
+
+/* 🎥 Fixed Sliding Animation */
+@keyframes slideTestimonials {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-33.33%);
+  }
+  66% {
+    transform: translateX(-66.66%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 📍 Client Logos */
+.clients-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 60px 0 30px;
+}
+
+/* 🏢 Client Logos */
+.clients-logos {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.clients-logos img {
+  max-width: 150px;
+  height: auto;
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* 🖱️ Hover Effect */
+.clients-logos img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 80px 15px;
+  }
+
+  .testimonials-title {
+    font-size: 2rem;
+  }
+
+  .testimonials-subtext {
+    font-size: 1rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.2rem;
+  }
+
+  .testimonial-name {
+    font-size: 1.1rem;
+  }
+
+  .clients-title {
+    font-size: 1.8rem;
+  }
+
+  .clients-logos img {
+    max-width: 120px;
+  }
+}
+
+/* 🎯 FAQs Section */
+.faqs-section {
+  background: #f8f8f8;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* 🏆 Section Title */
+.faqs-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 15px;
+}
+
+/* 🔥 Highlighted Text */
+.faqs-highlight {
+  color: #ffcc00;
+}
+
+/* 📝 Subtitle */
+.faqs-subtext {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* 📌 FAQs Container */
+.faqs {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+/* 🎯 Individual FAQ */
+.faq-item {
+  border-bottom: 2px solid #ddd;
+  padding: 15px 0;
+}
+
+/* 🔹 FAQ Question Button */
+.faq-question {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #c20000;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease-in-out;
+}
+
+/* 🖱️ Hover Effect */
+.faq-question:hover {
+  color: #ff4500;
+}
+
+/* 🔽 Dropdown Icon */
+.faq-question i {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 📜 FAQ Answer (Initially Hidden) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* ✅ Show Answer When Active */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 10px 15px;
+}
+
+/* 🔽 Rotate Icon When Active */
+.faq-item.active .faq-question i {
+  transform: rotate(180deg);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .faqs-section {
+    padding: 80px 15px;
+  }
+
+  .faqs-title {
+    font-size: 2rem;
+  }
+
+  .faqs-subtext {
+    font-size: 1rem;
+  }
+
+  .faq-question {
+    font-size: 1.2rem;
+  }
+}
+
+/* 🎯 Contact Section */
+.contact-section {
+  background: linear-gradient(to right, #c20000, #ff4d4d);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+/* 🏆 Section Title */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* 🔥 Highlighted Text */
+.contact-highlight {
+  color: #ffcc00;
+}
+
+/* 📝 Subtitle */
+.contact-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+/* 📌 Contact Info */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* 🎯 Individual Contact Item */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* 🏆 Icons */
+.contact-item i {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  min-width: 30px; /* Ensures icons are properly aligned */
+  text-align: center;
+}
+
+/* 📩 Email & Phone Links */
+.contact-item p,
+.contact-item a {
+  color: white;
+  margin: 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* 🖱️ Hover Effect */
+.contact-item a:hover {
+  color: #ffcc00;
+}
+
+/* 🖱️ Contact Item Hover Effect */
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* 🔴 CTA Button */
+.contact-cta {
+  display: inline-block;
+  padding: 12px 30px;
+  background: white;
+  color: #c20000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* 🖱️ Hover Effect on CTA */
+.contact-cta:hover {
+  background: #ffcc00;
+  color: #c20000;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 80px 15px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtext {
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-item {
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .contact-item i {
+    font-size: 1.3rem;
+  }
+
+  .contact-item p,
+  .contact-item a {
+    font-size: 1.1rem;
+  }
+
+  .contact-cta {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+.footer-section {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section h4 {
+  color: #ff4b4b;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #ff4b4b;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4b4b;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-bottom ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom ul li a:hover {
+  color: #ff4b4b;
+}
+
+.footer-logo img {
+  width: 180px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Ensures responsiveness */
+  display: block;
+  margin: 0 auto; /* Centers the logo */
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    width: 140px; /* Smaller size for mobile */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .footer-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

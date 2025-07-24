@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>IT Services</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+
+    <link rel="stylesheet" href="/CSS/services/itServices.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="SortOut Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li><a href="/pages/about-page/about.html" class="nav-link">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Career <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="/employee-job/index.php" class="dropdown-item">Employee Jobs</a>
+                <a href="/admin/artist-v2/public/index.php" class="dropdown-item">Artist Jobs</a>
+              </div>
+            </li>
+            <li><a href="/modal_agency.php" class="nav-link">Find Talent</a></li>
+            <li><a href="/pages/our-services-page/service.html" class="nav-link">Service</a></li>
+            <li><a href="/pages/contact-page/contact-page.html" class="nav-link">Contact</a></li>
+            <li><a href="/blog/index.php" class="nav-link">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbarToggle = document.querySelector(".navbar-toggle");
+          const navbarLinks = document.querySelector(".navbar-links");
+          const dropdowns = document.querySelectorAll(".dropdown");
+
+          // Toggle mobile menu
+          navbarToggle.addEventListener("click", () => {
+              navbarLinks.classList.toggle("active");
+          });
+
+          // Handle dropdowns on mobile
+          dropdowns.forEach(dropdown => {
+              const link = dropdown.querySelector("a");
+              link.addEventListener("click", (e) => {
+                  if (window.innerWidth <= 991) {
+                      e.preventDefault();
+                      dropdown.classList.toggle("active");
+                  }
+              });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", (e) => {
+              if (!navbarLinks.contains(e.target) && !navbarToggle.contains(e.target)) {
+                  navbarLinks.classList.remove("active");
+                  dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+              }
+          });
+
+          // Sticky Navbar on Scroll
+          window.addEventListener("scroll", () => {
+              const navbar = document.querySelector(".navbar");
+              if (window.scrollY > 50) {
+                  navbar.classList.add("scrolled");
+              } else {
+                  navbar.classList.remove("scrolled");
+              }
+          });
+      });
+    </script>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <marquee class="smm-marq" behavior="alternate">
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+          <span class="pdr-60">IT Services</span>
+        </marquee>
+        <div class="row align-items-center">
+          <!-- Text Content -->
+          <div class="col-md-6 hero-content">
+            <h1>Your Partner for Smarter IT Solutions</h1>
+            <p>
+              From managed IT services to cybersecurity, we provide everything
+              you need to stay ahead in today’s digital world.
+            </p>
+            <a
+              class="btn-primary"
+              href="https://wa.me/919818559036"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+          </div>
+          <!-- Image Content -->
+          <div class="col-md-6 text-center">
+            <img
+              src="/images/services-imgs/hero-section/it-support-hero-logo.png"
+              alt="IT Services"
+              class="hero-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const whatsappBtn = document.getElementById("whatsapp-link");
+
+        whatsappBtn.addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent default action
+
+          let userName = prompt("Enter your name:");
+          if (!userName) {
+            alert("Please enter your name to proceed.");
+            return;
+          }
+
+          let pageTitle = document.title; // Gets the current page title
+
+          // Construct the message
+          let message = `Hi, my name is ${userName}, and I am interested in ${pageTitle} services.`;
+
+          // Encode message for URL
+          let encodedMessage = encodeURIComponent(message);
+
+          // Final WhatsApp URL
+          let whatsappURL = `https://wa.me/919818559036?text=${encodedMessage}`;
+
+          // Redirect to WhatsApp
+          window.open(whatsappURL, "_blank");
+        });
+      });
+    </script>
+
+    <!-- Services Section -->
+    <section class="our-services-section" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="services-title">Our Services</h2>
+            <p class="services-description">
+              Explore our range of IT services tailored to meet your business
+              needs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-tools service-icon"></i>
+              <h3 class="service-heading">Managed IT Services</h3>
+              <p class="service-text">
+                Complete IT support for businesses, covering troubleshooting,
+                software updates, and technical assistance.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-network-wired service-icon"></i>
+              <h3 class="service-heading">Network Infrastructure & Setup</h3>
+              <p class="service-text">
+                Design, installation, and maintenance of network infrastructure,
+                including structured cabling, routers, and switches.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-desktop service-icon"></i>
+              <h3 class="service-heading">
+                Hardware Maintenance & AMC Services
+              </h3>
+              <p class="service-text">
+                Preventive and corrective hardware support, covering desktops,
+                laptops, printers, and other IT hardware under Annual
+                Maintenance Contracts (AMC).
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-database service-icon"></i>
+              <h3 class="service-heading">Data Backup & Recovery</h3>
+              <p class="service-text">
+                Cloud and local backup solutions with data recovery services to
+                prevent loss due to failures or cyber threats.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-laptop-house service-icon"></i>
+              <h3 class="service-heading">IT Equipment Rental & Sales</h3>
+              <p class="service-text">
+                Rent or buy new and used laptops, desktops, servers, and
+                networking equipment. We also handle IT asset purchases.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-fingerprint service-icon"></i>
+              <h3 class="service-heading">Biometric & Security Solutions</h3>
+              <p class="service-text">
+                Installation and maintenance of biometric attendance systems,
+                access control, and other security solutions.
+              </p>
+            </div>
+          </div>
+          <!-- Service 7 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-code service-icon"></i>
+              <h3 class="service-heading">
+                Website Development & IT Solutions
+              </h3>
+              <p class="service-text">
+                Professional website design and development for businesses,
+                including e-commerce and corporate websites.
+              </p>
+            </div>
+          </div>
+          <!-- Service 8 -->
+          <div class="col-md-4">
+            <div class="service-box">
+              <i class="fas fa-phone-alt service-icon"></i>
+              <h3 class="service-heading">PABX & Telephony Solutions</h3>
+              <p class="service-text">
+                Setup and maintenance of PABX (Private Automated Branch
+                Exchange) telephone systems for businesses.
+              </p>
+            </div>
+          </div>
+          <!-- Service 9 -->
+          <div class="col-md-4">
+            <a href="/devices.php">
+              <div class="service-box">
+                <i class="fas fa-mobile-alt service-icon"></i>
+                <h3 class="service-heading">
+                  Used Laptop/Mobile Devices (Sales & Services)
+                </h3>
+                <p class="service-text">
+                  Sales and servicing of pre-owned mobile phones, desktops, and
+                  laptops with warranty options.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us-section" id="why-choose-us">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="section-title">Why Choose Us</h2>
+            <p class="section-description">
+              Your success is our priority. Here's why businesses trust us for
+              their IT needs.
+            </p>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="row align-items-center">
+          <!-- Left Column: Image -->
+          <div class="col-md-6 text-center">
+            <img
+              src="/images/services-imgs/CA/about-us.jpg"
+              alt="Why Choose Us"
+              class="why-choose-us-img"
+            />
+          </div>
+          <!-- Right Column: Features -->
+          <div class="col-md-6">
+            <ul class="feature-list">
+              <li class="feature-item">
+                <i class="fas fa-user-shield"></i>
+                <div>
+                  <h3 class="feature-title">Expert Team</h3>
+                  <p class="feature-description">
+                    Our team of professionals delivers innovative and reliable
+                    IT solutions.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-trophy"></i>
+                <div>
+                  <h3 class="feature-title">Proven Track Record</h3>
+                  <p class="feature-description">
+                    We’ve successfully helped businesses improve their IT
+                    infrastructure.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-headset"></i>
+                <div>
+                  <h3 class="feature-title">24/7 Support</h3>
+                  <p class="feature-description">
+                    Always available to ensure your business runs smoothly
+                    without interruptions.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-item">
+                <i class="fas fa-thumbs-up"></i>
+                <div>
+                  <h3 class="feature-title">Customer Satisfaction</h3>
+                  <p class="feature-description">
+                    We prioritize your satisfaction with dedicated and
+                    personalized service.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-description">
+              Here’s why our clients trust us with their business.
+            </p>
+          </div>
+        </div>
+        <!-- Testimonials Content -->
+        <div class="row">
+          <!-- Highlighted Testimonial -->
+          <div
+            class="col-md-6 d-flex align-items-center justify-content-center"
+          >
+            <div class="highlighted-testimonial">
+              <!-- <img
+                src="https://via.placeholder.com/150"
+                alt="Client Highlight"
+                class="highlighted-img"
+              /> -->
+              <blockquote class="highlighted-text">
+                "Sortout Innovation provided us with the best IT solutions.
+                Their expertise and 24/7 support are unmatched!"
+              </blockquote>
+              <h3 class="author-name">Sneha Iyer</h3>
+              <p class="author-role">CEO, Josh</p>
+            </div>
+          </div>
+          <!-- Smaller Testimonials -->
+          <div class="col-md-6">
+            <div class="smaller-testimonials">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-item">
+                <blockquote class="testimonial-text">
+                  "Amazing service! They completely transformed our
+                  infrastructure."
+                </blockquote>
+                <h4 class="author-name">Amit Verma</h4>
+                <p class="author-role">Manager, Snapchat</p>
+              </div>
+              <!-- Testimonial 2 -->
+              <div class="testimonial-item">
+                <blockquote class="testimonial-text">
+                  "I’m very impressed with their custom solutions and fast
+                  response time."
+                </blockquote>
+                <h4 class="author-name">Rohan Sharma</h4>
+                <p class="author-role">Founder, Startup</p>
+              </div>
+              <!-- Testimonial 3 -->
+              <div class="testimonial-item">
+                <blockquote class="testimonial-text">
+                  "Affordable and reliable – exactly what we needed for our
+                  business."
+                </blockquote>
+                <h4 class="author-name">Priya Mehta</h4>
+                <p class="author-role">Owner, RetailNow</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-us-section" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-description">
+              We’re here to help! Reach out to us using the options below.
+            </p>
+          </div>
+        </div>
+        <!-- Contact Details -->
+        <div class="row g-4">
+          <!-- Email -->
+          <div class="col-md-4">
+            <div class="contact-card modern-gradient-red">
+              <a
+                href="mailto:info@sortoutinnovation.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="contact-title">Email Us</h3>
+                <p class="contact-detail">info@sortoutinnovation.com</p>
+              </a>
+            </div>
+          </div>
+          <!-- Phone -->
+
+          <div class="col-md-4">
+            <div class="contact-card modern-gradient-blue">
+              <a
+                href="https://wa.me/919818559036"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="contact-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3 class="contact-title">Call Us</h3>
+                <p class="contact-detail">919818559036</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="col-md-4">
+            <div class="contact-card modern-gradient-green">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3 class="contact-title">Visit Us</h3>
+              <p class="contact-detail">Spaze i-Tech Park, Gurugram, India</p>
+            </div>
+          </div>
+        </div>
+        <!-- Social Media Links -->
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs-section" id="faqs">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+          <div class="col">
+            <h2 class="faq-section-title">Frequently Asked Questions</h2>
+            <p class="faq-section-description">
+              Find answers to the most common questions about our services. Need
+              more help? Contact us!
+            </p>
+          </div>
+        </div>
+        <!-- FAQs Grid -->
+        <div class="row g-4">
+          <!-- FAQ 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-box">
+              <h4 class="faq-question">What services do you offer?</h4>
+              <p class="faq-answer">
+                We provide managed IT support, cybersecurity, network solutions,
+                website development, and more.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-box">
+              <h4 class="faq-question">Do you offer 24/7 support?</h4>
+              <p class="faq-answer">
+                Yes, our support team is available 24/7 to ensure your business
+                runs smoothly.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-box">
+              <h4 class="faq-question">What industries do you serve?</h4>
+              <p class="faq-answer">
+                We work with clients in healthcare, retail, education, and the
+                technology sector.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-box">
+              <h4 class="faq-question">How can I contact your support team?</h4>
+              <p class="faq-answer">
+                You can email us at support@sortoutinnovation.com or call us at
+                +1 (123) 456-7890.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-box">
+              <h4 class="faq-question">
+                Do you offer customized IT solutions?
+              </h4>
+              <p class="faq-answer">
+                Yes, we tailor IT solutions to fit your specific business needs
+                and challenges.
+              </p>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-box">
+              <h4 class="faq-question">How do I get started?</h4>
+              <p class="faq-answer">
+                Reach out to us via email or phone to discuss your needs, and
+                we’ll expertly guide you through the entire process smoothly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+          <!-- Text Content -->
+          <div class="col-md-8">
+            <h2 class="cta-title">Ready to Transform Your Business?</h2>
+            <p class="cta-subtitle">
+              Take the next step with our expert IT solutions. Let’s make your
+              business more efficient, secure, and successful.
+            </p>
+          </div>
+          <!-- Buttons -->
+          <div class="col-md-4 text-center text-md-end">
+            <a
+              href="https://wa.me/919818559036"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn cta-btn"
+              >Contact Us</a
+            >
+            <a href="#services" class="btn btn-outline-light cta-btn-secondary"
+              >Explore Services</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sortout Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!-- Font Awesome for Social Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Accordion Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome Script -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

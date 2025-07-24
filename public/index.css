@@ -1,0 +1,238 @@
+/* Apply Google Fonts */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* ✅ Ensure Smooth Mobile Menu Animation */
+.mobile-menu {
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* ✅ Custom CSS to Ensure Proper Mobile Alignment */
+@media (max-width: 768px) {
+  .mobile-navbar {
+    position: relative;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    position: absolute;
+    left: 16px;
+  }
+
+  .menu-toggle {
+    position: absolute;
+    right: 16px;
+  }
+}
+
+/* Blog Content Box */
+.blog-content {
+  position: relative;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1.5px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Blog content hover effect */
+.blog-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Section - Profile Image */
+.relative.w-32 {
+  width: 128px; /* 32x32 */
+  height: 128px;
+  border-radius: 50%;
+  border: 3px solid #ff3333;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect on Image */
+.relative.w-32:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Date & Time Below Image */
+.text-center.mt-3 {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+/* Date */
+.text-gray-500 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #717171;
+}
+
+/* Time */
+.text-gray-800 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+/* Pagination Styling */
+.bg-gray-900 {
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Pagination Buttons */
+.bg-gray-700 {
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-gray-700:hover {
+  background-color: #4a5568;
+  transform: scale(1.05);
+}
+
+/* Disabled Button */
+.bg-gray-800 {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .blog-content {
+    border-radius: 30px;
+    padding: 16px;
+  }
+
+  .flex.items-center {
+    flex-direction: column;
+  }
+
+  .text-center.mt-3 p {
+    font-size: 14px;
+  }
+
+  .mt-10 {
+    margin-top: 2rem;
+  }
+}
+
+/* styles.css */
+
+/* ✅ Speech Bubble Effect */
+.speech-bubble {
+  position: relative;
+  background-color: white;
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1.5px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Speech Bubble Tail */
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  left: -15px; /* Default for large screens */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Fix Tail Positioning on Mobile */
+@media (max-width: 768px) {
+  .speech-bubble {
+    border-radius: 30px;
+    padding: 15px;
+  }
+
+  .speech-bubble::before {
+    left: -10px; /* Adjusted for mobile */
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ✅ Ensure Proper Alignment */
+@media (max-width: 480px) {
+  .speech-bubble {
+    padding: 12px;
+    border-radius: 25px;
+  }
+
+  .speech-bubble::before {
+    left: -8px;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ✅ Speech Bubble Effect */
+.speech-bubble {
+  position: relative;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1.5px solid #000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ✅ Speech Bubble Tail */
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  left: -15px; /* Default for large screens */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ✅ Centering Left Section (Profile Image & Date) */
+@media (min-width: 768px) {
+  .flex.md\:items-center {
+    align-items: center;
+  }
+}
+
+/* ✅ Fix Tail Positioning on Mobile */
+@media (max-width: 768px) {
+  .speech-bubble {
+    border-radius: 30px;
+    padding: 15px;
+  }
+
+  .speech-bubble::before {
+    left: -10px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .flex.md\:items-center {
+    align-items: center;
+    flex-direction: column;
+  }
+}

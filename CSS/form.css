@@ -1,0 +1,118 @@
+/* General Container Styling */
+.custom-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  font-family: "Arial", sans-serif;
+}
+
+.custom-title {
+  color: #e63946;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Form Styling */
+.custom-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.custom-form .form-group {
+  flex: 1 1 calc(33.33% - 20px);
+}
+
+.custom-form .form-group.full-width {
+  flex: 1 1 100%;
+}
+
+.custom-form .form-control,
+.custom-form .form-select,
+.custom-form .form-range {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.custom-form button {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.custom-form button:hover {
+  background-color: #c5283a;
+}
+
+/* Display Data Grid */
+.custom-display-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.custom-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #f3f3f3, #ffffff);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.custom-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.custom-card-content p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.custom-card-content p strong {
+  color: #e63946;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .custom-display-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-display-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-display-grid {
+    grid-template-columns: 1fr;
+  }
+}

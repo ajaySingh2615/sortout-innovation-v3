@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Career at SortOut Media</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/CSS/career.css?v=2" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css?v=2" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="SortOut Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li>
+              <a href="/pages/about-page/about.html" class="nav-link">About</a>
+            </li>
+            <li><a href="/employee-job/index.php" class="nav-link">Jobs</a></li>
+            <li>
+              <a href="/modal_agency.php" class="nav-link"
+                >Find Talent</a
+              >
+            </li>
+            <li>
+              <a href="/pages/our-services-page/service.html" class="nav-link"
+                >Service</a
+              >
+            </li>
+            <li>
+              <a href="/pages/contact-page/contact-page.html" class="nav-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      const navbarToggle = document.querySelector(".navbar-toggle");
+      const navbarLinks = document.querySelector(".navbar-links");
+
+      navbarToggle.addEventListener("click", () => {
+        navbarLinks.classList.toggle("active");
+      });
+
+      // Sticky Navbar on Scroll
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+    <!-- #################################################### -->
+    <!-- Hero Section -->
+    <!-- #################################################### -->
+    <section class="career-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 text-content">
+            <h1 class="career-heading">Together, Let's Build the Future</h1>
+            <p class="career-description">
+              At SortOut Media, we value talent, passion, and creativity. Be
+              part of a dynamic team, innovate, and grow with us. Let’s shape
+              the future of digital marketing and HR solutions together!
+            </p>
+            <a
+              href="https://linktr.ee/sortoutmedia?utm_source=qr_code"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="career-btn"
+            >
+              <button class="btn-primary myBtn">Find Your Dream Job!</button>
+            </a>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center">
+            <img
+              src="/images/careers-img/Meeting-mg.png"
+              class="career-image"
+              alt="Career Growth"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!-- SECTION CARD  -->
+    <!-- #################################################### -->
+
+    <!-- ########################################################## -->
+    <!-- Job Listing Section -->
+    <!-- Job Listing Section -->
+    <!-- Job Listing Section -->
+    <!-- Job Listing Section -->
+    <section class="job-listing-section">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="section-title text-center">
+          <h2>Find Your <span>Dream Job</span></h2>
+          <p>Explore opportunities and take your career to the next level.</p>
+        </div>
+
+        <!-- Job Filters -->
+        <div class="job-filters">
+          <input
+            type="text"
+            id="filterPosition"
+            placeholder="🔍 Search Position"
+          />
+          <select id="filterSalary">
+            <option value="">💰 Select Salary</option>
+            <option value="10000-20000">₹10,000 - ₹20,000</option>
+            <option value="20000-30000">₹20,000 - ₹30,000</option>
+            <option value="30000-50000">₹30,000 - ₹50,000</option>
+          </select>
+          <select id="filterExperience">
+            <option value="">🎓 Select Experience</option>
+            <option value="0-1">0-1 Year</option>
+            <option value="1-3">1-3 Years</option>
+            <option value="3-5">3-5 Years</option>
+            <option value="5+">5+ Years</option>
+          </select>
+          <select id="filterLocation">
+            <option value="">📍 Select Location</option>
+            <option value="Gurugram">Gurugram</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Mumbai">Mumbai</option>
+          </select>
+          <button id="clearFilters">❌ Clear Filters</button>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="job-listings" id="jobListings"></div>
+
+        <!-- Pagination -->
+        <!-- Pagination -->
+        <div class="pagination-container">
+          <button id="prevPage" disabled>⬅ Previous</button>
+          <div id="pageNumbers"></div>
+          <!-- Page Numbers Will Be Inserted Here -->
+          <button id="nextPage">Next ➡</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Manually Entered Job Data (You Can Edit This)
+      const jobData = [
+        {
+          position: "Retail Sales Executive",
+          salary: "15000-20000",
+          experience: "1-2",
+          location: "Jalalpur",
+          industry: "Sales & Retail",
+        },
+        {
+          position: "Sales Executive",
+          salary: "30000-35000",
+          experience: "3-4",
+          location: "Gurugram",
+          industry: "Sales & Marketing",
+        },
+        {
+          position: "Team Lead (Retail Sales)",
+          salary: "35000-45000",
+          experience: "5-7",
+          location: "Gurugram",
+          industry: "Sales & Leadership",
+        },
+        {
+          position: "Web Developer",
+          salary: "25000",
+          experience: "1-2",
+          location: "Gurugram",
+          industry: "IT & Software Development",
+        },
+        {
+          position: "Business Development",
+          salary: "Up to 30000 + Incentive",
+          experience: "2-5",
+          location: "Gurugram",
+          industry: "Business Development",
+        },
+        {
+          position: "Marketing & Communication",
+          salary: "Up to 30000 + Incentive",
+          experience: "2-5",
+          location: "Gurugram",
+          industry: "Marketing & Communication",
+        },
+        {
+          position: "CRM (Logistics)",
+          salary: "25000-35000",
+          experience: "1-2",
+          location: "Gurugram",
+          industry: "Customer Relationship Management",
+        },
+        {
+          position: "Business Development",
+          salary: "25000-35000",
+          experience: "2-4",
+          location: "Gurugram",
+          industry: "Business Development",
+        },
+        {
+          position: "Accountant",
+          salary: "20000-30000",
+          experience: "2-4",
+          location: "Gurugram",
+          industry: "Accounting & Finance",
+        },
+        {
+          position: "Graphic Designer",
+          salary: "15000-25000",
+          experience: "2-4",
+          location: "Gurugram",
+          industry: "Design & Creativity",
+        },
+        {
+          position: "Vendor Manager (Logistics)",
+          salary: "15000-37000 + Incentive",
+          experience: "2-5",
+          location: "Gurugram",
+          industry: "Logistics & Supply Chain",
+        },
+        {
+          position: "Social Media Manager",
+          salary: "15000-37000 + Incentive",
+          experience: "2-5",
+          location: "Gurugram",
+          industry: "Social Media & Digital Marketing",
+        },
+        {
+          position: "Telecaller",
+          salary: "Up to 20000",
+          experience: "1-2",
+          location: "Gurugram",
+          industry: "Customer Support & Telecalling",
+        },
+        {
+          position: "Field Sales Executive",
+          salary: "25000-30000",
+          experience: "1-2",
+          location: "Gurugram",
+          industry: "Sales & Field Work",
+        },
+        {
+          position: "Digital Marketing Executive",
+          salary: "25000-35000",
+          experience: "2-4",
+          location: "Gurugram",
+          industry: "Digital Marketing",
+        },
+        {
+          position: "Sales & Distribution Manager",
+          salary: "30000-40000",
+          experience: "3-5",
+          location: "Gurugram",
+          industry: "Sales & Distribution",
+        },
+      ];
+
+      let currentPage = 1;
+      const jobsPerPage = 8;
+      let filteredJobs = [...jobData]; // Stores filtered results
+
+      // Function to Display Jobs with Pagination
+      function displayJobs(page = 1) {
+        const jobListings = document.getElementById("jobListings");
+        jobListings.innerHTML = ""; // Clear previous jobs
+
+        const startIndex = (page - 1) * jobsPerPage;
+        const endIndex = startIndex + jobsPerPage;
+        const paginatedJobs = filteredJobs.slice(startIndex, endIndex);
+
+        paginatedJobs.forEach((job) => {
+          const jobElement = document.createElement("div");
+          jobElement.classList.add("job-card");
+
+          jobElement.innerHTML = `
+            <h4>📌 ${job.position}</h4>
+            <p><strong>💰 Salary:</strong> ₹${job.salary.replace(
+              "-",
+              " - ₹"
+            )}</p>
+            <p><strong>🎓 Experience:</strong> ${job.experience} Years</p>
+            <p><strong>📍 Location:</strong> ${job.location}</p>
+            <p><strong>🏢 Industry:</strong> ${job.industry}</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmHKGO60CrF7M2HuPpb8KhlhazfcsKPo1MF-fqQyFM1aM22A/viewform" target="_blank"
+                rel="noopener noreferrer" class="apply-btn">Apply Now</a>
+        `;
+
+          jobListings.appendChild(jobElement);
+        });
+
+        updatePagination();
+      }
+
+      // Function to Update Pagination Buttons & Page Numbers
+      function updatePagination() {
+        const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+        const pageNumbersContainer = document.getElementById("pageNumbers");
+        pageNumbersContainer.innerHTML = ""; // Clear existing numbers
+
+        for (let i = 1; i <= totalPages; i++) {
+          let pageButton = document.createElement("button");
+          pageButton.classList.add("page-number");
+          pageButton.textContent = i;
+          if (i === currentPage) {
+            pageButton.classList.add("active"); // Highlight active page
+          }
+          pageButton.addEventListener("click", () => {
+            currentPage = i;
+            displayJobs(currentPage);
+            scrollToPagination(); // Scroll to pagination when page changes
+          });
+          pageNumbersContainer.appendChild(pageButton);
+        }
+
+        document.getElementById("prevPage").disabled = currentPage === 1;
+        document.getElementById("nextPage").disabled =
+          currentPage === totalPages;
+      }
+
+      // Scrolls to Pagination Section on Page Change (For Mobile UX)
+      function scrollToPagination() {
+        document
+          .querySelector(".pagination-container")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Filtering Function
+      function filterJobs() {
+        const position = document
+          .getElementById("filterPosition")
+          .value.toLowerCase();
+        const salary = document.getElementById("filterSalary").value;
+        const experience = document.getElementById("filterExperience").value;
+        const location = document.getElementById("filterLocation").value;
+
+        filteredJobs = jobData.filter((job) => {
+          return (
+            (position === "" ||
+              job.position.toLowerCase().includes(position)) &&
+            (salary === "" || job.salary === salary) &&
+            (experience === "" || job.experience === experience) &&
+            (location === "" || job.location === location)
+          );
+        });
+
+        currentPage = 1; // Reset to first page
+        displayJobs(currentPage);
+      }
+
+      // Pagination Controls
+      document.getElementById("prevPage").addEventListener("click", () => {
+        if (currentPage > 1) {
+          currentPage--;
+          displayJobs(currentPage);
+          scrollToPagination();
+        }
+      });
+
+      document.getElementById("nextPage").addEventListener("click", () => {
+        const totalPages = Math.ceil(filteredJobs.length / jobsPerPage);
+        if (currentPage < totalPages) {
+          currentPage++;
+          displayJobs(currentPage);
+          scrollToPagination();
+        }
+      });
+
+      // Attach Event Listeners for Filtering
+      document
+        .getElementById("filterPosition")
+        .addEventListener("input", filterJobs);
+      document
+        .getElementById("filterSalary")
+        .addEventListener("change", filterJobs);
+      document
+        .getElementById("filterExperience")
+        .addEventListener("change", filterJobs);
+      document
+        .getElementById("filterLocation")
+        .addEventListener("change", filterJobs);
+
+      // Clear Filters
+      document.getElementById("clearFilters").addEventListener("click", () => {
+        document.getElementById("filterPosition").value = "";
+        document.getElementById("filterSalary").value = "";
+        document.getElementById("filterExperience").value = "";
+        document.getElementById("filterLocation").value = "";
+
+        filteredJobs = [...jobData]; // Reset to full list
+        currentPage = 1;
+        displayJobs(currentPage);
+      });
+
+      // Initial Load
+      displayJobs(currentPage);
+    </script>
+
+    <!-- #################################################### -->
+    <!-- SECTION LOOKING FOR A CHANGE -->
+    <!-- #################################################### -->
+    <section id="cta" class="job-application-section">
+      <div class="container text-center">
+        <h2 class="job-heading">Your Skills, Your Future</h2>
+        <p class="job-description">
+          Let us match you with the perfect job! Share your skills, experience,
+          and salary expectations, and we'll help you land your dream role.
+        </p>
+        <a
+          href="https://linktr.ee/sortoutmedia?utm_source=qr_code"
+          target="_blank"
+          class="btn btn-primary job-btn"
+        >
+          Submit Your Details
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919818559036">+91 9818559036</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@sortoutinnovation.com"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61556452066209"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/sortout-innovation/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://www.instagram.com/sortoutinnovation"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortoutinnovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i
+          ><span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

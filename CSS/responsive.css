@@ -1,0 +1,335 @@
+/* Default Styles - Global */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Containers to ensure no cutting from left or right */
+.improve-section,
+.frequently-asked-questions,
+.many-section {
+  width: 100%;
+  padding: 0 20px; /* Add horizontal padding */
+  box-sizing: border-box; /* Include padding in width */
+  margin: 0 auto;
+}
+
+/* Center all elements in the sections */
+.improve-section,
+.frequently-asked-questions,
+.many-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* For smaller screens (Tablets) */
+@media screen and (max-width: 768px) {
+  .improve-section,
+  .frequently-asked-questions,
+  .many-section {
+    padding: 0 10px; /* Reduced padding for small screens */
+  }
+
+  /* Ensure icons have breathing space */
+  .improve-section .icon,
+  .frequently-asked-questions .icon,
+  .many-section .icon {
+    margin: 10px; /* Add space between icons */
+  }
+
+  /* Ensure headings and sub-headings have breathing space */
+  .improve-section h2,
+  .frequently-asked-questions h2,
+  .many-section h2 {
+    margin-bottom: 20px;
+  }
+
+  .improve-section h3,
+  .frequently-asked-questions h3,
+  .many-section h3 {
+    margin-bottom: 15px;
+  }
+
+  /* Space between images and text */
+  .improve-section img,
+  .frequently-asked-questions img,
+  .many-section img {
+    margin-bottom: 15px; /* Add space below images */
+    max-width: 100%; /* Ensure images are responsive */
+  }
+
+  /* Add breathing space between cards */
+  .improve-section .card,
+  .frequently-asked-questions .card,
+  .many-section .card {
+    margin: 15px 0; /* Add top and bottom margin for spacing */
+    width: 100%;
+  }
+
+  /* FAQ item spacing */
+  .frequently-asked-questions .faq-item {
+    margin-bottom: 15px;
+  }
+
+  /* Remove excessive margins or padding */
+  .improve-section .card-header,
+  .frequently-asked-questions .card-header,
+  .many-section .card-header {
+    margin-bottom: 10px;
+  }
+}
+
+/* For Mobile Screens */
+@media screen and (max-width: 480px) {
+  /* Add more space on mobile devices */
+  .improve-section,
+  .frequently-asked-questions,
+  .many-section {
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  .improve-section .card,
+  .frequently-asked-questions .card,
+  .many-section .card {
+    margin: 20px 0; /* Add vertical margin between sections */
+    width: 100%; /* Full width for mobile */
+  }
+
+  .improve-section h2,
+  .frequently-asked-questions h2,
+  .many-section h2 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    margin-bottom: 25px; /* Larger margin for better separation */
+  }
+
+  .improve-section h3,
+  .frequently-asked-questions h3,
+  .many-section h3 {
+    font-size: 1.2rem; /* Adjust font size for sub-headings */
+    margin-bottom: 20px;
+  }
+
+  .improve-section img,
+  .frequently-asked-questions img,
+  .many-section img {
+    margin-bottom: 20px; /* More space for images on mobile */
+    width: 100%; /* Make images responsive */
+  }
+
+  .frequently-asked-questions .faq-item {
+    margin-bottom: 20px; /* Increased space between FAQ items */
+  }
+
+  /* Center elements inside cards */
+  .improve-section .card,
+  .frequently-asked-questions .card,
+  .many-section .card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* FAQ Section - Better stacked layout for mobile */
+  .frequently-asked-questions {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+
+  .frequently-asked-questions .faq-item {
+    text-align: left; /* Align text to the left in FAQ */
+    margin-bottom: 25px;
+  }
+}
+
+/* Additional large screen styles (Desktop) */
+@media screen and (min-width: 1200px) {
+  .improve-section,
+  .frequently-asked-questions,
+  .many-section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .improve-section .card,
+  .frequently-asked-questions .card,
+  .many-section .card {
+    width: 30%; /* Display cards in a 3-column layout */
+    margin-right: 20px;
+  }
+}
+
+/* improve section */
+/* General Layout for the improve-section */
+/* General Layout for the improve-section */
+/* General Layout for the improve-section */
+/* General Layout for the improve-section */
+/* General Layout for the improve-section */
+.improve-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures proper spacing */
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* Individual Icon Styling */
+.improve-section .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  padding: 15px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Icon Hover Effect */
+.improve-section .icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Image Inside */
+.improve-section .icon img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-bottom: 10px;
+}
+
+/* For smaller screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* Hide all icons and display only one step */
+  .improve-section .icon {
+    display: none; /* Hide icons */
+  }
+
+  /* Show one step on smaller screens */
+  .improve-section .step {
+    display: block; /* Make the step visible */
+    width: 100%; /* Make it full width */
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  /* Adjust padding for the section to give breathing space */
+  .improve-section {
+    padding: 20px 10px; /* Reduce the padding */
+    justify-content: center; /* Center the content */
+  }
+}
+
+/* ############### */
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .viral-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    padding: 10px; /* Add padding for breathing space */
+  }
+
+  .viral-section .step {
+    display: block;
+    width: 80%; /* Decrease the width to create space on left and right */
+    max-width: 300px; /* Optionally, set a max width to prevent divs from becoming too wide */
+    margin: 10px 0; /* Space between each step */
+    text-align: center; /* Center the text */
+  }
+
+  .viral-section .step img {
+    width: 80px; /* Adjust icon size */
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .viral-section .step h3,
+  .viral-section .step p {
+    margin: 5px 0; /* Adjust margins for headings and paragraphs */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    margin-left: 10px; /* Add 10px margin on the left */
+    margin-right: 10px; /* Add 10px margin on the right */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .boost-red,
+  .boost-bl {
+    margin-left: 10px; /* Add 10px margin on the left */
+    margin-right: 10px; /* Add 10px margin on the right */
+  }
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .secondary-heading-main {
+    margin-left: 5px;
+  }
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .smm_box {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .heading-title-md {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .heading-main {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .btn-primary {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .testimonial-card {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .moblie-row {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

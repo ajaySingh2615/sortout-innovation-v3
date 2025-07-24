@@ -1,0 +1,1534 @@
+/* General Styling */
+:root {
+  --bs-primary: #d10000;
+  --bs-primary-rgb: 209, 0, 0;
+  --bs-secondary: #6c757d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #ff4b4b, #d10000);
+  color: #ffffff;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Headings */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Custom Buttons */
+.btn-primary-custom,
+.btn-outline-custom {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+/* Solid Button */
+.btn-primary-custom {
+  background-color: #ffffff;
+  color: #d10000;
+}
+
+.btn-primary-custom:hover {
+  background-color: #ffcccc;
+  color: #d10000;
+}
+
+/* Outline Button */
+.btn-outline-custom {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+}
+
+.btn-outline-custom:hover {
+  background-color: #ffffff;
+  color: #d10000;
+  border-color: #ffffff;
+}
+
+/* Remove Focus Outline */
+.btn-primary-custom:focus,
+.btn-outline-custom:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Hero Image */
+.hero-img {
+  max-width: 90%;
+  height: auto;
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.hero-img:hover {
+  transform: scale(1.15);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 80%;
+    margin-top: 30px;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-img {
+    max-width: 70%;
+    margin-top: 20px;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hero-img {
+    max-width: 80%;
+    margin-top: 15px;
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Buttons Container */
+.hero-section .mt-4 {
+  display: flex;
+  gap: 15px; /* Adds space between buttons */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+  .hero-section .mt-4 {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+    gap: 12px; /* Add more gap for smaller devices */
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    width: 80%; /* Make buttons wider for better touch experience */
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section .mt-4 {
+    gap: 10px; /* Slightly smaller gap for extra-small screens */
+  }
+
+  .btn-primary-custom,
+  .btn-outline-custom {
+    width: 100%; /* Full width for extra-small screens */
+  }
+}
+
+/* Our Story Section */
+/* Our Story Section */
+.our-story-section {
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.story-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #d10000;
+  margin-bottom: 15px;
+}
+
+.story-subheading {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.story-description {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Story List (Icons & Text) */
+.story-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.story-list li {
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-list li:hover {
+  transform: translateY(-3px);
+}
+
+.story-list i {
+  color: #d10000;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* Footer Text */
+.story-footer {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Story Image */
+.story-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); */
+}
+
+/* 🔹 Responsive Fixes for Mobile */
+@media (max-width: 991px) {
+  .story-heading {
+    font-size: 2.2rem;
+  }
+
+  .story-subheading {
+    font-size: 1.3rem;
+  }
+
+  .story-description {
+    font-size: 1rem;
+  }
+
+  .story-list li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-story-section {
+    text-align: center;
+    padding: 60px 15px;
+  }
+
+  .story-list {
+    align-items: center; /* Center list items */
+  }
+
+  .story-list li {
+    width: 100%; /* Ensure equal width */
+    max-width: 400px;
+    text-align: left;
+  }
+
+  .story-list i {
+    font-size: 1.2rem;
+  }
+
+  /* Stack image on top */
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .story-image {
+    margin-bottom: 20px;
+  }
+}
+
+/* Creative Quote Section */
+/* 🌟 Philosophy Section */
+.philosophy-section {
+  background: #ffffff;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎨 Elegant Main Heading */
+.philosophy-heading {
+  font-size: 3.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: #222;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+/* 🔥 Highlighted Text */
+.philosophy-heading span {
+  color: #d10000;
+  font-weight: 900;
+  font-style: italic;
+  display: block;
+}
+
+/* 🖌 Supporting Text */
+.philosophy-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #444;
+  max-width: 700px;
+  margin: 10px auto 30px;
+  line-height: 1.7;
+  position: relative;
+}
+
+/* 🚀 Brand Highlight */
+.brand-highlight {
+  color: #d10000;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ✨ Underline Effect */
+.philosophy-underline {
+  width: 150px;
+  height: 4px;
+  background: #d10000;
+  margin: 20px auto;
+  border-radius: 10px;
+  animation: slideIn 1.5s ease-out infinite alternate;
+}
+
+/* 🌀 Abstract Quote Design */
+.abstract-design {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d10000;
+  font-style: italic;
+  padding: 20px;
+  max-width: 700px;
+  margin: 50px auto;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* 🌟 Quote Symbols */
+.quote {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #d10000;
+  display: inline-block;
+  position: relative;
+}
+
+/* 🎭 Smooth Animation */
+@keyframes slideIn {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(1.2);
+  }
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 991px) {
+  .philosophy-heading {
+    font-size: 3rem;
+  }
+  .philosophy-text {
+    font-size: 1.2rem;
+  }
+  .abstract-design {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy-section {
+    padding: 100px 15px;
+  }
+  .philosophy-heading {
+    font-size: 2.4rem;
+  }
+  .philosophy-text {
+    font-size: 1.1rem;
+  }
+  .abstract-design {
+    font-size: 1.3rem;
+  }
+}
+
+/* 🌟 Creative Process Section */
+/* 🌟 Creative Process Section */
+/* 🌟 Creative Process Section */
+/* 🌟 Creative Process Section */
+/* 🌟 Creative Process Section */
+.creative-process {
+  background: url("https://source.unsplash.com/1600x900/?technology,digital")
+    no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* ✨ Dark Overlay for Readability */
+.creative-process::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* 🚀 Section Title */
+.process-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.process-subtitle {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  color: #f2f2f2;
+}
+
+/* 🎯 Process Steps - Vertical Flow */
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+
+/* 🔴 Step Design */
+.process-step {
+  display: flex;
+  align-items: center;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  /* box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2); */
+  /* opacity: 0; */
+  transform: translateY(50px);
+}
+
+/* 🌟 Step Animation */
+.process-step.visible {
+  /* opacity: 1; */
+  transform: translateY(0);
+}
+
+/* 🔘 Step Icons */
+.step-icon {
+  width: 70px;
+  height: 70px;
+  background: #ff4b4b;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 75, 75, 0.8);
+  margin-right: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 💡 Hover Glow Effect */
+.process-step:hover .step-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 75, 75, 1);
+}
+
+/* 💬 Step Content */
+.step-content {
+  text-align: left;
+  color: white;
+}
+
+.step-content h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff4b4b;
+}
+
+.step-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 🏆 Responsive Design */
+@media (max-width: 768px) {
+  .process-title {
+    font-size: 2.5rem;
+  }
+
+  .process-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .process-step {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-icon {
+    margin-bottom: 15px;
+  }
+
+  .step-content {
+    text-align: center;
+  }
+}
+
+/* 🌟 Mission, Vision & Values Section */
+/* 🌟 Mission, Vision & Values Section */
+/* 🌟 Mission, Vision & Values Section */
+.mission-vision {
+  background: linear-gradient(135deg, #ffffff 50%, #f8f9fa 50%);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* 🎯 Section Header */
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #d10000;
+}
+
+.section-title .highlight {
+  color: #a00000;
+  font-style: italic;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 🌍 Flexbox Layout for Blocks */
+.mv-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+/* 🏆 Individual Block */
+.mv-block {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1; /* Allows equal width */
+  min-width: 280px; /* Prevents shrinking too much */
+  text-align: center;
+  border-left: 6px solid #d10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 🚀 Hover Effect */
+.mv-block:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(255, 75, 75, 0.2);
+}
+
+/* 🌟 Icons */
+.mv-icon {
+  font-size: 3rem;
+  color: #d10000;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* 🏆 Hover Effect on Icons */
+.mv-block:hover .mv-icon {
+  transform: scale(1.1);
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* ✍️ Headings */
+.mv-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* 💬 Text */
+.mv-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ✅ List Styling */
+.mv-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.mv-list li {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* 🔥 Icons for List Items */
+.mv-list .icon {
+  font-size: 1.5rem;
+  color: #d10000;
+  margin-right: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 991px) {
+  .mv-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mv-block {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* 📌 Our Services Section */
+/* 📌 Our Services Section */
+.our-services {
+  background: linear-gradient(135deg, #ffffff 50%, #f8f9fa 50%);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* 🎯 Section Header */
+.service-intro {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #d10000;
+}
+
+.section-title .highlight {
+  color: #a00000;
+  font-style: italic;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* 🔳 Services Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* 🏆 Service Box */
+.service-box {
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔴 Red Background */
+.red-bg {
+  background: #d10000;
+  color: white;
+}
+
+/* ⚪ White Background */
+.white-bg {
+  background: white;
+  color: #333;
+  border: 1px solid #d10000;
+}
+
+/* 🏆 Hover Effects */
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(255, 75, 75, 0.2);
+}
+
+/* 🔥 Service Icons */
+.service-icon {
+  font-size: 3rem;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* 🏆 Hover Effect on Icons */
+.service-box:hover .service-icon {
+  transform: scale(1.1);
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* ✍️ Service Titles */
+.service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* 💬 Service Text */
+.service-text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* 📌 Explore More Button */
+.explore-more-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.explore-more-btn {
+  display: inline-block;
+  background: #d10000;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.explore-more-btn:hover {
+  background: #a00000;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 991px) {
+  .service-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .explore-more-btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* 📌 Experience Section */
+/* 📌 Experience Section */
+.experience-section {
+  background: linear-gradient(135deg, #ffffff 50%, #f8f9fa 50%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* 🏆 Section Heading */
+.experience-header {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #d10000;
+}
+
+.section-title span {
+  color: #a00000;
+  font-style: italic;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* 🔥 Experience List (No Divs) */
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 🎯 Experience List Items */
+.experience-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+  background: rgba(209, 0, 0, 0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* 🏆 Hover Effects */
+.experience-list li:hover {
+  background: rgba(209, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+/* 🏅 Icons */
+.experience-list li i {
+  font-size: 2rem;
+  color: #d10000;
+  margin-right: 15px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 991px) {
+  .experience-list {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .experience-list li {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* 📊 Stats Section */
+.stats-section {
+  background: #f8f9fa;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* 🏆 Section Heading */
+.stats-header {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #d10000;
+}
+
+.section-title span {
+  color: #a00000;
+  font-style: italic;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* 🔥 Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* 🏅 Stats Items */
+.stat-item {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔴 Icon Styling */
+.stat-item i {
+  font-size: 3rem;
+  color: #d10000;
+  margin-bottom: 15px;
+}
+
+/* 🔢 Number Styling */
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 📌 Description */
+.stat-item p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 991px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .stat-item {
+    padding: 20px;
+  }
+
+  .stat-item i {
+    font-size: 2.5rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .stat-item p {
+    font-size: 1rem;
+  }
+}
+
+/* 👀 Clients Section */
+.clients-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* 📌 Section Header */
+.clients-header {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #d10000;
+}
+
+.section-title span {
+  color: #a00000;
+  font-style: italic;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* 🏢 Industries Grid */
+.industries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.industry-item {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔴 Industry Icons */
+.industry-item i {
+  font-size: 2.5rem;
+  color: #d10000;
+  margin-bottom: 10px;
+}
+
+.industry-item p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 🔥 Client Logo Carousel */
+.clients-carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin: 50px auto;
+  width: 100%;
+}
+
+.logos-slide {
+  display: flex;
+  gap: 40px;
+  animation: scrollLogos 10s linear infinite;
+}
+
+.logos-slide img {
+  width: 120px;
+  height: auto;
+  transition: filter 0.3s ease-in-out;
+}
+
+.logos-slide img:hover {
+  filter: grayscale(100%);
+}
+
+/* 🚀 Logo Animation */
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 🤝 Call to Action */
+.clients-cta {
+  margin-top: 40px;
+}
+
+.clients-cta p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #d10000;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #a00000;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 991px) {
+  .industries-grid {
+    gap: 20px;
+  }
+
+  .industry-item {
+    width: 150px;
+    padding: 15px;
+  }
+
+  .industry-item i {
+    font-size: 2rem;
+  }
+
+  .logos-slide img {
+    width: 100px;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .industries-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .industry-item {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .logos-slide img {
+    width: 80px;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+
+.founder-section {
+  background: linear-gradient(135deg, #d10000, #ff4b4b);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.founder-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.founder-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+}
+
+.founder-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.founder-title {
+  font-size: 1.2rem;
+  color: #fff5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .founder-heading {
+    font-size: 2rem;
+  }
+  .founder-quote {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-section {
+    padding: 60px 15px;
+  }
+
+  .founder-heading {
+    font-size: 1.8rem;
+  }
+
+  .founder-quote {
+    font-size: 1.1rem;
+  }
+}
+
+/* 🚀 CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #d10000, #ff4b4b);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 10px;
+}
+
+.cta-heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.cta-heading span {
+  color: #ffffff;
+  font-style: italic;
+}
+
+.cta-text {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* 📞 Contact Details */
+.cta-contact {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.cta-contact i {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.cta-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cta-contact a:hover {
+  text-decoration: underline;
+  color: #ffdddd;
+}
+
+/* 🎯 CTA Buttons */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 🎯 CTA Buttons */
+.btn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: 2px solid white;
+}
+
+/* 🔴 Primary Button */
+.btn-primary {
+  background: #ffffff;
+  color: #d10000;
+}
+
+.btn-primary:hover {
+  background: #ffdddd;
+  transform: scale(1.05);
+}
+
+/* ⚪ Secondary Button */
+.btn-secondary {
+  background: transparent;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #d10000;
+  transform: scale(1.05);
+}
+
+/* 🔧 Remove Blue Outline Issue */
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 991px) {
+  .cta-heading {
+    font-size: 2.4rem;
+  }
+
+  .cta-text {
+    font-size: 1.2rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-heading {
+    font-size: 2rem;
+  }
+
+  .cta-text {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* Footer Section */
+.footer-section {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section h4 {
+  color: #ff4b4b;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #ff4b4b;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4b4b;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-bottom ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom ul li a:hover {
+  color: #ff4b4b;
+}
+
+.footer-logo img {
+  padding-bottom: 15px;
+  width: 180px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Ensures responsiveness */
+  display: block;
+  margin: 0 auto; /* Centers the logo */
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    width: 140px; /* Smaller size for mobile */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .footer-section .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .footer-bottom ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

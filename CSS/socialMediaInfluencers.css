@@ -1,0 +1,1665 @@
+/* Root Variables for Styling */
+:root {
+  --primary-color: #c90001; /* Red for accents */
+  --secondary-color: #ffffff; /* White for contrast */
+  --dark-color: #1c1c1c; /* Deep black for text */
+  --text-color: #000000; /* Standard black */
+  --font-family-main: "Roboto", sans-serif; /* Main font */
+  --border-radius: 12px; /* Rounded corners */
+  --box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* General Reset */
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Section Background */
+.bg_smm {
+  background-color: #f1f1f1; /* Light gray background */
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* Container with responsive widths */
+
+.col-md-12 {
+  padding: 0px;
+}
+
+/* Row Layout */
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Marquee Text */
+/* Modern Marquee Text Styling */
+.smm-marq {
+  font-size: 1.1rem; /* Large and readable text */
+  font-weight: bold;
+  color: #000; /* Vibrant red color */
+  text-transform: uppercase; /* Convert text to uppercase for emphasis */
+  letter-spacing: 1px; /* Add spacing between letters */
+  background: linear-gradient(90deg, #c90001, #ff9f45, #ffe347, #c90001);
+  background-size: 200% auto; /* Gradient effect animation */
+  animation: gradientScroll 5s linear infinite; /* Smooth gradient animation */
+  padding: 20px 0;
+}
+
+/* Padding for elements in the marquee */
+.pdr-60 {
+  margin-right: 5px; /* Space between repeating items */
+}
+
+/* Gradient Animation */
+@keyframes gradientScroll {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Optional: Adjust marquee spacing and behavior */
+marquee.smm-marq {
+  width: 100%;
+  padding: 10px 0; /* Add padding for better appearance */
+  overflow: hidden; /* Hide overflow text outside the marquee */
+  background-color: #000; /* Contrast background for better visibility */
+  border-top: 2px solid #c90001; /* Top border for emphasis */
+  border-bottom: 2px solid #c90001; /* Bottom border for emphasis */
+  box-shadow: 0 5px 15px rgba(255, 76, 97, 0.5); /* Subtle glow effect */
+}
+
+/* Heading Styles */
+.heading-main {
+  font-size: 3.5rem; /* Larger font size for a more prominent heading */
+  font-weight: 900; /* Bold font weight for emphasis */
+  line-height: 1.1; /* Adjust line height for better readability */
+  color: #c90001; /* Slightly darker color for better contrast */
+  margin-bottom: 20px;
+  margin-top: 40px; /* Increase top margin for better spacing */
+  letter-spacing: -0.9px; /* Small letter-spacing for sleek look */
+}
+
+.secondary-heading-main {
+  font-size: 2.5rem; /* Larger font size for a more prominent heading */
+  font-weight: 600; /* Bold font weight for emphasis */
+  line-height: 1.1; /* Adjust line height for better readability */
+  color: #000; /* Slightly darker color for better contrast */
+  margin-bottom: 20px;
+  margin-top: 40px; /* Increase top margin for better spacing */
+  letter-spacing: -0.9px; /* Small letter-spacing for sleek look */
+}
+
+.sec-white {
+  color: #000;
+}
+
+.heading-title-md {
+  font-size: 1.8rem; /* Larger title size */
+  font-weight: 600; /* Semi-bold for emphasis */
+  color: #444; /* Subtle dark color for the title */
+  margin-bottom: 20px;
+  letter-spacing: -0.5px; /* Slight letter-spacing */
+  text-transform: none; /* Keep text in sentence case */
+  line-height: 1.2;
+}
+
+/* Paragraph Styles */
+.p-lg {
+  font-size: 1.5rem; /* Larger paragraph text for better readability */
+  color: #555; /* Softer color for paragraphs */
+  line-height: 1.2; /* Increased line-height for readability */
+  margin-bottom: 20px;
+  max-width: 800px; /* Limit width for better text control */
+  margin-left: auto; /* Center the text block */
+  margin-right: auto; /* Center the text block */
+  font-weight: 500;
+}
+
+.p-white {
+  color: #000;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #c90001; /* Red background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #970001; /* Slightly darker red */
+  transform: scale(1.05);
+}
+
+/* Modern Image Styling */
+/* Modern 3D Image Styling */
+/* Modern Image Styling with Glowing Effect */
+.wd-100 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px; /* Slight rounded corners */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover */
+  transform-style: preserve-3d; /* Enable 3D space for the image */
+  position: relative;
+  will-change: transform, box-shadow; /* Optimize for performance during animation */
+  filter: brightness(1.1) contrast(1.2); /* Increase brightness and contrast on hover */
+}
+
+/* Hover Effect for 3D */
+.wd-100:hover {
+  transform: perspective(1500px) rotateY(10deg) rotateX(10deg); /* Slight 3D rotation effect */
+  filter: brightness(1.1) contrast(1.2); /* Increase brightness and contrast on hover */
+}
+
+/* Glowing Effect on Hover */
+.wd-100::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease, box-shadow 0.3s ease; /* Smooth fade and shadow effect */
+}
+
+/* Glow on Hover */
+.wd-100:hover::after {
+  opacity: 1; /* Glow appears on hover */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.7); /* More intense glow shadow */
+}
+
+/* Optional Glowing Borders (Further Enhancement) */
+.wd-100:hover {
+  filter: brightness(1.2) contrast(1.3); /* Stronger brightness and contrast */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wd-100 {
+    border-radius: 15px; /* Smaller radius on mobile */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Reduced shadow for mobile */
+  }
+
+  .wd-100:hover {
+    transform: scale(1.02); /* More subtle zoom effect on mobile */
+    box-shadow: 0 0 20px rgba(255, 99, 132, 0.5); /* Light glow effect on mobile */
+  }
+}
+
+/* ####################################### */
+/* Navigation Links */
+.navbar {
+  height: 70px; /* Fixed navbar height */
+  position: sticky;
+  display: flex;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .container {
+  /* max-width: 1200px; */
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.navbar-logo img {
+  width: 200px; /* Increase this for bigger logo */
+  height: 80px; /* Maintain aspect ratio */
+  max-height: 50px; /* Restrict navbar height */
+  object-fit: contain; /* Ensures proper scaling */
+}
+
+/* Navbar Links */
+.navbar-links ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333;
+  padding: 10px 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+  color: #d10000;
+  transform: scale(1.05);
+}
+
+.navbar-links ul li a.active {
+  color: #d10000;
+  border-bottom: 2px solid #d10000;
+}
+
+/* Call-to-Action (CTA) Button */
+.nav-cta {
+  background: #d10000;
+  color: #ffffff !important;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: #a00000;
+  transform: translateY(-3px);
+}
+
+/* Mobile Menu Button */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333333;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: #ffffff;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .navbar-links ul li {
+    text-align: left;
+  }
+
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+}
+
+/* Sticky Background on Scroll */
+.navbar.scrolled {
+  background: #f8f9fa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Alignment */
+@media (max-width: 767px) {
+  .navbar .container {
+    padding: 0 15px;
+  }
+
+  .navbar-links ul li a {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Responsive for moblie */
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  /* Row Layout Adjustments */
+  .row {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the start */
+    gap: 15px; /* Add spacing between items */
+  }
+
+  /* Marquee Text Adjustments */
+  .smm-marq {
+    font-size: 0.9rem; /* Smaller text for better fit */
+    padding: 15px 0; /* Adjust padding */
+    letter-spacing: 0.5px; /* Slightly tighter spacing */
+  }
+
+  /* Headings Adjustments */
+  .heading-main {
+    font-size: 2.5rem; /* Reduce font size for headings */
+    margin-top: 20px; /* Adjust top margin */
+  }
+
+  .secondary-heading-main {
+    font-size: 2rem; /* Adjust secondary heading size */
+  }
+
+  .heading-title-md {
+    font-size: 1.4rem; /* Smaller title size */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  /* Paragraph Styles Adjustments */
+  .p-lg {
+    font-size: 1.2rem; /* Smaller paragraph text */
+    margin-bottom: 15px; /* Reduce bottom margin */
+    max-width: 100%; /* Allow full width */
+    padding: 0 10px; /* Add side padding */
+  }
+
+  /* Button Adjustments */
+  .btn-primary {
+    padding: 14px 24px; /* Reduce padding */
+    font-size: 1rem; /* Adjust font size */
+    border-radius: 6px; /* Slightly smaller radius */
+  }
+
+  /* Image Adjustments */
+  .wd-100 {
+    border-radius: 10px; /* Smaller corner radius */
+  }
+
+  .wd-100:hover {
+    transform: scale(1.02); /* Subtle zoom */
+    box-shadow: 0 4px 10px rgba(255, 99, 132, 0.4); /* Light glow */
+  }
+
+  /* Marquee Container for Smaller Screens */
+  marquee.smm-marq {
+    padding: 8px 0; /* Adjust padding */
+    border-top: 1px solid #ff4c61; /* Thinner border */
+    border-bottom: 1px solid #ff4c61; /* Thinner border */
+  }
+}
+
+/* Extra Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .heading-main {
+    font-size: 2rem; /* Further reduce heading size */
+  }
+
+  .secondary-heading-main {
+    font-size: 1.6rem; /* Reduce secondary heading size */
+  }
+
+  .btn-primary {
+    padding: 12px 20px; /* Smaller buttons */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .smm-marq {
+    font-size: 0.8rem; /* Adjust marquee font size */
+    padding: 10px 0; /* Reduce padding */
+  }
+
+  .p-lg {
+    font-size: 1rem; /* Smaller paragraph text */
+  }
+}
+
+/* Engaged Section */
+.smm-engage-section {
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 50px 0;
+}
+
+.smm-engage-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.smm-heading-main {
+}
+
+.smm-heading-title-md {
+}
+
+/* Paragraph Styling */
+.smm-paragraph {
+}
+
+.smm-col-left {
+  text-align: left;
+}
+
+.smm-col-right {
+  text-align: center;
+}
+
+.smm-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smm-image {
+  max-width: 120%; /* Ensure the image is responsive */
+  width: 140%; /* Adjust the width to make the GIF bigger */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Slight rounded corners for images */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+  background-color: transparent; /* Ensure the background is transparent */
+  display: block; /* Remove any inline element spacing */
+  margin: 0 auto; /* Center the image */
+}
+
+.smm-image:hover {
+  transform: scale(1.1); /* Increase the zoom effect for more impact */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .smm-heading-main {
+    font-size: 2rem; /* Adjust font size for mobile */
+    text-align: center; /* Center-align heading for mobile */
+  }
+
+  .smm-heading-title-md {
+    font-size: 1.2rem;
+    text-align: center; /* Center-align subtitle for mobile */
+  }
+
+  .smm-col-right img {
+    width: 80%; /* Smaller width for mobile */
+  }
+
+  .smm-engage-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Styles for Section 03 */
+.center {
+  text-align: center;
+}
+
+.smm_box {
+  background: #fc4d4d; /* Card background */
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center align text */
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.smm_box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.infobox-icon-wrap {
+  margin-bottom: 15px; /* Space below icon */
+  display: flex; /* Ensure Lordicon is centered */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Full width of the card */
+  height: 100px; /* Fixed height for consistent layout */
+}
+
+.lord-icon {
+  width: 60px; /* Icon size */
+  height: 60px;
+}
+
+.infobox-icon-wrap {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #6c757d, #495057);
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1),
+    -2px -2px 6px rgba(255, 255, 255, 0.5);
+}
+
+p.heading-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Services Section */
+/* Boost Red Card */
+.service-heading {
+  margin-bottom: 50px;
+}
+.boost-red {
+  background-color: #ff4d4d; /* Red color */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boost-red:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 77, 77, 0.5);
+}
+
+/* Boost Blue Card */
+.boost-bl {
+  background-color: #ff4d4d; /* Red color */
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boost-bl:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(77, 148, 255, 0.5);
+}
+
+.infobox-icon-wrap i {
+  font-size: 28px;
+  color: #ff4d4d; /* Default icon color */
+}
+
+.boost-bl .infobox-icon-wrap i {
+  color: #4d94ff; /* Icon color for blue card */
+}
+
+/* Text Styling */
+.boost-red p,
+.boost-bl p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.boost-red,
+.boost-bl {
+  margin-bottom: 30px; /* Increase space at the bottom of the cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Center the icons in the infobox */
+.infobox-icon-wrap {
+  display: flex;
+  justify-content: center; /* Horizontally center the icon */
+  align-items: center; /* Vertically center the icon */
+  height: 80px; /* Give it a fixed height to ensure centering */
+  margin-bottom: 15px; /* Space between icon and text */
+}
+
+/* Set the icon size */
+lord-icon {
+  width: 60px; /* Adjust the width */
+  height: 60px; /* Adjust the height */
+}
+
+/* Adjust text styling */
+.white {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* VIRAL SECTION */
+.heading-main-viral {
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #fff;
+  text-align: center;
+}
+
+.heading-main-viral span {
+  color: #4c0000;
+  font-size: 60px;
+  background-color: #fff; /* Add this for the background color */
+  border-radius: 20px;
+  padding: 5px; /* Optional: Adds space around the text inside the span */
+  margin-left: 10px;
+}
+
+.smm-bx {
+  background-color: #fff;
+  padding: 30px;
+  margin: 10px 0;
+  color: #000;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.smm-bx:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.smm-bx-left,
+.smm-bx-center,
+.smm-bx-right,
+.smm-bx-b-left,
+.smm-bx-b-right {
+  padding: 20px;
+}
+
+.smm-bx .heading-title {
+  font-size: 22px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.smm-bx p {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 10px;
+  color: #000;
+  text-align: center;
+}
+
+/* Icon Styling */
+.smm-bx i {
+  font-size: 50px;
+  color: #fb0000;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .smm-bx {
+    margin-bottom: 20px;
+  }
+
+  .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
+
+/* IMPROVE SECTION */
+.improve-section {
+  font-family: Arial, sans-serif;
+  padding: 40px 20px; /* More padding for the entire section */
+  background-color: #fff;
+}
+
+.description {
+  font-size: 1.1rem; /* Slightly larger for better readability */
+  color: #444;
+  margin-bottom: 40px; /* Increased space below the description */
+  line-height: 1.6; /* Better text spacing */
+  text-align: center; /* Center-align for balance */
+  font-weight: 600;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap between cards */
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px; /* Slightly rounded corners for softness */
+  padding: 25px; /* Increased padding for breathing room */
+  width: calc(50% - 15px); /* Adjust width to fit better */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px); /* Add a slight lift on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.red-bg {
+  background-color: red;
+  color: white;
+}
+
+.white-bg {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
+.step-number {
+  font-size: 2rem; /* Larger step numbers */
+  font-weight: bold;
+  margin-right: 10px; /* Space from content */
+}
+
+.step-content {
+  flex: 1;
+  margin: 0 20px; /* Extra margin for spacing */
+}
+
+.step-content h4 {
+  font-size: 1.2rem; /* Highlight the titles */
+  margin-bottom: 5px;
+}
+
+.step-content p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.step-icon {
+  font-size: 2rem; /* Larger icons */
+}
+
+/* REVIEWS SECTION */
+/* Main Background */
+/* Main Slider Container */
+/* Main Slider Container */
+/* General styles for the section */
+
+/* General styles for the section */
+/* General styles for the section */
+.bg_test {
+  background-size: cover;
+  padding: 60px 0;
+  color: #fff; /* Ensure text is visible on dark background */
+}
+
+/* Style for testimonial card */
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for testimonial image */
+.testimonial-img {
+  width: 80%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  max-width: 150px;
+}
+
+/* Content inside testimonial */
+.testimonial-content {
+  text-align: center;
+}
+
+.test-p {
+  font-size: 16px;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.heading-main-md {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+h2 {
+  color: #333;
+}
+
+i {
+  font-style: italic;
+  color: #777;
+}
+
+/* Mobile-first styles */
+@media (max-width: 767px) {
+  .testimonial-card {
+    margin-bottom: 20px;
+  }
+
+  .testimonial-img {
+    max-width: 120px;
+  }
+
+  .heading-main-md {
+    font-size: 18px;
+  }
+
+  .test-p {
+    font-size: 14px;
+  }
+}
+
+/* Desktop styles (from 768px and up) */
+@media (min-width: 768px) {
+  .testimonial-card {
+    margin-bottom: 20px;
+  }
+
+  .testimonial-img {
+    max-width: 150px;
+  }
+
+  .heading-main-md {
+    font-size: 22px;
+  }
+
+  .test-p {
+    font-size: 16px;
+  }
+}
+
+/* FAQ section */
+.freq-ques {
+  padding: 80px 0;
+  background-color: #fff; /* Dark background for modern feel */
+  color: #f1f1f1; /* Light text color for contrast */
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Headings styling */
+.markheading88 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.markheading89 {
+  font-size: 18px;
+  text-align: center;
+  color: #bdbdbd;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.markheading90 {
+  font-size: 28px;
+  text-align: center;
+  color: #f44336; /* Red shade */
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* Accordion styling */
+.single-acco {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Accordion title with floating animation */
+.single-acco h2 {
+  font-size: 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    #ff1744 0%,
+    #f44336 100%
+  ); /* Red gradient */
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.sub-list-style{
+  list-style: disc !important;
+  border-bottom: 0px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 1px 0 !important;
+}
+
+.single-acco h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("https://img.icons8.com/ios-filled/50/ffffff/plus-math.png")
+    no-repeat center center;
+  background-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.single-acco h2:hover {
+  background: linear-gradient(
+    135deg,
+    #f44336 0%,
+    #ff1744 100%
+  ); /* Slightly different red gradient on hover */
+  transform: scale(1.02);
+}
+
+.single-acco.active h2::after {
+  transform: rotate(45deg);
+}
+
+/* Accordion body styling */
+.accodion-body {
+  display: none;
+  padding: 20px 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f1f1f1;
+  font-weight: 300;
+  background-color: #2c2c2c;
+  transition: opacity 0.3s ease;
+  border-top: 1px solid #444;
+}
+
+/* Show content when active */
+.single-acco.active .accodion-body {
+  display: block;
+  opacity: 1;
+}
+
+/* Subtle glow effect on hover */
+.single-acco:hover {
+  box-shadow: 0 30px 60px rgba(244, 67, 54, 0.2); /* Red glow */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .markheading88 {
+    font-size: 32px;
+  }
+
+  .markheading89 {
+    font-size: 16px;
+  }
+
+  .markheading90 {
+    font-size: 24px;
+  }
+
+  .single-acco h2 {
+    font-size: 18px;
+    padding: 12px 15px;
+  }
+
+  .faqpara {
+    font-size: 14px;
+  }
+}
+
+.footer-section {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section h4 {
+  color: #ff4b4b;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #ff4b4b;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff4b4b;
+  transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-bottom ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom ul li a:hover {
+  color: #ff4b4b;
+}
+
+.footer-logo img {
+  padding-bottom: 15px;
+
+  width: 180px; /* Adjust width as needed */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Ensures responsiveness */
+  display: block;
+  margin: 0 auto; /* Centers the logo */
+}
+
+@media (max-width: 768px) {
+  .footer-logo img {
+    width: 140px; /* Smaller size for mobile */
+  }
+}
+
+/* ###################### */
+/* 📌 Pricing Section */
+.pricing-container {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* 📌 Title & Subtitle */
+.pricing-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.pricing-subtext {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+/* 📌 Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* 📌 Individual Pricing Cards */
+.pricing-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative; /* Allows absolute positioning inside */
+  min-height: 550px; /* Ensures all cards have the same height */
+  border: 3px solid transparent;
+}
+
+/* 📌 Hover Effect */
+.pricing-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 20px rgba(255, 69, 0, 0.3);
+}
+
+/* 📌 Package Titles */
+.pricing-card h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #c20000;
+}
+
+/* 📌 Pricing Amount */
+.pricing-amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #c20000;
+  margin-bottom: 15px;
+}
+
+.pricing-amount span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #666;
+}
+
+/* 📌 Package Description */
+.pricing-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+/* 📌 Package Features */
+.pricing-features {
+  text-align: left;
+  padding: 0;
+  margin: auto;
+  flex-grow: 1;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* 📌 Feature List Items */
+.pricing-features li {
+  list-style: none;
+  padding: 8px 0;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.special {
+  list-style: none;
+  border-bottom: 1px solid #fff !important;
+}
+
+/* 📌 Remove border from last item */
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+/* 📌 "Most Popular" Tag (Starter Package) */
+.popular-tag {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: #ffcc00;
+  color: #c20000;
+  font-weight: bold;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 📌 "Best Value" Tag (Ultimate Package) */
+.best-deal {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4500;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 📌 Ultimate Package Special Styling */
+.ultimate-package {
+  background: #c20000;
+  color: white;
+  border-color: #ffcc00;
+}
+
+.ultimate-package .pricing-amount {
+  color: #ffcc00;
+}
+
+.ultimate-package h3,
+.ultimate-package .pricing-desc,
+.ultimate-package .pricing-features li {
+  color: white;
+}
+
+/* 📌 Call-to-Action Button */
+.btn-started {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #ff4500;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.btn-started:hover {
+  background: #c20000;
+  transform: scale(1.05);
+}
+
+.btn-started.yellow-hover:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 1024px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    min-height: unset;
+    margin-bottom: 30px;
+  }
+
+  .popular-tag,
+  .best-deal {
+    top: -5px;
+    left: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+.ultimate-package-month-color {
+  color: #fff !important;
+}
+
+/* 🔹 Modern Glassmorphism Modal Background */
+.modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for focus */
+  backdrop-filter: blur(8px); /* Smooth blur effect */
+  padding-top: 60px;
+  overflow: auto;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* 🔹 Stylish Modal Box */
+.modal-content {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 35px;
+  width: 90%;
+  max-width: 520px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  animation: scaleUp 0.4s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 🔹 Close Button (X) */
+.close {
+  color: #ff4500;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.close:hover {
+  color: #c20000;
+  transform: scale(1.2);
+}
+
+/* 🔹 Modal Title */
+.modal-content h2 {
+  font-size: 2rem;
+  color: #ff4500;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* 🔹 Description Text */
+.modal-content p {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* 🔹 Add-On Options (Glassmorphic Toggle Switches) */
+#addOnForm label {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+/* 🔹 Hover Effect */
+#addOnForm label:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.02);
+}
+
+/* 🔹 Custom Neon Checkbox */
+#addOnForm input {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 2px solid white;
+  margin-right: 12px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🔹 When Checkbox is Checked */
+#addOnForm input:checked {
+  background: #25d366; /* WhatsApp green */
+  border-color: #25d366;
+  box-shadow: 0px 0px 10px rgba(37, 211, 102, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔹 Perfectly Centered Checkmark */
+#addOnForm input:checked::after {
+  content: "✔";
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 🔹 WhatsApp Button (3D Neon Effect) */
+#whatsappBtn {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* WhatsApp Icon */
+#whatsappBtn::before {
+  content: "📩"; /* WhatsApp emoji icon */
+  font-size: 1.4rem;
+}
+
+/* Hover Effect */
+#whatsappBtn:hover {
+  background: linear-gradient(135deg, #128c7e, #25d366);
+  transform: scale(1.08);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* 3D Click Effect */
+#whatsappBtn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 30px rgba(37, 211, 102, 0.9);
+}
+
+/* 🔹 Modal Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .modal-content p {
+    font-size: 1rem;
+  }
+
+  #whatsappBtn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+  color: #d10000;
+}
+
+/* Mobile Dropdown */
+@media (max-width: 991px) {
+  .navbar-links {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      background: #ffffff;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      display: none;
+  }
+
+  .navbar-links.active {
+      transform: translateX(0);
+      display: block;
+  }
+
+  .dropdown-menu {
+      position: static;
+      transform: none;
+      box-shadow: none;
+      width: 100%;
+      display: none;
+      padding: 0;
+      margin-top: 10px;
+  }
+
+  .dropdown.active .dropdown-menu {
+      display: block;
+  }
+
+  .dropdown-item {
+      padding: 10px 20px;
+      text-align: left;
+      background: #f5f5f5;
+  }
+}

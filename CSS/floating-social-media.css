@@ -1,0 +1,120 @@
+/* Floating Social Media Bar */
+.floating-social-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* Common Styling */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Original Brand Colors */
+.facebook {
+  background-color: #1877f2;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.instagram {
+  background-color: #e1306c;
+}
+.linkedin {
+  background-color: #0077b5;
+}
+.youtube {
+  background-color: #ff0000;
+}
+
+/* Hover Effect - Turns Red */
+.social-icon:hover {
+  background-color: #d10000 !important;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .floating-social-bar {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Floating WhatsApp Section */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* WhatsApp Icon */
+.whatsapp-button i {
+  font-size: 1.5rem;
+}
+
+/* WhatsApp Hover Effect - Turns Red */
+.whatsapp-button:hover {
+  background: #d10000;
+  transform: scale(1.1);
+}
+
+/* Responsive - Hide Text on Small Screens */
+@media (max-width: 768px) {
+  .whatsapp-button {
+    padding: 12px;
+  }
+
+  .whatsapp-text {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.what-a {
+  text-decoration: none;
+  color: #fff;
+}

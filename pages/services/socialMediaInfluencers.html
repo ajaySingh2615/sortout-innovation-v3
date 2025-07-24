@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Social Media Marketing</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/socialMediaInfluencers.css" />
+    <link rel="stylesheet" href="/CSS/responsive.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="Sortout Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li><a href="/pages/about-page/about.html" class="nav-link">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Career <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="/employee-job/index.php" class="dropdown-item">Employee Jobs</a>
+                <a href="/admin/artist-v2/public/index.php" class="dropdown-item">Artist Jobs</a>
+              </div>
+            </li>
+            <li><a href="/modal_agency.php" class="nav-link">Find Talent</a></li>
+            <li><a href="/pages/our-services-page/service.html" class="nav-link">Service</a></li>
+            <li><a href="/pages/services/social-media-portfolio/social-media-portfolio.html" class="nav-link">Work</a></li>
+            <li><a href="/pages/contact-page/contact-page.html" class="nav-link">Contact</a></li>
+            <li><a href="/blog/index.php" class="nav-link">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbarToggle = document.querySelector(".navbar-toggle");
+          const navbarLinks = document.querySelector(".navbar-links");
+          const dropdowns = document.querySelectorAll(".dropdown");
+
+          // Toggle mobile menu
+          navbarToggle.addEventListener("click", () => {
+              navbarLinks.classList.toggle("active");
+          });
+
+          // Handle dropdowns on mobile
+          dropdowns.forEach(dropdown => {
+              const link = dropdown.querySelector("a");
+              link.addEventListener("click", (e) => {
+                  if (window.innerWidth <= 991) {
+                      e.preventDefault();
+                      dropdown.classList.toggle("active");
+                  }
+              });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", (e) => {
+              if (!navbarLinks.contains(e.target) && !navbarToggle.contains(e.target)) {
+                  navbarLinks.classList.remove("active");
+                  dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+              }
+          });
+
+          // Sticky Navbar on Scroll
+          window.addEventListener("scroll", () => {
+              const navbar = document.querySelector(".navbar");
+              if (window.scrollY > 50) {
+                  navbar.classList.add("scrolled");
+              } else {
+                  navbar.classList.remove("scrolled");
+              }
+          });
+      });
+    </script>
+    <!-- #################################################### -->
+    <!-- Hero Section -->
+    <!-- #################################################### -->
+    <section style="overflow: hidden">
+      <marquee class="smm-marq" behavior="alternate">
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+        <span class="pdr-60">Digital Marketing Services</span>
+      </marquee>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="heading-main mb-20 mt-30">
+              Boost Your Digital Marketing Impact!
+            </h1>
+
+            <p class="p-lg mb-20">
+              Elevate your brand's online presence with tailored strategies,
+              engaging content, and data-driven results. Let's take your social
+              media game to the next level and captivate your audience like
+              never before.
+            </p>
+            <a
+              href="https://wa.me/919818559036"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button class="btn-primary mt-10 mb-20 myBtn" id="myBtn">
+                Book Now
+              </button>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="/images/social-media/socialMediaImage.png"
+              class="wd-100"
+              alt="Social Media Marketing"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!-- SECTION CARD  -->
+    <!-- #################################################### -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 center">
+            <h2 class="secondary-heading-main sec-white">
+              Our Winning Features
+            </h2>
+            <p class="p-lg p-white">
+              Our services help you connect, engage, and grow with meaningful
+              results
+            </p>
+          </div>
+
+          <div class="col-md-3 center">
+            <div class="smm_box center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/hbvgknxo.json"
+                  trigger="loop"
+                  colors="primary:#fc4d4d,secondary:#f8f9fa"
+                  class="lord-icon"
+                ></lord-icon>
+              </div>
+              <p class="heading-title">Tailored Strategies</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 center">
+            <div class="smm_box center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/dnoiydox.json"
+                  trigger="loop"
+                  colors="primary:#ff4c61,secondary:#f8f9fa"
+                  class="lord-icon"
+                ></lord-icon>
+              </div>
+              <p class="heading-title">Data-Driven Insights</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 center">
+            <div class="smm_box center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/nocovwne.json"
+                  trigger="loop"
+                  colors="primary:#ff4c61,secondary:#f8f9fa"
+                  class="lord-icon"
+                ></lord-icon>
+              </div>
+              <p class="heading-title">Creative Content</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 center">
+            <div class="smm_box center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/qhgmphtg.json"
+                  trigger="loop"
+                  colors="primary:#ff4c61,secondary:#f8f9fa"
+                  class="lord-icon"
+                ></lord-icon>
+              </div>
+              <p class="heading-title">Proven ROI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!-- SECTION ENGAGE -->
+    <!-- #################################################### -->
+    <section style="overflow: hidden">
+      <div class="smm-engage-container container pd-10 mt-50 ov-x">
+        <div class="row">
+          <div class="col-md-8 smm-col-left mt-30">
+            <h2 class="secondary-heading-main mb-20 mt-30">
+              Engage Your Audience, Build Your Brand
+            </h2>
+            <p class="heading-title-md mb-20">
+              Meaningful engagement for lasting connections
+            </p>
+            <p class="smm-paragraph p-lg mb-20">
+              Every like, comment, and share matters — they are the building
+              blocks of meaningful connections. We don't just create content; we
+              craft personalized experiences that resonate deeply with your
+              audience, fostering engagement that lasts. Our tailored strategies
+              ensure that your brand stays at the forefront of your audience's
+              mind, driving consistent loyalty and repeat interactions. With our
+              creative approach, we transform casual interactions into lasting
+              relationships, ensuring your brand's presence is unforgettable.
+            </p>
+          </div>
+          <div class="col-md-4 smm-center smm-col-right">
+            <img
+              src="/images/social-media/SMpost.gif"
+              class="smm-image"
+              width="70%"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!--  Services Section   -->
+    <!-- #################################################### -->
+
+    <section>
+      <div class="container ov-x">
+        <div class="row">
+          <div class="col-md-12 center mb-30">
+            <h2 class="secondary-heading-main service-heading">Our Services</h2>
+            <p class="smm-paragraph p-lg mb-20">
+              Explore our range of Digital Marketing Services tailored to meet
+              your business needs.
+            </p>
+          </div>
+
+          <!-- Content Creation -->
+          <div class="col-md-3 center">
+            <div class="boost-red center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/exymduqj.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Content Creation</p>
+            </div>
+          </div>
+
+          <!-- Post Scheduling -->
+          <div class="col-md-3 center">
+            <div class="boost-bl center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/vpbspaec.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Post Scheduling</p>
+            </div>
+          </div>
+
+          <!-- Social Media Ads -->
+          <div class="col-md-3 center">
+            <div class="boost-red center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/puvaffet.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Social Media Marketing</p>
+            </div>
+          </div>
+
+          <!-- Analytics & Reporting -->
+          <div class="col-md-3 center mb-20">
+            <div class="boost-bl center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/dflgefov.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Analytics & Reporting</p>
+            </div>
+          </div>
+
+          <!-- Audience Engagement -->
+          <div class="col-md-3 center">
+            <div class="boost-bl center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/nobciafz.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Audience Engagement</p>
+            </div>
+          </div>
+
+          <!-- Influencer Partnerships -->
+          <div class="col-md-3 center">
+            <div class="boost-red center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/gqzfzudq.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Influencer Partnerships</p>
+            </div>
+          </div>
+
+          <!-- Growth Strategies -->
+          <div class="col-md-3 center">
+            <div class="boost-bl center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/fcyboqbm.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Growth Strategies</p>
+            </div>
+          </div>
+
+          <!-- Improved Customer Reach -->
+          <div class="col-md-3 center mb-20">
+            <div class="boost-red center">
+              <div class="infobox-icon-wrap">
+                <lord-icon
+                  src="https://cdn.lordicon.com/pqxdilfs.json"
+                  trigger="hover"
+                  colors="primary:#ff4d4d,secondary:#ffffff"
+                  style="width: 60px; height: 60px"
+                >
+                </lord-icon>
+              </div>
+              <p class="white">Improved Customer Reach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-container">
+      <div class="pricing-content">
+        <h2 class="pricing-title">Our Social Media Management Packages</h2>
+        <p class="pricing-subtext">
+          Choose the best plan to grow your brand on social media.
+        </p>
+
+        <div class="pricing-grid">
+          <!-- Starter Package -->
+          <div class="pricing-card starter-package">
+            <span class="popular-tag">Most Popular</span>
+            <h3>Starter Package</h3>
+            <p class="pricing-amount">₹20,000 <span>/month</span></p>
+            <p class="pricing-desc">
+              For businesses looking to establish their social media presence.
+            </p>
+            <ul class="pricing-features">
+              <li><strong>Platforms:</strong> 2 (Instagram & Facebook)</li>
+              <li>
+                <strong>Content Creation:</strong> 12 posts/month (5 static posts, 5
+                reels/short form videos, 2 stories updates)
+              </li>
+              <li>
+                <strong>Here’s What We Deliver:</strong> <br>
+                <ul>
+                  <li class="sub-list-style">Community Management & Content Writing (Captions)</li>
+                  <li class="sub-list-style">Hashtag Strategy & Competitive Analysis
+                  </li>
+                  <li class="sub-list-style">Social Media Calendar
+                  </li>
+                  <li class="sub-list-style">Performance Report
+                  </li>
+                  <li class="sub-list-style">Support
+                  </li>
+                </ul>
+              </li>
+              <!-- <li>
+                <strong>Performance Report:</strong> Monthly performance
+                insights
+              </li>
+              <li><strong>Support:</strong> Email and chat assistance</li> -->
+            </ul>
+            <div class="pricing-footer">
+              <a href="#" class="btn-started">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Growth Package -->
+          <div class="pricing-card growth-package">
+            <h3>Growth Package</h3>
+            <p class="pricing-amount">₹42,000 <span>/month</span></p>
+            <p class="pricing-desc">
+              A more robust package with additional engagement.
+            </p>
+            <ul class="pricing-features">
+              <li>
+                <strong>Platforms:</strong> 3 (Instagram, Facebook, LinkedIn)
+              </li>
+              <li>
+                <strong>Content Creation:</strong> 20 posts/month (10 static posts, 8
+                reels/short form videos, 2 stories updates)
+              </li>
+              <li>
+                <strong>Extras:</strong> Includes 1 video shoot session and
+                enhanced ad management
+              </li>
+              <li>
+                <strong>Here’s What We Deliver:</strong> <br>
+                <ul>
+                  <li class="sub-list-style">Community Management & Content Writing (Captions)</li>
+                  <li class="sub-list-style">Hashtag Strategy & Competitive Analysis
+                  </li>
+                  <li class="sub-list-style">Advertising & Ad Creatives
+                  </li>
+                  <li class="sub-list-style">Social Media Calendar
+                  </li>
+                  <li class="sub-list-style">Performance Report
+                  </li>
+                  <li class="sub-list-style">Support
+                  </li>
+                </ul>
+              </li>
+              <!-- <li><strong>Advertising:</strong> Basic ad campaign (1/month)</li>
+              <li>
+                <strong>Performance Report:</strong> Advanced performance
+                insights
+              </li>
+              <li><strong>Support:</strong> WhatsApp and email support</li> -->
+            </ul>
+            <div class="pricing-footer">
+              <a href="#" class="btn-started">Get Started</a>
+            </div>
+          </div>
+
+          <!-- Ultimate Package -->
+          <div class="pricing-card ultimate-package">
+            <span class="best-deal">Best Value</span>
+            <h3>Ultimate Package</h3>
+            <p class="pricing-amount">
+              ₹45,000 <span class="ultimate-package-month-color">/month</span>
+            </p>
+            <p class="pricing-desc">
+              A full-service package with premium content & advertising.
+            </p>
+            <ul class="pricing-features">
+              <li class="special">
+                <strong>Platforms Managed:</strong> 5 (Instagram, Facebook,
+                LinkedIn, Twitter, GMB)
+              </li>
+              <li class="special">
+                <strong>Content Creation:</strong> 30 posts/month (16 static posts, 10
+                reels/short form videos, 4 stories updates)
+              </li>
+              <li class="special">
+                <strong>Extras:</strong> Includes 1 videoshoot session, advanced
+                ad campaigns, and bonus influencer & crisis management
+                strategies
+              </li>
+              <li class="special">
+                <strong>Here’s What We Deliver:</strong> <br>
+                <ul>
+                  <li class="sub-list-style">Community Management & Content Writing (Captions)</li>
+                  <li class="sub-list-style">Hashtag Strategy & Competitive Analysis
+                  </li>
+                  <li class="sub-list-style">Advertising & Ad Creatives
+                  </li>
+                  <li class="sub-list-style">Social Media Calendar
+                  </li>
+                  <li class="sub-list-style">Performance Report
+                  </li>
+                  <li class="sub-list-style">Support
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Bonus:</strong> Priority consultation with weekly
+                strategy calls
+              </li>
+            </ul>
+            <div class="pricing-footer">
+              <a href="#" class="btn-started yellow-hover">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Get Started Popup Modal (Placed at the END of the Pricing Section) -->
+      <div id="addOnModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Custom Add-ons</h2>
+          <p>Select any additional services to enhance your package:</p>
+
+          <!-- Add-on Options -->
+          <form id="addOnForm">
+            <label
+              ><input
+                type="checkbox"
+                value="Social Media Script Writing (₹2–₹7 per word)"
+              />
+              Social Media Script Writing (₹2–₹7 per word)</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="YouTube Thumbnail Design (₹500–₹1,000 per thumbnail)"
+              />
+              YouTube Thumbnail Design (₹500–₹1,000 per thumbnail)</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="AI-Generated Product Photography (₹500–₹1,000 per product)"
+              />
+              AI-Generated Product Photography (₹500–₹1,000 per product)</label
+            >
+            <label
+              ><input type="checkbox" value="Content Repurposing (₹5,000)" />
+              Content Repurposing (₹5,000)</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                value="LinkedIn Personal Branding Expert (₹30,000)"
+              />
+              LinkedIn Personal Branding Expert (₹30,000)</label
+            >
+          </form>
+
+          <!-- Proceed Button -->
+          <button id="whatsappBtn">Proceed to WhatsApp</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Open modal when "Get Started" is clicked
+      document.querySelectorAll(".btn-started").forEach((button) => {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("addOnModal").style.display = "block";
+
+          // Get the package name from the button's parent container
+          let packageName =
+            this.closest(".pricing-card").querySelector("h3").innerText;
+
+          // Store the selected package in a data attribute
+          document
+            .getElementById("addOnModal")
+            .setAttribute("data-package", packageName);
+        });
+      });
+
+      // Close modal when clicking on "×"
+      document.querySelector(".close").addEventListener("click", function () {
+        document.getElementById("addOnModal").style.display = "none";
+      });
+
+      // Proceed to WhatsApp
+      document
+        .getElementById("whatsappBtn")
+        .addEventListener("click", function () {
+          let selectedPackage = document
+            .getElementById("addOnModal")
+            .getAttribute("data-package");
+          let selectedServices = [];
+
+          // Get all checked services
+          document
+            .querySelectorAll("#addOnForm input[type='checkbox']:checked")
+            .forEach((checkbox) => {
+              selectedServices.push(checkbox.value);
+            });
+
+          // Ensure selectedPackage is not null or undefined
+          if (!selectedPackage) {
+            alert("Please select a package first.");
+            return;
+          }
+
+          // Format the message for WhatsApp
+          let message = `Hello! I'm interested in the ${selectedPackage}.`;
+
+          if (selectedServices.length > 0) {
+            message += `\n\nI would also like to add:\n - ${selectedServices.join(
+              "\n - "
+            )}`;
+          }
+
+          // Encode message to handle special characters properly
+          let encodedMessage = encodeURIComponent(message);
+
+          // WhatsApp link
+          let whatsappURL = `https://api.whatsapp.com/send?phone=919818559036&text=${encodedMessage}`;
+
+          // Debugging: Check the final link
+          console.log("WhatsApp Link:", whatsappURL);
+
+          // Redirect to WhatsApp
+          window.open(whatsappURL, "_blank");
+        });
+    </script>
+
+    <!-- #################################################### -->
+    <!-- Instagram Image Section   -->
+    <!-- #################################################### -->
+    <section style="overflow: hidden">
+      <div class="container pd-10">
+        <div class="row">
+          <div class="col-md-8">
+            <h2 class="secondary-heading-main mb-20 mt-100">
+              Take Your Online Presence to the Next Level With the Premier
+              Social Media Marketing Agency in Gurugram
+            </h2>
+            <p class="p-lg mb-20">
+              We kick off with a deep dive into your industry, analyzing trends
+              and understanding your audience. Using cutting-edge social media
+              strategies, we craft tailored content that inspires engagement and
+              fosters loyalty, empowering your brand to thrive in the digital
+              landscape.
+            </p>
+          </div>
+          <div class="col-md-4 center">
+            <img
+              class="smm-image"
+              src="/images/social-media/instagramImg.png"
+              width="90%"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!--  Viral Section   -->
+    <!-- #################################################### -->
+    <section style="background-color: #fb0001">
+      <div class="container ov-x">
+        <div class="row">
+          <div class="col-md-12 center mb-30">
+            <h2 class="secondary-heading-main">
+              Go Viral with<span style="color: #fff; font-size: 60px">
+                Us!
+              </span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- First Row (3 Cards) -->
+        <div class="row">
+          <!-- Card 1: Trending Campaigns -->
+          <div class="col-md-4 smm-bx mt-10">
+            <div class="smm-bx-left center">
+              <lord-icon
+                src="https://cdn.lordicon.com/fcyboqbm.json"
+                trigger="hover"
+                colors="primary:#fb0000,secondary:#000"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+              <h3 class="heading-title">Trending Campaigns</h3>
+              <p>Get your brand quickly noticed in front of millions</p>
+            </div>
+          </div>
+
+          <!-- Card 2: Innovative Ideas -->
+          <div class="col-md-4 smm-bx mt-10 middle-card">
+            <div class="smm-bx-center center">
+              <lord-icon
+                src="https://cdn.lordicon.com/jdgfsfzr.json"
+                trigger="hover"
+                colors="primary:#fb0000,secondary:#000"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+              <h3 class="heading-title">Innovative Ideas</h3>
+              <p>Stand out with unique and memorable content.</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Interactive Content -->
+          <div class="col-md-4 smm-bx mt-10">
+            <div class="smm-bx-right center">
+              <lord-icon
+                src="https://cdn.lordicon.com/caxgkjgi.json"
+                trigger="hover"
+                colors="primary:#fb0000,secondary:#000"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+              <h3 class="heading-title">Interactive Content</h3>
+              <p>Boost engagement with polls, quizzes, and more.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Row (3 Cards) -->
+        <div class="row">
+          <!-- Card 4: Viral Sharing -->
+          <div class="col-md-4 smm-bx mt-10">
+            <div class="smm-bx-b-left center">
+              <lord-icon
+                src="https://cdn.lordicon.com/ucfjvctd.json"
+                trigger="hover"
+                colors="primary:#fb0000,secondary:#000"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+              <h3 class="heading-title">Viral Sharing</h3>
+              <p>
+                Increase your brand's reach with share-worthy and engaging posts
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: Social Media Strategy -->
+          <div class="col-md-4 smm-bx mt-10 middle-card">
+            <div class="smm-bx-center center">
+              <lord-icon
+                src="https://cdn.lordicon.com/vqhlecvy.json"
+                trigger="hover"
+                colors="primary:#fb0000,secondary:#000"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+              <h3 class="heading-title">Social Media Strategy</h3>
+              <p>Tailored strategies to maximize your social media presence.</p>
+            </div>
+          </div>
+
+          <!-- Card 6: Brand Awareness -->
+          <div class="col-md-4 smm-bx mt-10">
+            <div class="smm-bx-b-right center">
+              <lord-icon
+                src="https://cdn.lordicon.com/bsmnglum.json"
+                trigger="hover"
+                colors="primary:#fb0000,secondary:#000"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+              <h3 class="heading-title">Brand Awareness</h3>
+              <p>Strengthen your brand visibility and recognition.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!--  Improve Section   -->
+    <!-- #################################################### -->
+    <section class="improve-section">
+      <div class="container">
+        <div class="text-center mb-30">
+          <h2 class="secondary-heading-main">
+            How We Elevate Your Brand's Social Media Presence
+          </h2>
+          <p class="description">
+            We harness the power of social media to connect with your audience.
+            Our strategy includes creating engaging content, interacting
+            authentically with followers, analyzing performance metrics, and
+            executing targeted social media ads.
+          </p>
+        </div>
+
+        <div class="steps">
+          <!-- Step 1 -->
+          <div class="step red-bg white">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Set Social Media Goals</h4>
+              <p>Align marketing goals with your business objectives.</p>
+            </div>
+            <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step white-bg red">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Understand Your Audience</h4>
+              <p>Learn and research deeply about your target group.</p>
+            </div>
+            <div class="step-icon"><i class="fas fa-users"></i></div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step red-bg white">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Analyze Competitors</h4>
+              <p>Stay ahead by studying competitors' strategies.</p>
+            </div>
+            <div class="step-icon"><i class="fas fa-binoculars"></i></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step white-bg red">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Social Media Audit</h4>
+              <p>Evaluate existing profiles and performance.</p>
+            </div>
+            <div class="step-icon"><i class="fas fa-search"></i></div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step red-bg white">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h4>Profile Optimization</h4>
+              <p>Enhance accounts for a professional look.</p>
+            </div>
+            <div class="step-icon"><i class="fas fa-user-edit"></i></div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="step white-bg red">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h4>Content Calendar</h4>
+              <p>Plan and schedule posts effectively.</p>
+            </div>
+            <div class="step-icon"><i class="fas fa-calendar-alt"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!--  Reviews Section   -->
+    <!-- #################################################### -->
+    <section class="bg_test" style="background-color: #fb0001">
+      <div class="container">
+        <div class="row">
+          <!-- Testimonial Card 1 -->
+          <div class="col-12 col-md-4">
+            <div class="testimonial-card">
+              <!-- <img
+                src="/images/service-1.png"
+                class="testimonial-img"
+                alt="Testimonial 1"
+              /> -->
+              <div class="testimonial-content">
+                <p class="test-p">
+                  Working with Digital Boosters has been a game-changer for us.
+                  We've collaborated with multiple agencies in the past, but
+                  none have brought us the results Digital Boosters has. They
+                  understood our goals and helped us achieve them in a clear and
+                  efficient way.
+                </p>
+                <h2 class="heading-main-md">Ravi Kapoor</h2>
+                <p><i>Head of Marketing - Josh</i></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="col-12 col-md-4">
+            <div class="testimonial-card">
+              <!-- <img
+                src="/images/service-2.png"
+                class="testimonial-img"
+                alt="Testimonial 2"
+              /> -->
+              <div class="testimonial-content">
+                <p class="test-p">
+                  From their innovative strategies to their continuous support,
+                  Digital Boosters helped us achieve remarkable results. My
+                  business has grown significantly, and I highly recommend
+                  Digital Boosters for anyone looking to scale up quickly with
+                  minimal effort.
+                </p>
+                <h2 class="heading-main-md">Neha Sharma</h2>
+                <p><i>Founder - Trendo</i></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="col-12 col-md-4">
+            <div class="testimonial-card">
+              <!-- <img
+                src="/images/service-3.png"
+                class="testimonial-img"
+                alt="Testimonial 3"
+              /> -->
+              <div class="testimonial-content">
+                <p class="test-p">
+                  Digital Boosters took a personal, hands-on approach that led
+                  to tangible results. Our growth across all channels has been
+                  remarkable, and their expertise in digital marketing is
+                  unmatched. If you're serious about elevating your online
+                  presence, Digital Boosters is the way to go.
+                </p>
+                <h2 class="heading-main-md">Manish Verma</h2>
+                <p><i>Marketing Director - meesho</i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- #################################################### -->
+    <!--  Frequently asked questions Section   -->
+    <!-- #################################################### -->
+    <section class="freq-ques">
+      <div class="container">
+        <div class="row moblie-row">
+          <div class="col-md-12">
+            <p class="markheading88">Frequently asked questions</p>
+            <p class="markheading89">Get all your questions answered here.</p>
+            <p class="markheading90">Okay, I'm interested</p>
+          </div>
+          <div class="accordion-body">
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; Can Social Media Marketing help in growing
+                your business?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  Yes, any business should have an internet presence because it
+                  may help you develop your business by 75% by connecting you to
+                  a large number of people.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; How should a company measure its social
+                media marketing success?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  Metrics like traffic, leads, and customers can be used to
+                  gauge success. It can be assessed by the number of individuals
+                  who are directed to your websites, the number of quality
+                  leads, and the number of customers.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2><span>+</span>&nbsp; Does a company needs a blog?</h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  Yes, consistent posting of fresh, keyword-rich material that
+                  builds credibility can attract a significant number of
+                  clients.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; Is social media marketing better for B2B or
+                B2C?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  It is important for both as in B2B Social Media Marketing is
+                  used as a tool for connecting with customers whereas B2C
+                  focuses on a light-hearted, fun post.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; How much time is to be given to social
+                media marketing?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  You may reach a wide audience by using social media marketing,
+                  but it is time-consuming because it is an all-day work with no
+                  breaks.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; What can be some general tips for social
+                media marketing?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  You should publish frequently, participate in conversations,
+                  respond to queries as quickly as possible, be creative, and
+                  provide good content.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; Is social media good for small businesses?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  Yes, because it focuses on individual consumers and community
+                  building, it is perfect for small enterprises. By engaging
+                  with the audience, it can maintain client loyalty.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; What are the types of social media
+                platforms?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  &#x2022; Twitter <br />
+                  &#x2022; Instagram <br />
+                  &#x2022; Pinterest <br />
+                  &#x2022; YouTube <br />
+                  &#x2022; Snapchat <br />
+                  &#x2022; LinkedIn <br />
+                  &#x2022; Reddit <br />
+                  &#x2022; Quora <br />
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2><span>+</span>&nbsp; What are social media calendars?</h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  They are apps or excel sheets that may be used to schedule
+                  posts ahead of time so that you can track the contents and
+                  share them when they are ready.
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+            <!-- single items  -->
+            <div class="single-acco">
+              <!-- accordion title  -->
+              <h2>
+                <span>+</span>&nbsp; What are some common recommendations on
+                social media marketing?
+              </h2>
+              <!-- single accordion body  -->
+              <div class="accodion-body">
+                <p class="faqpara">
+                  &#x2022; Define your objectives.<br />
+                  &#x2022; Discover who your target market is.<br />
+                  &#x2022; Choose your content and platform carefully.<br />
+                  &#x2022; Establish a social media calendar.<br />
+                  &#x2022; More marketing tools should be used.<br />
+                </p>
+              </div>
+            </div>
+            <!-- single items  -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="Sortout Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sortout Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i
+          ><span class="whatsapp-text">Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS `jobs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `company_name` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `min_salary` int(11) NOT NULL,
+  `max_salary` int(11) NOT NULL,
+  `job_type` varchar(50) NOT NULL, /* Full Time, Part Time, Contract */
+  `experience` varchar(100) DEFAULT NULL,
+  `education_level` varchar(100) DEFAULT NULL,
+  `description` text,
+  `category` varchar(100) DEFAULT NULL,
+  `vacancies` int(11) DEFAULT 1,
+  `high_demand` tinyint(1) DEFAULT 0,
+  `contact_person` varchar(100) DEFAULT NULL,
+  `interview_address` text,
+  `incentives` varchar(255) DEFAULT NULL,
+  `working_days` int(11) DEFAULT 5,
+  `working_hours` varchar(100) DEFAULT NULL,
+  `is_verified` tinyint(1) DEFAULT 0,
+  `is_contract` tinyint(1) DEFAULT 0,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4; 

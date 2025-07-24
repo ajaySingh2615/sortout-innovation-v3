@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Design and Creative Service</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/CSS/services/designAndCreativeServices.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Bootstrap Navbar with Enhanced Features -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container">
+          <!-- Logo with hover effect -->
+          <a class="navbar-brand position-relative" href="/">
+              <div class="logo-container">
+                  <img src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" alt="SortOut Innovation" height="45" class="main-logo">
+                  <div class="logo-glow"></div>
+              </div>
+          </a>
+
+          <!-- Animated Mobile Toggle Button -->
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <div class="toggle-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </button>
+
+          <!-- Enhanced Navigation Links -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav align-items-center">
+                  <li class="nav-item">
+                      <a class="nav-link px-3" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link px-3" href="/pages/about-page/about.html">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Career
+                      </a>
+                      <ul class="dropdown-menu animate slideIn">
+                          <li>
+                              <a class="dropdown-item" href="/employee-job/index.php">Employee Jobs</a>
+                          </li>
+                          <li>
+                              <a class="dropdown-item" href="/admin/artist-v2/public/index.php">Artist Jobs</a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link px-3" href="/modal_agency.php">Find Talent</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link px-3" href="/pages/our-services-page/service.html">Services</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link px-3" href="/pages/contact-page/contact-page.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link px-3" href="/blog/index.php">Blog</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+
+    <!-- Spacer for fixed navbar -->
+    <!-- <div style="height: 76px;"></div> -->
+
+    <style>
+    /* Modern Navbar Styles with Enhanced Features */
+    .navbar {
+        padding: 0.8rem 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(255, 255, 255, 0.98) !important;
+        backdrop-filter: blur(10px);
+        font-family: 'Montserrat', sans-serif;
+        z-index: 1000;
+    }
+
+    /* Logo Container with Glow Effect */
+    .logo-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .logo-glow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(209, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-brand:hover .logo-glow {
+        opacity: 1;
+    }
+
+    /* Navigation Links */
+    .nav-link {
+        font-weight: 500;
+        color: #2c3e50 !important;
+        position: relative;
+        transition: all 0.3s ease;
+        font-size: 15px;
+        letter-spacing: 0.3px;
+        padding: 0.5rem 1.1rem !important;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background: linear-gradient(90deg, #d10000, #ff4b4b);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+        border-radius: 2px;
+    }
+
+    .nav-link:hover::after {
+        width: calc(100% - 2.4rem);
+    }
+
+    .nav-link:hover {
+        color: #d10000 !important;
+    }
+
+    /* Enhanced Dropdown Styles */
+    .dropdown-menu {
+        border: none;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-radius: 12px;
+        padding: 0.8rem 0.5rem;
+        margin-top: 0.5rem;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        z-index: 1001;
+    }
+
+    .dropdown-item {
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        color: #2c3e50;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .dropdown-item:hover {
+        background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+        color: #d10000;
+        transform: translateX(5px);
+    }
+
+    /* Animated Mobile Toggle Button */
+    .toggle-icon {
+        width: 24px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .toggle-icon span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #2c3e50;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .toggle-icon span:first-child {
+        top: 0;
+    }
+
+    .toggle-icon span:nth-child(2) {
+        top: 9px;
+    }
+
+    .toggle-icon span:last-child {
+        top: 18px;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .toggle-icon span:first-child {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .toggle-icon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .toggle-icon span:last-child {
+        transform: rotate(-45deg);
+        top: 9px;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 991px) {
+        .navbar-collapse {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 1rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            padding: 0.8rem 1.2rem !important;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover {
+            background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+        }
+
+        .nav-link::after {
+            display: none;
+        }
+
+        .dropdown-menu {
+            box-shadow: none;
+            padding-left: 1rem;
+            background: transparent;
+        }
+
+        .dropdown-item:hover {
+            transform: none;
+        }
+    }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('.navbar');
+        let lastScroll = 0;
+
+        // Enhanced scroll behavior
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                navbar.style.padding = "0.6rem 0";
+                navbar.style.boxShadow = "0 5px 30px rgba(0,0,0,0.08)";
+            } else {
+                navbar.style.padding = "0.8rem 0";
+                navbar.style.boxShadow = "none";
+            }
+
+            // Smooth hide/show on scroll
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Handle mobile menu toggle animation
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        
+        navbarToggler.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            
+            if (!isExpanded) {
+                navbarCollapse.classList.add('show');
+            } else {
+                navbarCollapse.classList.remove('show');
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!navbar.contains(event.target) && navbarCollapse.classList.contains('show')) {
+                navbarToggler.setAttribute('aria-expanded', 'false');
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });
+    </script>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="hero-heading">
+              Where <span>Creativity</span> Meets <span>Design Excellence</span>
+            </h1>
+            <p class="hero-subheading">
+              Transform your ideas into stunning visuals and impactful designs.
+              Let's create something extraordinary together.
+            </p>
+            <div class="hero-buttons mt-4">
+              <a
+                href="https://wa.me/919818559036"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                >Book Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Right Content -->
+          <div class="col-lg-6 text-center">
+            <img
+              src="/images/services-imgs/hero-section/design-hero-logo.png"
+              alt="Creative Design Team"
+              class="hero-img img-fluid"
+            />
+          </div>
+        </div>
+
+        <!-- Unified Highlight Section -->
+        <div class="hero-highlight mt-5">
+          <div class="row">
+            <div class="col-md-4">
+              <p>
+                <i class="fas fa-check-circle"></i> Trusted by 500+ businesses
+                to bring their creative visions to life.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <p>
+                <i class="fas fa-check-circle"></i> Delivering innovative design
+                solutions for over a decade.
+              </p>
+            </div>
+            <div class="col-md-4">
+              <p>
+                <i class="fas fa-check-circle"></i> Award-winning team of
+                creative professionals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="creative-services py-5">
+      <div class="container text-center">
+        <h2 class="section-title">Our Creative Services</h2>
+        <p class="section-subtitle">
+          Discover how we can bring your vision to life with our innovative and
+          tailored creative services.
+        </p>
+        <div class="row mt-5">
+          <!-- Service 1 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-palette"></i>
+              </div>
+              <h4 class="service-title">Brand Identity Design</h4>
+              <p class="service-description">
+                Crafting unique logos, color schemes, and typography for your
+                brand.
+              </p>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-drafting-compass"></i>
+              </div>
+              <h4 class="service-title">Graphic Design</h4>
+              <p class="service-description">
+                High-quality brochures, banners, and social media graphics.
+              </p>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h4 class="service-title">Web Design</h4>
+              <p class="service-description">
+                Building visually stunning and user-friendly websites.
+              </p>
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-box"></i>
+              </div>
+              <h4 class="service-title">Packaging Design</h4>
+              <p class="service-description">
+                Eye-catching packaging solutions that reflect your brand.
+              </p>
+            </div>
+          </div>
+          <!-- Service 5 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-film"></i>
+              </div>
+              <h4 class="service-title">Motion Graphics</h4>
+              <p class="service-description">
+                Creating animated videos and motion graphics for campaigns.
+              </p>
+            </div>
+          </div>
+          <!-- Service 6 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-ad"></i>
+              </div>
+              <h4 class="service-title">Advertising Design</h4>
+              <p class="service-description">
+                Designing impactful ads for print, social media, and more.
+              </p>
+            </div>
+          </div>
+          <!-- Service 7 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-photo-video"></i>
+              </div>
+              <h4 class="service-title">Photography</h4>
+              <p class="service-description">
+                Professional photoshoots for campaigns and promotional content.
+              </p>
+            </div>
+          </div>
+          <!-- Service 8 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-box">
+              <div class="service-icon">
+                <i class="fas fa-pencil-ruler"></i>
+              </div>
+              <h4 class="service-title">Illustration</h4>
+              <p class="service-description">
+                Custom illustrations and hand-drawn designs for branding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-us py-5">
+      <div class="container text-center">
+        <h2 class="about-heading">About Our Design and Creative Services</h2>
+        <p class="about-content mt-4">
+          Our mission is to bring your creative vision to life. From branding
+          and web design to custom illustrations and motion graphics, we provide
+          comprehensive services that capture your unique identity. With a team
+          of talented designers and state-of-the-art tools, we deliver solutions
+          that are both innovative and impactful.
+        </p>
+        <div class="key-points mt-5">
+          <div class="key-item">
+            <i class="fas fa-paint-brush key-icon"></i>
+            <p>Over 15 years of experience in design and creative solutions.</p>
+          </div>
+          <div class="key-item">
+            <i class="fas fa-users key-icon"></i>
+            <p>Trusted by startups, small businesses, and global brands.</p>
+          </div>
+          <div class="key-item">
+            <i class="fas fa-tools key-icon"></i>
+            <p>Tailored services to meet the unique needs of every client.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="expertise-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6">
+            <h2 class="expertise-heading">
+              Our Expertise in <span>Design and Creativity</span>
+            </h2>
+            <p class="expertise-content mt-3">
+              Our team of talented designers, developers, and strategists
+              specializes in delivering tailored solutions that elevate your
+              brand and captivate your audience. Whether you need cutting-edge
+              web designs or custom illustrations, we combine creativity with
+              strategy to achieve outstanding results.
+            </p>
+            <ul class="expertise-list mt-4">
+              <li>Innovative design solutions tailored to your brand.</li>
+              <li>Expertise in branding, web design, and motion graphics.</li>
+              <li>
+                Proven track record of successful projects for global clients.
+              </li>
+            </ul>
+          </div>
+          <!-- Right Decorative Element -->
+          <div class="col-lg-6 text-center">
+            <div class="expertise-graphic">
+              <img
+                src="/images/services-imgs/web_and_app.png"
+                alt="Expertise Graphic"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section py-5">
+      <div class="container">
+        <h2 class="process-heading text-center mb-4">
+          How We <span>Bring Your Vision to Life</span>
+        </h2>
+        <p class="process-subheading text-center mb-5">
+          A step-by-step process designed to deliver exceptional creative
+          solutions.
+        </p>
+        <div class="timeline">
+          <!-- Step 1 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Consultation</h4>
+              <p>
+                Collaborating with you to understand your goals, brand identity,
+                and design needs.
+              </p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Concept Creation</h4>
+              <p>
+                Developing creative concepts, sketches, and mood boards tailored
+                to your project.
+              </p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Design Execution</h4>
+              <p>
+                Bringing ideas to life with detailed designs, prototypes, and
+                layouts.
+              </p>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Feedback and Revisions</h4>
+              <p>
+                Incorporating your feedback to refine and perfect the final
+                design.
+              </p>
+            </div>
+          </div>
+          <!-- Step 5 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Delivery</h4>
+              <p>
+                Providing the finalized product, ready to captivate and engage
+                your audience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section py-5">
+      <div class="container text-center">
+        <h2 class="section-heading mb-4">What Our Clients <span>Say</span></h2>
+        <p class="section-subheading mb-5">
+          Hear from the businesses and brands we've helped elevate with our
+          creative solutions.
+        </p>
+        <div class="row g-4">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "They created a stunning website and branding for our business.
+                The results were beyond our expectations!"
+              </p>
+              <h5 class="client-name">Lisa T.</h5>
+              <p class="client-position">CEO, Retail Ventures</p>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "Their designs helped us stand out in a competitive market.
+                Highly recommended!"
+              </p>
+              <h5 class="client-name">John M.</h5>
+              <p class="client-position">Marketing Head, E-Commerce Co.</p>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="col-md-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "From packaging to animations, they deliver excellence every
+                single time."
+              </p>
+              <h5 class="client-name">Sarah L.</h5>
+              <p class="client-position">Product Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section py-5">
+      <div class="container">
+        <h2 class="section-heading text-center mb-4">
+          Frequently Asked <span>Questions</span>
+        </h2>
+        <p class="section-subheading text-center mb-5">
+          Have questions? We've got answers.
+        </p>
+        <div class="faq-container">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>What types of design services do you offer?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We provide a wide range of services, including branding, graphic
+                design, web design, packaging, motion graphics, and more.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Do you offer custom solutions?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, every service is tailored to your unique needs and brand
+                identity.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>What is your typical turnaround time?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our timelines depend on the project scope but are always
+                delivered on time with uncompromising quality.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Can I request revisions?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely! We offer revisions to ensure the final product
+                exceeds your expectations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // FAQ Toggle Functionality
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+          const icon = item.querySelector(".toggle-icon");
+          icon.classList.toggle("rotate");
+        });
+      });
+    </script>
+
+    <section class="cta-section py-5">
+      <div class="container text-center">
+        <h2 class="cta-heading mb-4">Ready to Bring Your Vision to Life?</h2>
+        <p class="cta-content mb-5">
+          Let's create designs that set your brand apart. Connect with us today
+          to start your creative journey.
+        </p>
+        <div class="cta-buttons">
+          <a href="#services" class="btn btn-primary">Explore Our Services</a>
+          <a
+            href="tel:+919818559036"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline-light"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </section>
+    <footer id="contact" class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+          // Close all other active items
+          document
+            .querySelectorAll(".faq-item.active")
+            .forEach((activeItem) => {
+              activeItem.classList.remove("active");
+            });
+          // Toggle the clicked item
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+    </script>
+
+    <script>
+      // Toggle FAQ Functionality
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

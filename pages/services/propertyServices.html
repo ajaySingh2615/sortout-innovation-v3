@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Real Estate and Property</title>
+
+    <link rel="stylesheet" href="/CSS/services/propertyServices.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="SortOut Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li><a href="/pages/about-page/about.html" class="nav-link">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Career <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="/employee-job/index.php" class="dropdown-item">Employee Jobs</a>
+                <a href="/admin/artist-v2/public/index.php" class="dropdown-item">Artist Jobs</a>
+              </div>
+            </li>
+            <li><a href="/modal_agency.php" class="nav-link">Find Talent</a></li>
+            <li><a href="/pages/our-services-page/service.html" class="nav-link">Service</a></li>
+            <li><a href="/pages/contact-page/contact-page.html" class="nav-link">Contact</a></li>
+            <li><a href="/blog/index.php" class="nav-link">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbarToggle = document.querySelector(".navbar-toggle");
+          const navbarLinks = document.querySelector(".navbar-links");
+          const dropdowns = document.querySelectorAll(".dropdown");
+
+          // Toggle mobile menu
+          navbarToggle.addEventListener("click", () => {
+              navbarLinks.classList.toggle("active");
+          });
+
+          // Handle dropdowns on mobile
+          dropdowns.forEach(dropdown => {
+              const link = dropdown.querySelector("a");
+              link.addEventListener("click", (e) => {
+                  if (window.innerWidth <= 991) {
+                      e.preventDefault();
+                      dropdown.classList.toggle("active");
+                  }
+              });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", (e) => {
+              if (!navbarLinks.contains(e.target) && !navbarToggle.contains(e.target)) {
+                  navbarLinks.classList.remove("active");
+                  dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+              }
+          });
+
+          // Sticky Navbar on Scroll
+          window.addEventListener("scroll", () => {
+              const navbar = document.querySelector(".navbar");
+              if (window.scrollY > 50) {
+                  navbar.classList.add("scrolled");
+              } else {
+                  navbar.classList.remove("scrolled");
+              }
+          });
+      });
+    </script>
+
+
+    <section class="hero-section d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Content -->
+          <div class="col-lg-6 col-md-12">
+            <h1 class="hero-heading">
+              Seamless <span>Real Estate</span> Solutions
+            </h1>
+            <p class="hero-subheading">
+              Your trusted partner in buying, renting, and managing properties
+              for businesses of all sizes.
+            </p>
+            <div class="hero-buttons">
+              <a href="#services" class="btn btn-red">Explore Services</a>
+              <a
+                href="https://wa.me/919818559036"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-white"
+                >Contact Us Today</a
+              >
+            </div>
+            <!-- Key Highlights -->
+            <ul class="hero-highlights mt-4">
+              <li>
+                <i class="fas fa-check-circle"></i> Over 15 years of real estate
+                expertise
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> 100+ successful property
+                transactions
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Trusted by leading
+                businesses worldwide
+              </li>
+            </ul>
+          </div>
+          <!-- Hero Image -->
+          <div class="col-lg-6 col-md-12 text-center">
+            <img
+              src="/images/services-imgs/hero-section/property-hero-logo.png"
+              alt="Real Estate Solutions"
+              class="img-fluid hero-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-unique py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-heading">Why <span>Choose Us?</span></h2>
+          <p class="section-subheading">Empowering Your Real Estate Journey.</p>
+        </div>
+        <div class="unique-grid">
+          <!-- Feature 1 -->
+          <div class="unique-item">
+            <div class="circle-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Customized Solutions</h4>
+            <p>We tailor strategies to your unique business needs.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="unique-item">
+            <div class="circle-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h4>Market Expertise</h4>
+            <p>Leverage data and insights for smarter decisions.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="unique-item">
+            <div class="circle-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h4>Trusted Partnerships</h4>
+            <p>We work as your partner, not just your service provider.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="unique-item">
+            <div class="circle-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h4>24/7 Support</h4>
+            <p>We're here whenever you need us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section py-5">
+      <div class="container">
+        <h2 class="services-heading text-center">
+          Our Real Estate and Management Services
+        </h2>
+        <p class="services-subheading text-center mb-5">
+          Comprehensive solutions tailored to your business needs.
+        </p>
+        <div class="row g-4">
+          <!-- Service Card 1 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-building service-icon"></i>
+              <h4 class="service-title">Office Space Rental Services</h4>
+              <p class="service-description">
+                Helping businesses find and lease office spaces that suit their
+                size, location, and budget needs.
+              </p>
+            </div>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-shopping-cart service-icon"></i>
+              <h4 class="service-title">Commercial Property Sales</h4>
+              <p class="service-description">
+                Assisting companies in buying commercial properties, including
+                offices, retail spaces, and more.
+              </p>
+            </div>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-store service-icon"></i>
+              <h4 class="service-title">Retail Space Leasing and Purchasing</h4>
+              <p class="service-description">
+                Facilitating businesses in renting or buying retail spaces in
+                prime locations.
+              </p>
+            </div>
+          </div>
+          <!-- Service Card 4 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-warehouse service-icon"></i>
+              <h4 class="service-title">
+                Warehouse and Industrial Property Leasing
+              </h4>
+              <p class="service-description">
+                Providing storage and industrial spaces for logistics and
+                manufacturing.
+              </p>
+            </div>
+          </div>
+          <!-- Service Card 5 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-user-friends service-icon"></i>
+              <h4 class="service-title">Co-Working Space Rental</h4>
+              <p class="service-description">
+                Flexible and affordable co-working spaces for startups and small
+                businesses.
+              </p>
+            </div>
+          </div>
+          <!-- Service Card 6 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-coins service-icon"></i>
+              <h4 class="service-title">Real Estate Investment</h4>
+              <p class="service-description">
+                Expert guidance on purchasing properties for income generation.
+              </p>
+            </div>
+          </div>
+          <!-- Service Card 7 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-truck service-icon"></i>
+              <h4 class="service-title">Corporate Relocation Services</h4>
+              <p class="service-description">
+                Helping businesses relocate by finding and setting up the
+                perfect property.
+              </p>
+            </div>
+          </div>
+          <!-- Service Card 8 -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card text-center">
+              <i class="fas fa-couch service-icon"></i>
+              <h4 class="service-title">Interior Design</h4>
+              <p class="service-description">
+                Transform your space with expert interior design services,
+                blending style and functionality to create stunning,
+                personalized environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section text-center py-5">
+      <div class="container">
+        <h2 class="about-heading">
+          About Our Real Estate and Management Services
+        </h2>
+        <h3 class="about-subheading">
+          Your Trusted Partner in Real Estate Solutions
+        </h3>
+        <p class="about-content">
+          At SortOut Innovation, we are passionate about connecting businesses
+          with the perfect properties. With over 15 years of industry expertise,
+          we excel at offering customized solutions to meet your unique needs.
+          Whether it's office spaces, warehouses, or retail properties, our goal
+          is to make property management and acquisition seamless, efficient,
+          and stress-free.
+        </p>
+        <div class="about-features">
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <p>Proven success with 500+ clients globally</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <p>Comprehensive support for both renting and buying</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-check-circle"></i>
+            <p>Flexible services tailored for startups and enterprises alike</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-we-work-section py-5">
+      <div class="container">
+        <h2 class="section-heading text-center mb-4">
+          How <span>We Work</span>
+        </h2>
+        <p class="section-subheading text-center mb-5">
+          A clear and simple process to ensure your needs are met with
+          efficiency and care.
+        </p>
+
+        <div class="timeline">
+          <!-- Step 1 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-search-location"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Step 1: Property Search</h4>
+              <p>
+                We identify and shortlist properties tailored to your business
+                needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Step 2: Client Consultation</h4>
+              <p>
+                We work closely with you to understand your requirements and
+                preferences.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-file-signature"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Step 3: Agreement & Documentation</h4>
+              <p>
+                We handle all the paperwork, ensuring compliance and
+                transparency.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-key"></i>
+            </div>
+            <div class="timeline-content">
+              <h4>Step 4: Move-In Ready</h4>
+              <p>
+                Your property is fully prepared and ready for occupancy or
+                operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries-section py-5">
+      <div class="container">
+        <h2 class="section-heading text-center mb-4">
+          Industries <span>We Serve</span>
+        </h2>
+        <p class="section-subheading text-center mb-5">
+          Our real estate solutions cater to a wide range of industries,
+          ensuring every business finds the right property to thrive.
+        </p>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <ul class="industries-list">
+              <!-- Industry 1 -->
+              <li class="industry-item">
+                <div class="icon-container">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="industry-content">
+                  <h4 class="industry-title">Information Technology</h4>
+                  <p>
+                    Cutting-edge office spaces designed for tech-driven
+                    businesses.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Industry 2 -->
+              <li class="industry-item">
+                <div class="icon-container">
+                  <i class="fas fa-shopping-cart"></i>
+                </div>
+                <div class="industry-content">
+                  <h4 class="industry-title">Retail & E-Commerce</h4>
+                  <p>
+                    Prime retail spaces and warehouses for seamless operations.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Industry 3 -->
+              <li class="industry-item">
+                <div class="icon-container">
+                  <i class="fas fa-user-md"></i>
+                </div>
+                <div class="industry-content">
+                  <h4 class="industry-title">Healthcare & Pharmaceuticals</h4>
+                  <p>
+                    Facilities optimized for clinics, hospitals, and research
+                    labs.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Industry 4 -->
+              <li class="industry-item">
+                <div class="icon-container">
+                  <i class="fas fa-industry"></i>
+                </div>
+                <div class="industry-content">
+                  <h4 class="industry-title">Manufacturing & Logistics</h4>
+                  <p>
+                    Industrial properties designed for manufacturing and
+                    distribution.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Industry 5 -->
+              <li class="industry-item">
+                <div class="icon-container">
+                  <i class="fas fa-university"></i>
+                </div>
+                <div class="industry-content">
+                  <h4 class="industry-title">Finance & Banking</h4>
+                  <p>
+                    Premium office spaces tailored for financial institutions.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Industry 6 -->
+              <li class="industry-item">
+                <div class="icon-container">
+                  <i class="fas fa-hotel"></i>
+                </div>
+                <div class="industry-content">
+                  <h4 class="industry-title">Hospitality & Tourism</h4>
+                  <p>
+                    Properties ideal for hotels, resorts, and travel agencies.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section py-5">
+      <div class="container">
+        <h2 class="section-heading text-center mb-4">
+          What <span>Our Clients Say</span>
+        </h2>
+        <p class="section-subheading text-center mb-5">
+          Hear from the businesses we've had the privilege to serve.
+        </p>
+
+        <div class="row">
+          <!-- Testimonial 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "They helped us find the perfect office space in the heart of
+                the city. Truly outstanding service!"
+              </p>
+              <h5 class="testimonial-author">— Sarah T.</h5>
+              <p class="testimonial-role">Tech Startup Founder</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "Their expertise in commercial real estate is unmatched. Our
+                property investment portfolio has grown significantly."
+              </p>
+              <h5 class="testimonial-author">— John D.</h5>
+              <p class="testimonial-role">Real Estate Investor</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <p class="testimonial-text">
+                "From consultation to closing, they made the entire process
+                seamless and stress-free."
+              </p>
+              <h5 class="testimonial-author">— Lisa M.</h5>
+              <p class="testimonial-role">Retail Business Owner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section py-5">
+      <div class="container">
+        <h2 class="section-heading text-center mb-4">
+          Frequently Asked <span>Questions</span>
+        </h2>
+        <p class="section-subheading text-center mb-5">
+          Clear answers to the most common queries about our real estate
+          services.
+        </p>
+
+        <div class="faq-container">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Do you provide services for international clients?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we assist international clients in finding properties and
+                navigating local real estate markets.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Can you help with financing property purchases?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely! We offer property financing and loan assistance to
+                simplify the buying process.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>What type of properties do you specialize in?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We focus on commercial properties, including office spaces,
+                retail shops, warehouses, and co-working spaces.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <h4>Are your services scalable for growing businesses?</h4>
+              <i class="fas fa-chevron-down toggle-icon"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, our solutions are tailored to grow alongside your business
+                needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section py-5">
+      <div class="container">
+        <div class="row text-center">
+          <!-- Heading -->
+          <div class="col-12">
+            <h2 class="cta-heading">
+              Let's
+              <span>Find Your Perfect Space Today?</span>
+            </h2>
+          </div>
+          <!-- Content -->
+          <div class="col-12 p-2">
+            <p class="cta-content">
+              Ready to explore the best real estate solutions for your business?
+              Partner with us and experience a seamless process for renting,
+              buying, or managing your properties.
+            </p>
+          </div>
+          <!-- Buttons -->
+          <div class="col-12 p-2">
+            <div class="cta-buttons">
+              <a href="#services" class="btn btn-primary"
+                >Explore Our Services</a
+              >
+              <a
+                href="tel:+919818559036"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline-light"
+                >Book Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Toggle FAQ Functionality
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i
+          ><span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Premium Hero Section</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Lord Icons Script -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <link rel="stylesheet" href="/pages/portfolio/portfolio.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="SortOut Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li>
+              <a href="/pages/about-page/about.html" class="nav-link">About</a>
+            </li>
+            <li><a href="/pages/career.html" class="nav-link">Career</a></li>
+            <li>
+              <a href="/employee-job/index.php" class="nav-link">Jobs</a>
+            </li>
+            <li>
+              <a href="/pages/our-services-page/service.html" class="nav-link"
+                >Service</a
+              >
+            </li>
+            <li>
+              <a href="/pages/contact-page/contact-page.html" class="nav-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      const navbarToggle = document.querySelector(".navbar-toggle");
+      const navbarLinks = document.querySelector(".navbar-links");
+
+      navbarToggle.addEventListener("click", () => {
+        navbarLinks.classList.toggle("active");
+      });
+
+      // Sticky Navbar on Scroll
+      window.addEventListener("scroll", () => {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+
+    <section class="hero">
+      <!-- Left Side - Text Content -->
+      <div class="text-content">
+        <h1>Empowering <span class="highlight">Brands</span> with Impact</h1>
+        <p>
+          We help businesses thrive in the digital landscape with innovative
+          solutions and growth-driven strategies.
+        </p>
+        <div class="cta-buttons">
+          <a href="#" class="btn-neumorphic">Get Started</a>
+          <a href="#" class="btn-neumorphic">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Right Side - Hero Image with Floating Stats -->
+      <div class="hero-image">
+        <div class="image-frame">
+          <img
+            src="/images/portfolio/hero-section/women-holding.webp"
+            alt="Profile Image"
+            class="profile-pic"
+          />
+        </div>
+        <div class="floating-stats">
+          <div class="stat-box">
+            <strong>650+</strong>
+            <span>Projects</span>
+          </div>
+          <div class="stat-box">
+            <strong>99%</strong>
+            <span>Happy Clients</span>
+          </div>
+          <div class="stat-box">
+            <strong>240+</strong>
+            <span>Successful Works</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+      <h2 class="section-title">Clients We Worked For</h2>
+      <p class="section-subtitle">
+        Collaborating with top industry leaders worldwide.
+      </p>
+
+      <div class="clients-grid">
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/chingari1.jpeg"
+            alt="Client 1"
+          />
+          <div class="client-overlay">
+            <h3>Chingari</h3>
+            <p>Video sharing moblie app</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/disco2.jpeg"
+            alt="Client 2"
+          />
+          <div class="client-overlay">
+            <h3>Company Two</h3>
+            <p>Innovators in Digital Marketing</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/imo3.png"
+            alt="Client 3"
+          />
+          <div class="client-overlay">
+            <h3>imo</h3>
+            <p>audio/video calling</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/josh13.jpeg"
+            alt="Client 4"
+          />
+          <div class="client-overlay">
+            <h3>Josh</h3>
+            <p>video-sharing service</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/me4.jpeg"
+            alt="Client 5"
+          />
+          <div class="client-overlay">
+            <h3>Company Five</h3>
+            <p>Global Logistics Solutions</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/meesho14.png"
+            alt="Client 6"
+          />
+          <div class="client-overlay">
+            <h3>Meesho</h3>
+            <p>e-commerce company</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/pix11.jpeg"
+            alt="Client 7"
+          />
+          <div class="client-overlay">
+            <h3>Company Seven</h3>
+            <p>Trusted IT Infrastructure Provider</p>
+          </div>
+        </div>
+
+        <div class="client-card">
+          <img
+            src="/images/company-images/improved-logos/tend10.jpeg"
+            alt="Client 8"
+          />
+          <div class="client-overlay">
+            <h3>Company Eight</h3>
+            <p>Experts in Business Strategy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+      <h2 class="section-title-service">Our Services</h2>
+      <p class="section-subtitle-service">
+        Professional solutions tailored to your business needs.
+      </p>
+
+      <div class="services-grid">
+        <a href="/pages/services/socialMediaInfluencers.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/wuvorxbv.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>Digital Marketing</h3>
+            <p>Grow your business with SEO, PPC, and social media marketing.</p>
+          </div>
+        </a>
+
+        <a href="/pages/services/live-streaming/liveStreaming.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/vycwlttg.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>Live Streaming</h3>
+            <p>
+              Engage your audience with high-quality live streaming services.
+            </p>
+          </div>
+        </a>
+
+        <a href="/pages/talent.page/talent.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/eszyyflr.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>Find Talent Service</h3>
+            <p>
+              Connect with skilled professionals and grow your team with
+              experts.
+            </p>
+          </div>
+        </a>
+
+        <a href="/pages/services/itServices.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/jdgfsfzr.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>IT Support Service</h3>
+            <p>Reliable tech support and IT solutions for businesses.</p>
+          </div>
+        </a>
+
+        <a href="/pages/services/caServices.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/warimioc.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>Chartered Accountant</h3>
+            <p>Expert accounting and financial advisory services.</p>
+          </div>
+        </a>
+
+        <a href="/pages/services/hrServices.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/fqbvgezn.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>HR Solutions</h3>
+            <p>Comprehensive human resource management services.</p>
+          </div>
+        </a>
+
+        <a href="/pages/services/courierServices.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/uetqnvvg.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>Courier Services</h3>
+            <p>Fast and secure delivery solutions for your packages.</p>
+          </div>
+        </a>
+
+        <a href="/pages/services/shipping.html">
+          <div class="service-card">
+            <lord-icon
+              src="https://cdn.lordicon.com/uqpazftn.json"
+              trigger="hover"
+              style="width: 80px; height: 80px"
+            ></lord-icon>
+            <h3>Shipping & Fulfillment</h3>
+            <p>End-to-end logistics and order fulfillment services.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Explore Services Button -->
+      <div class="explore-btn-container">
+        <a href="/pages/our-services-page/service.html" class="btn-explore"
+          >Explore All Services</a
+        >
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+      <h2 class="section-title">Latest Insights & Articles</h2>
+      <p class="section-subtitle">
+        Sharing my knowledge, experiences, and industry trends.
+      </p>
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <img
+            src="/images/portfolio/hero-section/insights-img/1d.webp"
+            alt="Blog 1"
+          />
+          <div class="blog-content">
+            <span class="blog-category">UI/UX Design</span>
+            <h3>10 UI Trends That Will Dominate 2024</h3>
+            <p class="blog-date">Published on Jan 15, 2024</p>
+            <a
+              href="https://medium.com/codeart-mk/ux-ui-design-trends-2024-3637374ba59b"
+              class="btn-read"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img
+            src="/images/portfolio/hero-section/insights-img/1e.webp"
+            alt="Blog 2"
+          />
+          <div class="blog-content">
+            <span class="blog-category">Web Development</span>
+            <h3>How to Build a Fast & SEO-Optimized Website</h3>
+            <p class="blog-date">Published on Feb 1, 2024</p>
+            <a
+              href="https://www.mtu.edu/umc/services/websites/seo/"
+              class="btn-read"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <img
+            src="/images/portfolio/hero-section/insights-img/1c.webp"
+            alt="Blog 3"
+          />
+          <div class="blog-content">
+            <span class="blog-category">Business Growth</span>
+            <h3>5 Strategies to Scale Your Freelance Business</h3>
+            <p class="blog-date">Published on Feb 10, 2024</p>
+            <a
+              href="https://paro.ai/blog/scale-your-freelance-business/"
+              class="btn-read"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Articles Button -->
+      <!-- <div class="explore-btn-container">
+        <a href="#" class="btn-explore">View All Articles</a>
+      </div> -->
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="contact-container">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+          We'd love to hear from you. Drop a message and let's create something
+          amazing!
+        </p>
+
+        <form id="contactForm">
+          <div class="input-group">
+            <div class="input-box">
+              <input type="text" id="fullName" required />
+              <label for="fullName">Full Name*</label>
+            </div>
+            <div class="input-box">
+              <input type="email" id="email" required />
+              <label for="email">Email*</label>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <select id="services" required>
+                <option value="" disabled selected>Select a Service</option>
+                <option value="branding">Branding</option>
+                <option value="web-dev">Web Development</option>
+                <option value="marketing">Digital Marketing</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <select id="industry" required>
+                <option value="" disabled selected>Select an Industry</option>
+                <option value="tech">Technology</option>
+                <option value="finance">Finance</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-box">
+            <textarea id="message" required></textarea>
+            <label for="message">Your Message*</label>
+          </div>
+
+          <button type="button" class="btn-submit" onclick="sendToWhatsApp()">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script>
+      function sendToWhatsApp() {
+        let phoneNumber = "1234567890"; // Replace with your WhatsApp number
+
+        let fullName = document.getElementById("fullName").value;
+        let email = document.getElementById("email").value;
+        let services = document.getElementById("services").value;
+        let industry = document.getElementById("industry").value;
+        let message = document.getElementById("message").value;
+
+        if (!fullName || !email || !services || !industry || !message) {
+          alert("Please fill all fields before sending.");
+          return;
+        }
+
+        let text =
+          `Hello! I would like to connect.\n\n` +
+          `*Name:* ${fullName}\n` +
+          `*Email:* ${email}\n` +
+          `*Service Interested In:* ${services}\n` +
+          `*Industry:* ${industry}\n` +
+          `*Message:* ${message}`;
+
+        let encodedText = encodeURIComponent(text);
+        window.open(
+          `https://wa.me/${phoneNumber}?text=${encodedText}`,
+          "_blank"
+        );
+      }
+    </script>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2 class="section-title">Words from Our Clients</h2>
+      <p class="section-subtitle">
+        What our happy clients say about working with us.
+      </p>
+
+      <div class="testimonial-slider">
+        <div class="testimonial-track">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Ambika_Arora.webp"
+              alt="Client 1"
+            />
+            <p class="testimonial-text">
+              "Absolutely fantastic service! They understood my vision and
+              delivered beyond my expectations."
+            </p>
+            <h3>Ambika_Arora</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Anchal_Thakur.webp"
+              alt="Client 2"
+            />
+            <p class="testimonial-text">
+              "Professional, timely, and creative. I highly recommend their
+              services."
+            </p>
+            <h3>Anchal_Thakur</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Annupriya_singh.webp"
+              alt="Client 3"
+            />
+            <p class="testimonial-text">
+              "They provided outstanding UI/UX design that boosted my app's
+              engagement rates."
+            </p>
+            <h3>Annupriya_singh</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Jyoti_Soni.webp"
+              alt="Client 4"
+            />
+            <p class="testimonial-text">
+              "Reliable, responsive, and highly skilled. A pleasure to work
+              with!"
+            </p>
+            <h3>Jyoti_Soni</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Nancy_Khatri.webp"
+              alt="Client 4"
+            />
+            <p class="testimonial-text">
+              "Reliable, responsive, and highly skilled. A pleasure to work
+              with!"
+            </p>
+            <h3>Nancy_Khatri</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Priyanka_Taras.webp"
+              alt="Client 4"
+            />
+            <p class="testimonial-text">
+              "Reliable, responsive, and highly skilled. A pleasure to work
+              with!"
+            </p>
+            <h3>Shereen_A_Bannsal</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <!-- Testimonial 7 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Shereen_A_Bannsal.webp"
+              alt="Client 4"
+            />
+            <p class="testimonial-text">
+              "Reliable, responsive, and highly skilled. A pleasure to work
+              with!"
+            </p>
+            <h3>Shivangi_Ghosh</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+          <!-- Testimonial 8 -->
+          <div class="testimonial-card">
+            <img
+              src="/images/Artist-images/slot-1/refactor-v1/Twinkle_Sharma.webp"
+              alt="Client 4"
+            />
+            <p class="testimonial-text">
+              "Reliable, responsive, and highly skilled. A pleasure to work
+              with!"
+            </p>
+            <h3>Twinkle_Sharma</h3>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-cta">
+      <h2>Get in Touch with Us</h2>
+      <p>Need assistance? We are just a call or email away!</p>
+
+      <div class="custom-cta-info">
+        <!-- Phone -->
+        <div class="custom-cta-box">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+919818559036">+91 9818559036</a>
+        </div>
+
+        <!-- Email -->
+        <div class="custom-cta-box">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@sortoutinnovation.com"
+            >info@sortoutinnovation.com</a
+          >
+        </div>
+
+        <!-- Address -->
+        <div class="custom-cta-box">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Spaze i-Tech Park, Gurugram, India</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="custom-footer">
+      <div class="container">
+        <div class="row custom-footer-row justify-content-center">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6 custom-footer-col">
+            <div class="custom-footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p>
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6 custom-footer-col">
+            <h4 class="custom-footer-title">Quick Links</h4>
+            <ul class="custom-footer-links">
+              <li><a href="index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li><a href="/pages/career.html">Careers</a></li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6 custom-footer-col">
+            <h4 class="custom-footer-title">Our Services</h4>
+            <ul class="custom-footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services//courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services//event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6 custom-footer-col">
+            <h4 class="custom-footer-title">Contact Us</h4>
+            <ul class="custom-footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919818559036">+91 9818559036</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@sortoutinnovation.com"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6 custom-footer-col">
+            <h4 class="custom-footer-title">Follow Us</h4>
+            <div class="custom-social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61556452066209"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/sortout-innovation/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://www.instagram.com/sortoutinnovation"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="custom-footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortoutinnovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

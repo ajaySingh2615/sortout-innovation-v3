@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>shipping and fulfillment</title>
+
+    <link rel="stylesheet" href="/CSS/services/shipping.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="SortOut Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li><a href="/pages/about-page/about.html" class="nav-link">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Career <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="/employee-job/index.php" class="dropdown-item">Employee Jobs</a>
+                <a href="/admin/artist-v2/public/index.php" class="dropdown-item">Artist Jobs</a>
+              </div>
+            </li>
+            <li><a href="/modal_agency.php" class="nav-link">Find Talent</a></li>
+            <li><a href="/pages/our-services-page/service.html" class="nav-link">Service</a></li>
+            <li><a href="/pages/contact-page/contact-page.html" class="nav-link">Contact</a></li>
+            <li><a href="/blog/index.php" class="nav-link">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbarToggle = document.querySelector(".navbar-toggle");
+          const navbarLinks = document.querySelector(".navbar-links");
+          const dropdowns = document.querySelectorAll(".dropdown");
+
+          // Toggle mobile menu
+          navbarToggle.addEventListener("click", () => {
+              navbarLinks.classList.toggle("active");
+          });
+
+          // Handle dropdowns on mobile
+          dropdowns.forEach(dropdown => {
+              const link = dropdown.querySelector("a");
+              link.addEventListener("click", (e) => {
+                  if (window.innerWidth <= 991) {
+                      e.preventDefault();
+                      dropdown.classList.toggle("active");
+                  }
+              });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", (e) => {
+              if (!navbarLinks.contains(e.target) && !navbarToggle.contains(e.target)) {
+                  navbarLinks.classList.remove("active");
+                  dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+              }
+          });
+
+          // Sticky Navbar on Scroll
+          window.addEventListener("scroll", () => {
+              const navbar = document.querySelector(".navbar");
+              if (window.scrollY > 50) {
+                  navbar.classList.add("scrolled");
+              } else {
+                  navbar.classList.remove("scrolled");
+              }
+          });
+      });
+    </script>
+
+    <section class="hero-modern-centered">
+      <div class="container">
+        <marquee class="smm-marq" behavior="alternate">
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+          <span class="pdr-60">Shipping Services</span>
+        </marquee>
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="hero-heading">
+              <span>Seamless</span> Shipping, <br />
+              Reliable <span>Fulfillment</span>
+            </h1>
+            <p class="hero-subheading">
+              Your trusted partner for fast, accurate, and cost-effective
+              shipping and fulfillment solutions.
+            </p>
+            <div class="hero-buttons">
+              <a
+                href="https://wa.me/919818559036"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                >Book Now</a
+              >
+              <a href="#services" class="btn btn-outline-light">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Right Image -->
+          <div class="col-lg-6 text-center hero-image-area">
+            <img
+              src="/images/services-imgs/hero-section/shipping-hero-logo.png"
+              alt="Shipping and Fulfillment"
+              class="hero-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-modern-section py-5">
+      <div class="container">
+        <!-- Heading and Content -->
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 class="about-modern-heading">
+              Transforming the Way You <span>Ship and Deliver</span>
+            </h2>
+            <p class="about-modern-content">
+              With unparalleled expertise and innovative logistics, we empower
+              businesses to thrive in a fast-paced world. Trust us to provide
+              tailored, efficient, and reliable shipping and fulfillment
+              services.
+            </p>
+          </div>
+        </div>
+
+        <!-- Key Points -->
+        <div class="row justify-content-center text-center">
+          <div class="col-md-4">
+            <div class="modern-about-card">
+              <i class="fas fa-truck-moving icon"></i>
+              <h4>Industry-Leading Logistics</h4>
+              <p>
+                End-to-end solutions designed for seamless operations and
+                customer satisfaction.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="modern-about-card">
+              <i class="fas fa-users icon"></i>
+              <h4>Trusted by Thousands</h4>
+              <p>
+                A global network of happy clients who rely on us for their
+                shipping needs.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="modern-about-card">
+              <i class="fas fa-cogs icon"></i>
+              <h4>Advanced Technology</h4>
+              <p>
+                State-of-the-art facilities and systems to handle your goods
+                securely and efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sf-services-section py-5" id="services">
+      <div class="sf-container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="sf-services-heading">
+            Our <span>Shipping and Fulfillment Services</span>
+          </h2>
+          <p class="sf-services-description">
+            Discover how our comprehensive shipping and fulfillment solutions
+            can elevate your business operations.
+          </p>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="sf-services-grid">
+          <!-- Service 1 -->
+          <div class="sf-service-box">
+            <i class="fas fa-box sf-service-icon"></i>
+            <h4 class="sf-service-title">Order Fulfillment</h4>
+            <p class="sf-service-description">
+              End-to-end solutions from order processing to last-mile delivery.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="sf-service-box">
+            <i class="fas fa-warehouse sf-service-icon"></i>
+            <h4 class="sf-service-title">Warehousing</h4>
+            <p class="sf-service-description">
+              Secure and scalable storage for your inventory.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="sf-service-box">
+            <i class="fas fa-chart-line sf-service-icon"></i>
+            <h4 class="sf-service-title">Inventory Management</h4>
+            <p class="sf-service-description">
+              Track, update, and monitor stock in real-time.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="sf-service-box">
+            <i class="fas fa-shipping-fast sf-service-icon"></i>
+            <h4 class="sf-service-title">Same-Day Shipping</h4>
+            <p class="sf-service-description">
+              Fast delivery options for urgent orders.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="sf-service-box">
+            <i class="fas fa-globe sf-service-icon"></i>
+            <h4 class="sf-service-title">International Shipping</h4>
+            <p class="sf-service-description">
+              Seamless global shipping to over 200 destinations.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="sf-service-box">
+            <i class="fas fa-exchange-alt sf-service-icon"></i>
+            <h4 class="sf-service-title">Returns Management</h4>
+            <p class="sf-service-description">
+              Efficient processing for customer returns and exchanges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sf-enhanced-why-choose-section py-5">
+      <div class="sf-container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="sf-enhanced-heading">
+            Why Choose Our <span>Shipping and Fulfillment Services?</span>
+          </h2>
+          <p class="sf-enhanced-subheading">
+            Experience unmatched efficiency and reliability.
+          </p>
+          <p class="sf-enhanced-content">
+            We go beyond standard shipping to provide complete fulfillment
+            services that prioritize your business growth.
+          </p>
+        </div>
+
+        <!-- Key Features Grid -->
+        <div class="row">
+          <!-- Feature 1 -->
+          <div class="col-md-6 mb-4">
+            <div class="sf-enhanced-feature">
+              <div class="sf-feature-icon-wrapper">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4 class="sf-feature-title">Advanced Tracking and Analytics</h4>
+              <p class="sf-feature-description">
+                Monitor your shipments in real-time with detailed analytics to
+                optimize operations.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="col-md-6 mb-4">
+            <div class="sf-enhanced-feature">
+              <div class="sf-feature-icon-wrapper">
+                <i class="fas fa-tags"></i>
+              </div>
+              <h4 class="sf-feature-title">Affordable Pricing Plans</h4>
+              <p class="sf-feature-description">
+                Cost-effective solutions tailored to your business size and
+                needs.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="col-md-6 mb-4">
+            <div class="sf-enhanced-feature">
+              <div class="sf-feature-icon-wrapper">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <h4 class="sf-feature-title">Flexible and Scalable Solutions</h4>
+              <p class="sf-feature-description">
+                Adaptable services designed to grow alongside your business.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div class="col-md-6 mb-4">
+            <div class="sf-enhanced-feature">
+              <div class="sf-feature-icon-wrapper">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h4 class="sf-feature-title">Eco-Friendly Packaging Options</h4>
+              <p class="sf-feature-description">
+                Reduce your environmental impact with sustainable packaging
+                solutions.
+              </p>
+            </div>
+          </div>
+          <!-- Feature 5 -->
+          <div class="col-md-12 text-center">
+            <div class="sf-enhanced-feature">
+              <div class="sf-feature-icon-wrapper">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h4 class="sf-feature-title">24/7 Support</h4>
+              <p class="sf-feature-description">
+                Around-the-clock assistance to address your concerns anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sf-horizontal-process-section">
+      <div class="sf-container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="sf-process-heading">
+            Our <span>Streamlined Shipping Process</span>
+          </h2>
+          <p class="sf-process-description">
+            Our simplified process ensures a smooth experience from the moment
+            your customer places an order to when it’s delivered to their
+            doorstep.
+          </p>
+        </div>
+
+        <!-- Horizontal Timeline -->
+        <div class="sf-timeline">
+          <!-- Step 1 -->
+          <div class="sf-timeline-step">
+            <div class="sf-timeline-icon">
+              <i class="fas fa-box"></i>
+            </div>
+            <div class="sf-timeline-content">
+              <h4>Receive Your Orders</h4>
+              <p>Automated order syncing from your e-commerce platform.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="sf-timeline-step">
+            <div class="sf-timeline-icon">
+              <i class="fas fa-dolly"></i>
+            </div>
+            <div class="sf-timeline-content">
+              <h4>Pick and Pack</h4>
+              <p>Accurate and fast order picking with customized packaging.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="sf-timeline-step">
+            <div class="sf-timeline-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <div class="sf-timeline-content">
+              <h4>Ship and Deliver</h4>
+              <p>Reliable carriers for on-time delivery.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="sf-timeline-step">
+            <div class="sf-timeline-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="sf-timeline-content">
+              <h4>Track and Report</h4>
+              <p>Real-time updates and performance analytics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sf-industries-modern">
+      <div class="sf-container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="sf-industries-heading">
+            Industries <span>We Serve</span>
+          </h2>
+          <p class="sf-industries-description">
+            Our expertise spans across industries, enabling us to cater to the
+            specific needs of each business type.
+          </p>
+        </div>
+
+        <!-- Industries List -->
+        <div class="sf-industries-list">
+          <!-- Row 1 -->
+          <div class="sf-industry-row">
+            <div class="sf-industry">
+              <i class="fas fa-shopping-cart sf-industry-icon"></i>
+              <h4 class="sf-industry-title">E-Commerce</h4>
+            </div>
+            <div class="sf-industry">
+              <i class="fas fa-store sf-industry-icon"></i>
+              <h4 class="sf-industry-title">Retail</h4>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="sf-industry-row sf-row-alt">
+            <div class="sf-industry">
+              <i class="fas fa-user-md sf-industry-icon"></i>
+              <h4 class="sf-industry-title">Healthcare</h4>
+            </div>
+            <div class="sf-industry">
+              <i class="fas fa-laptop sf-industry-icon"></i>
+              <h4 class="sf-industry-title">Electronics</h4>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="sf-industry-row">
+            <div class="sf-industry">
+              <i class="fas fa-tshirt sf-industry-icon"></i>
+              <h4 class="sf-industry-title">Fashion and Apparel</h4>
+            </div>
+            <div class="sf-industry">
+              <i class="fas fa-utensils sf-industry-icon"></i>
+              <h4 class="sf-industry-title">Food and Beverage</h4>
+            </div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="sf-industry-row sf-row-alt">
+            <div class="sf-industry">
+              <i class="fas fa-car sf-industry-icon"></i>
+              <h4 class="sf-industry-title">Automotive</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sf-testimonials-highlight-section">
+      <div class="sf-container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="sf-testimonials-heading">
+            What Our <span>Clients Say</span>
+          </h2>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="sf-testimonials-grid">
+          <!-- Client 1 -->
+          <div class="sf-testimonial-item">
+            <p class="sf-testimonial-text">
+              "Thanks to their streamlined process, we’ve been able to scale our
+              business without worrying about logistics."
+            </p>
+            <h4 class="sf-client-name">Rohan Sharma</h4>
+            <span class="sf-client-title">E-Commerce Owner</span>
+          </div>
+
+          <!-- Client 2 (Highlighted) -->
+          <div class="sf-testimonial-item highlight">
+            <p class="sf-testimonial-text">
+              "Their order accuracy and fast delivery have significantly
+              improved our customer satisfaction."
+            </p>
+            <h4 class="sf-client-name">Priya Mehta</h4>
+            <span class="sf-client-title">Retail Business Owner</span>
+          </div>
+
+          <!-- Client 3 -->
+          <div class="sf-testimonial-item">
+            <p class="sf-testimonial-text">
+              "Outstanding international shipping solutions! My products always
+              reach their destination safely."
+            </p>
+            <h4 class="sf-client-name">Amit Verma</h4>
+            <span class="sf-client-title">Exporter</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sf-faq-section">
+      <div class="sf-container">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+          <h2 class="sf-faq-heading">
+            Frequently Asked <span>Questions</span>
+          </h2>
+        </div>
+
+        <!-- FAQ Items -->
+        <div class="sf-faq-items">
+          <!-- Question 1 -->
+          <div class="sf-faq-item">
+            <div class="sf-faq-question">
+              <h4>Do you offer international shipping?</h4>
+              <i class="fas fa-chevron-down sf-toggle-icon"></i>
+            </div>
+            <div class="sf-faq-answer">
+              <p>
+                Yes, we deliver to over 200 destinations worldwide with customs
+                handling.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="sf-faq-item">
+            <div class="sf-faq-question">
+              <h4>Can you handle returns?</h4>
+              <i class="fas fa-chevron-down sf-toggle-icon"></i>
+            </div>
+            <div class="sf-faq-answer">
+              <p>
+                Absolutely. We manage returns and exchanges efficiently,
+                ensuring customer satisfaction.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="sf-faq-item">
+            <div class="sf-faq-question">
+              <h4>What is the turnaround time for order fulfillment?</h4>
+              <i class="fas fa-chevron-down sf-toggle-icon"></i>
+            </div>
+            <div class="sf-faq-answer">
+              <p>
+                Our same-day shipping ensures orders are processed and shipped
+                within hours.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="sf-faq-item">
+            <div class="sf-faq-question">
+              <h4>Are your services scalable for growing businesses?</h4>
+              <i class="fas fa-chevron-down sf-toggle-icon"></i>
+            </div>
+            <div class="sf-faq-answer">
+              <p>
+                Yes, our solutions are flexible and can grow with your business
+                needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="sf-cta-section">
+      <div class="sf-container text-center">
+        <!-- Section Heading -->
+        <h2 class="sf-cta-heading">
+          Let’s Deliver <span>Success Together</span>
+        </h2>
+        <p class="sf-cta-content">
+          Partner with us for reliable shipping and fulfillment services that
+          help you focus on what matters most—your business.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="sf-cta-buttons">
+          <a href="#services" class="sf-btn-primary">Explore Our Services</a>
+          <a
+            href="tel:+919818559036"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="sf-btn-secondary"
+            >Contact Us Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      // Select all FAQ items
+      const faqItems = document.querySelectorAll(".sf-faq-item");
+
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".sf-faq-question");
+
+        question.addEventListener("click", () => {
+          // Close other FAQs
+          faqItems.forEach((faq) => {
+            if (faq !== item) {
+              faq.classList.remove("active");
+            }
+          });
+
+          // Toggle the current FAQ
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      const carousel = document.getElementById("sf-testimonials-carousel");
+      let currentIndex = 0;
+
+      // Get all testimonial items
+      const testimonials = document.querySelectorAll(".sf-testimonial-item");
+      const totalTestimonials = testimonials.length;
+
+      // Function to update the slide
+      function updateCarousel() {
+        const offset = -currentIndex * 100; // Move the carousel
+        carousel.style.transform = `translateX(${offset}%)`;
+      }
+
+      // Function for autoplay
+      function autoplayCarousel() {
+        currentIndex = (currentIndex + 1) % totalTestimonials; // Increment index and loop back
+        updateCarousel();
+      }
+
+      // Start autoplay every 4 seconds
+      setInterval(autoplayCarousel, 4000);
+    </script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i>
+          <span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

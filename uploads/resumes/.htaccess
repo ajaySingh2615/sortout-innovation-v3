@@ -1,0 +1,92 @@
+# Deny access to all files in this directory
+
+Order deny,allow
+Deny from all
+
+# Allow access only through PHP scripts
+
+<FilesMatch "\.pdf$|\.doc$|\.docx$">
+Order allow,deny
+Allow from all # Require valid user authentication
+AuthType Basic
+AuthName "Restricted Access"
+Require valid-user
+</FilesMatch>
+
+# Prevent script execution
+
+<FilesMatch "\.php$|\.py$|\.pl$|\.cgi$|\.asp$|\.jsp$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+# Disable directory listing
+
+Options -Indexes
+
+# Protect against malicious file uploads
+
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+
+# Only allow access to specific file types
+
+<FilesMatch "\.(?i:pdf|doc|docx)$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
+
+# Deny access to all other file types
+
+<FilesMatch "^(?!\.(pdf|doc|docx)$).*$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Force download instead of displaying in browser
+
+<FilesMatch "\.(?i:pdf|doc|docx)$">
+ForceType application/octet-stream
+Header set Content-Disposition attachment
+</FilesMatch>
+
+# Prevent script execution
+
+<FilesMatch "\.(?i:php|py|pl|rb|sh|cgi)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Basic security headers
+
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "DENY"
+Header set X-XSS-Protection "1; mode=block"
+
+# Enable rewrite engine
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /uploads/resumes/
+</IfModule>
+
+# Allow access to PDF and document files
+
+<FilesMatch "\.(pdf|doc|docx)$">
+Order Allow,Deny
+Allow from all
+
+    # Set correct content type
+    <IfModule mod_headers.c>
+        Header set Content-Type "application/pdf"
+        Header set Content-Disposition "inline"
+    </IfModule>
+
+</FilesMatch>
+
+# Set MIME types
+
+AddType application/pdf .pdf
+AddType application/msword .doc
+AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx

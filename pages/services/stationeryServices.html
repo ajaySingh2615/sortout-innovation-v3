@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+    />
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" />
+    <title>Stationery Services</title>
+
+    <link rel="stylesheet" href="/CSS/services/stationeryServices.css" />
+    <link rel="stylesheet" href="/CSS/floating-social-media.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="/index.php" class="navbar-logo">
+          <img
+            src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif"
+            alt="SortOut Innovation"
+          />
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar-links">
+          <ul>
+            <li><a href="/index.php" class="nav-link">Home</a></li>
+            <li><a href="/pages/about-page/about.html" class="nav-link">About</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link">Career <i class="fas fa-chevron-down"></i></a>
+              <div class="dropdown-menu">
+                <a href="/employee-job/index.php" class="dropdown-item">Employee Jobs</a>
+                <a href="/admin/artist-v2/public/index.php" class="dropdown-item">Artist Jobs</a>
+              </div>
+            </li>
+            <li><a href="/modal_agency.php" class="nav-link">Find Talent</a></li>
+            <li><a href="/pages/our-services-page/service.html" class="nav-link">Service</a></li>
+            <li><a href="/pages/contact-page/contact-page.html" class="nav-link">Contact</a></li>
+            <li><a href="/blog/index.php" class="nav-link">Blog</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <script>
+      // Mobile Menu Toggle
+      document.addEventListener('DOMContentLoaded', function() {
+          const navbarToggle = document.querySelector(".navbar-toggle");
+          const navbarLinks = document.querySelector(".navbar-links");
+          const dropdowns = document.querySelectorAll(".dropdown");
+
+          // Toggle mobile menu
+          navbarToggle.addEventListener("click", () => {
+              navbarLinks.classList.toggle("active");
+          });
+
+          // Handle dropdowns on mobile
+          dropdowns.forEach(dropdown => {
+              const link = dropdown.querySelector("a");
+              link.addEventListener("click", (e) => {
+                  if (window.innerWidth <= 991) {
+                      e.preventDefault();
+                      dropdown.classList.toggle("active");
+                  }
+              });
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener("click", (e) => {
+              if (!navbarLinks.contains(e.target) && !navbarToggle.contains(e.target)) {
+                  navbarLinks.classList.remove("active");
+                  dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+              }
+          });
+
+          // Sticky Navbar on Scroll
+          window.addEventListener("scroll", () => {
+              const navbar = document.querySelector(".navbar");
+              if (window.scrollY > 50) {
+                  navbar.classList.add("scrolled");
+              } else {
+                  navbar.classList.remove("scrolled");
+              }
+          });
+      });
+    </script>
+
+    <section class="stationery-hero-section">
+      <div class="container">
+        <marquee class="smm-marq" behavior="alternate">
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+          <span class="pdr-60">Stationery Services</span>
+        </marquee>
+        <div class="row align-items-center">
+          <!-- Content on the Left -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 class="stationery-hero-heading">
+              Your One-Stop Destination for <span>Quality Stationery</span>
+            </h1>
+            <p class="stationery-hero-subheading">
+              From office essentials to custom solutions, we deliver premium
+              stationery for businesses of all sizes.
+            </p>
+            <div class="stationery-hero-buttons mt-4">
+              <a
+                href="https://wa.me/919818559036"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary me-3"
+                >Book Now</a
+              >
+            </div>
+          </div>
+          <!-- Image on the Right -->
+          <div class="col-lg-6 text-center">
+            <div class="hero-image">
+              <img
+                src="/images/services-imgs/hero-section/stationery-hero-logo.png"
+                alt="Stationery Services"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section py-5" id="services">
+      <div class="container text-center">
+        <h2 class="section-heading mb-4">
+          Our <span>Professional Services</span>
+        </h2>
+        <p class="section-subheading mb-5">
+          Explore our wide range of stationery services tailored to meet your
+          personal and business needs.
+        </p>
+        <div class="row">
+          <!-- Service 1 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-pen"></i>
+              </div>
+              <h4 class="service-title">Office Stationery Supplies</h4>
+              <p class="service-description">
+                Pens, notebooks, files, and everything your office needs.
+              </p>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-school"></i>
+              </div>
+              <h4 class="service-title">School Stationery Supplies</h4>
+              <p class="service-description">
+                Bags, crayons, geometry boxes, and art supplies for learners.
+              </p>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-print"></i>
+              </div>
+              <h4 class="service-title">Custom Printing Services</h4>
+              <p class="service-description">
+                Personalized notebooks, business cards, and calendars.
+              </p>
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h4 class="service-title">Art and Craft Supplies</h4>
+              <p class="service-description">
+                Sketchbooks, crafting materials, and paints.
+              </p>
+            </div>
+          </div>
+          <!-- Service 5 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <h4 class="service-title">Eco-Friendly Stationery</h4>
+              <p class="service-description">
+                Sustainable, biodegradable notebooks, pens, and papers.
+              </p>
+            </div>
+          </div>
+          <!-- Service 6 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-box"></i>
+              </div>
+              <h4 class="service-title">Gift Wrapping Supplies</h4>
+              <p class="service-description">
+                Beautiful gift wraps, decorative ribbons, and eco-friendly
+                options.
+              </p>
+            </div>
+          </div>
+          <!-- Service 7 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-highlighter"></i>
+              </div>
+              <h4 class="service-title">Writing Instruments</h4>
+              <p class="service-description">
+                Premium pens, calligraphy sets, and mechanical pencils.
+              </p>
+            </div>
+          </div>
+          <!-- Service 8 -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-calendar"></i>
+              </div>
+              <h4 class="service-title">Corporate Stationery</h4>
+              <p class="service-description">
+                Custom branded pens, notepads, and gift sets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who-we-are-section py-5" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Left Content -->
+          <div class="col-lg-6 text-content">
+            <h2 class="section-heading mb-4">Who <span>We Are</span></h2>
+            <p class="about-description">
+              At <strong>SortOut Innovation</strong>, we redefine stationery
+              solutions with quality, sustainability, and customer focus. We're
+              your one-stop destination for office supplies, custom printing,
+              and eco-friendly solutions.
+            </p>
+            <div class="highlights">
+              <div class="highlight-item">
+                <i class="fas fa-award"></i>
+                <p><strong>10+ Years</strong> of Industry Leadership</p>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-recycle"></i>
+                <p><strong>Eco-Friendly</strong> and Sustainable Practices</p>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-smile"></i>
+                <p><strong>Trusted by Thousands</strong> of Clients</p>
+              </div>
+            </div>
+          </div>
+          <!-- Right Visual -->
+          <div class="col-lg-6">
+            <div class="visual-container">
+              <img
+                src="/images/services-imgs/CA/about-us.jpg"
+                alt="Who We Are"
+                class="img-fluid main-image"
+              />
+              <div class="decorative-shape"></div>
+              <div class="stats-container">
+                <div class="stat">
+                  <h3>10K+</h3>
+                  <p>Happy Customers</p>
+                </div>
+                <div class="stat">
+                  <h3>50+</h3>
+                  <p>Corporate Clients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-insights-section py-5">
+      <div class="container">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h2 class="section-heading">Latest <span>Insights</span></h2>
+          <p class="section-subheading">
+            Stay updated with industry news and expert tips.
+          </p>
+        </div>
+        <!-- Blog Grid -->
+        <div class="row g-4">
+          <!-- Blog 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img
+                  src="/images/services-imgs/CA/blog-img-1.jpg"
+                  alt="Essential Stationery Items"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="blog-content">
+                <h5 class="blog-title">
+                  5 Essential Stationery Items Every Office Needs
+                </h5>
+                <p class="blog-description">
+                  Discover the must-have tools for productivity and
+                  organization.
+                </p>
+                <a
+                  href="https://www.winc.com.au/services/blog/5-stationery-essentials-every-home-office-worker-needs/"
+                  class="blog-link"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img
+                  src="/images/services-imgs/CA/blog-img-2.jpg"
+                  alt="Eco-Friendly Stationery"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="blog-content">
+                <h5 class="blog-title">
+                  The Benefits of Eco-Friendly Stationery
+                </h5>
+                <p class="blog-description">
+                  Learn how sustainable choices can make a big impact.
+                </p>
+                <a
+                  href="https://envaplax.com/blogs/news/the-rise-of-eco-friendly-stationery-a-sustainable-choice-for-students-and-professionals"
+                  class="blog-link"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img
+                  src="/images/services-imgs/CA/blog-img-3.jpg"
+                  alt="Custom Printing"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="blog-content">
+                <h5 class="blog-title">
+                  How Custom Printing Can Elevate Your Brand
+                </h5>
+                <p class="blog-description">
+                  Stand out with personalized stationery for your business.
+                </p>
+                <a
+                  href="https://www.tmcnet.com/topics/articles/2024/10/15/460959-power-branding-how-custom-printing-elevate-business.htm"
+                  class="blog-link"
+                  >Read More <i class="fas fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="get-in-touch-section py-5">
+      <div class="container text-center">
+        <!-- Heading -->
+        <h2 class="section-heading">Get in <span>Touch with Us</span></h2>
+        <p class="section-subheading mb-5">
+          Have questions or need assistance? We're here to help!
+        </p>
+        <!-- Contact Information -->
+        <div class="row g-4">
+          <!-- Phone -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card h-100">
+              <div class="icon-wrapper mx-auto">
+                <i class="fas fa-phone-alt contact-icon"></i>
+              </div>
+              <h4 class="contact-title">Call Us</h4>
+              <p class="contact-detail">
+                <a href="tel:+919818559036">+91 9818559036</a>
+              </p>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card h-100">
+              <div class="icon-wrapper mx-auto">
+                <i class="fas fa-envelope contact-icon"></i>
+              </div>
+              <h4 class="contact-title">Email Us</h4>
+              <p class="contact-detail">
+                <a href="mailto:support@sortoutinnovation.com"
+                  >support@sortoutinnovation.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <!-- Address -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card h-100">
+              <div class="icon-wrapper mx-auto">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+              </div>
+              <h4 class="contact-title">Visit Us</h4>
+              <p class="contact-detail">
+                <a href=" "
+                  >Spaze i-Tech Park, Sector 49, Sohna Road, Gurugram, Haryana,
+                  India</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-modern-section py-5">
+      <div class="container">
+        <!-- Heading -->
+        <div class="text-center mb-5">
+          <h2 class="faq-title">Frequently Asked <span>Questions</span></h2>
+          <p class="faq-subtitle">
+            Get answers to your common queries about our stationery services.
+          </p>
+        </div>
+
+        <!-- FAQ Grid -->
+        <div class="row g-4">
+          <!-- FAQ Item 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-card">
+              <div class="faq-question">
+                <h4>Do you offer custom stationery services?</h4>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, we specialize in creating personalized stationery like
+                  business cards, branded notebooks, and more.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-card">
+              <div class="faq-question">
+                <h4>Are your eco-friendly options available in bulk?</h4>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Absolutely! All our sustainable stationery products are
+                  available for bulk purchases with discounted rates.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-card">
+              <div class="faq-question">
+                <h4>Do you provide same-day delivery?</h4>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, same-day delivery is available for in-stock items within
+                  select locations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-card">
+              <div class="faq-question">
+                <h4>Can I get a sample of customized products?</h4>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Of course! We offer samples to ensure the product meets your
+                  expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="faq-card">
+              <div class="faq-question">
+                <h4>How can I track my order?</h4>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  You will receive a tracking link via email to monitor your
+                  shipment's progress.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-modern-section py-5">
+      <div class="container text-center">
+        <h2 class="cta-heading">Let's Deliver Success Together</h2>
+        <p class="cta-content">
+          Partner with us for reliable shipping and fulfillment services that
+          help you focus on what matters most—your business.
+        </p>
+        <div class="cta-buttons mt-4">
+          <a href="#services" class="btn primary-btn-cta"
+            >Explore Our Services</a
+          >
+          <a
+            href="tel:+919818559036"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn secondary-btn-cta"
+            >Contact Us Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="SortOut Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="/index.php">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/modal_agency.php">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a
+                  href="tel:+919818559036"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >+91 9818559036</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a
+                  href="mailto:info@sortoutinnovation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/profile.php?id=61556452066209"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/sortout-innovation/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sortout_innovation"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 SortOut Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript for accordion toggle
+      document.querySelectorAll(".single-acco h2").forEach((item) => {
+        item.addEventListener("click", () => {
+          item.parentNode.classList.toggle("active");
+        });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const isActive = item.classList.contains("active");
+          // Close all other active items
+          document
+            .querySelectorAll(".faq-item.active")
+            .forEach((activeItem) => {
+              activeItem.classList.remove("active");
+            });
+          // Toggle the clicked item
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+    </script>
+
+    <!-- Font Awesome for Social Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Accordion Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awesome Script -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Floating Social Media Bar -->
+    <div class="floating-social-bar">
+      <a
+        href="https://www.facebook.com/profile.php?id=61556452066209"
+        target="_blank"
+        class="social-icon facebook"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a
+        href="https://www.instagram.com/sortout_innovation"
+        target="_blank"
+        class="social-icon instagram"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/sortout-innovation/"
+        target="_blank"
+        class="social-icon linkedin"
+      >
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a
+        href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr"
+        target="_blank"
+        class="social-icon youtube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="floating-whatsapp">
+      <div class="whatsapp-button">
+        <a
+          class="what-a"
+          href="https://wa.me/919818559036"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="fab fa-whatsapp"></i
+          ><span class="whatsapp-text"> Contact Us</span></a
+        >
+      </div>
+    </div>
+  </body>
+</html>
+
+

@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing - Sortout Innovation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="social-media-page.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- Include ScrollTrigger plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- LordIcon for animated icons -->
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+</head>
+<body>
+  <!-- Bootstrap Navbar with Enhanced Features -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <!-- Logo with hover effect -->
+        <a class="navbar-brand position-relative" href="/">
+            <div class="logo-container">
+                <img src="/images/sortoutInnovation-icon/sortout-innovation-only-s.gif" alt="Sortout Innovation" height="45" class="main-logo">
+                <div class="logo-glow"></div>
+            </div>
+        </a>
+
+        <!-- Animated Mobile Toggle Button -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="toggle-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+
+        <!-- Enhanced Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/pages/about-page/about.html">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link px-3" href="javascript:void(0);" onclick="toggleCareerDropdown()">
+                        Career <i class="fas fa-chevron-down" style="font-size: 12px; margin-left: 5px;"></i>
+                    </a>
+                    <div id="careerDropdown" class="custom-dropdown-menu">
+                        <a href="/employee-job/index.php">Employee Jobs</a>
+                        <a href="/admin/artist-v2/public/index.php">Artist Jobs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/modal_agency.php">Find Talent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 active" href="/pages/our-services-page/service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/pages/contact-page/contact-page.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="/blog/index.php">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Spacer for fixed navbar -->
+<div class="navbar-spacer"></div>
+
+<style>
+/* Modern Navbar Styles with Enhanced Features */
+.navbar {
+    padding: 0.8rem 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* Logo Container with Glow Effect */
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(209, 0, 0, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover .logo-glow {
+    opacity: 1;
+}
+
+/* Navigation Links */
+.nav-link {
+    font-weight: 500;
+    color: #2c3e50 !important;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(90deg, #d10000, #ff4b4b);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.nav-link:hover::after {
+    width: calc(100% - 1.5rem);
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #d10000 !important;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 1.5rem);
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: linear-gradient(90deg, #d10000, #ff4b4b);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Enhanced Dropdown Styles */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 0.8rem 0.5rem;
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+    color: #d10000;
+    transform: translateX(5px);
+}
+
+/* Animated Mobile Toggle Button */
+.toggle-icon {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #2c3e50;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.toggle-icon span:first-child {
+    top: 0;
+}
+
+.toggle-icon span:nth-child(2) {
+    top: 9px;
+}
+
+.toggle-icon span:last-child {
+    top: 18px;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggle-icon span:first-child {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggle-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .toggle-icon span:last-child {
+    transform: rotate(-45deg);
+    top: 9px;
+}
+
+/* Mobile Styles */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-top: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.8rem 1.2rem !important;
+        border-radius: 8px;
+    }
+
+    .nav-link:hover {
+        background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .dropdown-menu {
+        box-shadow: none;
+        padding-left: 1rem;
+        background: transparent;
+    }
+
+    .dropdown-item:hover {
+        transform: none;
+    }
+}
+
+/* Custom Dropdown for Career */
+.custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 0.8rem 0.5rem;
+    min-width: 180px;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+.custom-dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-dropdown-menu a:hover {
+    background: linear-gradient(45deg, rgba(209, 0, 0, 0.05), rgba(255, 75, 75, 0.05));
+    color: #d10000;
+    transform: translateX(5px);
+}
+
+/* Show class for custom dropdown */
+.custom-dropdown-menu.show {
+    display: block;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+
+    // Enhanced scroll behavior
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.style.padding = "0.6rem 0";
+            navbar.style.boxShadow = "0 5px 30px rgba(0,0,0,0.08)";
+        } else {
+            navbar.style.padding = "0.8rem 0";
+            navbar.style.boxShadow = "none";
+        }
+
+        // Smooth hide/show on scroll
+        if (currentScroll > lastScroll && currentScroll > 100) {
+            navbar.style.transform = 'translateY(-100%)';
+        } else {
+            navbar.style.transform = 'translateY(0)';
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // Handle mobile menu toggle animation
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    navbarToggler.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+    });
+    
+    // Close dropdown when clicking elsewhere
+    document.addEventListener('click', function(event) {
+        if (!event.target.matches('.nav-link') && !event.target.closest('.custom-dropdown-menu')) {
+            document.getElementById('careerDropdown').classList.remove('show');
+        }
+    });
+});
+
+// Toggle Career dropdown
+function toggleCareerDropdown() {
+    document.getElementById('careerDropdown').classList.toggle('show');
+    event.stopPropagation();
+}
+</script>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative">
+        <!-- Modern Animated Gradient Background -->
+        <div class="hero-bg-gradient"></div>
+        
+        <div class="container position-relative py-5">
+            <!-- Clean Service Header -->
+            <div class="service-header" data-aos="fade-down" data-aos-duration="800">
+                <div class="header-content">
+                    <div class="service-tag">
+                        <i class="fas fa-fire"></i>
+                        <span>Digital Marketing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center hero-content-row">
+                <!-- Content Column -->
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-content">
+                        <h1 class="hero-title" id="heroTitle">
+                            <span class="hero-title-line">Boost Your</span> 
+                            <span class="hero-title-line">Digital Marketing</span>
+                            <span class="hero-title-line highlight">Impact!</span>
+                        </h1>
+                        
+                        <p class="hero-text" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                            Elevate your brand's online presence with tailored strategies,
+                            engaging content, and data-driven results that drive real business growth.
+                        </p>
+                        
+                        <div class="hero-features">
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Targeted audience engagement</span>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Data-driven campaign optimization</span>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Measurable ROI for every campaign</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-wrapper" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                            <a href="https://wa.me/919818559036" target="_blank" rel="noopener noreferrer" class="cta-primary pulse-btn" id="bookNowBtn">
+                                <div class="btn-content">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>Book Now</span>
+                                </div>
+                            </a>
+                            <a href="#services" class="cta-secondary">
+                                <span>Explore Services</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Image Column with Professional Design -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="professional-image-wrapper">
+                        <!-- Professional Image Display -->
+                        <div class="image-display-container">
+                            <!-- Main content frame with professional border -->
+                            <div class="content-frame">
+                                <!-- Device mockup -->
+                                <div class="device-mockup">
+                                    <img src="/images/social-media/socialMediaImage.png" alt="Social Media Marketing" class="hero-image">
+                                    
+                                    <!-- Professional overlay with metrics -->
+                                    <div class="metrics-overlay">
+                                        <div class="overlay-header">
+                                            <div class="platform-indicator">
+                                                <i class="fab fa-instagram"></i>
+                                                <span>Instagram</span>
+                                            </div>
+                                            <div class="post-date">Posted 2 days ago</div>
+                                        </div>
+                                        
+                                        <div class="engagement-stats">
+                                            <div class="stat-item">
+                                                <i class="fas fa-heart"></i>
+                                                <span id="likeCounter">125K</span>
+                                            </div>
+                                            <div class="stat-separator"></div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-comment"></i>
+                                                <span id="commentCounter">25K</span>
+                                            </div>
+                                            <div class="stat-separator"></div>
+                                            <div class="stat-item">
+                                                <i class="fas fa-share"></i>
+                                                <span id="shareCounter">5K</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Enhanced Professional Results Badge -->
+                            <div id="resultsBadge" class="results-badge">
+                                <div class="badge-top">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Results</span>
+                                </div>
+                                <div class="badge-content-wrapper">
+                                    <div id="engagementStat" class="badge-stat">
+                                        <span class="stat-value" id="engagementValue">0</span>
+                                        <span class="stat-label">Engagement Increase</span>
+                                    </div>
+                                    <div id="conversionStat" class="badge-stat">
+                                        <span class="stat-value" id="conversionValue">0</span>
+                                        <span class="stat-label">More Conversions</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Features Section -->
+    <section id="features" class="features-section">
+        <div class="features-bg"></div>
+        <div class="container position-relative">
+            <div class="row mb-5">
+                <div class="col-lg-6 offset-lg-3 text-center">
+                    <div class="section-title-wrapper" data-aos="fade-up">
+                        <div class="section-tag">
+                            <i class="fas fa-star"></i>
+                            <span>Why Choose Us</span>
+                        </div>
+                        <h2 class="section-title">Our Winning <span class="highlight">Advantages</span></h2>
+                        <p class="section-subtitle">Cutting-edge strategies that transform your social media presence into measurable business growth.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature Item 1 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/hbvgknxo.json"
+                            trigger="hover"
+                            colors="primary:#ff0000,secondary:#ffffff"
+                            class="feature-lord-icon">
+                        </lord-icon>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">AI-Powered Strategy</h3>
+                        <p class="feature-description">Leverage cutting-edge AI to analyze trends and optimize your campaigns in real-time for maximum impact.</p>
+                        <div class="feature-stats">
+                            <div class="stat-highlight">
+                                <span class="stat-value">43%</span>
+                                <span class="stat-label">More Effective</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature Item 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/dnoiydox.json"
+                            trigger="hover"
+                            colors="primary:#ff0000,secondary:#ffffff"
+                            class="feature-lord-icon">
+                        </lord-icon>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Data-Driven Insights</h3>
+                        <p class="feature-description">Comprehensive analytics and reporting that reveal exactly what's working and where to focus your budget.</p>
+                        <div class="feature-stats">
+                            <div class="stat-highlight">
+                                <span class="stat-value">87%</span>
+                                <span class="stat-label">Conversion Accuracy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature Item 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/nocovwne.json"
+                            trigger="hover"
+                            colors="primary:#ff0000,secondary:#ffffff"
+                            class="feature-lord-icon">
+                        </lord-icon>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Creative Excellence</h3>
+                        <p class="feature-description">Scroll-stopping content that captures attention and drives engagement, created by our expert design team.</p>
+                        <div class="feature-stats">
+                            <div class="stat-highlight">
+                                <span class="stat-value">5.2x</span>
+                                <span class="stat-label">Higher Engagement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature Item 4 -->
+                <!-- <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/qhgmphtg.json"
+                            trigger="hover"
+                            colors="primary:#ff0000,secondary:#ffffff"
+                            class="feature-lord-icon">
+                        </lord-icon>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Growth Acceleration</h3>
+                        <p class="feature-description">Proven methodologies that scale your accounts faster while building authentic audience connections.</p>
+                        <div class="feature-stats">
+                            <div class="stat-highlight">
+                                <span class="stat-value">197%</span>
+                                <span class="stat-label">Average Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Feature Item 5 -->
+                <!-- <div class="feature-card featured-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/pqxdilgt.json"
+                            trigger="hover"
+                            colors="primary:#ff0000,secondary:#ffffff"
+                            class="feature-lord-icon">
+                        </lord-icon>
+                    </div>
+                    <div class="feature-content">
+                        <div class="featured-tag">MOST POPULAR</div>
+                        <h3 class="feature-title">Multi-Platform Mastery</h3>
+                        <p class="feature-description">Synchronized strategies across all platforms to create a powerful, cohesive social presence.</p>
+                        <div class="feature-stats">
+                            <div class="stat-highlight">
+                                <span class="stat-value">3.4x</span>
+                                <span class="stat-label">Brand Visibility</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 -->
+                <!-- Feature Item 6 -->
+                <!-- <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon-bg"></div>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/zpxybbhl.json"
+                            trigger="hover"
+                            colors="primary:#ff0000,secondary:#ffffff"
+                            class="feature-lord-icon">
+                        </lord-icon>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Community Building</h3>
+                        <p class="feature-description">Transform followers into a loyal community that advocates for your brand and drives word-of-mouth growth.</p>
+                        <div class="feature-stats">
+                            <div class="stat-highlight">
+                                <span class="stat-value">68%</span>
+                                <span class="stat-label">More Loyal Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
+            <!-- <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="features-cta-wrapper" data-aos="fade-up">
+                        <a href="#" class="btn-features-cta">
+                            <span>Start Growing Today</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Audience Engagement Section -->
+    <section id="engagement" class="engagement-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Content Column -->
+                <div class="col-lg-7 engagement-content-col" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="engagement-content">
+                        <div class="content-tag" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-heart-pulse"></i>
+                            <span>Audience Connection</span>
+                        </div>
+                        <h2 class="engagement-title" data-aos="fade-up" data-aos-delay="200">
+                            Engage Your Audience, <span class="highlight">Build Your Brand</span>
+                        </h2>
+                        <p class="engagement-subtitle" data-aos="fade-up" data-aos-delay="300">
+                            Meaningful engagement strategies that transform followers into loyal brand advocates
+                        </p>
+                        <div class="engagement-text" data-aos="fade-up" data-aos-delay="400">
+                            <p>Every like, comment, and share matters — they're building blocks of meaningful connections. We don't just create content; we craft personalized experiences that resonate deeply with your audience, fostering engagement that lasts.</p>
+                            <p>Our tailored strategies ensure your brand stays at the forefront of your audience's mind, driving consistent loyalty and repeat interactions.</p>
+                        </div>
+                        
+                        <!-- Engagement Metrics -->
+                        <div class="engagement-metrics" data-aos="fade-up" data-aos-delay="500">
+                            <div class="metric-item">
+                                <div class="metric-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <span class="metric-value">97%</span>
+                                    <span class="metric-label">Higher Response Rate</span>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <span class="metric-value">3.8x</span>
+                                    <span class="metric-label">Audience Growth</span>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <span class="metric-value">68%</span>
+                                    <span class="metric-label">Shared Content</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <!-- <div class="engagement-cta" data-aos="fade-up" data-aos-delay="600">
+                            <a href="#" class="btn-engagement">
+                                <span>Get Started</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+                
+                <!-- Image Column -->
+                <div class="col-lg-5 engagement-image-col" data-aos="fade-left" data-aos-duration="1200">
+                    <div class="engagement-image-wrapper">
+                        <div class="image-decoration">
+                            <div class="deco-circle circle-1"></div>
+                            <div class="deco-circle circle-2"></div>
+                            <div class="deco-line line-1"></div>
+                            <div class="deco-line line-2"></div>
+                        </div>
+                        
+                        <div class="engagement-image-container">
+                            <img src="/images/social-media/SMpost.gif" alt="Social Media Engagement" class="engagement-image">
+                            
+                            <!-- Floating Engagement Elements -->
+                            <div class="floating-engagement like-bubble">
+                                <i class="fas fa-heart"></i>
+                                <span class="count">1.2k</span>
+                            </div>
+                            <div class="floating-engagement comment-bubble">
+                                <i class="fas fa-comment"></i>
+                                <span class="count">348</span>
+                            </div>
+                            <div class="floating-engagement share-bubble">
+                                <i class="fas fa-share"></i>
+                                <span class="count">217</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="services-bg"></div>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-6 offset-lg-3 text-center">
+                    <div class="section-title-wrapper" data-aos="fade-up">
+                        <div class="section-tag">
+                            <i class="fas fa-cogs"></i>
+                            <span>What We Offer</span>
+                        </div>
+                        <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+                        <p class="section-subtitle">Comprehensive social media solutions tailored to elevate your brand's digital presence</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 - Content Creation -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/exymduqj.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Content Creation</h3>
+                        <p class="service-description">Engaging, brand-aligned content that resonates with your target audience and drives meaningful interactions.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Professional graphics</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Trending formats</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 - Post Scheduling -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/vpbspaec.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Post Scheduling</h3>
+                        <p class="service-description">Strategic timing of content delivery across all platforms to maximize visibility and audience engagement.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Optimal timing</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Consistent presence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 - Social Media Ads -->
+                <div class="service-card featured-service" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card-inner">
+                        <div class="featured-label">Popular</div>
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/puvaffet.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Social Media Marketing</h3>
+                        <p class="service-description">Targeted advertising campaigns that reach your ideal customers and deliver measurable ROI.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Precision targeting</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Performance tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 - Analytics & Reporting -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/dflgefov.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Analytics & Reporting</h3>
+                        <p class="service-description">Comprehensive data analysis that transforms insights into strategic action plans for continuous improvement.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Custom dashboards</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Monthly reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 - Audience Engagement -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/nobciafz.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Audience Engagement</h3>
+                        <p class="service-description">Proactive community management that builds relationships and fosters brand loyalty with your followers.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Quick responses</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Community building</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 - Influencer Partnerships -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/gqzfzudq.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Influencer Partnerships</h3>
+                        <p class="service-description">Strategic collaborations with relevant content creators that extend your reach and build credibility.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Perfect matches</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Authentic promotion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 7 - Growth Strategies -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fcyboqbm.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Growth Strategies</h3>
+                        <p class="service-description">Data-backed growth plans that steadily increase your following, engagement, and conversion rates.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Sustainable growth</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Measurable gains</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service Card 8 - Improved Customer Reach -->
+                <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper">
+                            <lord-icon
+                                src="https://cdn.lordicon.com/pqxdilfs.json"
+                                trigger="hover"
+                                colors="primary:#ff0000,secondary:#ffffff"
+                                class="service-lord-icon">
+                            </lord-icon>
+                        </div>
+                        <h3 class="service-title">Improved Customer Reach</h3>
+                        <p class="service-description">Expanded audience targeting strategies that connect your brand with new potential customers.</p>
+                        <div class="service-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>Audience expansion</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-check"></i>
+                                <span>New demographics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="services-cta-wrapper" data-aos="fade-up">
+                        <a href="#" class="btn-services-cta">
+                            <span>Get Custom Strategy</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-container">
+        <div class="pricing-content">
+          <h2 class="pricing-title">Our Social Media Management Packages</h2>
+          <p class="pricing-subtext">
+            Choose the best plan to grow your brand on social media.
+          </p>
+  
+          <div class="pricing-grid">
+            <!-- Starter Package -->
+            <div class="pricing-card starter-package">
+              <span class="popular-tag">Most Popular</span>
+              <h3>Starter Package</h3>
+              <p class="pricing-amount">₹20,000 <span>/month</span></p>
+              <p class="pricing-desc">
+                For businesses looking to establish their social media presence.
+              </p>
+              <ul class="pricing-features">
+                <li><strong>Platforms:</strong> 2 (Instagram & Facebook)</li>
+                <li>
+                  <strong>Content Creation:</strong> 12 posts/month (5 static posts, 5
+                  reels/short form videos, 2 stories updates)
+                </li>
+                <li>
+                  <strong>Here's What We Deliver:</strong> <br>
+                  <ul>
+                    <li class="sub-list-style">Community Management & Content Writing (Captions)</li>
+                    <li class="sub-list-style">Hashtag Strategy & Competitive Analysis
+                    </li>
+                    <li class="sub-list-style">Social Media Calendar
+                    </li>
+                    <li class="sub-list-style">Performance Report
+                    </li>
+                    <li class="sub-list-style">Support
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="#" class="btn-started">Get Started</a>
+              </div>
+            </div>
+  
+            <!-- Growth Package -->
+            <div class="pricing-card growth-package">
+              <h3>Growth Package</h3>
+              <p class="pricing-amount">₹42,000 <span>/month</span></p>
+              <p class="pricing-desc">
+                A more robust package with additional engagement.
+              </p>
+              <ul class="pricing-features">
+                <li>
+                  <strong>Platforms:</strong> 3 (Instagram, Facebook, LinkedIn)
+                </li>
+                <li>
+                  <strong>Content Creation:</strong> 20 posts/month (10 static posts, 8
+                  reels/short form videos, 2 stories updates)
+                </li>
+                <li>
+                  <strong>Extras:</strong> Includes 1 video shoot session and
+                  enhanced ad management
+                </li>
+                <li>
+                  <strong>Here's What We Deliver:</strong> <br>
+                  <ul>
+                    <li class="sub-list-style">Community Management & Content Writing (Captions)</li>
+                    <li class="sub-list-style">Hashtag Strategy & Competitive Analysis
+                    </li>
+                    <li class="sub-list-style">Advertising & Ad Creatives
+                    </li>
+                    <li class="sub-list-style">Social Media Calendar
+                    </li>
+                    <li class="sub-list-style">Performance Report
+                    </li>
+                    <li class="sub-list-style">Support
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="#" class="btn-started">Get Started</a>
+              </div>
+            </div>
+  
+            <!-- Ultimate Package -->
+            <div class="pricing-card ultimate-package">
+              <span class="best-deal">Best Value</span>
+              <h3>Ultimate Package</h3>
+              <p class="pricing-amount">
+                ₹45,000 <span class="ultimate-package-month-color">/month</span>
+              </p>
+              <p class="pricing-desc">
+                A full-service package with premium content & advertising.
+              </p>
+              <ul class="pricing-features">
+                <li class="special">
+                  <strong>Platforms Managed:</strong> 5 (Instagram, Facebook,
+                  LinkedIn, Twitter, GMB)
+                </li>
+                <li class="special">
+                  <strong>Content Creation:</strong> 30 posts/month (16 static posts, 10
+                  reels/short form videos, 4 stories updates)
+                </li>
+                <li class="special">
+                  <strong>Extras:</strong> Includes 1 videoshoot session, advanced
+                  ad campaigns, and bonus influencer & crisis management
+                  strategies
+                </li>
+                <li class="special">
+                  <strong>Here's What We Deliver:</strong> <br>
+                  <ul>
+                    <li class="sub-list-style">Community Management & Content Writing (Captions)</li>
+                    <li class="sub-list-style">Hashtag Strategy & Competitive Analysis
+                    </li>
+                    <li class="sub-list-style">Advertising & Ad Creatives
+                    </li>
+                    <li class="sub-list-style">Social Media Calendar
+                    </li>
+                    <li class="sub-list-style">Performance Report
+                    </li>
+                    <li class="sub-list-style">Support
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Bonus:</strong> Priority consultation with weekly
+                  strategy calls
+                </li>
+              </ul>
+              <div class="pricing-footer">
+                <a href="#" class="btn-started yellow-hover">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- 🔹 Get Started Popup Modal (Placed at the END of the Pricing Section) -->
+        <div id="addOnModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Customize Your Package</h2>
+            <p>Select additional services to enhance your social media strategy</p>
+  
+            <!-- Add-on Options -->
+            <form id="addOnForm">
+              <label>
+                <input type="checkbox" value="Social Media Script Writing (₹2–₹7 per word)" />
+                <span>
+                  Social Media Script Writing
+                  <span class="addon-price">₹2–₹7 per word</span>
+                </span>
+              </label>
+              <label>
+                <input type="checkbox" value="YouTube Thumbnail Design (₹500–₹1,000 per thumbnail)" />
+                <span>
+                  YouTube Thumbnail Design
+                  <span class="addon-price">₹500–₹1,000 per thumbnail</span>
+                </span>
+              </label>
+              <label>
+                <input type="checkbox" value="AI-Generated Product Photography (₹500–₹1,000 per product)" />
+                <span>
+                  AI-Generated Product Photography
+                  <span class="addon-price">₹500–₹1,000 per product</span>
+                </span>
+              </label>
+              <label>
+                <input type="checkbox" value="Content Repurposing (₹5,000)" />
+                <span>
+                  Content Repurposing
+                  <span class="addon-price">₹5,000</span>
+                </span>
+              </label>
+              <label>
+                <input type="checkbox" value="LinkedIn Personal Branding Expert (₹30,000)" />
+                <span>
+                  LinkedIn Personal Branding Expert
+                  <span class="addon-price">₹30,000</span>
+                </span>
+              </label>
+            </form>
+  
+            <!-- Proceed Button -->
+            <button id="whatsappBtn">
+              <i class="fab fa-whatsapp"></i> Proceed to WhatsApp
+            </button>
+          </div>
+        </div>
+      </section>
+  
+      <script>
+        // Pricing section animations
+        document.addEventListener('DOMContentLoaded', function() {
+          // Animate pricing cards on scroll
+          const pricingCards = document.querySelectorAll('.pricing-card');
+          
+          // Create an intersection observer for pricing cards
+          const pricingObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+              if (entry.isIntersecting) {
+                // Add staggered animation delay
+                setTimeout(() => {
+                  entry.target.style.opacity = '1';
+                  entry.target.style.transform = 'translateY(0)';
+                }, index * 150);
+                pricingObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          // Set initial styles and observe
+          pricingCards.forEach((card) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            pricingObserver.observe(card);
+          });
+
+          // Pricing amount counter animation
+          const animatePricingAmount = () => {
+            document.querySelectorAll('.pricing-amount').forEach(element => {
+              const priceText = element.textContent;
+              const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+              const currencySymbol = '₹';
+              const suffix = element.querySelector('span')?.outerHTML || '';
+
+              // Set initial price to 0
+              element.innerHTML = currencySymbol + '0' + suffix;
+              
+              // Animate to final price
+              let startValue = 0;
+              const duration = 2000;
+              const startTime = performance.now();
+              
+              function updateCounter(currentTime) {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                // Use easeOutExpo for a more dynamic feel
+                const easeProgress = 1 - Math.pow(2, -10 * progress);
+                
+                const currentValue = Math.floor(easeProgress * price);
+                element.innerHTML = currencySymbol + currentValue + suffix;
+                
+                if (progress < 1) {
+                  requestAnimationFrame(updateCounter);
+                } else {
+                  element.innerHTML = currencySymbol + price + suffix;
+                }
+              }
+              
+              requestAnimationFrame(updateCounter);
+            });
+          };
+
+          // Use Intersection Observer to trigger price animation
+          const priceObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                animatePricingAmount();
+                priceObserver.disconnect();
+              }
+            });
+          }, { threshold: 0.3 });
+          
+          // Observe the pricing section
+          priceObserver.observe(document.querySelector('.pricing-container'));
+          
+          // Enhanced modal interactions
+          const modal = document.getElementById('addOnModal');
+          const modalContent = document.querySelector('.modal-content');
+          
+          // Open modal with enhanced animation
+          document.querySelectorAll('.btn-started').forEach((button) => {
+            button.addEventListener('click', function(event) {
+              event.preventDefault();
+              
+              // Store the clicked package
+              let packageName = this.closest('.pricing-card').querySelector('h3').innerText;
+              modal.setAttribute('data-package', packageName);
+              
+              // Add active class to the button
+              this.classList.add('active');
+              
+              // Show modal with GSAP if available
+              if (typeof gsap !== 'undefined') {
+                modal.style.display = 'block';
+                gsap.fromTo(modalContent, 
+                  { opacity: 0, y: -50, scale: 0.9 }, 
+                  { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "back.out(1.7)" }
+                );
+              } else {
+                // Fallback if GSAP is not available
+                modal.style.display = 'block';
+              }
+            });
+          });
+          
+          // Close modal with animation
+          document.querySelector('.close').addEventListener('click', function() {
+            if (typeof gsap !== 'undefined') {
+              gsap.to(modalContent, {
+                opacity: 0, 
+                y: -30, 
+                scale: 0.9, 
+                duration: 0.3, 
+                onComplete: () => {
+                  modal.style.display = 'none';
+                  document.querySelector('.btn-started.active')?.classList.remove('active');
+                }
+              });
+            } else {
+              modal.style.display = 'none';
+              document.querySelector('.btn-started.active')?.classList.remove('active');
+            }
+          });
+          
+          // Click outside to close
+          window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+              document.querySelector('.close').click();
+            }
+          });
+        });
+
+        // Original WhatsApp functionality
+        document.getElementById('whatsappBtn').addEventListener('click', function() {
+          let selectedPackage = document.getElementById('addOnModal').getAttribute('data-package');
+          let selectedServices = [];
+          
+          // Get all checked services
+          document.querySelectorAll('#addOnForm input[type="checkbox"]:checked').forEach((checkbox) => {
+            selectedServices.push(checkbox.value);
+          });
+          
+          // Format the message for WhatsApp
+          let message = `Hello! I'm interested in the ${selectedPackage}.`;
+          
+          if (selectedServices.length > 0) {
+            message += `\n\nI would also like to add:\n - ${selectedServices.join('\n - ')}`;
+          }
+          
+          // Encode message to handle special characters properly
+          let encodedMessage = encodeURIComponent(message);
+          
+          // WhatsApp link
+          let whatsappURL = `https://api.whatsapp.com/send?phone=919818559036&text=${encodedMessage}`;
+          
+          // Redirect to WhatsApp
+          window.open(whatsappURL, '_blank');
+        });
+      </script>
+  
+    <!-- Testimonial Section with Red Background -->
+    <section class="bg_test" style="background-color: #fb0001; padding: 70px 0; margin-top: 60px; color: white; position: relative; overflow: hidden;">
+      <!-- Background pattern -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'%3E%3Ccircle cx=\'3\' cy=\'3\' r=\'3\'/%3E%3C/g%3E%3C/svg%3E'); background-size: 20px 20px;"></div>
+      
+      <div class="container position-relative">
+        <!-- Section Title -->
+        <div class="row mb-5">
+          <div class="col-md-8 col-lg-6 mx-auto text-center">
+            <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 15px;">What Our Clients Say</h2>
+            <p style="font-size: 18px; opacity: 0.9;">Discover how we've helped businesses achieve remarkable results</p>
+            <div style="width: 80px; height: 4px; background: white; margin: 20px auto 0;"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Testimonial Card 1 -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="testimonial-card" style="background-color: rgba(255,255,255,0.1); border-radius: 15px; padding: 30px; height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+              <!-- Quote icon -->
+              <div style="position: absolute; top: 20px; right: 20px; font-size: 50px; opacity: 0.2;">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              
+              <div class="testimonial-content">
+                <p class="test-p" style="font-size: 16px; line-height: 1.7; margin-bottom: 20px; position: relative; z-index: 1;">
+                  Working with Digital Boosters has been a game-changer for us.
+                  We've collaborated with multiple agencies in the past, but
+                  none have brought us the results Digital Boosters has. They
+                  understood our goals and helped us achieve them in a clear and
+                  efficient way.
+                </p>
+                
+                <!-- Star Rating -->
+                <div style="color: #FFD700; margin-bottom: 15px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                
+                <h2 class="heading-main-md" style="font-size: 22px; font-weight: 700; margin-bottom: 5px;">Ravi Kapoor</h2>
+                <p style="font-size: 14px;"><i>Head of Marketing - Josh</i></p>
+                <div style="font-size: 14px; margin-top: 10px; color: #FFD700;">
+                  <span style="background-color: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">45% Growth</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 2 -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="testimonial-card" style="background-color: rgba(255,255,255,0.1); border-radius: 15px; padding: 30px; height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+              <!-- Quote icon -->
+              <div style="position: absolute; top: 20px; right: 20px; font-size: 50px; opacity: 0.2;">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              
+              <div class="testimonial-content">
+                <p class="test-p" style="font-size: 16px; line-height: 1.7; margin-bottom: 20px; position: relative; z-index: 1;">
+                  From their innovative strategies to their continuous support,
+                  Digital Boosters helped us achieve remarkable results. My
+                  business has grown significantly, and I highly recommend
+                  Digital Boosters for anyone looking to scale up quickly with
+                  minimal effort.
+                </p>
+                
+                <!-- Star Rating -->
+                <div style="color: #FFD700; margin-bottom: 15px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                
+                <h2 class="heading-main-md" style="font-size: 22px; font-weight: 700; margin-bottom: 5px;">Neha Sharma</h2>
+                <p style="font-size: 14px;"><i>Founder - Trendo</i></p>
+                <div style="font-size: 14px; margin-top: 10px; color: #FFD700;">
+                  <span style="background-color: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">3x ROI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial Card 3 -->
+          <div class="col-12 col-md-4 mb-4">
+            <div class="testimonial-card" style="background-color: rgba(255,255,255,0.1); border-radius: 15px; padding: 30px; height: 100%; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 15px 30px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">
+              <!-- Quote icon -->
+              <div style="position: absolute; top: 20px; right: 20px; font-size: 50px; opacity: 0.2;">
+                <i class="fas fa-quote-right"></i>
+              </div>
+              
+              <div class="testimonial-content">
+                <p class="test-p" style="font-size: 16px; line-height: 1.7; margin-bottom: 20px; position: relative; z-index: 1;">
+                  Digital Boosters took a personal, hands-on approach that led
+                  to tangible results. Our growth across all channels has been
+                  remarkable, and their expertise in digital marketing is
+                  unmatched. If you're serious about elevating your online
+                  presence, Digital Boosters is the way to go.
+                </p>
+                
+                <!-- Star Rating -->
+                <div style="color: #FFD700; margin-bottom: 15px;">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                
+                <h2 class="heading-main-md" style="font-size: 22px; font-weight: 700; margin-bottom: 5px;">Manish Verma</h2>
+                <p style="font-size: 14px;"><i>Marketing Director - meesho</i></p>
+                <div style="font-size: 14px; margin-top: 10px; color: #FFD700;">
+                  <span style="background-color: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 20px;">85% Engagement ↑</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <a href="#" class="btn" style="background-color: white; color: #fb0001; padding: 12px 30px; font-weight: 600; border-radius: 30px; text-decoration: none; display: inline-block; transition: all 0.3s ease; margin-top: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 20px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 5px 15px rgba(0,0,0,0.1)';">
+              Become Our Next Success Story <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <!-- Column 1: Company Info -->
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-logo">
+              <img
+                src="/images/sortoutInnovation-icon/Sortout innovation.jpg"
+                alt="Sortout Innovation"
+              />
+              <p class="text-center">
+                Empowering businesses with top-notch solutions in digital, IT,
+                and business services.
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="/pages/about-page/about.html">About Us</a></li>
+              <li>
+                <a href="/pages/contact-page/contact-page.html">Contact</a>
+              </li>
+              <li>
+                <a href="/pages/career.html">Careers</a>
+              </li>
+              <li>
+                <a href="/pages/our-services-page/service.html">Services</a>
+              </li>
+              <li>
+                <a href="/blog/index.php">Blogs</a>
+              </li>
+              <li>
+                <a href="/auth/register.php">Register</a>
+              </li>
+              <li>
+                <a href="/modal_agency.php">talent</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Our Services -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Our Services</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/pages/services/socialMediaInfluencers.html"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li><a href="/pages/services/itServices.html">IT Support</a></li>
+              <li><a href="/pages/services/caServices.html">CA Services</a></li>
+              <li><a href="/pages/services/hrServices.html">HR Services</a></li>
+              <li>
+                <a href="/pages/services/courierServices.html"
+                  >Courier Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/shipping.html"
+                  >Shipping & Fulfillment</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/stationeryServices.html"
+                  >Stationery Services</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/propertyServices.html"
+                  >Real Estate & Property</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/event-managementServices.html"
+                  >Event Management</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Design & Creative</a
+                >
+              </li>
+              <li>
+                <a href="/pages/services/designAndCreative.html"
+                  >Web & App Development</a
+                >
+              </li>
+              <li><a href="/pages/talent.page/talent.html">Find Talent</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Contact Info -->
+          <div class="col-lg-3 col-md-6">
+            <h4>Contact Us</h4>
+            <ul class="footer-links">
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+919818559036">+91 9818559036</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@sortoutinnovation.com"
+                  >info@sortoutinnovation.com</a
+                >
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Spaze i-Tech Park,
+                Gurugram, India
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 5: Social Media -->
+          <div class="col-lg-2 col-md-6">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61556452066209" target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="https://youtu.be/tw-xk-Pb-zA?si=QMTwuvhEuTegpqDr" target="_blank"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/sortout-innovation/" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://www.instagram.com/sortout_innovation" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Legal Links -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sortout Innovation. All Rights Reserved.</p>
+          <ul>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init();
+    </script>
+</body>
+</html>
