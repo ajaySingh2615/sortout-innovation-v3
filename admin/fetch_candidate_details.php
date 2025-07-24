@@ -41,17 +41,6 @@ $candidate = $result->fetch_assoc();
             <div class="fs-5"><?= htmlspecialchars($candidate['full_name']) ?></div>
         </div>
         
-        <div class="row mb-3">
-            <div class="col-6">
-                <label class="fw-semibold text-muted">Age:</label>
-                <div><?= $candidate['age'] ?> years</div>
-            </div>
-            <div class="col-6">
-                <label class="fw-semibold text-muted">Gender:</label>
-                <div><?= ucfirst($candidate['gender']) ?></div>
-            </div>
-        </div>
-        
         <div class="mb-3">
             <label class="fw-semibold text-muted">Phone Number:</label>
             <div>
@@ -63,10 +52,10 @@ $candidate = $result->fetch_assoc();
         </div>
         
         <div class="mb-3">
-            <label class="fw-semibold text-muted">City:</label>
+            <label class="fw-semibold text-muted">Gender:</label>
             <div>
-                <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                <?= htmlspecialchars($candidate['city']) ?>
+                <i class="fas fa-user text-info me-2"></i>
+                <?= ucfirst($candidate['gender']) ?>
             </div>
         </div>
         
@@ -97,32 +86,10 @@ $candidate = $result->fetch_assoc();
         </div>
         
         <div class="mb-3">
-            <label class="fw-semibold text-muted">Years of Experience:</label>
+            <label class="fw-semibold text-muted">Experience:</label>
             <div>
-                <i class="fas fa-clock text-warning me-2"></i>
-                <?= $candidate['years_experience'] ?> years
-                <?php if ($candidate['years_experience'] >= 5): ?>
-                    <span class="badge bg-success ms-2">Experienced</span>
-                <?php elseif ($candidate['years_experience'] >= 2): ?>
-                    <span class="badge bg-info ms-2">Mid-level</span>
-                <?php elseif ($candidate['years_experience'] > 0): ?>
-                    <span class="badge bg-warning ms-2">Junior</span>
-                <?php else: ?>
-                    <span class="badge bg-secondary ms-2">Fresher</span>
-                <?php endif; ?>
-            </div>
-        </div>
-        
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Current Salary:</label>
-            <div>
-                <?php if ($candidate['current_salary']): ?>
-                    <i class="fas fa-rupee-sign text-success me-2"></i>
-                    <span class="fw-bold fs-6">₹<?= number_format($candidate['current_salary']) ?></span>
-                    <small class="text-muted">per month</small>
-                <?php else: ?>
-                    <span class="text-muted">Not specified</span>
-                <?php endif; ?>
+                <i class="fas fa-chart-line text-warning me-2"></i>
+                <span class="badge bg-info text-dark fs-6"><?= htmlspecialchars($candidate['experience_range']) ?></span>
             </div>
         </div>
         

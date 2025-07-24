@@ -19,24 +19,17 @@ if ($job_data && isset($job_data['job_categories'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Sanitize and validate input
     $full_name = trim($_POST['full_name'] ?? '');
-    $age = intval($_POST['age'] ?? 0);
     $phone_number = trim($_POST['phone_number'] ?? '');
     $gender = $_POST['gender'] ?? '';
-    $city = trim($_POST['city'] ?? '');
     $job_category = trim($_POST['job_category'] ?? '');
     $job_role = trim($_POST['job_role'] ?? '');
-    $years_experience = floatval($_POST['years_experience'] ?? 0);
-    $current_salary = !empty($_POST['current_salary']) ? floatval($_POST['current_salary']) : null;
+    $experience_range = trim($_POST['experience_range'] ?? '');
     
     // Validation
     $errors = [];
     
     if (empty($full_name) || strlen($full_name) < 2) {
         $errors[] = "Full name is required (minimum 2 characters)";
-    }
-    
-    if ($age < 16 || $age > 80) {
-        $errors[] = "Age must be between 16 and 80";
     }
     
     if (empty($phone_number) || !preg_match('/^[6-9][0-9]{9}$/', $phone_number)) {
@@ -47,10 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "Please select a valid gender";
     }
     
-    if (empty($city) || strlen($city) < 2) {
-        $errors[] = "City is required";
-    }
-    
     if (empty($job_category)) {
         $errors[] = "Please select a job category";
     }
@@ -59,12 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "Please select a job role";
     }
     
-    if ($years_experience < 0 || $years_experience > 50) {
-        $errors[] = "Years of experience must be between 0 and 50";
-    }
-    
-    if ($current_salary !== null && $current_salary < 0) {
-        $errors[] = "Current salary cannot be negative";
+    if (empty($experience_range)) {
+        $errors[] = "Please select experience range";
     }
     
     // Check if phone number already exists
@@ -81,13 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Insert data if no errors
     if (empty($errors)) {
-        $stmt = $conn->prepare("INSERT INTO candidates (full_name, age, phone_number, gender, city, job_category, job_role, years_experience, current_salary) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("sisssssdd", $full_name, $age, $phone_number, $gender, $city, $job_category, $job_role, $years_experience, $current_salary);
+        $stmt = $conn->prepare("INSERT INTO candidates (full_name, phone_number, gender, job_category, job_role, experience_range) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssss", $full_name, $phone_number, $gender, $job_category, $job_role, $experience_range);
         
         if ($stmt->execute()) {
             $success_message = "Registration successful! Thank you for joining our talent network.";
             // Clear form data
-            $full_name = $age = $phone_number = $gender = $city = $job_category = $job_role = $years_experience = $current_salary = '';
+            $full_name = $phone_number = $gender = $job_category = $job_role = $experience_range = '';
         } else {
             $error_message = "Registration failed. Please try again.";
         }
@@ -345,21 +330,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 
                                 <div class="col-md-6">
-                                    <label for="age" class="form-label">
-                                        Age <span class="required">*</span>
-                                    </label>
-                                    <input type="number" 
-                                           class="form-control" 
-                                           id="age" 
-                                           name="age" 
-                                           required 
-                                           min="16" 
-                                           max="80"
-                                           value="<?= htmlspecialchars($age ?? '') ?>"
-                                           placeholder="Enter your age">
-                                </div>
-                                
-                                <div class="col-md-6">
                                     <label for="phone_number" class="form-label">
                                         Phone Number <span class="required">*</span>
                                     </label>
@@ -383,19 +353,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <option value="Female" <?= (isset($gender) && $gender === 'Female') ? 'selected' : '' ?>>Female</option>
                                         <option value="Other" <?= (isset($gender) && $gender === 'Other') ? 'selected' : '' ?>>Other</option>
                                     </select>
-                                </div>
-                                
-                                <div class="col-12">
-                                    <label for="city" class="form-label">
-                                        City <span class="required">*</span>
-                                    </label>
-                                    <input type="text" 
-                                           class="form-control" 
-                                           id="city" 
-                                           name="city" 
-                                           required 
-                                           value="<?= htmlspecialchars($city ?? '') ?>"
-                                           placeholder="Enter your current city">
                                 </div>
                             </div>
                         </div>
@@ -433,33 +390,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </div>
                                 
                                 <div class="col-md-6">
-                                    <label for="years_experience" class="form-label">
-                                        Years of Experience <span class="required">*</span>
+                                    <label for="experience_range" class="form-label">
+                                        Experience <span class="required">*</span>
                                     </label>
-                                    <input type="number" 
-                                           class="form-control" 
-                                           id="years_experience" 
-                                           name="years_experience" 
-                                           required 
-                                           min="0" 
-                                           max="50" 
-                                           step="0.5"
-                                           value="<?= htmlspecialchars($years_experience ?? '') ?>"
-                                           placeholder="e.g., 2.5">
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <label for="current_salary" class="form-label">
-                                        Current Salary (per month)
-                                    </label>
-                                    <input type="number" 
-                                           class="form-control" 
-                                           id="current_salary" 
-                                           name="current_salary" 
-                                           min="0" 
-                                           step="1000"
-                                           value="<?= htmlspecialchars($current_salary ?? '') ?>"
-                                           placeholder="Optional - in INR">
+                                    <select class="form-select" id="experience_range" name="experience_range" required>
+                                        <option value="">Select Experience</option>
+                                        <option value="Fresher" <?= (isset($experience_range) && $experience_range === 'Fresher') ? 'selected' : '' ?>>Fresher</option>
+                                        <option value="1-2 years" <?= (isset($experience_range) && $experience_range === '1-2 years') ? 'selected' : '' ?>>1-2 years</option>
+                                        <option value="2-3 years" <?= (isset($experience_range) && $experience_range === '2-3 years') ? 'selected' : '' ?>>2-3 years</option>
+                                        <option value="3-4 years" <?= (isset($experience_range) && $experience_range === '3-4 years') ? 'selected' : '' ?>>3-4 years</option>
+                                        <option value="4-5 years" <?= (isset($experience_range) && $experience_range === '4-5 years') ? 'selected' : '' ?>>4-5 years</option>
+                                        <option value="5-7 years" <?= (isset($experience_range) && $experience_range === '5-7 years') ? 'selected' : '' ?>>5-7 years</option>
+                                        <option value="7-10 years" <?= (isset($experience_range) && $experience_range === '7-10 years') ? 'selected' : '' ?>>7-10 years</option>
+                                        <option value="10+ years" <?= (isset($experience_range) && $experience_range === '10+ years') ? 'selected' : '' ?>>10+ years</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -539,7 +483,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         });
         
         // Real-time validation for other fields
-        const requiredFields = ['full_name', 'age', 'gender', 'city', 'job_category', 'job_role', 'years_experience'];
+        const requiredFields = ['full_name', 'gender', 'job_category', 'job_role', 'experience_range'];
         
         requiredFields.forEach(fieldId => {
             const field = document.getElementById(fieldId);

@@ -14,10 +14,8 @@ $export_type = isset($_GET['type']) ? $_GET['type'] : 'csv';
 // ✅ Apply same filters as dashboard
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 $job_category_filter = isset($_GET['job_category']) ? trim($_GET['job_category']) : '';
-$city_filter = isset($_GET['city']) ? trim($_GET['city']) : '';
+$experience_filter = isset($_GET['experience_range']) ? trim($_GET['experience_range']) : '';
 $status_filter = isset($_GET['status']) ? trim($_GET['status']) : '';
-$min_experience = isset($_GET['min_experience']) ? floatval($_GET['min_experience']) : '';
-$max_experience = isset($_GET['max_experience']) ? floatval($_GET['max_experience']) : '';
 $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
 $date_to = isset($_GET['date_to']) ? $_GET['date_to'] : '';
 
@@ -27,10 +25,10 @@ $params = [];
 $types = "";
 
 if (!empty($search)) {
-    $where_conditions[] = "(full_name LIKE ? OR phone_number LIKE ? OR city LIKE ?)";
+    $where_conditions[] = "(full_name LIKE ? OR phone_number LIKE ?)";
     $search_param = "%$search%";
-    $params = array_merge($params, [$search_param, $search_param, $search_param]);
-    $types .= "sss";
+    $params = array_merge($params, [$search_param, $search_param]);
+    $types .= "ss";
 }
 
 if (!empty($job_category_filter)) {
@@ -39,9 +37,9 @@ if (!empty($job_category_filter)) {
     $types .= "s";
 }
 
-if (!empty($city_filter)) {
-    $where_conditions[] = "city = ?";
-    $params[] = $city_filter;
+if (!empty($experience_filter)) {
+    $where_conditions[] = "experience_range = ?";
+    $params[] = $experience_filter;
     $types .= "s";
 }
 
@@ -49,18 +47,6 @@ if (!empty($status_filter)) {
     $where_conditions[] = "status = ?";
     $params[] = $status_filter;
     $types .= "s";
-}
-
-if (!empty($min_experience)) {
-    $where_conditions[] = "years_experience >= ?";
-    $params[] = $min_experience;
-    $types .= "d";
-}
-
-if (!empty($max_experience)) {
-    $where_conditions[] = "years_experience <= ?";
-    $params[] = $max_experience;
-    $types .= "d";
 }
 
 if (!empty($date_from)) {
@@ -81,14 +67,11 @@ $where_clause = !empty($where_conditions) ? "WHERE " . implode(" AND ", $where_c
 $export_query = "SELECT 
     id,
     full_name,
-    age,
     phone_number,
     gender,
-    city,
     job_category,
     job_role,
-    years_experience,
-    current_salary,
+    experience_range,
     status,
     created_at,
     updated_at
@@ -118,14 +101,11 @@ if ($export_type === 'csv') {
     $headers = [
         'ID',
         'Full Name',
-        'Age',
         'Phone Number',
         'Gender',
-        'City',
         'Job Category',
         'Job Role',
-        'Years of Experience',
-        'Current Salary (INR)',
+        'Experience',
         'Status',
         'Registration Date',
         'Last Updated'
@@ -138,14 +118,11 @@ if ($export_type === 'csv') {
         $row = [
             $candidate['id'],
             $candidate['full_name'],
-            $candidate['age'],
             $candidate['phone_number'],
             ucfirst($candidate['gender']),
-            $candidate['city'],
             $candidate['job_category'],
             $candidate['job_role'],
-            $candidate['years_experience'],
-            $candidate['current_salary'] ? number_format($candidate['current_salary'], 2) : 'Not specified',
+            $candidate['experience_range'],
             ucfirst($candidate['status']),
             date('Y-m-d H:i:s', strtotime($candidate['created_at'])),
             date('Y-m-d H:i:s', strtotime($candidate['updated_at']))
@@ -214,7 +191,7 @@ if ($export_type === 'csv') {
     
     // Add header row
     $worksheetXML .= '<row r="1">';
-    $headers = ['ID', 'Full Name', 'Age', 'Phone Number', 'Gender', 'City', 'Job Category', 'Job Role', 'Years of Experience', 'Current Salary (INR)', 'Status', 'Registration Date', 'Last Updated'];
+    $headers = ['ID', 'Full Name', 'Phone Number', 'Gender', 'Job Category', 'Job Role', 'Experience', 'Status', 'Registration Date', 'Last Updated'];
     foreach ($headers as $col => $header) {
         $cellRef = chr(65 + $col) . '1';
         $worksheetXML .= '<c r="' . $cellRef . '" t="inlineStr"><is><t>' . htmlspecialchars($header) . '</t></is></c>';
@@ -229,14 +206,11 @@ if ($export_type === 'csv') {
         $data = [
             $candidate['id'],
             $candidate['full_name'],
-            $candidate['age'],
             $candidate['phone_number'],
             ucfirst($candidate['gender']),
-            $candidate['city'],
             $candidate['job_category'],
             $candidate['job_role'],
-            $candidate['years_experience'],
-            $candidate['current_salary'] ? number_format($candidate['current_salary'], 2) : 'Not specified',
+            $candidate['experience_range'],
             ucfirst($candidate['status']),
             date('Y-m-d H:i:s', strtotime($candidate['created_at'])),
             date('Y-m-d H:i:s', strtotime($candidate['updated_at']))
@@ -333,14 +307,11 @@ if ($export_type === 'csv') {
     echo '<tr style="background-color: #d90429; color: white; font-weight: bold;">';
     echo '<td>ID</td>';
     echo '<td>Full Name</td>';
-    echo '<td>Age</td>';
     echo '<td>Phone Number</td>';
     echo '<td>Gender</td>';
-    echo '<td>City</td>';
     echo '<td>Job Category</td>';
     echo '<td>Job Role</td>';
-    echo '<td>Years of Experience</td>';
-    echo '<td>Current Salary (INR)</td>';
+    echo '<td>Experience</td>';
     echo '<td>Status</td>';
     echo '<td>Registration Date</td>';
     echo '<td>Last Updated</td>';
@@ -351,14 +322,11 @@ if ($export_type === 'csv') {
         echo '<tr>';
         echo '<td>' . htmlspecialchars($candidate['id']) . '</td>';
         echo '<td>' . htmlspecialchars($candidate['full_name']) . '</td>';
-        echo '<td>' . htmlspecialchars($candidate['age']) . '</td>';
         echo '<td>' . htmlspecialchars($candidate['phone_number']) . '</td>';
         echo '<td>' . htmlspecialchars(ucfirst($candidate['gender'])) . '</td>';
-        echo '<td>' . htmlspecialchars($candidate['city']) . '</td>';
         echo '<td>' . htmlspecialchars($candidate['job_category']) . '</td>';
         echo '<td>' . htmlspecialchars($candidate['job_role']) . '</td>';
-        echo '<td>' . htmlspecialchars($candidate['years_experience']) . '</td>';
-        echo '<td>' . ($candidate['current_salary'] ? '₹' . number_format($candidate['current_salary'], 2) : 'Not specified') . '</td>';
+        echo '<td>' . htmlspecialchars($candidate['experience_range']) . '</td>';
         echo '<td style="background-color: ' . getStatusColor($candidate['status']) . ';">' . htmlspecialchars(ucfirst($candidate['status'])) . '</td>';
         echo '<td>' . date('Y-m-d H:i:s', strtotime($candidate['created_at'])) . '</td>';
         echo '<td>' . date('Y-m-d H:i:s', strtotime($candidate['updated_at'])) . '</td>';

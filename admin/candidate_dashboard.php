@@ -16,10 +16,8 @@ $start = ($page - 1) * $limit;
 // ✅ Filters
 $search = isset($_GET['search']) ? trim($_GET['search']) : '';
 $job_category_filter = isset($_GET['job_category']) ? trim($_GET['job_category']) : '';
-$city_filter = isset($_GET['city']) ? trim($_GET['city']) : '';
+$experience_filter = isset($_GET['experience_range']) ? trim($_GET['experience_range']) : '';
 $status_filter = isset($_GET['status']) ? trim($_GET['status']) : '';
-$min_experience = isset($_GET['min_experience']) ? floatval($_GET['min_experience']) : '';
-$max_experience = isset($_GET['max_experience']) ? floatval($_GET['max_experience']) : '';
 $date_from = isset($_GET['date_from']) ? $_GET['date_from'] : '';
 $date_to = isset($_GET['date_to']) ? $_GET['date_to'] : '';
 
@@ -29,10 +27,10 @@ $params = [];
 $types = "";
 
 if (!empty($search)) {
-    $where_conditions[] = "(full_name LIKE ? OR phone_number LIKE ? OR city LIKE ?)";
+    $where_conditions[] = "(full_name LIKE ? OR phone_number LIKE ?)";
     $search_param = "%$search%";
-    $params = array_merge($params, [$search_param, $search_param, $search_param]);
-    $types .= "sss";
+    $params = array_merge($params, [$search_param, $search_param]);
+    $types .= "ss";
 }
 
 if (!empty($job_category_filter)) {
@@ -41,9 +39,9 @@ if (!empty($job_category_filter)) {
     $types .= "s";
 }
 
-if (!empty($city_filter)) {
-    $where_conditions[] = "city = ?";
-    $params[] = $city_filter;
+if (!empty($experience_filter)) {
+    $where_conditions[] = "experience_range = ?";
+    $params[] = $experience_filter;
     $types .= "s";
 }
 
@@ -51,18 +49,6 @@ if (!empty($status_filter)) {
     $where_conditions[] = "status = ?";
     $params[] = $status_filter;
     $types .= "s";
-}
-
-if (!empty($min_experience)) {
-    $where_conditions[] = "years_experience >= ?";
-    $params[] = $min_experience;
-    $types .= "d";
-}
-
-if (!empty($max_experience)) {
-    $where_conditions[] = "years_experience <= ?";
-    $params[] = $max_experience;
-    $types .= "d";
 }
 
 if (!empty($date_from)) {
@@ -105,10 +91,6 @@ $stats = $conn->query($stats_query)->fetch_assoc();
 // ✅ Get Job Categories for Filter
 $categories_query = "SELECT DISTINCT job_category FROM candidates ORDER BY job_category";
 $categories = $conn->query($categories_query);
-
-// ✅ Get Cities for Filter
-$cities_query = "SELECT DISTINCT city FROM candidates ORDER BY city";
-$cities = $conn->query($cities_query);
 
 // ✅ Handle AJAX requests for quick actions
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
@@ -496,12 +478,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                 <div class="stats-label">Active Candidates</div>
             </div>
         </div>
-        <div class="col-md-3 mb-3">
-            <div class="stats-card">
-                <div class="stats-number"><?= $stats['avg_experience'] ?>y</div>
-                <div class="stats-label">Avg Experience</div>
-            </div>
-        </div>
+                 <div class="col-md-3 mb-3">
+             <div class="stats-card">
+                 <div class="stats-number" style="font-size: 1.2rem;"><?= htmlspecialchars($stats['most_common_experience'] ?? 'N/A') ?></div>
+                 <div class="stats-label">Most Common Experience</div>
+             </div>
+         </div>
     </div>
 
     <!-- Filters -->
@@ -516,7 +498,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                 <!-- First Row -->
                 <div class="col-lg-4 col-md-6">
                     <label class="form-label">Search</label>
-                    <input type="text" class="form-control" name="search" value="<?= htmlspecialchars($search) ?>" placeholder="Name, phone, city...">
+                    <input type="text" class="form-control" name="search" value="<?= htmlspecialchars($search) ?>" placeholder="Name, phone...">
                 </div>
                 
                 <div class="col-lg-4 col-md-6">
@@ -533,15 +515,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                 </div>
                 
                 <div class="col-lg-4 col-md-6">
-                    <label class="form-label">City</label>
-                    <select class="form-select" name="city">
-                        <option value="">All Cities</option>
-                        <?php while ($city = $cities->fetch_assoc()): ?>
-                            <option value="<?= htmlspecialchars($city['city']) ?>" 
-                                    <?= $city_filter === $city['city'] ? 'selected' : '' ?>>
-                                <?= htmlspecialchars($city['city']) ?>
-                            </option>
-                        <?php endwhile; ?>
+                    <label class="form-label">Experience</label>
+                    <select class="form-select" name="experience_range">
+                        <option value="">All Experience</option>
+                        <option value="Fresher" <?= $experience_filter === 'Fresher' ? 'selected' : '' ?>>Fresher</option>
+                        <option value="1-2 years" <?= $experience_filter === '1-2 years' ? 'selected' : '' ?>>1-2 years</option>
+                        <option value="2-3 years" <?= $experience_filter === '2-3 years' ? 'selected' : '' ?>>2-3 years</option>
+                        <option value="3-4 years" <?= $experience_filter === '3-4 years' ? 'selected' : '' ?>>3-4 years</option>
+                        <option value="4-5 years" <?= $experience_filter === '4-5 years' ? 'selected' : '' ?>>4-5 years</option>
+                        <option value="5-7 years" <?= $experience_filter === '5-7 years' ? 'selected' : '' ?>>5-7 years</option>
+                        <option value="7-10 years" <?= $experience_filter === '7-10 years' ? 'selected' : '' ?>>7-10 years</option>
+                        <option value="10+ years" <?= $experience_filter === '10+ years' ? 'selected' : '' ?>>10+ years</option>
                     </select>
                 </div>
                 
@@ -554,16 +538,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                         <option value="contacted" <?= $status_filter === 'contacted' ? 'selected' : '' ?>>Contacted</option>
                         <option value="archived" <?= $status_filter === 'archived' ? 'selected' : '' ?>>Archived</option>
                     </select>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <label class="form-label">Min Experience</label>
-                    <input type="number" class="form-control" name="min_experience" value="<?= htmlspecialchars($min_experience) ?>" placeholder="0" min="0" step="0.5">
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <label class="form-label">Max Experience</label>
-                    <input type="number" class="form-control" name="max_experience" value="<?= htmlspecialchars($max_experience) ?>" placeholder="50" min="0" step="0.5">
                 </div>
                 
                 <!-- Third Row - Date Range -->
@@ -629,81 +603,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     <div class="table-container">
         <div class="table-responsive">
             <table class="table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Contact</th>
-                        <th>Location</th>
-                        <th>Role</th>
-                        <th>Experience</th>
-                        <th>Salary</th>
-                        <th>Status</th>
-                        <th>Registered</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
+                                 <thead>
+                     <tr>
+                         <th>Name</th>
+                         <th>Contact</th>
+                         <th>Gender</th>
+                         <th>Role</th>
+                         <th>Experience</th>
+                         <th>Status</th>
+                         <th>Registered</th>
+                         <th>Actions</th>
+                     </tr>
+                 </thead>
                 <tbody>
                     <?php if ($candidates->num_rows > 0): ?>
-                        <?php while ($candidate = $candidates->fetch_assoc()): ?>
-                            <tr id="candidate-<?= $candidate['id'] ?>">
-                                <td>
-                                    <strong><?= htmlspecialchars($candidate['full_name']) ?></strong><br>
-                                    <small class="text-muted"><?= $candidate['age'] ?> years, <?= ucfirst($candidate['gender']) ?></small>
-                                </td>
-                                <td>
-                                    <i class="fas fa-phone text-muted me-1"></i><?= htmlspecialchars($candidate['phone_number']) ?>
-                                </td>
-                                <td><?= htmlspecialchars($candidate['city']) ?></td>
-                                <td>
-                                    <strong><?= htmlspecialchars($candidate['job_role']) ?></strong><br>
-                                    <small class="text-muted"><?= htmlspecialchars($candidate['job_category']) ?></small>
-                                </td>
-                                <td><?= $candidate['years_experience'] ?> years</td>
-                                <td>
-                                    <?php if ($candidate['current_salary']): ?>
-                                        ₹<?= number_format($candidate['current_salary']) ?>
-                                    <?php else: ?>
-                                        <span class="text-muted">Not specified</span>
-                                    <?php endif; ?>
-                                </td>
-                                <td>
-                                    <span class="status-badge status-<?= $candidate['status'] ?>">
-                                        <?= ucfirst($candidate['status']) ?>
-                                    </span>
-                                </td>
-                                <td>
-                                    <?= date('M d, Y', strtotime($candidate['created_at'])) ?><br>
-                                    <small class="text-muted"><?= date('h:i A', strtotime($candidate['created_at'])) ?></small>
-                                </td>
-                                <td>
-                                    <button class="btn btn-action btn-view" onclick="viewCandidate(<?= $candidate['id'] ?>)" title="View Details">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                    <div class="dropdown d-inline">
-                                        <button class="btn btn-action btn-edit dropdown-toggle" type="button" data-bs-toggle="dropdown" title="Change Status">
-                                            <i class="fas fa-edit"></i>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'active')">Mark Active</a></li>
-                                            <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'contacted')">Mark Contacted</a></li>
-                                            <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'archived')">Archive</a></li>
-                                        </ul>
-                                    </div>
-                                    <button class="btn btn-action btn-delete" onclick="deleteCandidate(<?= $candidate['id'] ?>)" title="Delete">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        <?php endwhile; ?>
-                    <?php else: ?>
-                        <tr>
-                            <td colspan="9" class="text-center py-4">
-                                <i class="fas fa-search fa-3x text-muted mb-3"></i><br>
-                                <h5 class="text-muted">No candidates found</h5>
-                                <p class="text-muted">Try adjusting your filters or search criteria</p>
-                            </td>
-                        </tr>
-                    <?php endif; ?>
+                                                 <?php while ($candidate = $candidates->fetch_assoc()): ?>
+                             <tr id="candidate-<?= $candidate['id'] ?>">
+                                 <td>
+                                     <strong><?= htmlspecialchars($candidate['full_name']) ?></strong>
+                                 </td>
+                                 <td>
+                                     <i class="fas fa-phone text-muted me-1"></i><?= htmlspecialchars($candidate['phone_number']) ?>
+                                 </td>
+                                 <td><?= ucfirst($candidate['gender']) ?></td>
+                                 <td>
+                                     <strong><?= htmlspecialchars($candidate['job_role']) ?></strong><br>
+                                     <small class="text-muted"><?= htmlspecialchars($candidate['job_category']) ?></small>
+                                 </td>
+                                 <td>
+                                     <span class="badge bg-info text-dark"><?= htmlspecialchars($candidate['experience_range']) ?></span>
+                                 </td>
+                                 <td>
+                                     <span class="status-badge status-<?= $candidate['status'] ?>">
+                                         <?= ucfirst($candidate['status']) ?>
+                                     </span>
+                                 </td>
+                                 <td>
+                                     <?= date('M d, Y', strtotime($candidate['created_at'])) ?><br>
+                                     <small class="text-muted"><?= date('h:i A', strtotime($candidate['created_at'])) ?></small>
+                                 </td>
+                                 <td>
+                                     <button class="btn btn-action btn-view" onclick="viewCandidate(<?= $candidate['id'] ?>)" title="View Details">
+                                         <i class="fas fa-eye"></i>
+                                     </button>
+                                     <div class="dropdown d-inline">
+                                         <button class="btn btn-action btn-edit dropdown-toggle" type="button" data-bs-toggle="dropdown" title="Change Status">
+                                             <i class="fas fa-edit"></i>
+                                         </button>
+                                         <ul class="dropdown-menu">
+                                             <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'active')">Mark Active</a></li>
+                                             <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'contacted')">Mark Contacted</a></li>
+                                             <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'archived')">Archive</a></li>
+                                         </ul>
+                                     </div>
+                                     <button class="btn btn-action btn-delete" onclick="deleteCandidate(<?= $candidate['id'] ?>)" title="Delete">
+                                         <i class="fas fa-trash"></i>
+                                     </button>
+                                 </td>
+                             </tr>
+                         <?php endwhile; ?>
+                                         <?php else: ?>
+                         <tr>
+                             <td colspan="8" class="text-center py-4">
+                                 <i class="fas fa-search fa-3x text-muted mb-3"></i><br>
+                                 <h5 class="text-muted">No candidates found</h5>
+                                 <p class="text-muted">Try adjusting your filters or search criteria</p>
+                             </td>
+                         </tr>
+                     <?php endif; ?>
                 </tbody>
             </table>
         </div>
