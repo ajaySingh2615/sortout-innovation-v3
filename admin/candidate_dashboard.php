@@ -372,46 +372,75 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             color: white;
         }
 
-        /* Date Shortcut Buttons */
-        .date-shortcut {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.5rem;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
+                 /* Date Shortcut Buttons */
+         .date-shortcut {
+             font-size: 0.75rem;
+             padding: 0.25rem 0.5rem;
+             border-radius: 15px;
+             transition: all 0.3s ease;
+         }
 
-        .date-shortcut:hover {
-            background-color: var(--primary-red);
-            border-color: var(--primary-red);
-            color: white;
-        }
+         .date-shortcut:hover {
+             background-color: var(--primary-red);
+             border-color: var(--primary-red);
+             color: white;
+         }
 
-        .date-shortcut.btn-danger {
-            background-color: var(--primary-red);
-            border-color: var(--primary-red);
-            color: white;
-        }
+         .date-shortcut.btn-danger {
+             background-color: var(--primary-red);
+             border-color: var(--primary-red);
+             color: white;
+         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .table-responsive {
-                font-size: 0.9rem;
-            }
-            
-            .stats-number {
-                font-size: 1.5rem;
-            }
-            
-            .filters-container {
-                padding: 1rem;
-            }
+         /* Filters Layout Fix */
+         .filters-container .row {
+             margin: 0 -0.5rem;
+         }
 
-            .date-shortcut {
-                font-size: 0.7rem;
-                padding: 0.2rem 0.4rem;
-                margin-bottom: 0.25rem;
-            }
-        }
+         .filters-container .col-lg-6,
+         .filters-container .col-lg-4,
+         .filters-container .col-md-6,
+         .filters-container .col-md-12 {
+             padding: 0 0.5rem;
+         }
+
+         /* Responsive Design */
+         @media (max-width: 1200px) {
+             .filters-container {
+                 padding: 1.5rem 1rem;
+             }
+         }
+
+         @media (max-width: 768px) {
+             .table-responsive {
+                 font-size: 0.9rem;
+             }
+             
+             .stats-number {
+                 font-size: 1.5rem;
+             }
+             
+             .filters-container {
+                 padding: 1rem;
+             }
+
+             .date-shortcut {
+                 font-size: 0.7rem;
+                 padding: 0.2rem 0.4rem;
+                 margin-bottom: 0.25rem;
+             }
+
+             .filters-container .row {
+                 margin: 0 -0.25rem;
+             }
+
+             .filters-container .col-lg-6,
+             .filters-container .col-lg-4,
+             .filters-container .col-md-6,
+             .filters-container .col-md-12 {
+                 padding: 0 0.25rem;
+             }
+         }
     </style>
 </head>
 <body>
@@ -483,13 +512,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         </h5>
         
         <form method="GET" id="filterForm">
-            <div class="row g-3">
-                <div class="col-md-4">
+                         <div class="row g-3">
+                <!-- First Row -->
+                <div class="col-lg-4 col-md-6">
                     <label class="form-label">Search</label>
                     <input type="text" class="form-control" name="search" value="<?= htmlspecialchars($search) ?>" placeholder="Name, phone, city...">
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <label class="form-label">Job Category</label>
                     <select class="form-select" name="job_category">
                         <option value="">All Categories</option>
@@ -502,7 +532,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     </select>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <label class="form-label">City</label>
                     <select class="form-select" name="city">
                         <option value="">All Cities</option>
@@ -515,7 +545,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     </select>
                 </div>
                 
-                <div class="col-md-3">
+                <!-- Second Row -->
+                <div class="col-lg-4 col-md-6">
                     <label class="form-label">Status</label>
                     <select class="form-select" name="status">
                         <option value="">All Status</option>
@@ -525,22 +556,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     </select>
                 </div>
                 
-                <div class="col-md-3">
+                <div class="col-lg-4 col-md-6">
                     <label class="form-label">Min Experience</label>
                     <input type="number" class="form-control" name="min_experience" value="<?= htmlspecialchars($min_experience) ?>" placeholder="0" min="0" step="0.5">
                 </div>
                 
-                <div class="col-md-3">
+                <div class="col-lg-4 col-md-6">
                     <label class="form-label">Max Experience</label>
                     <input type="number" class="form-control" name="max_experience" value="<?= htmlspecialchars($max_experience) ?>" placeholder="50" min="0" step="0.5">
                 </div>
                 
-                <div class="col-md-3">
+                <!-- Third Row - Date Range -->
+                <div class="col-lg-6 col-md-12">
                     <label class="form-label">Date Range</label>
-                    <div class="d-flex gap-2 mb-2">
-                        <input type="date" class="form-control" name="date_from" id="date_from" value="<?= htmlspecialchars($date_from) ?>">
-                        <input type="date" class="form-control" name="date_to" id="date_to" value="<?= htmlspecialchars($date_to) ?>">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <input type="date" class="form-control" name="date_from" id="date_from" value="<?= htmlspecialchars($date_from) ?>" placeholder="From">
+                        </div>
+                        <div class="col-6">
+                            <input type="date" class="form-control" name="date_to" id="date_to" value="<?= htmlspecialchars($date_to) ?>" placeholder="To">
+                        </div>
                     </div>
+                </div>
+                
+                <!-- Date Shortcuts -->
+                <div class="col-lg-6 col-md-12">
+                    <label class="form-label">Quick Date Filters</label>
                     <div class="d-flex gap-1 flex-wrap">
                         <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="today">Today</button>
                         <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="yesterday">Yesterday</button>
