@@ -88,9 +88,15 @@ $candidates = $main_stmt->get_result();
 $stats_query = "SELECT * FROM candidate_stats";
 $stats = $conn->query($stats_query)->fetch_assoc();
 
-// ✅ Get Job Categories for Filter
-$categories_query = "SELECT DISTINCT job_category FROM candidates ORDER BY job_category";
-$categories = $conn->query($categories_query);
+// ✅ Get Job Categories for Filter from JSON file
+$job_roles_json = file_get_contents('../job_roles.json');
+$job_roles_data = json_decode($job_roles_json, true);
+$all_categories = [];
+if ($job_roles_data && isset($job_roles_data['job_categories'])) {
+    foreach ($job_roles_data['job_categories'] as $category) {
+        $all_categories[] = $category['category'];
+    }
+}
 
 // ✅ Handle AJAX requests for quick actions
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
@@ -505,12 +511,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                     <label class="form-label">Job Category</label>
                     <select class="form-select" name="job_category">
                         <option value="">All Categories</option>
-                        <?php while ($category = $categories->fetch_assoc()): ?>
-                            <option value="<?= htmlspecialchars($category['job_category']) ?>" 
-                                    <?= $job_category_filter === $category['job_category'] ? 'selected' : '' ?>>
-                                <?= htmlspecialchars($category['job_category']) ?>
+                        <?php foreach ($all_categories as $category): ?>
+                            <option value="<?= htmlspecialchars($category) ?>" 
+                                    <?= $job_category_filter === $category ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($category) ?>
                             </option>
-                        <?php endwhile; ?>
+                        <?php endforeach; ?>
                     </select>
                 </div>
                 
