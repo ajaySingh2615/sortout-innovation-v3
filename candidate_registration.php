@@ -105,7 +105,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         body {
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            margin: 0;
+            padding: 0;
             min-height: 100vh;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
@@ -115,6 +116,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             min-height: 100vh;
             display: flex;
             align-items: center;
+            background: linear-gradient(135deg, #d90429 0%, #ef233c 50%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+            animation: float 25s ease-in-out infinite;
+        }
+
+        .main-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: sparkle 20s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        @keyframes sparkle {
+            0% { transform: translateX(0px) translateY(0px) rotate(0deg); }
+            100% { transform: translateX(100px) translateY(100px) rotate(360deg); }
+        }
+
+        .main-container .container {
+            position: relative;
+            z-index: 2;
         }
 
         .form-card {
@@ -227,13 +272,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .logo-icon {
             width: 60px;
             height: 60px;
-            background: rgba(255, 255, 255, 0.2);
+            background: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1rem;
             font-size: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         /* Mobile Responsive */
@@ -284,7 +330,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Header -->
                 <div class="form-header">
                     <div class="logo-icon">
-                        <i class="fas fa-user-plus"></i>
+                        <img src="images/sortoutInnovation-icon/sortout-innovation-only-s.gif" alt="SortOut Innovation Logo" style="width: 100%; height: 100%; object-fit: contain;">
                     </div>
                     <h1>Get Your Dream Job</h1>
                     <p>Join thousands of professionals who found their perfect career match</p>
