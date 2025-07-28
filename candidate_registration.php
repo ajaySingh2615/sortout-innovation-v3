@@ -286,8 +286,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="logo-icon">
                         <i class="fas fa-user-plus"></i>
                     </div>
-                    <h1>Join Our Talent Network</h1>
-                    <p>Register now to explore exciting career opportunities</p>
+                    <h1>Get Your Dream Job</h1>
+                    <p>Join thousands of professionals who found their perfect career match</p>
                 </div>
 
                 <!-- Form Body -->
