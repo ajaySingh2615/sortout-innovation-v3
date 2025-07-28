@@ -277,7 +277,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
+            margin: 0 auto 0.5rem;
             font-size: 1.8rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
