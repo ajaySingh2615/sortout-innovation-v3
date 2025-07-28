@@ -209,10 +209,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         /* Modern Filters Container */
         .filters-container {
             background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
             border: 1px solid rgba(217, 4, 41, 0.1);
             position: relative;
             overflow: hidden;
@@ -224,23 +224,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
+            height: 3px;
             background: linear-gradient(90deg, var(--primary-red) 0%, var(--secondary-red) 100%);
         }
 
         .filter-title {
             color: var(--primary-red);
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
             position: relative;
         }
 
         .filter-title i {
-            margin-right: 0.75rem;
-            font-size: 1.4rem;
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -250,12 +250,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         .filter-title::after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: -6px;
             left: 0;
-            width: 60px;
-            height: 3px;
+            width: 40px;
+            height: 2px;
             background: linear-gradient(90deg, var(--primary-red) 0%, var(--secondary-red) 100%);
-            border-radius: 2px;
+            border-radius: 1px;
         }
 
         /* Table Styling */
@@ -395,65 +395,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         .filters-container .form-control,
         .filters-container .form-select {
             border: 2px solid #e9ecef;
-            border-radius: 12px;
-            padding: 0.75rem 1rem;
-            font-size: 0.95rem;
+            border-radius: 8px;
+            padding: 0.6rem 0.8rem;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
             background: white;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
         }
 
         .filters-container .form-control:focus,
         .filters-container .form-select:focus {
             border-color: var(--primary-red);
-            box-shadow: 0 0 0 0.2rem rgba(217, 4, 41, 0.15);
+            box-shadow: 0 0 0 0.15rem rgba(217, 4, 41, 0.12);
             transform: translateY(-1px);
         }
 
         .filters-container .form-label {
             font-weight: 600;
             color: #495057;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
         /* Modern Date Shortcut Buttons */
          .date-shortcut {
-            font-size: 0.8rem;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
+            font-size: 0.75rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
              transition: all 0.3s ease;
-            border: 2px solid #e9ecef;
+            border: 1px solid #e9ecef;
             background: white;
             color: #6c757d;
             font-weight: 500;
-            margin: 0.25rem;
+            margin: 0.2rem;
          }
 
          .date-shortcut:hover {
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
              border-color: var(--primary-red);
              color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(217, 4, 41, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(217, 4, 41, 0.25);
          }
 
          .date-shortcut.btn-danger {
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
              border-color: var(--primary-red);
              color: white;
-            box-shadow: 0 4px 12px rgba(217, 4, 41, 0.3);
+            box-shadow: 0 3px 8px rgba(217, 4, 41, 0.25);
         }
 
         /* Modern Action Buttons */
         .filters-container .btn {
-            border-radius: 12px;
-            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            padding: 0.6rem 1.2rem;
             font-weight: 600;
             transition: all 0.3s ease;
-            border: 2px solid;
+            border: 1px solid;
+            font-size: 0.85rem;
         }
 
         .filters-container .btn-outline-danger {
@@ -466,8 +467,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
             border-color: var(--primary-red);
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(217, 4, 41, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(217, 4, 41, 0.25);
         }
 
         .filters-container .btn-outline-secondary {
@@ -480,8 +481,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             background: #6c757d;
             border-color: #6c757d;
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(108, 117, 125, 0.25);
         }
 
         /* Enhanced Export Button */
@@ -490,58 +491,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             border: none;
             color: white;
             font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            border-radius: 12px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+            box-shadow: 0 3px 8px rgba(40, 167, 69, 0.15);
+            font-size: 0.85rem;
         }
 
         .btn-export:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
             color: white;
         }
 
         /* Filters Layout */
          .filters-container .row {
-            margin: 0 -0.75rem;
+            margin: 0 -0.5rem;
          }
 
          .filters-container .col-lg-6,
          .filters-container .col-lg-4,
          .filters-container .col-md-6,
          .filters-container .col-md-12 {
-            padding: 0 0.75rem;
+            padding: 0 0.5rem;
         }
 
         /* Filter Groups */
         .filter-group {
             background: rgba(255, 255, 255, 0.7);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
             border: 1px solid rgba(217, 4, 41, 0.1);
             transition: all 0.3s ease;
         }
 
         .filter-group:hover {
-            box-shadow: 0 4px 15px rgba(217, 4, 41, 0.1);
+            box-shadow: 0 3px 10px rgba(217, 4, 41, 0.08);
             transform: translateY(-1px);
         }
 
         /* Live Filter Indicators */
         .live-filter-indicator {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 8px;
+            right: 8px;
             background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
             color: white;
-            padding: 0.25rem 0.5rem;
-            border-radius: 12px;
-            font-size: 0.7rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.65rem;
             font-weight: 600;
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             transition: all 0.3s ease;
         }
 
@@ -563,7 +565,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             right: 0;
             bottom: 0;
             background: rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -576,8 +578,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             border: 2px solid #f3f3f3;
             border-top: 2px solid var(--primary-red);
             border-radius: 50%;
@@ -981,11 +983,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
          /* Responsive Design */
          @media (max-width: 1200px) {
              .filters-container {
-                 padding: 1.5rem;
+                 padding: 1rem;
              }
              
              .filter-group {
-                 padding: 1.25rem;
+                 padding: 0.8rem;
              }
          }
 
@@ -999,45 +1001,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
              }
              
              .filters-container {
-                 padding: 1.25rem;
-                 border-radius: 15px;
+                 padding: 0.8rem;
+                 border-radius: 10px;
              }
 
              .filter-title {
-                 font-size: 1.1rem;
+                 font-size: 1rem;
              }
 
              .date-shortcut {
-                 font-size: 0.75rem;
-                 padding: 0.4rem 0.8rem;
-                 margin: 0.15rem;
+                 font-size: 0.7rem;
+                 padding: 0.3rem 0.6rem;
+                 margin: 0.1rem;
              }
 
              .filters-container .form-control,
              .filters-container .form-select {
-                 padding: 0.6rem 0.8rem;
-                 font-size: 0.9rem;
+                 padding: 0.5rem 0.7rem;
+                 font-size: 0.85rem;
              }
 
              .filters-container .btn {
-                 padding: 0.6rem 1.2rem;
-                 font-size: 0.9rem;
+                 padding: 0.5rem 1rem;
+                 font-size: 0.8rem;
              }
 
              .filters-container .row {
-                 margin: 0 -0.5rem;
+                 margin: 0 -0.3rem;
              }
 
              .filters-container .col-lg-6,
              .filters-container .col-lg-4,
              .filters-container .col-md-6,
              .filters-container .col-md-12 {
-                 padding: 0 0.5rem;
+                 padding: 0 0.3rem;
              }
 
              .filter-group {
-                 padding: 1rem;
-                 margin-bottom: 0.75rem;
+                 padding: 0.8rem;
+                 margin-bottom: 0.6rem;
              }
          }
 
@@ -1342,8 +1344,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
             .action-btn {
                 justify-content: center;
-            }
-        }
+             }
+         }
     </style>
 </head>
 <body>
