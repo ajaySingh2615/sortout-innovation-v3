@@ -1349,16 +1349,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                                      <button class="btn btn-action btn-view" onclick="viewCandidate(<?= $candidate['id'] ?>)" title="View Details">
                                          <i class="fas fa-eye"></i>
                                      </button>
-                                     <div class="dropdown d-inline">
-                                         <button class="btn btn-action btn-edit dropdown-toggle" type="button" data-bs-toggle="dropdown" title="Change Status">
-                                             <i class="fas fa-edit"></i>
-                                         </button>
-                                         <ul class="dropdown-menu">
-                                             <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'active')">Mark Active</a></li>
-                                             <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'contacted')">Mark Contacted</a></li>
-                                             <li><a class="dropdown-item" href="#" onclick="updateStatus(<?= $candidate['id'] ?>, 'archived')">Archive</a></li>
-                                         </ul>
-                                     </div>
                                      <button class="btn btn-action btn-delete" onclick="deleteCandidate(<?= $candidate['id'] ?>)" title="Delete">
                                          <i class="fas fa-trash"></i>
                                      </button>
@@ -1599,9 +1589,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             deleteCandidate(id);
         });
         
-        // Re-attach dropdown handlers
-        $('.dropdown-toggle').off('click').on('click', function() {
-            $(this).dropdown('toggle');
+        // Initialize Bootstrap dropdowns for dynamically loaded content
+        $('.dropdown-toggle').each(function() {
+            const dropdownToggleEl = this;
+            // Check if dropdown is already initialized
+            if (!dropdownToggleEl.hasAttribute('data-bs-toggle')) {
+                // Re-add the data-bs-toggle attribute if it was lost
+                dropdownToggleEl.setAttribute('data-bs-toggle', 'dropdown');
+            }
+            // Initialize the dropdown if not already done
+            if (!dropdownToggleEl._bsDropdown) {
+                new bootstrap.Dropdown(dropdownToggleEl);
+            }
         });
     }
     
