@@ -421,7 +421,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
         /* Modern Date Shortcut Buttons */
          .date-shortcut {
-            font-size: 0.75rem;
+             font-size: 0.75rem;
             padding: 0.4rem 0.8rem;
             border-radius: 20px;
              transition: all 0.3s ease;
@@ -506,14 +506,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
         /* Filters Layout */
          .filters-container .row {
-            margin: 0 -0.5rem;
+             margin: 0 -0.5rem;
          }
 
          .filters-container .col-lg-6,
          .filters-container .col-lg-4,
          .filters-container .col-md-6,
          .filters-container .col-md-12 {
-            padding: 0 0.5rem;
+             padding: 0 0.5rem;
         }
 
         /* Filter Groups */

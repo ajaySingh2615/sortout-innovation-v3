@@ -282,6 +282,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
+        .company-name {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .company-name img {
+            max-width: 200px;
+            height: auto;
+            filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+            transition: all 0.3s ease;
+        }
+
+        .company-name img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .main-container {
@@ -294,6 +311,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             .form-header h1 {
                 font-size: 1.75rem;
+            }
+            
+            .company-name img {
+                max-width: 150px;
             }
             
             .form-body {
@@ -331,6 +352,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="form-header">
                     <div class="logo-icon">
                         <img src="images/sortoutInnovation-icon/sortout-innovation-only-s.gif" alt="SortOut Innovation Logo" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="company-name">
+                        <img src="assets/img/candidate-registration/Sortout-Inn.gif" alt="SortOut Innovation" style="width: 200px; height: auto; margin: 0.5rem 0;">
                     </div>
                     <h1>Get Your Dream Job</h1>
                     <p>Join thousands of professionals who found their perfect career match</p>
