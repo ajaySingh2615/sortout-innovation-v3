@@ -206,25 +206,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             letter-spacing: 0.5px;
         }
 
-        /* Filters Container */
+        /* Modern Filters Container */
         .filters-container {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
+            border: 1px solid rgba(217, 4, 41, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filters-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-red) 0%, var(--secondary-red) 100%);
         }
 
         .filter-title {
             color: var(--primary-red);
-            font-weight: 600;
-            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
+            position: relative;
         }
 
         .filter-title i {
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
+            font-size: 1.4rem;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .filter-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            border-radius: 2px;
         }
 
         /* Table Styling */
@@ -360,42 +391,261 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             color: white;
         }
 
-                 /* Date Shortcut Buttons */
-         .date-shortcut {
-             font-size: 0.75rem;
-             padding: 0.25rem 0.5rem;
-             border-radius: 15px;
-             transition: all 0.3s ease;
-         }
+        /* Modern Form Controls */
+        .filters-container .form-control,
+        .filters-container .form-select {
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
 
-         .date-shortcut:hover {
-             background-color: var(--primary-red);
-             border-color: var(--primary-red);
-             color: white;
-         }
+        .filters-container .form-control:focus,
+        .filters-container .form-select:focus {
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 0.2rem rgba(217, 4, 41, 0.15);
+            transform: translateY(-1px);
+        }
 
-         .date-shortcut.btn-danger {
-             background-color: var(--primary-red);
-             border-color: var(--primary-red);
-             color: white;
-         }
+        .filters-container .form-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
 
-         /* Filters Layout Fix */
-         .filters-container .row {
-             margin: 0 -0.5rem;
-         }
+        /* Modern Date Shortcut Buttons */
+        .date-shortcut {
+            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid #e9ecef;
+            background: white;
+            color: #6c757d;
+            font-weight: 500;
+            margin: 0.25rem;
+        }
 
-         .filters-container .col-lg-6,
-         .filters-container .col-lg-4,
-         .filters-container .col-md-6,
-         .filters-container .col-md-12 {
-             padding: 0 0.5rem;
-         }
+        .date-shortcut:hover {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            border-color: var(--primary-red);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(217, 4, 41, 0.3);
+        }
+
+        .date-shortcut.btn-danger {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            border-color: var(--primary-red);
+            color: white;
+            box-shadow: 0 4px 12px rgba(217, 4, 41, 0.3);
+        }
+
+        /* Modern Action Buttons */
+        .filters-container .btn {
+            border-radius: 12px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid;
+        }
+
+        .filters-container .btn-outline-danger {
+            border-color: var(--primary-red);
+            color: var(--primary-red);
+            background: white;
+        }
+
+        .filters-container .btn-outline-danger:hover {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            border-color: var(--primary-red);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 4, 41, 0.3);
+        }
+
+        .filters-container .btn-outline-secondary {
+            border-color: #6c757d;
+            color: #6c757d;
+            background: white;
+        }
+
+        .filters-container .btn-outline-secondary:hover {
+            background: #6c757d;
+            border-color: #6c757d;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.3);
+        }
+
+        /* Enhanced Export Button */
+        .btn-export {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+        }
+
+        .btn-export:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+            color: white;
+        }
+
+        /* Filters Layout */
+        .filters-container .row {
+            margin: 0 -0.75rem;
+        }
+
+        .filters-container .col-lg-6,
+        .filters-container .col-lg-4,
+        .filters-container .col-md-6,
+        .filters-container .col-md-12 {
+            padding: 0 0.75rem;
+        }
+
+        /* Filter Groups */
+        .filter-group {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(217, 4, 41, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .filter-group:hover {
+            box-shadow: 0 4px 15px rgba(217, 4, 41, 0.1);
+            transform: translateY(-1px);
+        }
+
+        /* Live Filter Indicators */
+        .live-filter-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .live-filter-indicator.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Enhanced Loading States */
+        .filter-loading {
+            position: relative;
+        }
+
+        .filter-loading::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .filter-loading::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid var(--primary-red);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 11;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Active Filter Highlight */
+        .form-control:not(:placeholder-shown),
+        .form-select:not([value=""]) {
+            border-color: var(--primary-red);
+            background-color: rgba(217, 4, 41, 0.02);
+        }
+
+        /* Filter Status Bar */
+        .filter-status {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .filter-status.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .filter-group-title {
+            font-weight: 600;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .filter-group-title i {
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
 
          /* Responsive Design */
          @media (max-width: 1200px) {
              .filters-container {
-                 padding: 1.5rem 1rem;
+                 padding: 1.5rem;
+             }
+             
+             .filter-group {
+                 padding: 1.25rem;
              }
          }
 
@@ -409,13 +659,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
              }
              
              .filters-container {
+                 padding: 1.25rem;
+                 border-radius: 15px;
+             }
+
+             .filter-title {
+                 font-size: 1.1rem;
+             }
+
+             .date-shortcut {
+                 font-size: 0.75rem;
+                 padding: 0.4rem 0.8rem;
+                 margin: 0.15rem;
+             }
+
+             .filters-container .form-control,
+             .filters-container .form-select {
+                 padding: 0.6rem 0.8rem;
+                 font-size: 0.9rem;
+             }
+
+             .filters-container .btn {
+                 padding: 0.6rem 1.2rem;
+                 font-size: 0.9rem;
+             }
+
+             .filters-container .row {
+                 margin: 0 -0.5rem;
+             }
+
+             .filters-container .col-lg-6,
+             .filters-container .col-lg-4,
+             .filters-container .col-md-6,
+             .filters-container .col-md-12 {
+                 padding: 0 0.5rem;
+             }
+
+             .filter-group {
                  padding: 1rem;
+                 margin-bottom: 0.75rem;
+             }
+         }
+
+         @media (max-width: 576px) {
+             .filters-container {
+                 padding: 1rem;
+             }
+
+             .filter-title {
+                 font-size: 1rem;
              }
 
              .date-shortcut {
                  font-size: 0.7rem;
-                 padding: 0.2rem 0.4rem;
-                 margin-bottom: 0.25rem;
+                 padding: 0.3rem 0.6rem;
+                 margin: 0.1rem;
+             }
+
+             .filters-container .btn {
+                 width: 100%;
+                 margin-bottom: 0.5rem;
              }
 
              .filters-container .row {
@@ -492,106 +795,128 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
          </div>
     </div>
 
-    <!-- Filters -->
+    <!-- Modern Filters -->
     <div class="filters-container">
         <h5 class="filter-title">
-            <i class="fas fa-filter"></i>
-            Filters & Search
+            <i class="fas fa-sliders-h"></i>
+            Advanced Filters & Search
+            <span class="live-filter-indicator">LIVE</span>
         </h5>
         
+        <!-- Filter Status Bar -->
+        <div class="filter-status" id="filterStatus">
+            <i class="fas fa-info-circle me-2"></i>
+            <span id="filterStatusText">Filters applied: <span id="activeFiltersCount">0</span></span>
+        </div>
+        
         <form method="GET" id="filterForm">
-                         <div class="row g-3">
-                <!-- First Row -->
-                <div class="col-lg-4 col-md-6">
-                    <label class="form-label">Search</label>
-                    <input type="text" class="form-control" name="search" value="<?= htmlspecialchars($search) ?>" placeholder="Name, phone...">
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <label class="form-label">Job Category</label>
-                    <select class="form-select" name="job_category">
-                        <option value="">All Categories</option>
-                        <?php foreach ($all_categories as $category): ?>
-                            <option value="<?= htmlspecialchars($category) ?>" 
-                                    <?= $job_category_filter === $category ? 'selected' : '' ?>>
-                                <?= htmlspecialchars($category) ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <label class="form-label">Experience</label>
-                    <select class="form-select" name="experience_range">
-                        <option value="">All Experience</option>
-                        <option value="Fresher" <?= $experience_filter === 'Fresher' ? 'selected' : '' ?>>Fresher</option>
-                        <option value="1-2 years" <?= $experience_filter === '1-2 years' ? 'selected' : '' ?>>1-2 years</option>
-                        <option value="2-3 years" <?= $experience_filter === '2-3 years' ? 'selected' : '' ?>>2-3 years</option>
-                        <option value="3-4 years" <?= $experience_filter === '3-4 years' ? 'selected' : '' ?>>3-4 years</option>
-                        <option value="4-5 years" <?= $experience_filter === '4-5 years' ? 'selected' : '' ?>>4-5 years</option>
-                        <option value="5-7 years" <?= $experience_filter === '5-7 years' ? 'selected' : '' ?>>5-7 years</option>
-                        <option value="7-10 years" <?= $experience_filter === '7-10 years' ? 'selected' : '' ?>>7-10 years</option>
-                        <option value="10+ years" <?= $experience_filter === '10+ years' ? 'selected' : '' ?>>10+ years</option>
-                    </select>
-                </div>
-                
-                <!-- Second Row -->
-                <div class="col-lg-4 col-md-6">
-                    <label class="form-label">Status</label>
-                    <select class="form-select" name="status">
-                        <option value="">All Status</option>
-                        <option value="active" <?= $status_filter === 'active' ? 'selected' : '' ?>>Active</option>
-                        <option value="contacted" <?= $status_filter === 'contacted' ? 'selected' : '' ?>>Contacted</option>
-                        <option value="archived" <?= $status_filter === 'archived' ? 'selected' : '' ?>>Archived</option>
-                    </select>
-                </div>
-                
-                <!-- Third Row - Date Range -->
-                <div class="col-lg-6 col-md-12">
-                    <label class="form-label">Date Range</label>
-                    <div class="row g-2">
-                        <div class="col-6">
-                            <input type="date" class="form-control" name="date_from" id="date_from" value="<?= htmlspecialchars($date_from) ?>" placeholder="From">
-                        </div>
-                        <div class="col-6">
-                            <input type="date" class="form-control" name="date_to" id="date_to" value="<?= htmlspecialchars($date_to) ?>" placeholder="To">
-                        </div>
+            <!-- Search & Basic Filters -->
+            <div class="filter-group">
+                <h6 class="filter-group-title">
+                    <i class="fas fa-search"></i>
+                    Search & Basic Filters
+                </h6>
+                <div class="row g-3">
+                    <div class="col-lg-4 col-md-6">
+                        <label class="form-label">Search Candidates</label>
+                        <input type="text" class="form-control" name="search" value="<?= htmlspecialchars($search) ?>" placeholder="Search by name or phone number...">
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <label class="form-label">Job Category</label>
+                        <select class="form-select" name="job_category">
+                            <option value="">All Categories</option>
+                            <?php foreach ($all_categories as $category): ?>
+                                <option value="<?= htmlspecialchars($category) ?>" 
+                                        <?= $job_category_filter === $category ? 'selected' : '' ?>>
+                                    <?= htmlspecialchars($category) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <label class="form-label">Experience Level</label>
+                        <select class="form-select" name="experience_range">
+                            <option value="">All Experience Levels</option>
+                            <option value="Fresher" <?= $experience_filter === 'Fresher' ? 'selected' : '' ?>>Fresher</option>
+                            <option value="1-2 years" <?= $experience_filter === '1-2 years' ? 'selected' : '' ?>>1-2 years</option>
+                            <option value="2-3 years" <?= $experience_filter === '2-3 years' ? 'selected' : '' ?>>2-3 years</option>
+                            <option value="3-4 years" <?= $experience_filter === '3-4 years' ? 'selected' : '' ?>>3-4 years</option>
+                            <option value="4-5 years" <?= $experience_filter === '4-5 years' ? 'selected' : '' ?>>4-5 years</option>
+                            <option value="5-7 years" <?= $experience_filter === '5-7 years' ? 'selected' : '' ?>>5-7 years</option>
+                            <option value="7-10 years" <?= $experience_filter === '7-10 years' ? 'selected' : '' ?>>7-10 years</option>
+                            <option value="10+ years" <?= $experience_filter === '10+ years' ? 'selected' : '' ?>>10+ years</option>
+                        </select>
                     </div>
                 </div>
-                
-                <!-- Date Shortcuts -->
-                <div class="col-lg-6 col-md-12">
-                    <label class="form-label">Quick Date Filters</label>
-                    <div class="d-flex gap-1 flex-wrap">
-                        <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="today">Today</button>
-                        <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="yesterday">Yesterday</button>
-                        <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="this_week">This Week</button>
-                        <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="last_week">Last Week</button>
-                        <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="this_month">This Month</button>
+            </div>
+
+            <!-- Status & Date Filters -->
+            <div class="filter-group">
+                <h6 class="filter-group-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    Status & Date Range
+                </h6>
+                <div class="row g-3">
+                    <div class="col-lg-3 col-md-6">
+                        <label class="form-label">Candidate Status</label>
+                        <select class="form-select" name="status">
+                            <option value="">All Status</option>
+                            <option value="active" <?= $status_filter === 'active' ? 'selected' : '' ?>>Active</option>
+                            <option value="contacted" <?= $status_filter === 'contacted' ? 'selected' : '' ?>>Contacted</option>
+                            <option value="archived" <?= $status_filter === 'archived' ? 'selected' : '' ?>>Archived</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6">
+                        <label class="form-label">Date Range</label>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <input type="date" class="form-control" name="date_from" id="date_from" value="<?= htmlspecialchars($date_from) ?>" placeholder="From">
+                            </div>
+                            <div class="col-6">
+                                <input type="date" class="form-control" name="date_to" id="date_to" value="<?= htmlspecialchars($date_to) ?>" placeholder="To">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-5 col-md-12">
+                        <label class="form-label">Quick Date Filters</label>
+                        <div class="d-flex gap-1 flex-wrap">
+                            <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="today">Today</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="yesterday">Yesterday</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="this_week">This Week</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="last_week">Last Week</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm date-shortcut" data-range="this_month">This Month</button>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="row mt-3">
+            <!-- Action Buttons -->
+            <div class="row mt-4">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-outline-danger me-2">
-                        <i class="fas fa-search me-1"></i> Apply Filters
-                    </button>
-                    <a href="candidate_dashboard.php" class="btn btn-outline-secondary me-2">
-                        <i class="fas fa-times me-1"></i> Clear
-                    </a>
-                    <div class="dropdown d-inline">
-                        <button type="button" class="btn btn-export dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fas fa-download me-1"></i> Export Data
+                    <div class="d-flex flex-wrap gap-2 align-items-center">
+                        <button type="submit" class="btn btn-outline-danger">
+                            <i class="fas fa-search me-2"></i> Apply Filters
                         </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" onclick="exportData('csv')">
-                                <i class="fas fa-file-csv me-2"></i> Export as CSV
-                            </a></li>
-                            <li><a class="dropdown-item" href="#" onclick="exportData('xlsx')">
-                                <i class="fas fa-file-excel me-2"></i> Export as Excel (XLSX)
-                            </a></li>
-                        </ul>
+                        <a href="candidate_dashboard.php" class="btn btn-outline-secondary">
+                            <i class="fas fa-times me-2"></i> Clear All
+                        </a>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-export dropdown-toggle" data-bs-toggle="dropdown">
+                                <i class="fas fa-download me-2"></i> Export Data
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="exportData('csv')">
+                                    <i class="fas fa-file-csv me-2"></i> Export as CSV
+                                </a></li>
+                                <li><a class="dropdown-item" href="#" onclick="exportData('xlsx')">
+                                    <i class="fas fa-file-excel me-2"></i> Export as Excel (XLSX)
+                                </a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -781,7 +1106,150 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         window.open('export_candidates.php?' + params.toString(), '_blank');
     }
     
-    // Date shortcuts functionality
+    // Live filtering functionality
+    let filterTimeout;
+    const filterDelay = 500; // 500ms delay for search input
+    
+    // Function to perform live filtering
+    function performLiveFilter() {
+        const formData = new FormData(document.getElementById('filterForm'));
+        const params = new URLSearchParams();
+        let activeFilters = 0;
+        
+        // Add all form data to params and count active filters
+        for (let [key, value] of formData.entries()) {
+            if (value) {
+                params.append(key, value);
+                activeFilters++;
+            }
+        }
+        
+        // Add page parameter
+        params.append('page', '1');
+        
+        // Update filter status
+        updateFilterStatus(activeFilters);
+        
+        // Show loading state
+        showLoadingState();
+        
+        // Show live indicator
+        $('.live-filter-indicator').addClass('show');
+        
+        // Make AJAX request
+        $.get('candidate_dashboard.php?' + params.toString(), function(data) {
+            // Extract table content from response
+            const tableContent = $(data).find('.table-container').html();
+            const paginationContent = $(data).find('.pagination').parent().html();
+            const resultsSummary = $(data).find('.d-flex.justify-content-between.align-items-center.mb-3').html();
+            
+            // Update content
+            $('.table-container').html(tableContent);
+            $('.pagination').parent().html(paginationContent);
+            $('.d-flex.justify-content-between.align-items-center.mb-3').html(resultsSummary);
+            
+            // Update URL without page reload
+            const newUrl = window.location.pathname + '?' + params.toString();
+            window.history.pushState({}, '', newUrl);
+            
+            // Hide loading state
+            hideLoadingState();
+            
+            // Hide live indicator after a delay
+            setTimeout(() => {
+                $('.live-filter-indicator').removeClass('show');
+            }, 2000);
+            
+            // Reinitialize any necessary event handlers
+            initializeEventHandlers();
+        }).fail(function() {
+            hideLoadingState();
+            showErrorMessage('Error loading filtered results. Please try again.');
+            $('.live-filter-indicator').removeClass('show');
+        });
+    }
+    
+    // Update filter status
+    function updateFilterStatus(activeFilters) {
+        const statusBar = $('#filterStatus');
+        const countElement = $('#activeFiltersCount');
+        
+        countElement.text(activeFilters);
+        
+        if (activeFilters > 0) {
+            statusBar.addClass('show');
+        } else {
+            statusBar.removeClass('show');
+        }
+    }
+    
+    // Show loading state
+    function showLoadingState() {
+        $('.table-container').html(`
+            <div class="text-center py-5">
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-3 text-muted">Filtering candidates...</p>
+            </div>
+        `);
+    }
+    
+    // Hide loading state
+    function hideLoadingState() {
+        // Loading state will be replaced by actual content
+    }
+    
+    // Show error message
+    function showErrorMessage(message) {
+        $('.table-container').html(`
+            <div class="text-center py-5">
+                <i class="fas fa-exclamation-triangle fa-3x text-danger mb-3"></i>
+                <h5 class="text-danger">Error</h5>
+                <p class="text-muted">${message}</p>
+                <button class="btn btn-outline-danger" onclick="location.reload()">
+                    <i class="fas fa-redo me-2"></i>Reload Page
+                </button>
+            </div>
+        `);
+    }
+    
+    // Initialize event handlers for dynamic content
+    function initializeEventHandlers() {
+        // Re-attach click handlers for action buttons
+        $('.btn-view').off('click').on('click', function() {
+            const id = $(this).attr('onclick').match(/\d+/)[0];
+            viewCandidate(id);
+        });
+        
+        $('.btn-delete').off('click').on('click', function() {
+            const id = $(this).attr('onclick').match(/\d+/)[0];
+            deleteCandidate(id);
+        });
+        
+        // Re-attach dropdown handlers
+        $('.dropdown-toggle').off('click').on('click', function() {
+            $(this).dropdown('toggle');
+        });
+    }
+    
+    // Live search input with debouncing
+    $('input[name="search"]').on('input', function() {
+        clearTimeout(filterTimeout);
+        filterTimeout = setTimeout(performLiveFilter, filterDelay);
+    });
+    
+    // Live filter for select elements
+    $('select[name="job_category"], select[name="experience_range"], select[name="status"]').on('change', function() {
+        performLiveFilter();
+    });
+    
+    // Live filter for date inputs
+    $('input[name="date_from"], input[name="date_to"]').on('change', function() {
+        performLiveFilter();
+    });
+    
+    // Date shortcuts functionality with live filtering
     $('.date-shortcut').on('click', function() {
         const range = $(this).data('range');
         const today = new Date();
@@ -823,7 +1291,65 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         // Highlight active button
         $('.date-shortcut').removeClass('btn-danger').addClass('btn-outline-secondary');
         $(this).removeClass('btn-outline-secondary').addClass('btn-danger');
+        
+        // Trigger live filter
+        performLiveFilter();
     });
+    
+    // Prevent form submission and use live filtering instead
+    $('#filterForm').on('submit', function(e) {
+        e.preventDefault();
+        performLiveFilter();
+    });
+    
+    // Clear filters with live update
+    $('a[href="candidate_dashboard.php"]').on('click', function(e) {
+        e.preventDefault();
+        
+        // Clear all form inputs
+        $('#filterForm')[0].reset();
+        
+        // Remove active state from date shortcuts
+        $('.date-shortcut').removeClass('btn-danger').addClass('btn-outline-secondary');
+        
+        // Perform live filter with cleared values
+        performLiveFilter();
+    });
+    
+    // Pagination with live filtering
+    $(document).on('click', '.pagination .page-link', function(e) {
+        e.preventDefault();
+        
+        const href = $(this).attr('href');
+        const url = new URL(href, window.location.origin);
+        const params = url.searchParams;
+        
+        // Show loading state
+        showLoadingState();
+        
+        // Make AJAX request for pagination
+        $.get('candidate_dashboard.php?' + params.toString(), function(data) {
+            const tableContent = $(data).find('.table-container').html();
+            const paginationContent = $(data).find('.pagination').parent().html();
+            const resultsSummary = $(data).find('.d-flex.justify-content-between.align-items-center.mb-3').html();
+            
+            $('.table-container').html(tableContent);
+            $('.pagination').parent().html(paginationContent);
+            $('.d-flex.justify-content-between.align-items-center.mb-3').html(resultsSummary);
+            
+            // Update URL
+            window.history.pushState({}, '', href);
+            
+            // Reinitialize event handlers
+            initializeEventHandlers();
+        }).fail(function() {
+            hideLoadingState();
+            showErrorMessage('Error loading page. Please try again.');
+        });
+    });
+    
+    // Initialize event handlers on page load
+    initializeEventHandlers();
 </script>
 
 </body>
