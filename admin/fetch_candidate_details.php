@@ -29,134 +29,159 @@ if ($result->num_rows === 0) {
 $candidate = $result->fetch_assoc();
 ?>
 
-<div class="row">
-    <!-- Left Column - Personal Info -->
-    <div class="col-md-6">
-        <h6 class="text-danger fw-bold mb-3">
-            <i class="fas fa-user me-2"></i>Personal Information
-        </h6>
-        
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Full Name:</label>
-            <div class="fs-5"><?= htmlspecialchars($candidate['full_name']) ?></div>
-        </div>
-        
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Phone Number:</label>
-            <div>
-                <i class="fas fa-phone text-success me-2"></i>
-                <a href="tel:<?= $candidate['phone_number'] ?>" class="text-decoration-none">
-                    <?= htmlspecialchars($candidate['phone_number']) ?>
-                </a>
+<div class="candidate-details-container">
+    <!-- Personal Information Section -->
+    <div class="candidate-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-user"></i>
             </div>
+            <h3 class="section-title">Personal Info</h3>
         </div>
         
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Gender:</label>
-            <div>
-                <i class="fas fa-user text-info me-2"></i>
-                <?= ucfirst($candidate['gender']) ?>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Name</div>
+                <div class="info-value">
+                    <i class="fas fa-user-circle"></i>
+                    <?= htmlspecialchars($candidate['full_name']) ?>
+                </div>
             </div>
-        </div>
-        
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Status:</label>
-            <div>
-                <span class="status-badge status-<?= $candidate['status'] ?>">
-                    <?= ucfirst($candidate['status']) ?>
-                </span>
+            
+            <div class="info-item">
+                <div class="info-label">Phone</div>
+                <div class="info-value">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:<?= $candidate['phone_number'] ?>">
+                        <?= htmlspecialchars($candidate['phone_number']) ?>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Gender</div>
+                <div class="info-value">
+                    <i class="fas fa-venus-mars"></i>
+                    <?= ucfirst($candidate['gender']) ?>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Status</div>
+                <div class="info-value">
+                    <span class="status-badge-modern status-<?= $candidate['status'] ?>-modern">
+                        <?= ucfirst($candidate['status']) ?>
+                    </span>
+                </div>
             </div>
         </div>
     </div>
     
-    <!-- Right Column - Professional Info -->
-    <div class="col-md-6">
-        <h6 class="text-danger fw-bold mb-3">
-            <i class="fas fa-briefcase me-2"></i>Professional Information
-        </h6>
-        
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Job Category:</label>
-            <div class="badge bg-primary fs-6"><?= htmlspecialchars($candidate['job_category']) ?></div>
-        </div>
-        
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Job Role:</label>
-            <div class="fs-6 fw-semibold"><?= htmlspecialchars($candidate['job_role']) ?></div>
-        </div>
-        
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Experience:</label>
-            <div>
-                <i class="fas fa-chart-line text-warning me-2"></i>
-                <span class="badge bg-info text-dark fs-6"><?= htmlspecialchars($candidate['experience_range']) ?></span>
+    <!-- Professional Information Section -->
+    <div class="candidate-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-briefcase"></i>
             </div>
+            <h3 class="section-title">Professional Info</h3>
         </div>
         
-        <div class="mb-3">
-            <label class="fw-semibold text-muted">Registration Date:</label>
-            <div>
-                <i class="fas fa-calendar text-info me-2"></i>
-                <?= date('F d, Y', strtotime($candidate['created_at'])) ?>
-                <br>
-                <small class="text-muted">
-                    <?= date('h:i A', strtotime($candidate['created_at'])) ?>
-                    (<?= date('D', strtotime($candidate['created_at'])) ?>)
-                </small>
-            </div>
-        </div>
-        
-        <?php if ($candidate['updated_at'] !== $candidate['created_at']): ?>
-            <div class="mb-3">
-                <label class="fw-semibold text-muted">Last Updated:</label>
-                <div>
-                    <i class="fas fa-edit text-secondary me-2"></i>
-                    <?= date('F d, Y h:i A', strtotime($candidate['updated_at'])) ?>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Category</div>
+                <div class="info-value">
+                    <span class="job-category-badge">
+                        <?= htmlspecialchars($candidate['job_category']) ?>
+                    </span>
                 </div>
             </div>
-        <?php endif; ?>
+            
+            <div class="info-item">
+                <div class="info-label">Role</div>
+                <div class="info-value">
+                    <i class="fas fa-tag"></i>
+                    <?= htmlspecialchars($candidate['job_role']) ?>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="info-label">Experience</div>
+                <div class="info-value">
+                    <span class="experience-badge">
+                        <?= htmlspecialchars($candidate['experience_range']) ?>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<!-- Quick Actions -->
-<div class="row mt-4">
-    <div class="col-12">
-        <div class="d-flex gap-2 justify-content-center">
-            <button class="btn btn-success btn-sm" onclick="updateStatus(<?= $candidate['id'] ?>, 'contacted')">
-                <i class="fas fa-phone me-1"></i> Mark as Contacted
-            </button>
-            <button class="btn btn-warning btn-sm" onclick="updateStatus(<?= $candidate['id'] ?>, 'active')">
-                <i class="fas fa-user-check me-1"></i> Mark as Active
-            </button>
-            <button class="btn btn-secondary btn-sm" onclick="updateStatus(<?= $candidate['id'] ?>, 'archived')">
-                <i class="fas fa-archive me-1"></i> Archive
-            </button>
+    
+    <!-- Registration Information Section -->
+    <div class="candidate-section">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-calendar-alt"></i>
+            </div>
+            <h3 class="section-title">Registration Info</h3>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">Registered</div>
+                <div class="info-value">
+                    <div class="date-info">
+                        <div class="date-main">
+                            <i class="fas fa-calendar-check"></i>
+                            <?= date('F d, Y', strtotime($candidate['created_at'])) ?>
+                        </div>
+                        <div class="date-secondary">
+                            <?= date('h:i A', strtotime($candidate['created_at'])) ?> 
+                            (<?= date('D', strtotime($candidate['created_at'])) ?>)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <?php if ($candidate['updated_at'] !== $candidate['created_at']): ?>
+            <div class="info-item">
+                <div class="info-label">Updated</div>
+                <div class="info-value">
+                    <div class="date-info">
+                        <div class="date-main">
+                            <i class="fas fa-edit"></i>
+                            <?= date('F d, Y h:i A', strtotime($candidate['updated_at'])) ?>
+                        </div>
+                        <div class="date-secondary">
+                            Profile was modified
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </div>
 </div>
 
-<!-- Additional Styling -->
-<style>
-    .status-badge {
-        padding: 0.4rem 0.8rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-
-    .status-active {
-        background-color: #d1f2eb;
-        color: #148a5c;
-    }
-
-    .status-contacted {
-        background-color: #d4f1fc;
-        color: #0c7a96;
-    }
-
-    .status-archived {
-        background-color: #f8d7da;
-        color: #721c24;
-    }
-</style> 
+<!-- Quick Actions Section -->
+<div class="quick-actions-section">
+    <div class="quick-actions-header">
+        <h4 class="quick-actions-title">Quick Actions</h4>
+        <p class="quick-actions-subtitle">Update candidate status</p>
+    </div>
+    
+    <div class="quick-actions-grid">
+        <button class="action-btn action-btn-contact" onclick="updateStatus(<?= $candidate['id'] ?>, 'contacted')">
+            <i class="fas fa-phone"></i>
+            Contacted
+        </button>
+        
+        <button class="action-btn action-btn-active" onclick="updateStatus(<?= $candidate['id'] ?>, 'active')">
+            <i class="fas fa-user-check"></i>
+            Active
+        </button>
+        
+        <button class="action-btn action-btn-archive" onclick="updateStatus(<?= $candidate['id'] ?>, 'archived')">
+            <i class="fas fa-archive"></i>
+            Archive
+        </button>
+    </div>
+</div> 

@@ -1072,6 +1072,278 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
                  padding: 0 0.25rem;
              }
          }
+
+        /* Compact Candidate Modal Styles */
+        .candidate-modal {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .candidate-modal-header {
+            background: var(--primary-red);
+            border: none;
+            padding: 0.75rem 1rem;
+            color: white;
+        }
+
+        .candidate-modal-header .modal-title {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .candidate-modal-body {
+            padding: 1rem;
+            background: white;
+        }
+
+        /* Compact Candidate Details Content Styles */
+        .candidate-details-container {
+            background: white;
+        }
+
+        .candidate-section {
+            margin-bottom: 1rem;
+        }
+
+        .candidate-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .section-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--primary-red);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.7rem;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #495057;
+            margin: 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .info-item {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 0.6rem;
+            border-left: 2px solid var(--primary-red);
+        }
+
+        .info-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            margin-bottom: 0.2rem;
+        }
+
+        .info-value {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #495057;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .info-value i {
+            color: var(--primary-red);
+            font-size: 0.75rem;
+        }
+
+        .info-value a {
+            color: var(--primary-red);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .status-badge-modern {
+            padding: 0.2rem 0.6rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-active-modern {
+            background: #d1f2eb;
+            color: #148a5c;
+        }
+
+        .status-contacted-modern {
+            background: #d4f1fc;
+            color: #0c7a96;
+        }
+
+        .status-archived-modern {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .job-category-badge {
+            background: var(--primary-red);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .experience-badge {
+            background: #667eea;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .date-info {
+            background: #f8f9fa;
+            border-radius: 4px;
+            padding: 0.4rem;
+            border-left: 2px solid #17a2b8;
+        }
+
+        .date-info .date-main {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.2rem;
+        }
+
+        .date-info .date-secondary {
+            font-size: 0.7rem;
+            color: #6c757d;
+        }
+
+        /* Compact Quick Actions Section */
+        .quick-actions-section {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 0.75rem;
+            margin-top: 0.75rem;
+            border: 1px solid #e9ecef;
+        }
+
+        .quick-actions-header {
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-actions-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 0.2rem;
+        }
+
+        .quick-actions-subtitle {
+            font-size: 0.7rem;
+            color: #6c757d;
+        }
+
+        .quick-actions-grid {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 0.4rem 0.8rem;
+            color: #495057;
+            font-weight: 500;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-btn-contact {
+            border-color: #17a2b8;
+            color: #17a2b8;
+        }
+
+        .action-btn-contact:hover {
+            background: #17a2b8;
+            color: white;
+        }
+
+        .action-btn-active {
+            border-color: #28a745;
+            color: #28a745;
+        }
+
+        .action-btn-active:hover {
+            background: #28a745;
+            color: white;
+        }
+
+        .action-btn-archive {
+            border-color: #6c757d;
+            color: #6c757d;
+        }
+
+        .action-btn-archive:hover {
+            background: #6c757d;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .candidate-modal-header {
+                padding: 0.6rem 0.8rem;
+            }
+
+            .candidate-modal-body {
+                padding: 0.8rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+            }
+
+            .quick-actions-grid {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1393,16 +1665,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
 <!-- Candidate Details Modal -->
 <div class="modal fade" id="candidateModal" tabindex="-1">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content candidate-modal">
+            <div class="modal-header candidate-modal-header">
                 <h5 class="modal-title">
                     <i class="fas fa-user me-2"></i>
                     Candidate Details
                 </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body" id="candidateDetails">
+            <div class="modal-body candidate-modal-body" id="candidateDetails">
                 <!-- Content loaded via AJAX -->
             </div>
         </div>
