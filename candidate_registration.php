@@ -166,7 +166,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            overflow: hidden;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -176,6 +175,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             color: white;
             padding: 2rem;
             text-align: center;
+            border: 2px solid #000000;
+            border-radius: 18px 18px 0 0;
         }
 
         .form-header h1 {
@@ -192,6 +193,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         .form-body {
             padding: 2rem;
+            border: 2px solid #000000;
+            border-top: none;
+            border-radius: 0 0 18px 18px;
         }
 
         .section-title {
@@ -277,7 +281,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 0.5rem;
+            margin: 0 auto 0.25rem;
             font-size: 1.8rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
