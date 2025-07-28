@@ -290,6 +290,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         .company-name img {
             max-width: 200px;
             height: auto;
+            border-radius: 15px;
             filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
             transition: all 0.3s ease;
         }
